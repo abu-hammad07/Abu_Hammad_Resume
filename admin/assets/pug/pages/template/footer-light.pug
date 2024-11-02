@@ -1,0 +1,38 @@
+- var page_Title = 'Footer Light';
+- var theme_customizer      = true;
+- var tooltip               = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Page Layout','Footer Light'],'Footer Light')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-sm-12
+                .card
+                  .card-header
+                    h4 Sample Card
+                    p.f-m-light.mt-1 A sample card of the mofi theme.
+                  .card-body
+                    p
+                      | A practitioner with expertise in building attractive and useful websites is known as a web designer. Their primary objective is to create responsive websites, which can adjust to and show properly on various platforms including PCs, tablets, and mobile phones. A web designer gives considerable thought to a website's style, navigation, and general user experience to make sure the target audience will find it easy to use and visually appealing.
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

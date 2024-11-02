@@ -1,0 +1,1008 @@
+- var page_Title = 'Project Dashboard';
+- var theme_customizer      = true;
+- var apex                  = true;
+- var apexmoment            = true;
+- var dashboard_2           = true;
+- var page_datatable        = true;
+- var datatable             = true;
+- var page_datatable1       = true;
+- var notify                = true;
+- var page_range_slider     = true;
+- var range_slider          = true;
+- var coustom_calendar      = true;
+- var animate               = true;
+- var typeahead             = true;
+- var typeahead_search      = true;
+- var sidebar               = true;
+- var scrollbar             = true;
+- var wow                   = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var height_equal          = true;
+
+
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Dashboard','Project'],'Project Dashboard')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar  
+        .page-body
+          // Container-fluid starts
+          .container-fluid.dashboard-2
+            .row 
+              .col-xl-3.col-xl-40.col-md-6.proorder-md-1 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Project Status
+                      .dropdown.icon-dropdown
+                        button#userdropdown.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.project-status-col
+                    .row 
+                      .col-6
+                        div.btn-light1-primary.b-r-10 
+                          .upcoming-box 
+                            .upcoming-icon.bg-primary 
+                              img(src="../assets/images/dashboard-2/svg-icon/calendar.png", alt="")
+                            h6 Upcomings
+                            p 5 Projects
+                      .col-6
+                          div.btn-light1-secondary.b-r-10 
+                            .upcoming-box 
+                              .upcoming-icon.bg-secondary 
+                                img(src="../assets/images/dashboard-2/svg-icon/check.png", alt="")
+                              h6 Completed
+                              p 27 Projects
+                      .col-6
+                        div.btn-light1-warning.b-r-10 
+                          .upcoming-box.mb-0 
+                            .upcoming-icon.bg-warning 
+                              img(src="../assets/images/dashboard-2/svg-icon/processing.png", alt="")
+                            h6 In Progress
+                            p 13 Projects
+                      .col-6
+                          div.btn-light1-tertiary.b-r-10 
+                            .upcoming-box.mb-0 
+                              .upcoming-icon.bg-tertiary 
+                                img(src="../assets/images/dashboard-2/svg-icon/total.png", alt="")
+                              h6 Total
+                              p 47 Projects
+              .col-xl-5.col-xl-70.col-md-12.proorder-md-3 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Recent Projects
+                      .dropdown.icon-dropdown
+                        button#userdropdown2.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown2')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.p-0.projects
+                    .table-responsive.theme-scrollbar
+                      table#recent-product.table.display.overflow-hidden(style='width:100%')
+                        thead
+                          tr
+                            th
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            th Name
+                            th.px-0 Team
+                            th started 
+                            th finished
+                            th Progress 
+                            th.px-2 Actions
+                        tbody
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td.px-0 
+                              a(href="order-history.html") Behance Post 
+                            td.customers.text-center.social-group
+                              ul
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/1.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/2.png', alt='')
+                                li.d-inline-block 
+                                    p.bg-light.rounded-circle 5+
+                            td  05Jan23
+                            td  12Jan23
+                            td.radial-chart-wrap.p-0 
+                              #widgetsChart1.widgetsChart
+                            td  
+                              .dropdown.icon-dropdown
+                                button#userdropdown3.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown3')
+                                  a.dropdown-item(href='#') Weekly 
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td.px-0
+                              a(href="order-history.html") Figma Design
+                            td.customers.text-center.social-group
+                              ul
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/4.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/6.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/5.png', alt='')
+                            td  11Feb23
+                            td  24Feb23
+                            td.radial-chart-wrap.p-0 
+                              #widgetsChart2.widgetsChart
+                            td
+                              .dropdown.icon-dropdown
+                                button#userdropdown4.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown4')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td.px-0
+                              a(href="order-history.html") Web Page
+                            td.customers.text-center.social-group
+                              ul
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/7.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/8.png', alt='')
+                                li.d-inline-block 
+                                    p.bg-light.rounded-circle 5+
+                            td  17Mar23
+                            td  08Mar23
+                            td.radial-chart-wrap.p-0 
+                              #widgetsChart3.widgetsChart
+                            td 
+                              .dropdown.icon-dropdown
+                                button#userdropdown5.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown5')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td.px-0
+                              a(href="order-history.html") CRM Admin
+                            td.customers.text-center.social-group
+                              ul
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/12.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/11.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/12.png', alt='')
+                            td  05Sep23
+                            td  13Sep23
+                            td.radial-chart-wrap.p-0 
+                              #widgetsChart4.widgetsChart
+                            td
+                              .dropdown.icon-dropdown
+                                button#userdropdown6.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown6')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+              .col-xl-4.col-xl-50.col-md-6.proorder-md-2 
+                .card
+                  .card-header.card-no-border
+                    .header-top
+                      h4 Total Project
+                      .dropdown.icon-dropdown
+                        button#userdropdown7.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown7')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.total-project
+                    h5.f-w-500 Currently Running
+                      span.px-2.f-w-500.font-primary 28 Projects
+                    #total-project
+                    ul 
+                      li.d-flex.align-items-center.gap-2 
+                        span.bg-primary
+                        p Completed
+                      li.d-flex.align-items-center.gap-2
+                        span.bg-secondary
+                        p In Progress
+                      li.d-flex.align-items-center.gap-2
+                        span.bg-warning
+                        p Terminated
+              .col-xl-5.col-xl-50.proorder-md-5 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Projects Overview
+                      .dropdown.icon-dropdown
+                        button#userdropdown8.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown8')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.pb-0
+                    .current-sale-container.order-container
+                      #orderoverview.overview-wrapper 
+                      .back-bar-container 
+                        #order-bar
+              .col-xl-7.col-xl-100.proorder-md-6 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Client's activity of 2024
+                      .dropdown.icon-dropdown
+                        button#userdropdown9.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown9')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.pt-0.client-activity.px-0
+                    .table-responsive.theme-scrollbar
+                      table#client-product.table.display(style='width:100%')
+                        thead
+                          tr
+                            th
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            th Project name
+                            th timeline
+                            th Project team 
+                            th Project Type
+                            th Progress
+                            th Actions
+                        tbody
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td.px-0
+                              .d-flex.align-items-center
+                                .flex-shrink-0
+                                  img(src="../assets/images/dashboard-2/svg-icon/1.png", alt="")
+                                .flex-grow-1.ms-2
+                                  a(href="product-page.html")
+                                    h5 Redesign Layout
+                                  p Anna Catmire
+                            td.px-0 Sep 20 - Oct 26
+                            td.customers.text-center.social-group
+                              ul
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/1.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/12.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/3.png', alt='')
+                                li.d-inline-block 
+                                    p.bg-light.rounded-circle 5+
+                            td  UI/UX Design 
+                            td 
+                              .progress-showcase
+                                .progress.sm-progress-bar.progress-border-primary
+                                    .progress-bar(role='progressbar', style='width: 40%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 
+                            td.text-center
+                              .dropdown.icon-dropdown
+                                button#userdropdown10.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown10')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td.px-0
+                              .d-flex.align-items-center
+                                .flex-shrink-0
+                                  img(src="../assets/images/dashboard-2/svg-icon/2.png", alt="")
+                                .flex-grow-1.ms-2
+                                  a(href="product-page.html")
+                                    h5 Login & Sign Up Ui
+                                  p John Elliot
+                            td.px-0 Mar 16 - Apr 10
+                            td.customers.text-center.social-group
+                              ul
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/4.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/5.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/6.png', alt='')
+                            td  Designer
+                            td 
+                              .progress-showcase
+                                .progress.sm-progress-bar.progress-border-secondary
+                                    .progress-bar(role='progressbar', style='width: 70%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 
+                            td.text-center
+                              .dropdown.icon-dropdown
+                                button#userdropdown11.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown11')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td.px-0
+                              .d-flex.align-items-center
+                                .flex-shrink-0
+                                  img(src="../assets/images/dashboard-2/svg-icon/3.png", alt="")
+                                .flex-grow-1.ms-2
+                                  a(href="product-page.html")
+                                    h5 Redesign CRM
+                                  p Ashley Hart
+                            td.px-0 May 09 - Jun 02
+                            td.customers.text-center.social-group
+                              ul
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/7.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/8.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/9.png', alt='')
+                                li.d-inline-block 
+                                    p.bg-light.rounded-circle 5+
+                            td  UI/UX Design
+                            td 
+                              .progress-showcase
+                                .progress.sm-progress-bar.progress-border-warning
+                                    .progress-bar(role='progressbar', style='width: 50%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 
+                            td.text-center
+                              .dropdown.icon-dropdown
+                                button#userdropdown12.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown12')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td.px-0
+                              .d-flex.align-items-center
+                                .flex-shrink-0
+                                  img(src="../assets/images/dashboard-2/svg-icon/4.png", alt="")
+                                .flex-grow-1.ms-2
+                                  a(href="product-page.html")
+                                    h5 Front-End Website
+                                  p Dana Lemon
+                            td.px-0 Jul 12 - Aug 20
+                            td.customers.text-center.social-group
+                              ul
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/10.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/11.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/12.png', alt='')
+                            td Developer
+                            td 
+                              .progress-showcase
+                                .progress.sm-progress-bar.progress-border-tertiary
+                                    .progress-bar(role='progressbar', style='width: 50%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 
+                            td.text-center 
+                              .dropdown.icon-dropdown
+                                button#userdropdown13.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown13')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td
+                              .d-flex.align-items-center
+                                .flex-shrink-0
+                                  svg
+                                    use(href='../assets/svg/icon-sprite.svg#redesign')
+                                .flex-grow-1.ms-2
+                                  a(href="product-page.html")
+                                    h5 Square Dashboard
+                                  p John Elliot
+                            td.project-dot
+                              .d-flex
+                                .flex-shrink-0
+                                  span.bg-tertiary
+                                .flex-grow-1
+                                  h6 Document
+                            td  24 Oct 2024
+                            td.customers.text-center.social-group
+                              ul
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/4.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/2.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/8.png', alt='')
+                            td 
+                              .progress-showcase
+                                .progress.sm-progress-bar.progress-border-warning
+                                    .progress-bar(role='progressbar', style='width: 30%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 
+                            td.text-center
+                              .dropdown.icon-dropdown
+                                button#userdropdown14.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown14')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td
+                              .d-flex.align-items-center
+                                .flex-shrink-0
+                                  svg
+                                    use(href='../assets/svg/icon-sprite.svg#login-dashboard')
+                                .flex-grow-1.ms-2
+                                  a(href="product-page.html")
+                                    h5 Rules Post on Dribble
+                                  p Dana Lemon
+                            td.project-dot
+                              .d-flex 
+                                .flex-shrink-0
+                                  span.bg-primary
+                                .flex-grow-1
+                                  h6 Document
+                            td  12 Aug 2024
+                            td.customers.text-center.social-group
+                              ul
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/14.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/18.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/3.png', alt='')
+                                li.d-inline-block 
+                                    p.bg-light.rounded-circle 5+
+                            td 
+                              .progress-showcase
+                                .progress.sm-progress-bar.progress-border-secondary
+                                    .progress-bar(role='progressbar', style='width: 60%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 
+                            td.text-center
+                              .dropdown.icon-dropdown
+                                button#userdropdown15.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown15')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td
+                              .d-flex.align-items-center
+                                .flex-shrink-0
+                                  svg
+                                    use(href='../assets/svg/icon-sprite.svg#redesign-CRM')
+                                .flex-grow-1.ms-2
+                                  a(href="product-page.html")
+                                    h5 Login & Sign Up UI
+                                  p Anna Catmire
+                            td.project-dot
+                              .d-flex
+                                .flex-shrink-0
+                                  span.bg-secondary
+                                .flex-grow-1
+                                  h6 Animation
+                            td  19 Mar 2024
+                            td.customers.text-center.social-group
+                              ul
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/6.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/18.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/19.png', alt='')
+                            td 
+                              .progress-showcase
+                                .progress.sm-progress-bar.progress-border-primary
+                                    .progress-bar(role='progressbar', style='width: 70%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 
+                            td.text-center
+                              .dropdown.icon-dropdown
+                                button#userdropdown16.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown16')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td
+                              .d-flex.align-items-center
+                                .flex-shrink-0
+                                  svg
+                                    use(href='../assets/svg/icon-sprite.svg#front-endwebsite')
+                                .flex-grow-1.ms-2
+                                  a(href="product-page.html")
+                                    h5 Square dashboard
+                                  p John Elliot
+                            td.project-dot
+                              .d-flex
+                                .flex-shrink-0
+                                  span.bg-tertiary
+                                .flex-grow-1
+                                  h6 Document
+                            td  24 Oct 2024
+                            td.customers.text-center.social-group
+                              ul
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/11.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/12.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/17.png', alt='')
+                            td 
+                              .progress-showcase
+                                .progress.sm-progress-bar.progress-border-tertiary
+                                    .progress-bar(role='progressbar', style='width: 50%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 
+                            td.text-center 
+                              .dropdown.icon-dropdown
+                                button#userdropdown17.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown17')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td
+                              .d-flex.align-items-center
+                                .flex-shrink-0
+                                  svg
+                                    use(href='../assets/svg/icon-sprite.svg#redesign')
+                                .flex-grow-1.ms-2
+                                  a(href="product-page.html")
+                                    h5 Nft website Pages
+                                  p Dana Lemon
+                            td.project-dot
+                              .d-flex
+                                .flex-shrink-0
+                                  span.bg-warning
+                                .flex-grow-1
+                                  h6 Image
+                            td  30 Jun 2024
+                            td.customers.text-center.social-group
+                              ul
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/6.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/7.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/9.png', alt='')
+                                li.d-inline-block 
+                                    p.bg-light.rounded-circle 5+
+                            td 
+                              .progress-showcase
+                                .progress.sm-progress-bar.progress-border-warning
+                                    .progress-bar(role='progressbar', style='width: 40%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 
+                            td.text-center
+                              .dropdown.icon-dropdown
+                                button#userdropdown18.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown18')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td
+                              .d-flex.align-items-center
+                                .flex-shrink-0
+                                  svg
+                                    use(href='../assets/svg/icon-sprite.svg#login-dashboard')
+                                .flex-grow-1.ms-2
+                                  a(href="product-page.html")
+                                    h5 Rules Post on Dribble
+                                  p John Elliot
+                            td.project-dot
+                              .d-flex
+                                .flex-shrink-0
+                                  span.bg-primary
+                                .flex-grow-1  
+                                  h6 Document
+                            td  12 Aug 2024
+                            td.customers.text-center.social-group
+                              ul
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/15.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/2.png', alt='')
+                                li.d-inline-block
+                                  img.img-30.rounded-circle(src='../assets/images/dashboard-2/user/19.png', alt='')
+                            td 
+                              .progress-showcase
+                                .progress.sm-progress-bar.progress-border-secondary
+                                    .progress-bar(role='progressbar', style='width: 20%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 
+                            td.text-center 
+                              .dropdown.icon-dropdown
+                                button#userdropdown19.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown19')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+              .col-xl-3.col-xl-50.col-md-6.proorder-md-7 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Website Design
+                      .dropdown.icon-dropdown
+                        button#userdropdown20.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown20')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.designer-card
+                    div   
+                      .d-flex.align-items-center.gap-2  
+                        .flex-shrink-0
+                          img(src='../assets/images/dashboard-2/user/16.png' alt="user")
+                        .flex-grow-1
+                          a(href="product-page.html")
+                            h5 Square Dashboard
+                          p karson123@gmail.com
+                      .design-button
+                        button.btn.bg-light-primary.font-primary.f-w-500 UX Design
+                        button.btn.bg-light-secondary.font-secondary.f-w-500 3D Deisgn
+                      .ratting-button   
+                        div 
+                          .d-flex.align-items-center.gap-2.mb-0 
+                            .flex-shrink-0
+                              p.f-w-500 12  
+                            .flex-grow-1
+                              span.f-w-500 Issues
+                        div 
+                          .d-flex.align-items-center.gap-2.mb-0  
+                            .flex-shrink-0
+                              p.f-w-500 5 
+                            .flex-grow-1
+                              span.f-w-500 Resolved 
+                        div 
+                          .d-flex.align-items-center.gap-2.mb-0  
+                            .flex-shrink-0
+                              p.f-w-500 7  
+                            .flex-grow-1
+                              span.f-w-500 Comment
+                      h5.f-w-500.pb-2 Task Completed: 6/10
+                      .progress.progress-striped-primary.b-r-2
+                        .progress-bar(role='progressbar', style='width: 50%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+              .col-xl-3.col-xl-50.col-md-6.proorder-md-8 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Social Post Design
+                      .dropdown.icon-dropdown
+                        button#userdropdown21.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown21')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.designer-card
+                    div   
+                      .d-flex.align-items-center.gap-2  
+                        .flex-shrink-0
+                          img(src='../assets/images/dashboard-2/user/18.png' alt="user")
+                        .flex-grow-1
+                          a(href="product-page.html")
+                            h5 Cronin Lewis
+                          p cronin324@gmail.com
+                      .design-button
+                        button.btn.bg-light-primary.font-primary.f-w-500 Illustration
+                        button.btn.bg-light-warning.font-warning.f-w-500 Video Editing
+                      .ratting-button   
+                        div 
+                          .d-flex.align-items-center.gap-2.mb-0  
+                            .flex-shrink-0
+                              p.f-w-500 10  
+                            .flex-grow-1
+                              span.f-w-500 Issues
+                        div 
+                          .d-flex.align-items-center.gap-2.mb-0  
+                            .flex-shrink-0
+                              p.f-w-500 9 
+                            .flex-grow-1
+                              span.f-w-500 Resolved 
+                        div 
+                          .d-flex.align-items-center.gap-2.mb-0  
+                            .flex-shrink-0
+                              p.f-w-500 5  
+                            .flex-grow-1
+                              span.f-w-500 Comment
+                      h5.f-w-500.pb-2 Task Completed: 4/10
+                      .progress.progress-striped-secondary.b-r-2
+                        .progress-bar(role='progressbar', style='width: 40%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+              .col-xl-3.col-xl-50.col-md-6.proorder-md-9 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Podcast Web design
+                      .dropdown.icon-dropdown
+                        button#userdropdown22.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown22')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.designer-card
+                    div   
+                      .d-flex.align-items-center.gap-2  
+                        .flex-shrink-0
+                          img(src='../assets/images/dashboard-2/user/17.png' alt="user")
+                        .flex-grow-1
+                          a(href="product-page.html")
+                            h5 Rau Foster
+                          p raufoster23@gmail.com
+                      .design-button
+                        button.btn.bg-light-tertiary.font-tertiary.f-w-500 2D Design
+                        button.btn.bg-light-secondary.font-secondary.f-w-500 Dribbble Post
+                      .ratting-button   
+                        div 
+                          .d-flex.align-items-center.gap-2.mb-0  
+                            .flex-shrink-0
+                              p.f-w-500 16  
+                            .flex-grow-1
+                              span.f-w-500 Issues
+                        div 
+                          .d-flex.align-items-center.gap-2.mb-0  
+                            .flex-shrink-0
+                              p.f-w-500 10 
+                            .flex-grow-1
+                              span.f-w-500 Resolved 
+                        div 
+                          .d-flex.align-items-center.gap-2.mb-0 
+                            .flex-shrink-0
+                              p.f-w-500 7  
+                            .flex-grow-1
+                              span.f-w-500 Comment
+                      h5.f-w-500.pb-2 Task Completed: 8/10
+                      .progress.progress-striped-warning.b-r-2
+                        .progress-bar(role='progressbar', style='width: 80%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+              .col-xl-3.col-xl-50.col-md-6.proorder-md-10 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Crypto Dashboard
+                      .dropdown.icon-dropdown
+                        button#userdropdown23.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown23')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.designer-card
+                    div   
+                      .d-flex.align-items-center.gap-2  
+                        .flex-shrink-0
+                          img(src='../assets/images/dashboard-2/user/19.png' alt="user")
+                        .flex-grow-1
+                          a(href="product-page.html")
+                            h5 Volkman Melisa
+                          p volkman839@gmail.com
+                      .design-button
+                        button.btn.bg-light-primary.font-primary.f-w-500 Design System
+                        button.btn.bg-light-secondary.font-secondary.f-w-500 Branding
+                      .ratting-button   
+                        div 
+                          .d-flex.align-items-center.gap-2.mb-0  
+                            .flex-shrink-0
+                              p.f-w-500 04  
+                            .flex-grow-1
+                              span.f-w-500 Issues
+                        div 
+                          .d-flex.align-items-center.gap-2.mb-0  
+                            .flex-shrink-0
+                              p.f-w-500 5  
+                            .flex-grow-1
+                              span.f-w-500 Resolved 
+                        div 
+                          .d-flex.align-items-center.gap-2.mb-0 
+                            .flex-shrink-0
+                              p.f-w-500 7  
+                            .flex-grow-1
+                              span.f-w-500 Comment
+                      h5.f-w-500.pb-2 Task Completed: 2/10
+                      .progress.progress-striped-tertiary.b-r-2
+                        .progress-bar(role='progressbar', style='width: 20%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+              .col-xl-3.col-xl-40.col-md-6.proorder-md-11 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Today’s Tasks
+                      .dropdown.icon-dropdown
+                        button#userdropdown24.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown24')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body
+                    ul.task-box 
+                      li.bg-light 
+                        div.d-flex.align-items-center.justify-content-between 
+                          h6.font-primary.f-w-500 NFT illustrarion Package
+                          .dropdown.icon-dropdown
+                            button#userdropdown25.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                              i.icon-more-alt
+                            .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown25')
+                              a.dropdown-item(href='#') Weekly
+                              a.dropdown-item(href='#') Monthly
+                              a.dropdown-item(href='#') Yearly 
+                        .d-flex.align-items-center.gap-2  
+                          .flex-shrink-0
+                            img(src='../assets/images/dashboard-2/user/17.png' alt="user")
+                          .flex-grow-1
+                            p.mb-0 Assigned to
+                            a(href="product-page.html")
+                              h5 Hackett Yessenia 
+                      li.bg-light 
+                        div.d-flex.align-items-center.justify-content-between 
+                          h6.font-secondary.f-w-500 Podcast landing Page 
+                          .dropdown.icon-dropdown
+                            button#userdropdown26.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                              i.icon-more-alt
+                            .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown26')
+                              a.dropdown-item(href='#') Weekly
+                              a.dropdown-item(href='#') Monthly
+                              a.dropdown-item(href='#') Yearly 
+                        .d-flex.align-items-center.gap-2  
+                          .flex-shrink-0
+                            .customers.social-group
+                                ul
+                                  li.d-inline-block
+                                    img.rounded-circle.border-0(src='../assets/images/dashboard-2/user/13.png', alt='')
+                                  li.d-inline-block
+                                    img.rounded-circle(src='../assets/images/dashboard-2/user/14.png', alt='')
+                          .flex-grow-1
+                            p.mb-0 Assigned to
+                            a(href="product-page.html")
+                              h5 schneider.. 
+                      li.bg-light 
+                        div.d-flex.align-items-center.justify-content-between 
+                          h6.font-warning.f-w-500 Delivery Food App
+                          .dropdown.icon-dropdown
+                            button#userdropdown27.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                              i.icon-more-alt
+                            .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown27')
+                              a.dropdown-item(href='#') Weekly
+                              a.dropdown-item(href='#') Monthly
+                              a.dropdown-item(href='#') Yearly 
+                        .d-flex.align-items-center.gap-2  
+                          .flex-shrink-0
+                            img(src='../assets/images/dashboard-2/user/15.png' alt="user")
+                          .flex-grow-1
+                            p.mb-0 Assigned to
+                            a(href="product-page.html")
+                              h5 Mahdi Gholizadeh
+              .col-xl-5.col-xl-70.proorder-md-13 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Running Events
+                      .dropdown.icon-dropdown
+                        button#userdropdown28.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown28')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.rinning-col
+                    .row 
+                      .col-6 
+                        .running-box 
+                          .d-flex.align-items-center.justify-content-between.gap-2  
+                            .flex-grow-1
+                              a(href="product-page.html")
+                                h5 Brooklyn Simmons
+                              p Web Manager 
+                            .flex-shrink-0
+                              .customers.social-group
+                                ul
+                                  li.d-inline-block
+                                    img.rounded-circle(src='../assets/images/dashboard-2/user/1.png', alt='')
+                                  li.d-inline-block
+                                    img.rounded-circle(src='../assets/images/dashboard-2/user/2.png', alt='')
+                                  li.d-inline-block
+                                    img.rounded-circle(src='../assets/images/dashboard-2/user/3.png', alt='')
+                                  li.d-inline-block 
+                                    p.bg-light.rounded-circle 5+
+                          p With Asana, you can bring your teams, work, and apps from everywhere in one tool. Workflows can be modified.
+                          ul.d-flex.align-items-center.gap-3
+                            li.bg-light
+                              h5 $34,930
+                              p Disbursed Budget
+                            li.bg-light
+                              h5 $65,789
+                              p Planned
+                          div 
+                            button.btn.bg-primary.text-white Upgrade Plan
+                            button.btn.bg-secondary.text-white View Project
+                      .col-6.running-events
+                        img(src="../assets/images/dashboard-2/round.png", alt="")
+                        div 
+                          img.running-events-image(src="../assets/images/dashboard-2/events-bg.png", alt="")
+              .col-xl-4.col-xl-100.col-md-6.proorder-md-12 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Online Course Timeline
+                      .dropdown.icon-dropdown
+                        button#userdropdown29.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown29')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.overflow-auto.theme-scrollbar
+                    .timeline-calendar.custom-scrollbar
+                      div#calendar-container(class="custom-calendar")
+                        div#calendar(class="time-line")
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files
+    script. 
+      new WOW().init();

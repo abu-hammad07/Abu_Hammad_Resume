@@ -1,0 +1,498 @@
+- var landing_sticky        = true;
+- var wow                   = true;
+- var animate               = true;
+- var tooltip               = true;
+- var page_wow              = true;
+- var jarallax_libs         = true;
+- var landing_icon          = true;
+- var slick                 = true;
+- var landing_slider        = true;
+- var landing_font          = true;
+doctype html
+html(lang='en')
+  include ../../components/landing-header
+  body.landing-page
+    include ../../components/taptop
+    // page-wrapper Start
+    div.landing-page
+      // Page Body Start            
+      .landing-home
+        span.cursor
+          span.cursor-move-inner
+            span.cursor-inner
+          span.cursor-move-outer
+            span.cursor-outer
+        .paginacontainer
+          .progress-wrap
+            svg.progress-circle.svg-content(width='100%' height='100%' viewbox='-1 -1 102 102')
+              path(d='M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98')
+
+        .container-fluid
+          .sticky-header
+            header                        
+              nav#sidebar-menu.navbar.navbar-b.navbar-dark.navbar-trans.navbar-expand-xl.fixed-top.nav-padding
+                a.navbar-brand.p-0(href='#')
+                  img.img-fluid(src='../assets/images/landing/landing_logo.png', alt='')
+                button.navbar-toggler.navabr_btn-set.custom_nav(type='button', data-bs-toggle='collapse', data-bs-target='#navbarDefault', aria-controls='navbarDefault', aria-expanded='false', aria-label='Toggle navigation')
+                  span
+                  span
+                  span
+                #navbarDefault.navbar-collapse.justify-content-center.collapse.hidenav(style='')
+                  ul.navbar-nav.navbar_nav_modify#scroll-spy
+                    li.nav-item
+                      a.nav-link(href='#home') Home
+                    li.nav-item
+                      a.nav-link(href='#applications') Applications
+                    li.nav-item
+                      a.nav-link(href='#frameworks') Frameworks
+                    li.nav-item 
+                      a.nav-link(href='#feature') Core Feature
+                    li.nav-item
+                      a.nav-link(href='https://docs.pixelstrap.net/mofi/document/' target="_blank") Documentation
+                    li.nav-item
+                      a.nav-link(href="https://docs.google.com/forms/d/e/1FAIpQLSe6hKUXw_By-pg7yabL0FxoTM02ZPTxoXy8PE3yboRuUCuyeA/viewform" target="_blank") Hire Us
+                .buy-btn
+                  a.nav-link.js-scroll(href='https://themeforest.net/user/pixelstrap/portfolio' target="_blank") Purchase Now
+        .home-bg#home
+          ul 
+            li 
+              img(src="../assets/images/landing/home/4.png", alt="")
+            li 
+              img(src="../assets/images/landing/home/5.png", alt="")
+            li 
+              img(src="../assets/images/landing/home/6.png", alt="")
+            li 
+              img(src="../assets/images/landing/home/7.png", alt="")
+            li 
+              img(src="../assets/images/landing/home/8.png", alt="")
+            li 
+              img(src="../assets/images/landing/home/9.png", alt="")
+          .row.align-items-center.justify-content-center
+            .col-lg-6.col-md-7
+              .home-text
+                .main-title
+                  .d-flex.align-items-center.gap-2
+                    .flex-shrink-0
+                      img(src='../assets/images/landing/icon/Rocket.png' alt="")
+                    .flex-grow-1
+                      p.m-0 Kick Start Your Project Using
+                h2 Mofi - Multipurpose Bootstrap Admin
+                  span Dashboard  
+                  | Template
+                  img.line-text(src='../assets/images/landing/home/line.png' alt="")
+                p Mofi is Perfect Admin template for any business. it has all features and modules to create your amazing C-panel. this template for selling Default, Ecommerce etc......
+                .docutment-button  
+                  a.btn.bg-warning(href="index.html" target="_blank") 
+                    img(src="../assets/images/landing/home/html.png", alt="")
+                  a.btn.bg-primary.text-white(href="https://docs.pixelstrap.net/mofi/document/" target="_blank") 
+                    svg
+                      use(href='../assets/svg/icon-sprite.svg#fill-layout')
+                    | Documentation
+            .col-lg-6.col-md-5
+              .home-screen
+                .screen-1
+                  img.img-fluid(src="../assets/images/landing/home/1.png", alt="")
+                .screen-2
+                  img.img-fluid(src="../assets/images/landing/home/2.png", alt="")
+                .screen-3
+                  img.img-fluid(src="../assets/images/landing/home/3.png", alt="") 
+      section.section-space.mofi-demo-section.layout.overflow-hidden
+        .container-fluid
+          .title
+            h5.sub-title Popular & Sleek Design Assortment
+            h2 Creative Admin layouts
+            p We comes up with most creative and useful main general Purpose Dashboard Template
+        .container-fluid.fluid-space
+          .row.demo-imgs.g-xl-5.g-sm-3
+            .col-xl-3.col-md-6.demo-content.fadeInUp.wow
+              .mofi-demo-img
+                .overflow-hidden
+                  a(href="index.html" target="_blank")
+                    img.img-fluid(src="../assets/images/landing/layout-images/1.jpg" alt="default") 
+              .title-wrapper
+                  h3.theme-name.mb-0 
+                    a(href="index.html" target="_blank") Default dashboard 
+            .col-xl-3.col-md-6.demo-content.fadeInUp.wow
+              .mofi-demo-img
+                .overflow-hidden
+                  a(href="dashboard-02.html" target="_blank")
+                    img.img-fluid(src="../assets/images/landing/layout-images/2.jpg" alt="project")
+              .title-wrapper
+                  h3.theme-name.mb-0 
+                    a(href="dashboard-02.html" target="_blank") Project dashboard 
+            .col-xl-3.col-md-6.demo-content.fadeInUp.wow
+              .mofi-demo-img
+                .overflow-hidden
+                  a(href="dashboard-03.html" target="_blank")
+                    img.img-fluid(src="../assets/images/landing/layout-images/3.jpg" alt="E-Commerce")
+              .title-wrapper
+                  h3.theme-name.mb-0 
+                    a(href="dashboard-03.html" target="_blank") E-Commerce dashboard 
+            .col-xl-3.col-md-6.demo-content.fadeInUp.wow
+              .mofi-demo-img
+                .overflow-hidden
+                  a(href="dashboard-04.html" target="_blank")
+                    img.img-fluid(src="../assets/images/landing/layout-images/4.jpg" alt="Education")
+              .title-wrapper
+                  h3.theme-name.mb-0 
+                    a(href="dashboard-04.html" target="_blank") Education dashboard 
+      section#applications.section-space.app-section.overflow-hidden.bg-white
+        .container-fluid
+          .title
+            h5.sub-title Trending & Clean Design Collection
+            h2 Fast & powerful Applications 
+            p Mofi admin template provides 3 workable application and designs of other applications.   
+        .container.demo-section
+          .row.demo-block
+            .col-lg-4.col-sm-6.wow.pulse
+              .demo-box
+                .img-wrraper
+                  a(href="projects.html" target="_blank")
+                    img.img-fluid(src="../assets/images/landing/application/10.jpg" alt="")
+                .demo-detail
+                  .demo-title
+                    a.btn.btn-primary(href="projects.html" target="_blank") Project
+            .col-lg-4.col-sm-6.wow.pulse
+              .demo-box
+                .img-wrraper
+                  a(href="kanban.html" target="_blank")
+                    img.img-fluid(src="../assets/images/landing/application/8.jpg" alt="")
+                .demo-detail
+                  .demo-title
+                    a.btn.btn-primary(href="kanban.html" target="_blank") Kanban
+            .col-lg-4.col-sm-6.wow.pulse
+              .demo-box
+                .img-wrraper
+                  a(href="social-app.html" target="_blank")
+                    img.img-fluid(src="../assets/images/landing/application/1.jpg" alt="")
+                .demo-detail
+                  .demo-title
+                    a.btn.btn-primary(href="social-app.html" target="_blank") Social App
+            .col-lg-4.col-sm-6.wow.pulse
+              .demo-box
+                .img-wrraper
+                  a(href='to-do.html' target="_blank")
+                    img.img-fluid(src="../assets/images/landing/application/5.jpg" alt="")
+                .demo-detail
+                  .demo-title
+                    a.btn.btn-primary(href="to-do.html" target="_blank") To-Do
+            .col-lg-4.col-sm-6.wow.pulse
+              .demo-box
+                .img-wrraper
+                  a(href="knowledgebase.html" target="_blank")
+                    img.img-fluid(src="../assets/images/landing/application/2.jpg" alt="")
+                .demo-detail
+                  .demo-title
+                    a.btn.btn-primary(href="knowledgebase.html" target="_blank") Knowledgebase
+            .col-lg-4.col-sm-6.wow.pulse
+              .demo-box
+                .img-wrraper
+                  a(href="file-manager.html" target="_blank")
+                    img.img-fluid(src="../assets/images/landing/application/9.jpg" alt="")
+                .demo-detail
+                  .demo-title
+                    a.btn.btn-primary(href="file-manager.html" target="_blank") File Manager
+            .col-lg-4.col-sm-6.wow.pulse
+              .demo-box
+                .img-wrraper
+                  a(href="product.html" target="_blank")
+                    img.img-fluid(src="../assets/images/landing/application/7.jpg" alt="")
+                .demo-detail
+                  .demo-title
+                    a.btn.btn-primary(href="product.html" target="_blank") Ecommerce
+            .col-lg-4.col-sm-6.wow.pulse
+              .demo-box
+                .img-wrraper
+                  a(href="contacts.html" target="_blank")
+                    img.img-fluid(src="../assets/images/landing/application/11.jpg" alt="")
+                .demo-detail
+                  .demo-title
+                    a.btn.btn-primary(href="contacts.html" target="_blank") Contacts
+            .col-lg-4.col-sm-6.wow.pulse
+              .demo-box
+                .img-wrraper
+                  a(href="private-chat.html" target="_blank") 
+                    img.img-fluid(src="../assets/images/landing/application/12.jpg" alt="")
+                .demo-detail    
+                  .demo-title    
+                    a.btn.btn-primary(href="private-chat.html" target="_blank") Chat
+            .col-lg-4.col-sm-6.wow.pulse
+              .demo-box
+                .img-wrraper
+                  a(href='support-ticket.html' target="_blank")
+                    img.img-fluid(src="../assets/images/landing/application/3.jpg" alt="")
+                .demo-detail
+                  .demo-title
+                    a.btn.btn-primary(href="support-ticket.html" target="_blank") Support Ticket
+            .col-lg-4.col-sm-6.wow.pulse
+              .demo-box
+                .img-wrraper
+                  a(href="letter-box.html" target="_blank")
+                    img.img-fluid(src="../assets/images/landing/application/4.jpg" alt="")
+                .demo-detail
+                  .demo-title
+                    a.btn.btn-primary(href="letter-box.html" target="_blank") Email Application
+            .col-lg-4.col-sm-6.wow.pulse
+              .demo-box
+                .img-wrraper
+                  a(href="job-cards-view.html" target="_blank")
+                    img.img-fluid(src="../assets/images/landing/application/6.jpg" alt="")
+                .demo-detail
+                  .demo-title
+                    a.btn.btn-primary(href="job-cards-view.html" target="_blank") Job Search  
+      section#frameworks.section-space.framework-section.overflow-hidden
+        .container
+          .title
+            h5.sub-title 10+ frameworks available
+            h2 Latest Evolutions in Different Frameworks
+            p Various Editions of the Mofi Admin Template Available in HTML
+        .container
+            .col-sm-12 
+              #myTabContent.tab-content
+                #html.tab-pane.fade.show.active(role='tabpanel')
+                  .row.g-sm-5.gy-4
+                    .col-xxl-4.col-md-6.slideInUp.wow
+                      .framework-box
+                        .frame-icon 
+                          img(src="../assets/images/landing/icon/html/sass.png", alt="")
+                        .frame-details
+                          h5 SCSS
+                          p.f-light The comprehensive CSS facilitates easy development and functionality using variables, selectors, and nesting
+                    .col-xxl-4.col-md-6.slideInUp.wow 
+                      .framework-box
+                        .frame-icon 
+                          img(src="../assets/images/landing/icon/html/bootstrap.png", alt="")
+                        .frame-details
+                          h5 Bootstrap 5
+                          p.f-light Its design aims to produce mobile-friendly responsive front-end web development.
+                    .col-xxl-4.col-md-6.slideInUp.wow
+                      .framework-box
+                        .frame-icon 
+                          img(src="../assets/images/landing/icon/html/pug.png", alt="")
+                        .frame-details
+                          h5 PUG
+                          p.f-light Pug.js empowers dynamic data generation and flexible HTML coding, enhancing overall efficiency
+                    .col-xxl-4.col-md-6.slideInUp.wow
+                      .framework-box
+                        .frame-icon 
+                          img(src="../assets/images/landing/icon/html/npm.png", alt="")
+                        .frame-details
+                          h5 NPM
+                          p.f-light Access Node.js source code or a pre-built installer for your platform, initiating development right away.
+                    .col-xxl-4.col-md-6.slideInUp.wow 
+                      .framework-box
+                        .frame-icon 
+                          img(src="../assets/images/landing/icon/html/gulp.png", alt="")
+                        .frame-details
+                          h5 Gulp
+                          p.f-light This is an incredibly handy tool that simplifies code compilation, particularly for backend programming.
+                    .col-xxl-4.col-md-6.slideInUp.wow 
+                      .framework-box
+                        .frame-icon 
+                          img(src="../assets/images/landing/icon/html/web-pack.png", alt="")
+                        .frame-details
+                          h5 Web pack
+                          p.f-light It is module bundler for JS applications and does not require configuration file to bundle project.
+                    .col-xxl-4.col-md-6.slideInUp.wow
+                      .framework-box
+                        .frame-icon 
+                          img(src="../assets/images/landing/icon/html/forms.png", alt="")
+                        .frame-details
+                          h5 Form
+                          p.f-light For streamlined form access and adjustment, the fields and labels are logically organized.
+                    .col-xxl-4.col-md-6.slideInUp.wow 
+                      .framework-box
+                        .frame-icon 
+                          img(src="../assets/images/landing/icon/html/6.png", alt="")
+                        .frame-details
+                          h5 Apex chart
+                          p.f-light It additionally possesses distinctive attributes that genuinely enhance data interactivity.
+                    .col-xxl-4.col-md-6.slideInUp.wow 
+                      .framework-box
+                        .frame-icon 
+                          img(src="../assets/images/landing/icon/html/7.png", alt="")
+                        .frame-details
+                          h5 Chart.js
+                          p.f-light It simplifies data visualization, presenting 8 diverse chart types, all responsive.
+                    .col-xxl-4.col-md-6.slideInUp.wow 
+                      .framework-box
+                        .frame-icon 
+                          img(src="../assets/images/landing/icon/html/8.png", alt="")
+                        .frame-details
+                          h5 Chartist
+                          p.f-lightChartist provides designers and developers the opportunity to create charts with cross-browser compatibility.
+                    .col-xxl-4.col-md-6.slideInUp.wow 
+                      .framework-box
+                        .frame-icon 
+                          img(src="../assets/images/landing/icon/html/apps.png", alt="")
+                        .frame-details
+                          h5 Apps
+                          p.f-light Aid you in constructing highly user-friendly, dynamic websites and apps with innovative designs.
+                    .col-xxl-4.col-md-6.slideInUp.wow 
+                      .framework-box
+                        .frame-icon 
+                          img(src="../assets/images/landing/icon/html/10.png", alt="")
+                        .frame-details.slideInUp.wow
+                          h5 Gallery
+                          p.f-light Settings allow animated thumbnails. Zoom and Fullscreen options are available.
+                    .col-xxl-4.col-md-6.slideInUp.wow 
+                      .framework-box
+                        .frame-icon 
+                          img(src="../assets/images/landing/icon/html/iconset.png", alt="")
+                        .frame-details
+                          h5 Icons
+                          p.f-light We offer a selection of 4 & 5 unique icon styles, including popular sets like Font Awesome and Feather icons.
+                    .col-xxl-4.col-md-6.slideInUp.wow 
+                      .framework-box
+                        .frame-icon 
+                          img(src="../assets/images/landing/icon/html/layout.png", alt="")
+                        .frame-details.slideInUp.wow
+                          h5 Layout
+                          p.f-light Ones that effortlessly adapt to varied screen sizes and responsive layouts for your business.
+                    .col-xxl-4.col-md-6.slideInUp.wow
+                      .framework-box
+                        .frame-icon 
+                          img(src="../assets/images/landing/icon/html/uikits.png", alt="")
+                        .frame-details
+                          h5 Ui kits
+                          p.f-light We offer an array of UI kits for effortless design and reusable components creation.
+      section.section-space.boxed.customer-support.overflow-hidden 
+        .container 
+          .col-xxl-12
+            .row.customer-wrap
+              .col-md-3.col-6.zoomIn.wow
+                .customer-wrapper
+                  .customer-box 
+                    img(src="../assets/images/landing/customers/1.svg", alt="")
+                    h6.f-light.mb-0.mt-2 178+ creative pages
+              .col-md-3.col-6.zoomIn.wow
+                .customer-wrapper
+                  .customer-box 
+                    img(src="../assets/images/landing/customers/2.svg", alt="")
+                    h6.f-light.mb-0.mt-2 Email templates
+              .col-md-3.col-6.zoomIn.wow
+                .customer-wrapper
+                  .customer-box 
+                    img(src="../assets/images/landing/customers/3.svg", alt="")
+                    h6.f-light.mb-0.mt-2 Super easy to deploy
+              .col-md-3.col-6.zoomIn.wow
+                .customer-wrapper
+                  .customer-box 
+                    img(src="../assets/images/landing/customers/4.svg", alt="")
+                    h6.f-light.mb-0.mt-2 Fast Customer 24*7Support
+              .line.zoomIn.wow  
+                img.img-fluid(src="../assets/images/landing/customers/line.png", alt="")
+      section#feature.section-space.feature-section.overflow-hidden 
+        .container-fluid
+          .title
+            h5.sub-title Why you choose Mofi
+            h2 Presenting our Fundamental Attributes
+            p Discover myriad incredible features in Mofi admin template, with responsive cleanliness. Utilizing SCSS 7-1 tire folder structure.
+        .container
+          .row.g-4 
+            .col-xxl-3.col-lg-4.col-sm-6.slideInUp.wow 
+              .feature-box
+                .feature-icon 
+                  img(src="../assets/images/landing/feature-icon/1.svg", alt="")
+                h5 Quality & Clean Code 
+                p.mb-0.f-light Master clean code for amazing team and software excellence.
+            .col-xxl-3.col-lg-4.col-sm-6.slideInUp.wow 
+              .feature-box
+                .feature-icon 
+                  img.img-50(src="../assets/images/landing/feature-icon/2.svg", alt="")
+                h5 Bootstrap v5.3.2
+                p.mb-0.f-lightCSS framework with responsive grids, components.
+            .col-xxl-3.col-lg-4.col-sm-6.slideInUp.wow  
+              .feature-box
+                .feature-icon 
+                  img(src="../assets/images/landing/feature-icon/3.svg", alt="")
+                h5 Handmade Icons
+                p.mb-0.f-light Create Icon System using SVG Sprites in Mofi Admin.
+            .col-xxl-3.col-lg-4.col-sm-6.slideInUp.wow  
+              .feature-box
+                .feature-icon 
+                  img(src="../assets/images/landing/feature-icon/4.svg", alt="")
+                h5 Limitless Components
+                p.mb-0.f-light Vast web design layouts and UI kits in limitless collection.
+            .col-xxl-3.col-lg-4.col-sm-6.slideInUp.wow  
+              .feature-box
+                .feature-icon 
+                  img(src="../assets/images/landing/feature-icon/5.svg", alt="")
+                h5 Easy Customizable
+                p.mb-0.f-light  Customize layout, settings, and content with easy steps.
+            .col-xxl-3.col-lg-4.col-sm-6.slideInUp.wow  
+              .feature-box
+                .feature-icon 
+                  img(src="../assets/images/landing/feature-icon/6.svg", alt="")
+                h5 Responsive & User-Friendly
+                p.mb-0.f-light Use Responsive Design to Connect with all Device Users. 
+            .col-xxl-3.col-lg-4.col-sm-6.slideInUp.wow  
+              .feature-box
+                .feature-icon 
+                  img(src="../assets/images/landing/feature-icon/7.svg", alt="")
+                h5 Premium Support
+                p.mb-0.f-light Constant support create a ticket for any faced issues.
+            .col-xxl-3.col-lg-4.col-sm-6.slideInUp.wow  
+              .feature-box
+                .feature-icon 
+                  img(src="../assets/images/landing/feature-icon/8.svg", alt="")
+                h5 Colors Options
+                p.mb-0.f-light alter others via SCSS variables effortlessly.
+      section.faq-section.section-space#faq.overflow-hidden
+        .container-fluid
+          .title
+            h5.sub-title Popular & Sleek Design Assortment
+            h2 Opt for Sandbox, economize time and funds.
+            p We comes up with most creative and useful main general Purpose Dashboard Template
+        .container
+          .row.align-items-center.justify-content-center
+            .col-lg-4.col-12
+              .d-flex
+                .flex-shrink-0
+                  img.img-30.img-fluid(src="../assets/images/landing/faq/puzzle.png" alt="Education")
+                .flex-grow-1
+                  h3 Color and Font Variety Choices
+                  p.mb-0 Effortlessly modify colors and fonts, or select from available choices. 
+              .d-flex
+                .flex-shrink-0
+                  img.img-40.img-fluid(src="../assets/images/landing/faq/pen-tool.png" alt="Education")
+                .flex-grow-1
+                  h3 Impressive Attributes & Components
+                  p.mb-0 Loaded with captivating features and elements to craft attractive pages.
+
+              .d-flex
+                .flex-shrink-0
+                  img.img-30.img-fluid(src="../assets/images/landing/faq/pen-tool1.png" alt="Education")
+                .flex-grow-1
+                  h3 Contemporary Portfolio Arrangements
+                  p.mb-0 Easily generate and uphold a visually striking and influential portfolio.
+            .col-lg-8.col-12 
+              .faq-img 
+                img.img-fluid(src="../assets/images/landing/mi1.png" alt="faq")
+                .faq-bg   
+                  img.img-fluid(src="../assets/images/landing/faq/1.png" alt="") 
+      //footer start
+      footer#footer.landing-footer.section-space.light-bg
+        .container
+          .row
+            .col-12
+              .footer-contain
+                img.img-fluid(src="../assets/images/logo/logo_dark.png" alt="")
+                h2 If you like our products, Please Rate Us
+                ul.star-rate
+                  li
+                    i.fa.fa-star.font-warning
+                  li
+                    i.fa.fa-star.font-warning
+                  li
+                    i.fa.fa-star.font-warning
+                  li
+                    i.fa.fa-star.font-warning
+                  li
+                    i.fa.fa-star.font-warning
+                .btn-footer
+                  a(class="btn btn-lg btn-primary" target="_blank" href="index.html" data-bs-original-title="" title="") Check Now
+                  a(class="btn btn-lg btn-secondary" target="_blank" href="https://themeforest.net/user/pixelstrap/portfolio" data-bs-original-title="" title="") Buy Now
+                  a(class="btn btn-lg btn-success" target="_blank" href="https://themeforest.net/user/pixelstrap/portfolio" data-bs-original-title="" title="") Our Portfolio
+      //footer end
+    include ../../components/landing-footer-files

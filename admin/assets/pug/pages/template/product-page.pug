@@ -1,0 +1,239 @@
+- var page_Title = 'Product Page';
+- var theme_customizer      = true;
+- var owlcarousel           = true;
+- var rating                = true;
+- var ecommerce             = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['ECommerce','Product Page'],'Product Page')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            div
+              .row.product-page-main.p-0
+                .col-xxl-4.col-md-6.box-col-6
+                  .card
+                    .card-body
+                      #sync1.product-slider.owl-carousel.owl-theme
+                        .item
+                          img(src='../assets/images/ecommerce/01.jpg', alt='')
+                        .item
+                          img(src='../assets/images/ecommerce/02.jpg', alt='')
+                        .item
+                          img(src='../assets/images/ecommerce/03.jpg', alt='')
+                        .item
+                          img(src='../assets/images/ecommerce/04.jpg', alt='')
+                        .item
+                          img(src='../assets/images/ecommerce/05.jpg', alt='')
+                        .item
+                          img(src='../assets/images/ecommerce/06.jpg', alt='')
+                        .item
+                          img(src='../assets/images/ecommerce/07.jpg', alt='')
+                        .item
+                          img(src='../assets/images/ecommerce/08.jpg', alt='')
+                      #sync2.owl-carousel.owl-theme
+                        .item
+                          img(src='../assets/images/ecommerce/01.jpg', alt='')
+                        .item
+                          img(src='../assets/images/ecommerce/02.jpg', alt='')
+                        .item
+                          img(src='../assets/images/ecommerce/03.jpg', alt='')
+                        .item
+                          img(src='../assets/images/ecommerce/04.jpg', alt='')
+                        .item
+                          img(src='../assets/images/ecommerce/05.jpg', alt='')
+                        .item
+                          img(src='../assets/images/ecommerce/06.jpg', alt='')
+                        .item
+                          img(src='../assets/images/ecommerce/07.jpg', alt='')
+                        .item
+                          img(src='../assets/images/ecommerce/08.jpg', alt='')
+                .col-xxl-5.box-col-6.order-xxl-0.order-1
+                  .card
+                    .card-body
+                      .product-page-details
+                        h3.f-w-600 Women Red Top
+                      .product-price
+                        | $26.00  
+                        del $350.00 
+                      ul.product-color
+                        li.bg-primary
+                        li.bg-secondary
+                        li.bg-success
+                        li.bg-info
+                        li.bg-warning
+
+                      hr
+                      p
+                        | Rock Paper Scissors Various Dots Half Sleeves Girl’s Regular Fit T-Shirt I 100% Cotton T Shirt with Half Sleeve Round Neck I Regular Wear Solid Kids Tees and Black Sleeve.
+
+                      hr
+
+                      div
+                        table.product-page-width
+                          tbody
+                            tr
+                              td 
+                                b Brand &nbsp;&nbsp;&nbsp;:
+                              td Pixelstrap
+                            tr
+                              td 
+                                b Availability &nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;
+                              td.txt-success In stock
+                            tr
+                              td 
+                                b Seller &nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;
+                              td ABC
+                            tr
+                              td 
+                                b Fabric &nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;
+                              td Cotton
+                      hr
+                      .row
+                        .col-md-4
+                          h5.f-w-600.product-title share it
+                        .col-md-8
+                          .product-icon
+                            ul.product-social
+                              li.d-inline-block
+                                a(href='https://www.facebook.com/' target="_blank")
+                                  i.fa.fa-facebook
+                              li.d-inline-block
+                                a(href='https://accounts.google.com/' target="_blank")
+                                  i.fa.fa-google-plus
+                              li.d-inline-block
+                                a(href='https://twitter.com/' target="_blank")
+                                  i.fa.fa-twitter
+                              li.d-inline-block
+                                a(href='https://www.instagram.com/' target="_blank")
+                                  i.fa.fa-instagram
+                              li.d-inline-block
+                                a(href='https://rss.app/' target="_blank")
+                                  i.fa.fa-rss
+                            form.d-inline-block.f-right
+                      hr
+                      .row
+                        .col-md-4
+                          h5.f-w-600.product-title Rate Now
+                        .col-md-8
+                          .d-flex
+                            select#u-rating-fontawesome(name='rating', autocomplete='off')
+                              option(value='1') 1
+                              option(value='2') 2
+                              option(value='3') 3
+                              option(value='4') 4
+                              option(value='5') 5
+                            span.ms-1 (250 review)
+                      hr
+                      .m-t-15.btn-showcase
+                        a.btn.btn-primary(href="cart.html", title='') 
+                          i.fa.fa-shopping-basket.me-1
+                          | Add To Cart
+                        a.btn.btn-success(href="checkout.html", title='') 
+                          i.fa.fa-shopping-cart.me-1
+                          | Buy Now
+                        a.btn.btn-secondary(href="list-wish.html") 
+                          i.fa.fa-heart.me-1
+                          | Add To WishList
+                .col-xxl-3.col-md-6.box-col-12
+                  .card
+                    .card-body
+                      // side-bar colleps block stat
+                      .filter-block
+                        h4 Brand
+                        ul
+                          li Clothing
+                          li Bags
+                          li Footwear
+                          li Watches
+                          li ACCESSORIES
+                  .card
+                    .card-body
+                      .collection-filter-block
+                        ul.pro-services
+                          li
+                            .d-flex
+                              i(data-feather='truck')
+                              .flex-grow-1
+                                h5 Free Shipping                                    
+                                p Free Shipping World Wide
+                          li
+                            .d-flex
+                              i(data-feather='clock')
+                              .flex-grow-1
+                                h5 24 X 7 Service                                    
+                                p Online Service For New Customer
+                          li
+                            .d-flex
+                              i(data-feather='gift')
+                              .flex-grow-1
+                                h5 Festival Offer                                 
+                                p New Online Special Festival
+                          li
+                            .d-flex
+                              i(data-feather='credit-card')
+                              .flex-grow-1
+                                h5 Online Payment                                  
+                                p Contrary To Popular Belief.                                   
+
+                    // silde-bar colleps block end here
+
+
+            .card
+              .row.product-page-main
+                .col-sm-12
+                  ul#top-tab.nav.nav-tabs.border-tab.nav-primary.mb-0(role='tablist')
+                    li.nav-item
+                      a#top-home-tab.nav-link.active(data-bs-toggle='tab', href='#top-home', role='tab', aria-controls='top-home', aria-selected='false')
+                        | Febric
+                      .material-border
+                    li.nav-item
+                      a#profile-top-tab.nav-link(data-bs-toggle='tab', href='#top-profile', role='tab', aria-controls='top-profile', aria-selected='false') Video
+                      .material-border
+                    li.nav-item
+                      a#contact-top-tab.nav-link(data-bs-toggle='tab', href='#top-contact', role='tab', aria-controls='top-contact', aria-selected='true')
+                        | Details
+                      .material-border
+                    li.nav-item
+                      a#brand-top-tab.nav-link(data-bs-toggle='tab', href='#top-brand', role='tab', aria-controls='top-brand', aria-selected='true')
+                        | Brand
+                      .material-border
+                  #top-tabContent.tab-content
+                    #top-home.tab-pane.fade.active.show(role='tabpanel', aria-labelledby='top-home-tab')
+                      p.mb-0.m-t-20
+                        | Fabric is a substance made of fibres that have been knitted, woven, or otherwise joined to form a flexible, durable, and multipurpose substance used for clothing and a variety of other purposes. Natural fibres, synthetic fibres, or a combination of both can be used to make fabrics."
+                      p.mb-0.m-t-20
+                        | The cotton plant's seed bag is the source of cotton, a natural fibre. It is a popular material for daily wear including t-shirts, shirts, dresses, and undergarments since it is soft, breathable, and comfy.Make sure the video is well-produced and has excellent graphics. To grab the audience's attention, use captivating pictures and original angles.
+                    #top-profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-top-tab')
+                      p.mb-0.m-t-20
+                        | A product video's main objective is to illustrate the attributes and functionality of the item. Demonstrate the product in use while emphasising how it satisfies a need or an issue.Include client feedback or testimonials in the video, where appropriate. Genuine customer endorsements may increase credibility and trust.
+                    #top-contact.tab-pane.fade(role='tabpanel', aria-labelledby='contact-top-tab')
+                      p.mb-0.m-t-20
+                        | At the conclusion of the video, include a strong and obvious call to action that instructs viewers on what actions to take next, such as visiting a website, making a purchase, or signing up for a newsletter.
+                      p.mb-0.m-t-20 
+                        | It might be difficult to create new material. While attempting to express oneself artistically, there are numerous factors to consider, including analytics and video quality. Since content creation tools are intended to make the process of creating new material easier, they may relieve some of the headache and lessen your workload.
+                    #top-brand.tab-pane.fade(role='tabpanel', aria-labelledby='brand-top-tab')
+                      p.mb-0.m-t-20
+                        | Pick audio and background music that supports the message of the video. Ensure that the audio is crystal clear and improves the viewing experience.
+                      p.mb-0.m-t-20
+                        | For patients to comprehend and recognise these medications for optimal usage, established/mature brands need a certain level of market familiarity, illness education, and patient engagement with HCPs. During the pandemic, as these companies' income profiles continue to worsen, so do the attention and funding they receive and the already patchy brand recognition they have in the healthcare ecosystem.
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

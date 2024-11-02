@@ -1,0 +1,91 @@
+/**=====================
+  5.2 Grid CSS Start
+==========================**/
+.grid-showcase {
+  margin-bottom: -10px;
+
+  span,
+  .grid-wrapper {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: var(--light-background);
+  }
+}
+
+.grid-align {
+  margin-bottom: -16px;
+
+  .row {
+    padding: 15px 0;
+    min-height: 7rem;
+    margin-bottom: 16px;
+    background-color: var(--light-background);
+  }
+}
+
+.grid-vertical {
+  min-height: 150px;
+  padding: 10px;
+  color: $black;
+  background-color: var(--light-background);
+}
+
+table {
+  &.table-bordered {
+    thead {
+      tr {
+        th {
+          p {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.grid-footer {
+  table {
+    tbody {
+      tr {
+        color: $dark-color;
+      }
+    }
+  }
+}
+
+.flex-behaviors {
+  div {
+    background-color: var(--light-background);
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+  }
+}
+
+.h,
+.v,
+.r-c,
+.no {
+  &-gutter {
+    .row {
+
+      [class*='col-'],
+      [class*='col-sm-'],
+      [class*='col-md-'],
+      .col {
+        div {
+          background-color: var(--light-background);
+        }
+      }
+    }
+  }
+}
+
+/**=====================
+    5.2 Grid CSS Ends
+==========================**/

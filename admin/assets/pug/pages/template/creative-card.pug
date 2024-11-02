@@ -1,0 +1,222 @@
+- var page_Title = 'Creative-card';
+- var theme_customizer      = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+- var height_equal          = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Bonus Ui','Creative Card'],'Creative Card')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row.effective-card
+              .col-xxl-3.col-sm-6.box-col-4.xl-4
+                .card.common-hover
+                  .card-body
+                    a.effect-card(href='#!')
+                      div.common-box1.common-align
+                        i.flex-shrink-0(data-feather='plus-square')
+                        h4.text-truncate Add the title of the card
+                      p.mb-0 This is an example card for you to use. you are able to include subtitles in your according.
+                      .go-corner
+                        .go-arrow
+              .col-xxl-6.col-sm-6.box-col-4.xl-4
+                .card.common-hover
+                  .card-body 
+                    .creative-wrapper
+                      img.img-fluid(src="../assets/images/other-images/mountain.jpg", alt="background image")
+                      .creative-info.w-100
+                        h4.text-white.text-truncate Add the title of the card
+                        p This is an example card for you to use. you are able to include subtitles in your according.
+              .col-xxl-3.box-col-4.xl-4
+                .card.common-hover
+                  .card-body
+                    .overlay-card
+                      .overlay
+                        .overlay-box
+                        .overlay-box.overlay-heading
+                          h4.text-white.text-truncate Add the title of the card
+                          hr
+                        .overlay-box.overlay-subtitle
+                          p.overlay-pera This is an example card for you to use. you are able to include subtitles in your according.
+              .col-12.col-md-6
+                .card.common-hover
+                  .card-header.border-l-primary
+                    h4 Border Left
+                    p.mt-1.f-m-light
+                      | Use the class of
+                      code .border-l-* 
+                      | for left border.
+                  .card-body
+                    p.lh-base
+                      | You can design your creative card by taking only the 
+                      strong border-l-primary 
+                      |  class.
+                      | If you want to use other colors like this: 
+                      strong border-l-*
+                      br
+                      strong Visit Us: 
+                      | 	2600 Hollywood Blvd,Florida, United States-	33020
+                      br
+                      strong Mail Us:
+                      |   contact@us@gmail.com
+                      br
+                      strong Contact Number: 
+                      |   (954) 357-7760
+              .col-12.col-md-6
+                .card.common-hover
+                  .card-header.border-r-secondary
+                    h4 Border Right
+                    p.mt-1.f-m-light
+                      | Use the class of
+                      code .b-r-* 
+                      | for right border.
+                  .card-body
+                    p
+                      | You can design your creative card by taking only the 
+                      strong border-r-secondary
+                      |  class.
+                      | If you want to use other colors like this: 
+                      strong border-r-*
+                    form
+                      label.form-label(for='exampleFormControlInput1') Email address
+                      input#exampleFormControlInput1.form-control(type='email' placeholder='youremail@gmail.com')
+              .col-12.col-md-6
+                .card.common-hover
+                  .card-header.border-t-danger
+                    h4 Border Top
+                    p.mt-1.f-m-light
+                      | Use the class of
+                      code .border-t-* 
+                      | for top border.
+                  .card-body
+                    p By using the border-color, we can give the border in the background direction in a creative way.
+                      |  You can design your creative card by taking only the 
+                      em.txt-danger border-t-danger
+                      |  class.
+                      | If you want to use other colors like this: 
+                      em.txt-danger border-t-*
+              .col-12.col-md-6
+                .card.common-hover
+                  .card-header.border-b-info
+                    h4 Border Bottom
+                    p.mt-1.f-m-light
+                      | Use the class of
+                      code .border-b-* 
+                      | for bottom border.
+                  .card-body
+                    p By using the border-color, we can give the border in the background direction in a creative way.
+                      |  You can design your creative card by taking only the 
+                      em.txt-danger border-b-info
+                      |  class.
+                      | If you want to use other colors like this: 
+                      em.txt-danger border-b-*
+              .col-xxl-4.col-md-6
+                .card.common-hover
+                  .card-header.border-l-primary.border-3
+                    h4 Border Primary State
+                    p.mt-1.f-m-light
+                      | Use the class of
+                      code .border-l-* 
+                      | for left border and 
+                      code .border-3 
+                      | is used to increase the width of the border.
+                  .card-body
+                    .list-group
+                      a.list-group-item.list-group-item-action.active(href='javascript:void(0)')
+                        img.rounded-circle(src='../assets/images/user/1.jpg', alt='user')
+                        | Teresa J. Mosteller
+                      a.list-group-item.list-group-item-action(href='javascript:void(0)')
+                        img.rounded-circle(src='../assets/images/user/3.png', alt='user')
+                        | Gloria D. Acheson
+                      a.list-group-item.list-group-item-action(href='javascript:void(0)')
+                        img.rounded-circle(src='../assets/images/user/5.jpg', alt='user')
+                        | Bryan A. Owens
+              .col-xxl-4.col-md-6
+                .card.common-hover
+                  .card-header.border-l-warning.border-3
+                    h4 Border Warning State
+                    p.mt-1.f-m-light
+                      | Use the class of
+                      code .border-l-* 
+                      | for left border and 
+                      code .border-3 
+                      | is used to increase the width of the border.
+                  .card-body
+                    ol.list-group.list-group-numbered
+                      li.list-group-item.txt-primary.fw-bold known for delivery of useful and usable solutions
+                      li.list-group-item.txt-danger.fw-bold Solve your problem with us
+                      li.list-group-item.txt-success.fw-bold Certified Professionals
+                      li.list-group-item.txt-warning.fw-bold Growth-Driven 
+              .col-xxl-4.col-12
+                .card.common-hover
+                  .card-header.border-l-secondary.border-3
+                    h4 Border Secondary State
+                    p.mt-1.f-m-light
+                      | Use the class of
+                      code .border-l-* 
+                      | for left border and 
+                      code .border-3 
+                      | is used to increase the width of the border.
+                  .card-body.scroll-demo
+                    ol.list-group.list-group-numbered.scroll-rtl
+                      li.list-group-item.d-flex.align-items-start.flex-wrap
+                        .ms-2.me-auto
+                          | Stella Nowland
+                        span.badge.bg-warning.rounded-pill.p-2 Freelance
+                      li.list-group-item.d-flex.align-items-start.flex-wrap
+                        .ms-2.me-auto
+                          | Lola Stanford
+                        span.badge.bg-danger.text-white.rounded-pill.p-2 Issue
+                      li.list-group-item.d-flex.align-items-start.flex-wrap
+                        .ms-2.me-auto
+                          | Caitlin Coungeau
+                        span.badge.bg-primary.text-white.rounded-pill.p-2 Social
+                      li.list-group-item.d-flex.align-items-start.flex-wrap
+                        .ms-2.me-auto
+                          | Graciela McClaran
+                        span.badge.bg-danger.text-white.rounded-pill.p-2 Issue
+              .col-sm-12.col-xl-6
+                .card.card-absolute
+                  .card-header.bg-primary
+                    h5.txt-light Absolute Card
+                  .card-body
+                    .d-flex.list-behavior-1.align-items-center
+                      .flex-shrink-0
+                        img.tab-img.img-fluid(src="../assets/images/blog/img.png", alt="home") 
+                      .flex-grow-1
+                        p.mb-xl-0.mb-sm-4
+                          | Absolute Card is made by using 
+                          em.txt-danger flex-shrink-0, flex-grow-1 & card-absolute 
+                          |  classes. you can do any of your designs using these classes. Subtracting the total size of all the flex items from the size of the flex container yields the leftover space.
+              .col-sm-12.col-xl-6
+                .card.card-absolute
+                  .card-header.bg-secondary
+                    h5.txt-light Absolute Card
+                  .card-body
+                    .d-flex.list-behavior-1.align-items-center
+                      .flex-shrink-0 
+                        img.tab-img.img-fluid(src="../assets/images/blog/blog.jpg", alt="home")
+                      .flex-grow-1
+                        p.mb-xl-0.mb-sm-4
+                          | Absolute Card is made by using 
+                          em.txt-danger flex-shrink-0, flex-grow-1 & card-absolute 
+                          |  classes. you can do any of your designs using these classes. Subtracting the total size of all the flex items from the size of the flex container yields the leftover space.
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

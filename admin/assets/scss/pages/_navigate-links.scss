@@ -1,0 +1,53 @@
+/**=====================
+    1.2 Navigate Links CSS start
+==========================**/
+
+.border-opacity-wrapper {
+    .border {
+        --theme-default: 122, 112, 186;
+        border-color: rgba(var(--theme-default), var(--bs-border-opacity)) !important;
+
+        a {
+            color: $primary-color;
+        }
+    }
+}
+
+.bg-opacity-wrapper {
+    >div {
+        --theme-default: 122, 112, 186;
+        background-color: rgba(var(--theme-default), var(--bs-bg-opacity)) !important;
+    }
+}
+
+.underline-opacity-wrapper {
+    p {
+        a {
+            text-decoration: underline;
+            --theme-default: 122, 112, 186;
+            color: $primary-color;
+            text-decoration-color: rgba(var(--theme-default), var(--bs-link-underline-opacity, 1)) !important;
+        }
+    }
+}
+
+.link-opacity-wrapper {
+    p {
+        a {
+            --theme-default: 122, 112, 186;
+            color: rgba(var(--theme-default), var(--bs-link-opacity, 1));
+
+            &:hover {
+                color: rgba(var(--theme-default), var(--bs-link-opacity, 1));
+            }
+        }
+    }
+}
+
+.link-body-emphasis {
+    text-decoration: underline;
+}
+
+/**=====================
+    1.2 Navigate Links CSS end
+==========================**/

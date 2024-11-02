@@ -1,0 +1,204 @@
+- var page_Title = 'Quill-Editor';
+- var theme_customizer      = true;
+- var editors               = true;
+- var editors3              = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var Bubble_editor         = true;
+- var scrollbar             = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Editors','Quill Editor'],'Quill Editor')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row 
+              .col-12 
+                .card
+                  .card-header
+                    h4 How to Utilize It
+                    p.f-m-light.mt-1
+                      | Use this classes to quill editor:
+                      code  ql-formats , ql-size , ql-bold , ql-italic , ql-underline , ql-strike , ql-script , ql-header , ql-list , ql-indent , ql-link , ql-image , ql-video , ql-color , ql-background , ql-blockquote , ql-code-block , ql-align. 
+                  .card-body 
+                    p.mb-0 Quill is an intuitive editor that facilitates text production on the web. It is constructed around reliable and consistent frameworks that are made available via a robust API. Quill wants to be the go-to rich text editor on the web, covering both extremes of complexity. For more info see the 
+                    a(href="https://quilljs.com/docs/quickstart/" target="_blank") official site 
+                    |  and the 
+                    a(href="https://github.com/quilljs/quill" target="_blank") github repository
+                    | .
+              .col-sm-12
+                .card
+                  .card-header
+                    h4 Standard Editor
+                    p.f-m-light.mt-1
+                      | Element in JS that has a unique 
+                      code id 
+                      | for initialization.
+                  .card-body
+                    .toolbar-box
+                      #toolbar7
+                        span.ql-formats
+                          select.ql-size
+                            option(value='small') Small
+                            option(selected='') Normal
+                            option(value='large') Large
+                            option(value='huge') Huge
+                        span.ql-formats
+                          button.ql-bold Bold
+                          button.ql-italic Italic
+                          button.ql-underline Underline
+                          button.ql-strike Strike
+                          button.ql-script(value='sub')
+                          button.ql-script(value='super')
+                        span.ql-formats
+                          button.ql-header(value='1')
+                          button.ql-header(value='2')
+                        span.ql-formats
+                          button.ql-list(value='ordered') List
+                          button.ql-list(value='bullet') Bullet
+                          button.ql-indent(value='-1')
+                          button.ql-indent(value='+1')
+                        span.ql-formats
+                          button.ql-link Link
+                          button.ql-image Image
+                          button.ql-video Video
+                          select.ql-color
+                          select.ql-background
+                        // Add more options here
+                        span.ql-formats
+                          button.ql-blockquote Blockquote
+                          button.ql-code-block
+                        span.ql-formats
+                          button.ql-align(value='')
+                          button.ql-align(value='center')
+                          button.ql-align(value='right')
+                          button.ql-align(value='justify')
+                        span.ql-formats 
+                          button.ql-clean
+                      #editor7.quill-paragraph
+                        blockquote 
+                          |  The tools supporting content creation need to consider these use cases.
+                        ul 
+                          li Demo-quill-1
+                          li Demo-quill-2
+                          li Demo-quill-3
+                        strong Quill 
+                        p is a contemporary rich text editor designed to be extensible and compatible. Here, you have the ability to alter the text to any format you like and utilize any type of text format.
+            .row
+              .col-sm-12
+                .card
+                  .card-header
+                    h4 Snow Theme
+                    p.f-m-light.mt-1
+                      | Element in JS that has a unique 
+                      code id 
+                      | for initialization. Snow is a clean, flat toolbar theme.
+                  .card-body
+                    .toolbar-box
+                      #toolbar5
+                        span.ql-formats
+                          select.ql-size
+                            option(value='small') Small
+                            option(selected='') Normal
+                            option(value='large') Large
+                            option(value='huge') Huge
+                          span.ql-formats
+                            button.ql-bold Bold
+                            button.ql-italic Italic
+                            button.ql-underline Underline
+                            button.ql-strike Strike
+                            button.ql-script(value='sub')
+                            button.ql-script(value='super')
+                          span.ql-formats
+                            button.ql-list(value='ordered') List
+                            button.ql-list(value='bullet') Bullet
+                            button.ql-indent(value='-1')
+                            button.ql-indent(value='+1')
+                          span.ql-formats
+                            button.ql-link Link
+                            button.ql-image Image
+                            button.ql-video Video
+                            select.ql-color
+                          // Add more options here
+                          span.ql-formats
+                            button.ql-blockquote Blockquote
+                            button.ql-code-block
+                          span.ql-formats
+                            button.ql-align(value='')
+                            button.ql-align(value='center')
+                            button.ql-align(value='right')
+                            button.ql-align(value='justify')
+                      #editor5.quill-paragraph
+                        p As a 
+                          strong web designer
+                          | , your role is crucial in creating visually appealing and user-friendly websites. You are responsible for designing the layout, selecting color schemes, and creating an intuitive user interface. You work closely with clients to understand their requirements and translate them into stunning website designs. Your expertise lies in using HTML, CSS, and JavaScript to bring these designs to life. You pay attention to detail, ensuring that every element is pixel-perfect and responsive across different devices.
+                        ol
+                          li Artist 
+                          li Developer  
+                          li Musician
+                        ul 
+                          li Web-designer 
+                          li UI-UX designer 
+                          li Software engineer
+            .row
+              .col-sm-12
+                .card
+                  .card-header
+                    h4 Bubble Theme
+                    p.f-m-light.mt-1
+                      | Element in JS that has a unique 
+                      code id 
+                      | for initialization. Bubble is a simple tooltip based theme.
+                  .card-body
+                    .toolbar-box
+                      #toolbar6
+                        span.ql-formats
+                          button.ql-bold Bold
+                          button.ql-italic Italic
+                          button.ql-underline Underline
+                          button.ql-strike Strike
+                          button.ql-script(value='sub')
+                          button.ql-script(value='super')
+                        span.ql-formats
+                          button.ql-list(value='ordered') List
+                          button.ql-list(value='bullet') Bullet
+                          button.ql-indent(value='-1')
+                          button.ql-indent(value='+1')
+                        span.ql-formats
+                          button.ql-link Link
+                          button.ql-image Image
+                          button.ql-video Video
+                          select.ql-color
+                        // Add more options here
+                        span.ql-formats
+                          button.ql-blockquote Blockquote
+                          button.ql-code-block.ql-active
+                        span.ql-formats
+                          button.ql-align(value='')
+                          button.ql-align(value='center')
+                          button.ql-align(value='right')
+                          button.ql-align(value='justify')
+                      #editor6.quill-paragraph
+                        p Being the best designer requires a combination of exceptional creativity, technical expertise, and a deep understanding of user experience. I pride myself on my ability to think outside the box and create visually stunning designs that captivate and inspire. With a keen eye for detail, I carefully craft every element of a design, ensuring that it is not only aesthetically pleasing but also functional and user-friendly. I stay up to date with the latest design trends and constantly push myself to explore new techniques and technologies. My passion for design goes beyond aesthetics; I strive to create meaningful experiences that evoke emotion and leave a lasting impression. Collaboration is key, and I value open communication with clients to truly understand their vision and bring it to life. As the best designer, I am committed to delivering excellence and surpassing expectations on every project.
+                        ul 
+                          li Navigation
+                          li Web Friendly
+                          li Turnaround Time 
+                          li Conversion
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

@@ -1,0 +1,97 @@
+/**=====================
+    1 Placeholders CSS Start
+==========================**/
+
+.placeholder-light {
+    background-color: $semi-dark;
+    opacity: 0.08;
+}
+
+.loading-card-wrapper {
+    img {
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+.placeholder-body {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    .placeholder-start {
+        .square {
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+            // background: linear-gradient(to right, rgba($dark-gray, 0.2) 8%, rgba(130, 130, 130, 0.3) 18%, rgba($dark-gray, 0.04) 33%);
+            background: linear-gradient(to right, rgba($dark-gray, 0.02) 2%, rgba(130, 130, 130, 0.02) 2%, rgba($dark-gray, 0.1) 14%);
+            background-size: 800px 100px;
+            animation: wave-square-lines 2s infinite ease-out;
+
+            &.circle {
+                border-radius: 50%;
+                height: 60px;
+                width: 60px;
+            }
+        }
+    }
+
+    .placeholder-end {
+        flex: 1;
+
+        .placeholder-line {
+            height: 12px;
+            margin-bottom: 6px;
+            border-radius: 2px;
+            // background: linear-gradient(to right, rgba(130, 130, 130, 0.2) 8%, rgba(130, 130, 130, 0.3) 18%, rgba(130, 130, 130, 0.2) 33%);
+            background: linear-gradient(to right, rgba($dark-gray, 0.02) 2%, rgba(130, 130, 130, 0.02) 2%, rgba($dark-gray, 0.1) 14%);
+            background-size: 800px 100px;
+            animation: wave-left-lines 2s infinite ease-out;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.animation-placeholder {
+    p {
+        margin-bottom: 0;
+        .placeholder-light {
+            opacity: 0.2;
+        }
+    }
+}
+
+@keyframes wave-left-lines {
+    0% {
+        background-position: -460px 0;
+    }
+
+    100% {
+        background-position: 460px 0;
+    }
+}
+
+@keyframes wave-square-lines {
+    0% {
+        background-position: -460px 0;
+    }
+
+    100% {
+        background-position: 460px 0;
+    }
+}
+
+@keyframes placeholder-glow {
+    50% {
+        opacity: 0.1;
+    }
+}
+
+
+/**=====================
+    1 Placeholders CSS End
+==========================**/

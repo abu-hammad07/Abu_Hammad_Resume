@@ -1,0 +1,39 @@
+- var page_Title = 'Footer Fixed';
+- var theme_customizer      = true;
+- var tooltip               = true;
+- var footer_fix            = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Page Layout','Footer Fixed'],'Footer Fixed')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-sm-12
+                .card
+                  .card-header
+                    h4 Sample Card
+                    p.f-m-light.mt-1 A sample card of the mofi theme.
+                  .card-body
+                    p
+                      | The creative minds behind stunning and useful websites are web designers. They possess a special talent for transforming concepts into works of art that attract audiences and provide seamless user experiences. Web designers bring websites to life by selecting fonts, colour palettes, and other design elements. They create layouts that are not only aesthetically pleasing but also optimised for performance and user engagement using their technical expertise and creative flare. Web designers can build flexible and dynamic designs that fit a variety of devices and screen sizes thanks to their proficiency in coding languages like HTML, CSS, and JavaScript. Web designers are essential to helping businesses succeed in an era where having an online presence is essential.
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

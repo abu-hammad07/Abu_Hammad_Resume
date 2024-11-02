@@ -1,0 +1,549 @@
+- var page_Title = 'Knowledgebase';
+- var theme_customizer      = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Knowledgebase','Knowledgebase'],'Knowledgebase')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts 
+          .container-fluid
+            .row
+              .col-12
+                .knowledgebase-bg
+                  img.bg-img-cover.bg-center(src="../assets/images/knowledgebase/bg_1.jpg" alt="looginpage" )
+                .knowledgebase-search
+                  div
+                    h3.f-w-500 How Can I help you?
+                    form.form-inline(action="#" method="get")
+                      .form-group.w-100
+                        i(data-feather='search')
+                        input.form-control-plaintext.w-100(type="text" placeholder="Type question here" title="")  
+              .col-xl-4.col-sm-6
+                .card.bg-primary
+                  .card-body
+                    .d-flex.faq-widgets
+                      .flex-grow-1
+                        h4 Articles
+                        p
+                          | How little experience or technical knowledge you currently have. The web is a very big place, and if you are the typical internet user, you probably visit several websites every day.
+                      i(data-feather='book-open')
+              .col-xl-4.col-sm-6
+                .card.bg-primary
+                  .card-body
+                    .d-flex.faq-widgets
+                      .flex-grow-1
+                        h4 Knowledgebase
+                        p
+                          | A Website Designing course enables learners to use essential designing and programming tools copy required to do the job. The curriculum is a blend of various themes.
+                      i(data-feather='aperture')
+              .col-xl-4
+                .card.bg-primary
+                  .card-body
+                    .d-flex.faq-widgets
+                      .flex-grow-1
+                        h4 Support
+                        p
+                          | The customer support industry is renaissance. Customer support as a specialty is coming into its own, offering companies a competitive advantage that’s difficult to copy.
+                      i(data-feather='file-text')
+              .col-sm-12
+                .header-faq
+                  h4.mb-0 Browse articles by category
+                .row
+                  .col-sm-12
+                    .card
+                      .card-header.card-no-border.pb-0
+                        h4 Browse Articles
+                      .card-body
+                        .row.browse.g-sm-4.g-3
+                          .col-xl-4.xl-50.col-md-6
+                            .browse-articles
+                              h5
+                                span
+                                  i(data-feather='archive')
+                                | Quick Questions are answered
+                              ul
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Policies have wide acceptance editors.
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Guidelines are sets of best practices supported.
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Editors should attempt to follow guidelines. 
+                                    span.badge.badge-primary.pull-right New
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span They are best treated with common sense. 
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='arrow-right')
+                                    span See More (40)
+                          .col-xl-4.xl-50.col-md-6
+                            .browse-articles
+                              h5
+                                span
+                                  i(data-feather='archive')
+                                |  API allows search and download AP Images.
+                              ul
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span API retrieve breaking news categories.
+                                    span.badge.badge-primary.pull-right Review
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span API retrieves rules for fantasy league.
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Resource API retrieves content produced business.
+                                    span.badge.badge-primary.pull-right Articles
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Making this the first true generator on the Internet.
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='arrow-right')
+                                    span See More (90)
+                          .col-xl-4.xl-50.col-md-6
+                            .browse-articles
+                              h5
+                                span
+                                  i(data-feather='archive')
+                                | WordPress Site Maintenance
+                              ul
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Make a backup of your WordPress website.
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Run a Wordpress security Website check.
+                                    span.badge.badge-primary.pull-right Closed
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Monitor your search engine optimization.
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Set a regular maintenance schedule.
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='arrow-right')
+                                    span See More (50)
+                          .col-xl-4.xl-50.col-md-6
+                            .browse-articles.browse-bottom
+                              h5
+                                span
+                                  i(data-feather='archive')
+                                  |  Meta Tags in WordPress
+                              ul
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span When an unknown printer took a galley
+                                    span.badge.badge-primary.pull-right Popular
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span You can easily change plans at any time.
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span you’ll be charged a prorated cover that upgrade.
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span But also the leap into electronic typesetting,
+                                  a(href='#')
+                                    span
+                                      i(data-feather='arrow-right')
+                                    span See More (90)
+                          .col-xl-4.xl-50.col-md-6
+                            .browse-articles.browse-bottom
+                              h5
+                                span
+                                  i(data-feather='archive')
+                                | WordPress in Your Language
+                              ul
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Premium plans are billed as a single yearly payment.
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Monthly plan are bill every month of signup.
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span You can set Monthly or Yearly for Premium plan.
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span unknown printer took galley.
+                                    span.badge.badge-primary.pull-right Closed
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='arrow-right')
+                                    span See More (50)
+                          .col-xl-4.xl-50.col-md-6
+                            .browse-articles.browse-bottom
+                              h5
+                                span
+                                  i(data-feather='archive')
+                                | Know Your Sources
+                              ul
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Many new editors rely on policy interpretations.
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Editor continually attempts to find a different policy.
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Violation of maintaining a neutral point of view.
+                                    span.badge.badge-primary.pull-right Article
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span You double check your sources.
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='arrow-right')
+                                    span See More (26)
+                          .col-xl-4.xl-50.col-md-6
+                            .browse-articles.browse-bottom
+                              h5
+                                span
+                                  i(data-feather='archive')
+                                | Validating a Website
+                              ul
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span You can modify some specific component settings.
+                                    span.badge.badge-primary.pull-right Review
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Click Apply to validate the set preferences. 
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Following procedure apply the components
+                                    span.badge.badge-primary.pull-right Closed
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span  To modify those specific components settings.
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='arrow-right')
+                                    span See More (10)
+                          .col-xl-4.xl-50.col-md-6
+                            .browse-articles.browse-bottom
+                              h5
+                                span
+                                  i(data-feather='archive')
+                                | Quick Questions are answered
+                              ul
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span To get started with your account.  
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Compile your theme using gulp
+                                    span.badge.badge-primary.pull-right Popular
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Users can browse by topic or use the visually.
+                                    span.badge.badge-primary.pull-right Review
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span This works through various methods of site tracking
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='arrow-right')
+                                    span See More (21)
+                          .col-xl-4.xl-100
+                            .browse-articles.browse-bottom
+                              h5
+                                span
+                                  i(data-feather='archive')
+                                | Integrating WordPress with Your Website
+                              ul
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span The core of your online presence is your website
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Your website is a 24/7 marketing tool 
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span Build a website that turns users into buyers
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='file-text')
+                                    span User experience determines a website's success
+                                    span.badge.badge-primary.pull-right On hold
+                                li
+                                  a(href='#')
+                                    span
+                                      i(data-feather='arrow-right')
+                                    span See More (34)
+              .col-lg-12
+                .header-faq
+                  h4.mb-0 Featured Tutorials
+                .row
+                  .col-xl-3.xl-50.col-md-6.box-col-6
+                    .card.features-faq.product-box
+                      .faq-image.product-img
+                        img.img-fluid(src='../assets/images/faq/1.jpg', alt='')
+                        .product-hover
+                          ul
+                            li
+                              i.icon-link
+                            li
+                              i.icon-import
+                      .card-body
+                        h5.f-w-600  Web Design
+                        p
+                          | Web designing course belongs to the field of computer science and IT. It enables students to learn.
+                      .card-footer
+                        span Dec 15, 2024
+                        span.pull-right
+                          i.fa.fa-star.font-primary
+                          i.fa.fa-star.font-primary
+                          i.fa.fa-star.font-primary
+                          i.fa.fa-star.font-primary
+                          i.fa.fa-star.font-primary
+                  .col-xl-3.xl-50.col-md-6.box-col-6
+                    .card.features-faq.product-box
+                      .faq-image.product-img
+                        img.img-fluid(src='../assets/images/faq/2.jpg', alt='')
+                        .product-hover
+                          ul
+                            li
+                              i.icon-link
+                            li
+                              i.icon-import
+                      .card-body
+                        h5.f-w-600 Web Development
+                        p
+                          | This course is designed to start you on a path toward future studies in web development and design.
+                      .card-footer
+                        span Dec 15, 2024
+                        span.pull-right
+                          i.fa.fa-star.font-primary
+                          i.fa.fa-star.font-primary
+                          i.fa.fa-star.font-primary
+                          i.fa.fa-star.font-primary
+                          i.fa.fa-star-o.font-primary
+                  .col-xl-3.xl-50.col-md-6.box-col-6
+                    .card.features-faq.product-box
+                      .faq-image.product-img
+                        img.img-fluid(src='../assets/images/faq/3.jpg', alt='')
+                        .product-hover
+                          ul
+                            li
+                              i.icon-link
+                            li
+                              i.icon-import
+                      .card-body
+                        h5.f-w-600 UI Design
+                        p
+                          | User interface design (UI) is the design for machines and software, such as mobile devices, computers.
+                      .card-footer
+                        span Dec 15, 2024
+                        span.pull-right
+                          i.fa.fa-star.font-primary
+                          i.fa.fa-star.font-primary
+                          i.fa.fa-star.font-primary
+                          i.fa.fa-star.font-primary
+                          i.fa.fa-star.font-primary
+                  .col-xl-3.xl-50.col-md-6.box-col-6
+                    .card.features-faq.product-box
+                      .faq-image.product-img
+                        img.img-fluid(src='../assets/images/faq/4.jpg', alt='')
+                        .product-hover
+                          ul
+                            li
+                              i.icon-link
+                            li
+                              i.icon-import
+                      .card-body
+                        h5.f-w-600 UX Design
+                        p
+                          | Web designing course belongs to the field of computer science and IT. It enables students to learn.
+                      .card-footer
+                        span Dec 15, 2024
+                        span.pull-right
+                          i.fa.fa-star.font-primary
+                          i.fa.fa-star.font-primary
+                          i.fa.fa-star.font-primary
+                          i.fa.fa-star.font-primary
+                          i.fa.fa-star-half-o.font-primary
+              .col-lg-12
+                .header-faq
+                  h4.mb-0 Latest articles and videos
+                .row
+                  .col-xl-4.col-md-6
+                    .row
+                      .col-sm-12
+                        .card
+                          .card-body
+                            .d-flex.articles-icons
+                              i.m-r-20(data-feather='codepen')
+                              .flex-grow-1
+                                h5.f-w-600 Product manager
+                                p A product manager is a specialist in charge of managing the growth, direction.
+                      .col-sm-12
+                        .card
+                          .card-body
+                            .d-flex.articles-icons
+                              i.m-r-20(data-feather='codepen')
+                              .flex-grow-1
+                                h5.f-w-600 E-commerce
+                                p Discover the flourishing e-commerce industry and how digital technology has transformed it.
+                      .col-sm-12
+                        .card
+                          .card-body
+                            .d-flex.articles-icons
+                              i.m-r-20(data-feather='codepen')
+                              .flex-grow-1
+                                h5.f-w-600 Web-development
+                                p To display HTML and CSS components on different web browsers, such as Chrome, Safari.
+                  .col-xl-4.col-md-6
+                    .row
+                      .col-sm-12
+                        .card
+                          .card-body
+                            .d-flex.articles-icons
+                              i.m-r-20(data-feather='file-text')
+                              .flex-grow-1
+                                h5.f-w-600 UX designer
+                                p Seniority does have a significant role in how much influence a UI specialist.
+                      .col-sm-12
+                        .card
+                          .card-body
+                            .d-flex.articles-icons
+                              i.m-r-20(data-feather='file-text')
+                              .flex-grow-1
+                                h5.f-w-600 SDLC cycle
+                                p The intricacies of Software Development Life Cycle a systematic approach to software development.
+                      .col-sm-12
+                        .card
+                          .card-body
+                            .d-flex.articles-icons
+                              i.m-r-20(data-feather='file-text')
+                              .flex-grow-1
+                                h5.f-w-600 Using Video 
+                                p Information architecture is a discipline that, among other things, arranges, and structures.
+                  .col-xl-4
+                    .row
+                      .col-xl-12.col-md-6
+                        .card
+                          .card-body
+                            .d-flex.articles-icons
+                              i.m-r-20(data-feather='youtube')
+                              .flex-grow-1
+                                h5.f-w-600 Information gathering
+                                p Explore the critical role of information gathering in effective problem-solving processes.
+                      .col-xl-12.col-md-6
+                        .card
+                          .card-body
+                            .d-flex.articles-icons
+                              i.m-r-20(data-feather='youtube')
+                              .flex-grow-1
+                                h5.f-w-600 Effective communication
+                                p It's crucial communicate! This blog explores the key components of good communication.
+                      .col-xl-12
+                        .card
+                          .card-body
+                            .d-flex.articles-icons
+                              i.m-r-20(data-feather='youtube')
+                              .flex-grow-1
+                                h5.f-w-600 Travel adventures
+                                p The spirit is enriched by travel! This site takes you on an exhilarating tour of stunning.
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

@@ -1,0 +1,173 @@
+- var page_Title = 'Ratios';
+- var theme_customizer      = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+- var clipboard             = true;
+- var prism                 = true;
+- var customcard            = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Bonus Ui','Ratios'],'Ratios')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid 
+            .row
+              .col-xxl-12
+                .card
+                  .card-header
+                    h4.mb-0 Aspect Ratios
+                    p.f-m-light.mt-1
+                      | Aspect ratios can be customized with modifier classes. By default the following ratio classes are provided:
+                      code [ratio-1x1 / ratio-4x3 / ratio-16x9 / ratio-21x9]
+                      |.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    .row.gy-3 
+                      .col-lg-3.col-sm-6
+                        .ratio.ratio-1x1
+                          iframe(src='https://www.youtube.com/embed/AsZwvuUmHGU?si=LHExkFd586NQbVAG' title='YouTube video' allowfullscreen='')
+                      .col-lg-3.col-sm-6
+                        .ratio.ratio-4x3
+                          iframe(src='https://www.youtube.com/embed/qDL2HBPy9uQ?si=yyIowrbZW-C-3lxd' title='YouTube video' allowfullscreen='')
+                      .col-lg-3.col-sm-6
+                        .ratio.ratio-16x9
+                          iframe(src='https://www.youtube.com/embed/AsZwvuUmHGU?si=LHExkFd586NQbVAG' title='YouTube video' allowfullscreen='')
+                      .col-lg-3.col-sm-6
+                        .ratio.ratio-21x9
+                          iframe(src='https://www.youtube.com/embed/qDL2HBPy9uQ?si=yyIowrbZW-C-3lxd' title='YouTube video' allowfullscreen='')
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#aspect-ratio', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#aspect-ratio
+                          |&lt;div class="row gap-lg-0 gap-4"&gt;
+                          |  &lt;div class="col-lg-3"&gt;
+                          |    &lt;div class="ratio ratio-1x1"&gt;
+                          |      &lt;iframe src="https://www.youtube.com/embed/AsZwvuUmHGU?si=LHExkFd586NQbVAG" title="YouTube video" allowfullscreen=""&gt;&lt;/iframe&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="col-lg-3"&gt;
+                          |    &lt;div class="ratio ratio-4x3"&gt;
+                          |      &lt;iframe src="https://www.youtube.com/embed/qDL2HBPy9uQ?si=yyIowrbZW-C-3lxd" title="YouTube video" allowfullscreen=""&gt;&lt;/iframe&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="col-lg-3"&gt;
+                          |    &lt;div class="ratio ratio-16x9"&gt;
+                          |      &lt;iframe src="https://www.youtube.com/embed/AsZwvuUmHGU?si=LHExkFd586NQbVAG" title="YouTube video" allowfullscreen=""&gt;&lt;/iframe&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="col-lg-3"&gt;
+                          |    &lt;div class="ratio ratio-21x9"&gt;
+                          |      &lt;iframe src="https://www.youtube.com/embed/qDL2HBPy9uQ?si=yyIowrbZW-C-3lxd" title="YouTube video" allowfullscreen=""&gt;&lt;/iframe&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-lg-6
+                .card
+                  .card-header
+                    h4.mb-0 Custom Ratio
+                    p.f-m-light.mt-1
+                      | Wrap any embed, like an 
+                      code &lt;iframe&gt;
+                      |  , in a parent element with 
+                      code ratio 
+                      | and an 
+                      code aspect ratio
+                      |  class. Here is a breakdown of these ratios:
+                      code  ratio-4x3
+                      |.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    .ratio.ratio-4x3
+                      iframe(src='https://www.youtube.com/embed/AsZwvuUmHGU?si=LHExkFd586NQbVAG' title='YouTube video' allowfullscreen='')
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#custom-ratio', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#custom-ratio
+                          |&lt;div class="ratio ratio-4x3"&gt;
+                          |  &lt;iframe src="https://www.youtube.com/embed/AsZwvuUmHGU?si=LHExkFd586NQbVAG" title="YouTube video" allowfullscreen=""&gt;&lt;/iframe&gt;
+                          |&lt;/div&gt;
+              .col-lg-6
+                .card
+                  .card-header
+                    h4.mb-0 Default Ratio
+                    p.f-m-light.mt-1
+                      | Wrap any embed, like an 
+                      code &lt;iframe&gt;
+                      |  , in a parent element with 
+                      code ratio 
+                      | and an 
+                      code aspect ratio
+                      |  class. Here is a breakdown of these ratios:
+                      code  16x9 ratio
+                      |.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    .ratio.ratio-16x9
+                      iframe(src='https://www.youtube.com/embed/qDL2HBPy9uQ?si=yyIowrbZW-C-3lxd' title='YouTube video' allowfullscreen='')  
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#default-ratio', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#default-ratio
+                          |&lt;div class="ratio ratio-16x9"&gt;
+                          |  &lt;iframe src="https://www.youtube.com/embed/qDL2HBPy9uQ?si=yyIowrbZW-C-3lxd" title="YouTube video" allowfullscreen=""&gt;&lt;/iframe&gt;
+                          |&lt;/div&gt;       
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

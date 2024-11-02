@@ -1,0 +1,78 @@
+- var page_Title = 'Ck-Editor';
+- var theme_customizer      = true;
+- var ckeditor              = true;
+- var page_ckeditor         = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Editors','Ck Editor'],'Ck Editor')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-sm-12
+                .card
+                  .card-header.card-no-border.pb-0
+                    h4 Ck Editor
+                  .card-body
+                    textarea#editor1(name='editor1', cols='30', rows='10')
+                      | <h2>Technical details <a id="tech-details" name="tech-details"></a></h2>
+                      | <table align="right" border="1" cellpadding="5" cellspacing="0">
+                      | <caption><strong>Mission crew</strong></caption>
+                      | <thead>
+                      | <tr>
+                      | <th scope="col">Position</th>
+                      | <th scope="col">Astronaut</th>
+                      | </tr>
+                      | </thead>
+                      | <tbody>
+                      | <tr>
+                      | <td>Commander</td>
+                      | <td>Neil A. Armstrong</td>
+                      | </tr>
+                      | <tr>
+                      | <td>Command Module Pilot</td>
+                      | <td>Michael Collins</td>
+                      | </tr>
+                      | <tr>
+                      | <td>Lunar Module Pilot</td>
+                      | <td>Edwin "Buzz" E. Aldrin, Jr.</td>
+                      | </tr>
+                      | </tbody>
+                      | </table>
+                      | <p>Launched by a <strong>Saturn V</strong> rocket from <a href="#">Kennedy Space Center</a> in Merritt Island, Florida on July 16, Apollo 11 was the fifth manned mission of <a href="#">NASA</a>'s Apollo program. The Apollo spacecraft had three parts:</p>
+                      | <ol>
+                      | <li><strong>Command Module</strong> with a cabin for the three astronauts which was the only part which landed back on Earth</li>
+                      | <li><strong>Service Module</strong> which supported the Command Module with propulsion, electrical power, oxygen and water</li>
+                      | <li><strong>Lunar Module</strong> for landing on the Moon.</li>
+                      | </ol>
+                      | <p>After being sent to the Moon by the Saturn V's upper stage, the astronauts separated the spacecraft from it and travelled for three days until they entered into lunar orbit. Armstrong and Aldrin then moved into the Lunar Module and landed in the <a href="#">Sea of Tranquility</a>. They stayed a total of about 21 and a half hours on the lunar surface. After lifting off in the upper part of the Lunar Module and rejoining Collins in the Command Module, they returned to Earth and landed in the <a href="#">Pacific Ocean</a> on July 24.</p>
+            .row
+              .col-sm-12
+                .card
+                  .card-header.card-no-border.pb-0
+                    h4 Inline Editor
+                  .card-body
+                    #area1(contenteditable='true')
+                      h1 Web designing
+                      p
+                        | Being the best designer requires a combination of exceptional creativity, technical expertise, and a deep understanding of user experience. I pride myself on my ability to think outside the box and create visually stunning designs that captivate and inspire. With a keen eye for detail, I carefully craft every element of a design, ensuring that it is not only aesthetically pleasing but also functional and user-friendly. I stay up to date with the latest design trends and constantly push myself to explore new techniques and technologies.
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

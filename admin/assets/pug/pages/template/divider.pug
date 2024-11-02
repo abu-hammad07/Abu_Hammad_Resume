@@ -1,0 +1,618 @@
+- var page_Title = 'Divider';
+- var theme_customizer      = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+- var clipboard             = true;
+- var prism                 = true;
+- var customcard            = true;
+- var height_equal          = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Ui Kits','Divider'],'Divider')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid 
+            .row
+                .col-xxl-4.col-md-6.box-col-6
+                    .card
+                        .card-header
+                            h4 Horizontal Solid Divider
+                            p.mb-0.mt-1
+                                | Use 
+                                code divider-body-1
+                                |  class for linear divider.
+                            .card-header-right
+                                ul.list-unstyled.card-option
+                                    li
+                                        i.icon-more-alt
+                                    li
+                                        i.view-html.fa.fa-code
+                                    li
+                                        i.icofont.icofont-maximize.full-card
+                                    li
+                                        i.icofont.icofont-minus.minimize-card
+                                    li
+                                        i.icofont.icofont-refresh.reload-card
+                                    li
+                                        i.icofont.icofont-error.close-card
+                        .card-body.main-divider
+                            .divider-body.divider-body-1.divider-primary 
+                                div.divider-p-primary
+                                    i.fa.fa-modx.me-2.txt-primary.f-20
+                                    span.txt-primary Primary
+                            .divider-body.divider-body-1.divider-secondary 
+                                div.divider-p-secondary
+                                    i.fa.fa-recycle.me-2.txt-secondary.f-20
+                                    span.txt-secondary Secondary 
+                            .divider-body.divider-body-1.divider-success 
+                                div.divider-p-success
+                                    i.fa.fa-leaf.me-2.txt-success.f-20
+                                    span.txt-success Success
+                            .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#horizontal-divider', title='Copy')
+                                    i.icofont.icofont-copy-alt
+                                pre.theme-scrollbar
+                                    code.language-html#horizontal-divider
+                                        |&lt;div class="card-body main-divider"&gt;
+                                        |    &lt;div class="divider-body divider-body-1 divider-primary"&gt; 
+                                        |        &lt;div class="divider-p-primary"&gt;
+                                        |            &lt;i class="fa fa-modx me-2 txt-primary f-20"&gt;&lt;/i&gt;
+                                        |            &lt;span class="txt-primary"&gt;Primary&lt;/span&gt;
+                                        |        &lt;/div&gt;
+                                        |    &lt;/div&gt;
+                                        |    &lt;div class="divider-body divider-body-1 divider-secondary"&gt; 
+                                        |        &lt;div class="divider-p-secondary"&gt;
+                                        |            &lt;i class="fa fa-recycle me-2 txt-secondary f-20"&gt;&lt;/i&gt;
+                                        |            &lt;span class="txt-secondary"&gt;Secondary &lt;/span&gt;
+                                        |        &lt;/div&gt;
+                                        |    &lt;/div&gt;
+                                        |    &lt;div class="divider-body divider-body-1 divider-success"&gt; 
+                                        |        &lt;div class="divider-p-success"&gt;
+                                        |            &lt;i class="fa fa-leaf me-2 txt-success f-20"&gt;&lt;/i&gt;
+                                        |            &lt;span class="txt-success"&gt;Success&lt;/span&gt;
+                                        |        &lt;/div&gt;
+                                        |    &lt;/div&gt;
+                                        |&lt;/div&gt;
+                .col-xxl-4.col-md-6.box-col-6
+                    .card
+                        .card-header
+                            h4 Horizontal Dashed Divider
+                            p.mb-0.mt-1
+                                | Use 
+                                code divider-body-2
+                                |  class for dashed divider.
+                            .card-header-right
+                                ul.list-unstyled.card-option
+                                    li
+                                        i.icon-more-alt
+                                    li
+                                        i.view-html.fa.fa-code
+                                    li
+                                        i.icofont.icofont-maximize.full-card
+                                    li
+                                        i.icofont.icofont-minus.minimize-card
+                                    li
+                                        i.icofont.icofont-refresh.reload-card
+                                    li
+                                        i.icofont.icofont-error.close-card
+                        .card-body.main-divider
+                            .divider-body.divider-body-2.divider-danger 
+                                .divider-circle.bg-light-danger
+                                    i.fa.fa-heart.txt-danger
+                            .divider-body.divider-body-2.divider-warning
+                                .divider-circle.bg-light-warning
+                                    i.fa.fa-star.txt-warning
+                            .divider-body.divider-body-2.divider-success
+                                .divider-circle.bg-light-success
+                                    i.fa.fa-trophy.txt-success
+                            .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#horizontal-dashed', title='Copy')
+                                    i.icofont.icofont-copy-alt
+                                pre.theme-scrollbar
+                                    code.language-html#horizontal-dashed
+                                        |&lt;div class="card-body main-divider"&gt;
+                                        |    &lt;div class="divider-body divider-body-2 divider-danger"&gt; 
+                                        |        &lt;div class="divider-circle bg-light-danger"&gt;
+                                        |            &lt;i class="fa fa-heart txt-danger"&gt;&lt;/i&gt;
+                                        |        &lt;/div&gt;
+                                        |    &lt;/div&gt;
+                                        |    &lt;div class="divider-body divider-body-2 divider-warning"&gt;
+                                        |        &lt;div class="divider-circle bg-light-warning"&gt;
+                                        |            &lt;i class="fa fa-star txt-warning"&gt;&lt;/i&gt;
+                                        |        &lt;/div&gt;
+                                        |    &lt;/div&gt;
+                                        |    &lt;div class="divider-body divider-body-2 divider-success"&gt;
+                                        |        &lt;div class="divider-circle bg-light-success"&gt;
+                                        |            &lt;i class="fa fa-trophy txt-success"&gt;&lt;/i&gt;
+                                        |        &lt;/div&gt;
+                                        |    &lt;/div&gt;
+                                        |&lt;/div&gt;
+                .col-xxl-4.col-md-6.box-col-6
+                    .card
+                        .card-header
+                            h4 Horizontal Dotted Divider
+                            p.mb-0.mt-1
+                                | Use 
+                                code divider-body-3
+                                |  class for dotted divider.
+                            .card-header-right
+                                ul.list-unstyled.card-option
+                                    li
+                                        i.icon-more-alt
+                                    li
+                                        i.view-html.fa.fa-code
+                                    li
+                                        i.icofont.icofont-maximize.full-card
+                                    li
+                                        i.icofont.icofont-minus.minimize-card
+                                    li
+                                        i.icofont.icofont-refresh.reload-card
+                                    li
+                                        i.icofont.icofont-error.close-card
+                        .card-body.main-divider
+                            .divider-body.divider-body-3.divider-primary Primary
+                            .divider-body.divider-body-3.divider-secondary Secondary
+                            .divider-body.divider-body-3.divider-warning Warning
+                            .divider-body.divider-body-3.divider-info Info
+                            .divider-body.divider-body-3.divider-dark Dark
+                            .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#horizontal-dotted', title='Copy')
+                                    i.icofont.icofont-copy-alt
+                                pre.theme-scrollbar
+                                    code.language-html#horizontal-dotted
+                                        |&lt;div class="card-body main-divider"&gt;
+                                        |    &lt;div class="divider-body divider-body-3 divider-primary"&gt;Primary&lt;/div&gt;
+                                        |    &lt;div class="divider-body divider-body-3 divider-secondary"&gt;Secondary&lt;/div&gt;
+                                        |    &lt;div class="divider-body divider-body-3 divider-warning"&gt;Warning&lt;/div&gt;
+                                        |    &lt;div class="divider-body divider-body-3 divider-info"&gt;Info&lt;/div&gt;
+                                        |    &lt;div class="divider-body divider-body-3 divider-dark"&gt;Dark&lt;/div&gt;
+                                        |&lt;/div&gt;
+                .col-xxl-4.col-md-6.box-col-6
+                    .card.height-equal
+                        .card-header
+                            h4 Vertical Dashed Divider
+                            p.mb-0.mt-1
+                                | Use 
+                                code vertical-divider
+                                |  and
+                                code  vertical-line
+                                |  class for dashed divider.
+                            .card-header-right
+                                ul.list-unstyled.card-option
+                                    li
+                                        i.icon-more-alt
+                                    li
+                                        i.view-html.fa.fa-code
+                                    li
+                                        i.icofont.icofont-maximize.full-card
+                                    li
+                                        i.icofont.icofont-minus.minimize-card
+                                    li
+                                        i.icofont.icofont-refresh.reload-card
+                                    li
+                                        i.icofont.icofont-error.close-card
+                        .card-body.main-divider
+                            .row.g-sm-2.d-flex.gy-4
+                                .col-sm-3.col-6
+                                    .vertical-divider
+                                        .vertical-line.bg-primary
+                                        p.my-2.border.border-primary Primary
+                                        .vertical-line.bg-primary
+                                .col-sm-3.col-6
+                                    .vertical-divider
+                                        .vertical-line.bg-secondary
+                                        p.my-2.border.border-secondary.rounded-pill Secondary
+                                        .vertical-line.bg-secondary
+                                .col-sm-3.col-6
+                                    .vertical-divider
+                                        .vertical-line.bg-warning
+                                        svg.my-2.stroke-icon.stroke-warning
+                                            use(href='../assets/svg/icon-sprite.svg#stroke-social')
+                                        .vertical-line.bg-warning
+                                .col-sm-3.col-6
+                                    .vertical-divider
+                                        .vertical-line.bg-success
+                                        p.my-2.txt-success Success
+                                        .vertical-line.bg-success
+                            .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#vertical-dashed', title='Copy')
+                                    i.icofont.icofont-copy-alt
+                                pre.theme-scrollbar
+                                    code.language-html#vertical-dashed
+                                        |&lt;div class="card-body main-divider"&gt;
+                                        |    &lt;div class="row g-sm-2 d-flex gy-4"&gt;
+                                        |        &lt;div class="col-sm-3 col-6"&gt;
+                                        |            &lt;div class="vertical-divider"&gt;
+                                        |                &lt;div class="vertical-line bg-primary"&gt;&lt;/div&gt;
+                                        |                &lt;p class="my-2 border border-primary"&gt;Primary&lt;/p&gt;
+                                        |                &lt;div class="vertical-line bg-primary"&gt;&lt;/div&gt;
+                                        |            &lt;/div&gt;
+                                        |        &lt;/div&gt;
+                                        |        &lt;div class="col-sm-3 col-6"&gt;
+                                        |            &lt;div class="vertical-divider"&gt;
+                                        |                &lt;div class="vertical-line bg-secondary"&gt;&lt;/div&gt;
+                                        |                &lt;p class="my-2 border border-secondary rounded-pill"&gt;Secondary&lt;/p&gt;
+                                        |                &lt;div class="vertical-line bg-secondary"&gt;&lt;/div&gt;
+                                        |            &lt;/div&gt;
+                                        |        &lt;/div&gt;
+                                        |        &lt;div class="col-sm-3 col-6"&gt;
+                                        |            &lt;div class="vertical-divider"&gt;
+                                        |                &lt;div class="vertical-line bg-warning"&gt;&lt;/div&gt;
+                                        |                &lt;svg class="my-2 stroke-icon stroke-warning"&gt;
+                                        |                    &lt;use href="../assets/svg/icon-sprite.svg#stroke-social"&gt;&lt;/use&gt;
+                                        |                &lt;/svg&gt;
+                                        |                &lt;div class="vertical-line bg-warning"&gt;&lt;/div&gt;
+                                        |            &lt;/div&gt;
+                                        |        &lt;/div&gt;
+                                        |        &lt;div class="col-sm-3 col-6"&gt;
+                                        |            &lt;div class="vertical-divider"&gt;
+                                        |                &lt;div class="vertical-line bg-success"&gt;&lt;/div&gt;
+                                        |                &lt;p class="my-2 txt-success"&gt;Success&lt;/p&gt;
+                                        |                &lt;div class="vertical-line bg-success"&gt;&lt;/div&gt;
+                                        |            &lt;/div&gt;
+                                        |        &lt;/div&gt;
+                                        |    &lt;/div&gt;
+                                        |&lt;/div&gt;
+                .col-xxl-4.col-md-6.box-col-6
+                    .card.height-equal
+                        .card-header
+                            h4 Vertical Dotted Divider
+                            p.mb-0.mt-1
+                                | Use 
+                                code dotted-divider
+                                |  and
+                                code  vertical-line
+                                |  class for dotted divider.
+                            .card-header-right
+                                ul.list-unstyled.card-option
+                                    li
+                                        i.icon-more-alt
+                                    li
+                                        i.view-html.fa.fa-code
+                                    li
+                                        i.icofont.icofont-maximize.full-card
+                                    li
+                                        i.icofont.icofont-minus.minimize-card
+                                    li
+                                        i.icofont.icofont-refresh.reload-card
+                                    li
+                                        i.icofont.icofont-error.close-card
+                        .card-body.main-divider
+                            .row.g-sm-2.d-flex.dotted-divider.gy-4
+                                .col-sm-3.col-6
+                                    .vertical-divider
+                                        .vertical-line.bg-success
+                                        p.my-2.border.border-success Success
+                                        .vertical-line.bg-success
+                                .col-sm-3.col-6
+                                    .vertical-divider
+                                        .vertical-line.bg-warning
+                                        p.my-2.border.border-warning.rounded-pill Warning
+                                        .vertical-line.bg-warning
+                                .col-sm-3.col-6
+                                    .vertical-divider
+                                        .vertical-line.bg-danger
+                                        svg.my-2.fill-icon.fill-danger
+                                            use(href='../assets/svg/icon-sprite.svg#fill-starter-kit')
+                                        .vertical-line.bg-danger     
+                                .col-sm-3.col-6
+                                    .vertical-divider
+                                        .vertical-line.bg-dark
+                                        p.my-2 Dark
+                                        .vertical-line.bg-dark
+                            .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#vertical-dotted', title='Copy')
+                                    i.icofont.icofont-copy-alt
+                                pre.theme-scrollbar
+                                    code.language-html#vertical-dotted
+                                        |&lt;div class="card-body main-divider"&gt;
+                                        |    &lt;div class="row g-sm-2 d-flex dotted-divider gy-4"&gt;
+                                        |        &lt;div class="col-sm-3 col-6"&gt;
+                                        |            &lt;div class="vertical-divider"&gt;
+                                        |                &lt;div class="vertical-line bg-success"&gt;&lt;/div&gt;
+                                        |                &lt;p class="my-2 border border-success"&gt;Success&lt;/p&gt;
+                                        |                &lt;div class="vertical-line bg-success"&gt;&lt;/div&gt;
+                                        |            &lt;/div&gt;
+                                        |        &lt;/div&gt;
+                                        |        &lt;div class="col-sm-3 col-6"&gt;
+                                        |            &lt;div class="vertical-divider"&gt;
+                                        |                &lt;div class="vertical-line bg-warning"&gt;&lt;/div&gt;
+                                        |                &lt;p class="my-2 border border-warning rounded-pill"&gt;Warning&lt;/p&gt;
+                                        |                &lt;div class="vertical-line bg-warning"&gt;&lt;/div&gt;
+                                        |            &lt;/div&gt;
+                                        |        &lt;/div&gt;
+                                        |        &lt;div class="col-sm-3 col-6"&gt;
+                                        |            &lt;div class="vertical-divider"&gt;
+                                        |                &lt;div class="vertical-line bg-danger"&gt;&lt;/div&gt;
+                                        |                &lt;svg class="my-2 fill-icon fill-danger"&gt;
+                                        |                    &lt;use href="../assets/svg/icon-sprite.svg#fill-starter-kit"&gt;&lt;/use&gt;
+                                        |                &lt;/svg&gt;
+                                        |                &lt;div class="vertical-line bg-danger"&gt;&lt;/div&gt;
+                                        |            &lt;/div&gt;
+                                        |        &lt;/div&gt;
+                                        |        &lt;div class="col-sm-3 col-6"&gt;
+                                        |            &lt;div class="vertical-divider"&gt;
+                                        |                &lt;div class="vertical-line bg-dark"&gt;&lt;/div&gt;
+                                        |                &lt;p class="my-2"&gt;Dark&lt;/p&gt;
+                                        |                &lt;div class="vertical-line bg-dark"&gt;&lt;/div&gt;
+                                        |            &lt;/div&gt;
+                                        |        &lt;/div&gt;
+                                        |    &lt;/div&gt;
+                                        |&lt;/div&gt;
+                .col-xxl-4.col-md-6.box-col-6
+                    .card.height-equal
+                        .card-header
+                            h4 Vertical Double Divider
+                            p.mb-0.mt-1
+                                | Use 
+                                code double-divider
+                                |  and
+                                code  vertical-line
+                                |  class for double divider.
+                            .card-header-right
+                                ul.list-unstyled.card-option
+                                    li
+                                        i.icon-more-alt
+                                    li
+                                        i.view-html.fa.fa-code
+                                    li
+                                        i.icofont.icofont-maximize.full-card
+                                    li
+                                        i.icofont.icofont-minus.minimize-card
+                                    li
+                                        i.icofont.icofont-refresh.reload-card
+                                    li
+                                        i.icofont.icofont-error.close-card
+                        .card-body.main-divider
+                            .row.g-sm-2.d-flex.double-divider.gy-4
+                                .col-sm-3.col-6
+                                    .vertical-divider
+                                        .vertical-line.bg-secondary
+                                        p.my-2.border.border-secondary Secondary
+                                        .vertical-line.bg-secondary
+                                .col-sm-3.col-6
+                                    .vertical-divider
+                                        .vertical-line.bg-success
+                                        p.my-2.border.border-success.rounded-pill Success
+                                        .vertical-line.bg-success
+                                .col-sm-3.col-6
+                                    .vertical-divider
+                                        .vertical-line.bg-dark
+                                        svg.my-2.divider-dark-icon
+                                            use(href='../assets/svg/icon-sprite.svg#project-target')
+                                        .vertical-line.bg-dark
+                                .col-sm-3.col-6
+                                    .vertical-divider
+                                        .vertical-line.bg-warning
+                                        p.my-2.txt-warning Warning
+                                        .vertical-line.bg-warning
+                            .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#horizontal-dashed', title='Copy')
+                                    i.icofont.icofont-copy-alt
+                                pre.theme-scrollbar
+                                    code.language-html#horizontal-dashed
+                                        |&lt;div class="card-body main-divider"&gt;
+                                        |    &lt;div class="row g-sm-2 d-flex double-divider gy-4"&gt;
+                                        |        &lt;div class="col-sm-3 col-6"&gt;
+                                        |            &lt;div class="vertical-divider"&gt;
+                                        |                &lt;div class="vertical-line bg-secondary"&gt;&lt;/div&gt;
+                                        |                &lt;p class="my-2 border border-secondary"&gt;Secondary&lt;/p&gt;
+                                        |                &lt;div class="vertical-line bg-secondary"&gt;&lt;/div&gt;
+                                        |            &lt;/div&gt;
+                                        |        &lt;/div&gt;
+                                        |        &lt;div class="col-sm-3 col-6"&gt;
+                                        |            &lt;div class="vertical-divider"&gt;
+                                        |                &lt;div class="vertical-line bg-success"&gt;&lt;/div&gt;
+                                        |                &lt;p class="my-2 border border-success rounded-pill"&gt;Success&lt;/p&gt;
+                                        |                &lt;div class="vertical-line bg-success"&gt;&lt;/div&gt;
+                                        |            &lt;/div&gt;
+                                        |        &lt;/div&gt;
+                                        |        &lt;div class="col-sm-3 col-6"&gt;
+                                        |            &lt;div class="vertical-divider"&gt;
+                                        |                &lt;div class="vertical-line bg-dark"&gt;&lt;/div&gt;
+                                        |                &lt;svg class="my-2 divider-dark-icon"&gt;
+                                        |                    &lt;use href="../assets/svg/icon-sprite.svg#project-target"&gt;&lt;/use&gt;
+                                        |                &lt;/svg&gt;
+                                        |                &lt;div class="vertical-line bg-dark"&gt;&lt;/div&gt;
+                                        |            &lt;/div&gt;
+                                        |        &lt;/div&gt;
+                                        |        &lt;div class="col-sm-3 col-6"&gt;
+                                        |            &lt;div class="vertical-divider"&gt;
+                                        |                &lt;div class="vertical-line bg-warning"&gt;&lt;/div&gt;
+                                        |                &lt;p class="my-2 txt-warning"&gt;Warning&lt;/p&gt;
+                                        |                &lt;div class="vertical-line bg-warning"&gt;&lt;/div&gt;
+                                        |            &lt;/div&gt;
+                                        |        &lt;/div&gt;
+                                        |    &lt;/div&gt;
+                                        |&lt;/div&gt;
+                .col-md-6
+                    .card
+                        .card-header
+                            h4 Animated Color divider
+                            p.mb-0.mt-1
+                                | Use 
+                                code animated-line
+                                |  and 
+                                code animated-divider 
+                                |  classes to create a linear animated divider.
+                            .card-header-right
+                                ul.list-unstyled.card-option
+                                    li
+                                        i.icon-more-alt
+                                    li
+                                        i.view-html.fa.fa-code
+                                    li
+                                        i.icofont.icofont-maximize.full-card
+                                    li
+                                        i.icofont.icofont-minus.minimize-card
+                                    li
+                                        i.icofont.icofont-refresh.reload-card
+                                    li
+                                        i.icofont.icofont-error.close-card
+                        .card-body.linear-divider
+                            h5 Main Heading
+                            .animated-divider.animated-line
+                            p.mb-0.c-light This CSS divider embodies simplicity at its finest, yet it exudes an air of elegance and timelessness. Despite its minimalist design, it commands attention effortlessly. While the divider takes center stage in this arrangement, it seamlessly integrates with the overall aesthetic, allowing the backdrop image to shine through.
+                            .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#animated-color', title='Copy')
+                                    i.icofont.icofont-copy-alt
+                                pre.theme-scrollbar
+                                    code.language-html#animated-color
+                                        |&lt;div class="card-body linear-divider"&gt;
+                                        |    &lt;h5&gt;Main Heading&lt;/h5&gt;
+                                        |    &lt;div class="animated-divider animated-line"&gt;&lt;/div&gt;
+                                        |    &lt;p class="mb-0 c-light"&gt;This CSS divider embodies simplicity at its finest, yet it exudes an air of elegance and timelessness. Despite its minimalist design, it commands attention effortlessly. While the divider takes center stage in this arrangement, it seamlessly integrates with the overall aesthetic, allowing the backdrop image to shine through. &lt;/p&gt;
+                                        |&lt;/div&gt;
+                .col-md-6
+                    .card
+                        .card-header
+                            h4 Horizontal Editable Divider
+                            p.mb-0.mt-1
+                                | Use
+                                code  horizontal-variation
+                                |  and 
+                                code double-line-*
+                                |  classes to create a thickness divider.
+                            .card-header-right
+                                ul.list-unstyled.card-option
+                                    li
+                                        i.icon-more-alt
+                                    li
+                                        i.view-html.fa.fa-code
+                                    li
+                                        i.icofont.icofont-maximize.full-card
+                                    li
+                                        i.icofont.icofont-minus.minimize-card
+                                    li
+                                        i.icofont.icofont-refresh.reload-card
+                                    li
+                                        i.icofont.icofont-error.close-card
+                        .card-body.main-divider.horizontal-variation
+                            .divider.linear-line.double-line.double-line-1(contenteditable='true') Primary
+                            .divider.linear-line.double-line.double-line-2(contenteditable='true') Secondary
+                            .divider.linear-line.double-line.double-line-3(contenteditable='true') Success
+                            .divider.linear-line.double-line.double-line-4(contenteditable='true') Warning
+                            .divider.linear-line.double-line.double-line-5(contenteditable='true') Danger
+                            .divider.linear-line.double-line.double-line-6(contenteditable='true') Info
+                            .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#horizontal-editable', title='Copy')
+                                    i.icofont.icofont-copy-alt
+                                pre.theme-scrollbar
+                                    code.language-html#horizontal-editable
+                                        |&lt;div class="card-body main-divider horizontal-variation"&gt;
+                                        |    &lt;div class="divider linear-line double-line double-line-1" contenteditable="true"&gt;Primary&lt;/div&gt;
+                                        |    &lt;div class="divider linear-line double-line double-line-2" contenteditable="true"&gt;Secondary&lt;/div&gt;
+                                        |    &lt;div class="divider linear-line double-line double-line-3" contenteditable="true"&gt;Success&lt;/div&gt;
+                                        |    &lt;div class="divider linear-line double-line double-line-4" contenteditable="true"&gt;Warning&lt;/div&gt;
+                                        |    &lt;div class="divider linear-line double-line double-line-5" contenteditable="true"&gt;Danger&lt;/div&gt;
+                                        |    &lt;div class="divider linear-line double-line double-line-6" contenteditable="true"&gt;Info&lt;/div&gt;
+                                        |&lt;/div&gt;
+                .col-md-6
+                    .card
+                        .card-header
+                            h4 Simple Horizontal Divider
+                            p.mb-0.mt-1
+                                | Use 
+                                code divider-h-line
+                                |  class for horizontal divider.
+                            .card-header-right
+                                ul.list-unstyled.card-option
+                                    li
+                                        i.icon-more-alt
+                                    li
+                                        i.view-html.fa.fa-code
+                                    li
+                                        i.icofont.icofont-maximize.full-card
+                                    li
+                                        i.icofont.icofont-minus.minimize-card
+                                    li
+                                        i.icofont.icofont-refresh.reload-card
+                                    li
+                                        i.icofont.icofont-error.close-card
+                        .card-body.main-divider
+                            .divider-h-line.bg-primary
+                            .divider-h-line.bg-secondary
+                            .divider-h-line.bg-success
+                            .divider-h-line.bg-info
+                            .divider-h-line.bg-warning 
+                            .divider-h-line.bg-danger
+                            .divider-h-line.bg-dark
+                            .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#horizontal-divider', title='Copy')
+                                    i.icofont.icofont-copy-alt
+                                pre.theme-scrollbar
+                                    code.language-html#horizontal-divider
+                                        |&lt;div class="card-body main-divider"&gt;
+                                        |    &lt;div class="divider-h-line bg-primary"&gt;&lt;/div&gt;
+                                        |    &lt;div class="divider-h-line bg-secondary"&gt;&lt;/div&gt;
+                                        |    &lt;div class="divider-h-line bg-success"&gt;&lt;/div&gt;
+                                        |    &lt;div class="divider-h-line bg-info"&gt;&lt;/div&gt;
+                                        |    &lt;div class="divider-h-line bg-warning"&gt;&lt;/div&gt;
+                                        |    &lt;div class="divider-h-line bg-danger"&gt;&lt;/div&gt;
+                                        |    &lt;div class="divider-h-line bg-dark"&gt;&lt;/div&gt;
+                                        |&lt;/div&gt;
+                .col-md-6
+                    .card
+                        .card-header
+                            h4 Simple Vertical Divider
+                            p.mb-0.mt-1
+                                | Use 
+                                code vr
+                                |  class for vertical divider.
+                            .card-header-right
+                                ul.list-unstyled.card-option
+                                    li
+                                        i.icon-more-alt
+                                    li
+                                        i.view-html.fa.fa-code
+                                    li
+                                        i.icofont.icofont-maximize.full-card
+                                    li
+                                        i.icofont.icofont-minus.minimize-card
+                                    li
+                                        i.icofont.icofont-refresh.reload-card
+                                    li
+                                        i.icofont.icofont-error.close-card
+                        .card-body.main-divider
+                            .common-align
+                                .vr.bg-primary
+                                .vr.bg-secondary
+                                .vr.bg-success
+                                .vr.bg-info
+                                .vr.bg-warning 
+                                .vr.bg-danger
+                                .vr.bg-dark
+                            .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#vertical-divider', title='Copy')
+                                    i.icofont.icofont-copy-alt
+                                pre.theme-scrollbar
+                                    code.language-html#vertical-divider
+                                        |&lt;div class="card-body main-divider"&gt;
+                                        |    &lt;div class="common-align"&gt;
+                                        |        &lt;div class="vr bg-primary"&gt;&lt;/div&gt;
+                                        |        &lt;div class="vr bg-secondary"&gt;&lt;/div&gt;
+                                        |        &lt;div class="vr bg-success"&gt;&lt;/div&gt;
+                                        |        &lt;div class="vr bg-info"&gt;&lt;/div&gt;
+                                        |        &lt;div class="vr bg-warning"&gt;&lt;/div&gt;
+                                        |        &lt;div class="vr bg-danger"&gt;&lt;/div&gt;
+                                        |        &lt;div class="vr bg-dark"&gt;&lt;/div&gt;
+                                        |    &lt;/div&gt;
+                                        |&lt;/div&gt;
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

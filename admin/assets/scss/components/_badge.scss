@@ -1,0 +1,173 @@
+/**=====================
+    2.4 Badge CSS start
+==========================**/
+
+.badge-spacing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  .badge {
+    padding: 6px 12px;
+    font-size: 12px;
+
+    &.badge {
+      svg {
+        padding-top: 0px;
+      }
+    }
+
+    &.rounded-circle {
+      padding: 10px 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    // &.badge-p-space {
+    //   padding: 10px 13px;
+    // }
+
+    &+.badge {
+      margin-left: 0px;
+    }
+
+    // &.btn-p-space {
+    //   padding: 8px 10px;
+    // }
+  }
+}
+
+a.badge {
+  &:hover {
+    color: inherit;
+
+    &.badge-dark {
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+.badge {
+  padding: $badge-padding;
+  font-family: $font-outfit, $font-serif;
+  font-weight: 500;
+
+  &+.badge {
+    margin-left: 5px;
+  }
+
+  svg {
+    width: $badge-svg-size;
+    height: $badge-svg-size;
+    padding-top: 3px;
+  }
+}
+
+.b-ln-height {
+  line-height: 5px;
+}
+
+@each $pill-badge-name,
+$pill-badge-color in (primary, var(--theme-default)),
+(secondary, $secondary-color),
+(success, $success-color),
+(danger, $danger-color),
+(info, $info-color),
+(light, $light-color),
+(dark, $dark-color),
+(warning, $warning-color) {
+  .pill-badge-#{$pill-badge-name} {
+    background-color: $pill-badge-color;
+    box-shadow: -0.5px 4.33px 16px 0px rgba($pill-badge-color, 0.25);
+    color: $white;
+    border-radius: 0;
+  }
+}
+
+.pill-badge-primary {
+  background-color: var(--theme-default);
+}
+
+.pill-badge-secondary {
+  background-color: var(--theme-secondary);
+}
+
+@each $round-badge-name,
+$round-badge-color in (primary, var(--theme-default)),
+(secondary, $secondary-color),
+(success, $success-color),
+(danger, $danger-color),
+(info, $info-color),
+(light, $light-color),
+(dark, $dark-color),
+(warning, $warning-color) {
+  .round-badge-#{$round-badge-name} {
+    border-radius: 6px;
+    background-color: $round-badge-color;
+    box-shadow: -0.5px -6.67px 14px 0px rgba($round-badge-color, 0.18);
+    color: $white !important;
+  }
+}
+
+.round-badge-primary {
+  background-color: var(--theme-default);
+}
+
+.round-badge-secondary {
+  background-color: var(--theme-secondary);
+}
+
+.badge-heading {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-bottom: 16px;
+  }
+}
+
+.badge-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 22px;
+  flex-wrap: wrap;
+  @media (max-width: 360px) {
+    gap: 20px;
+    .btn {
+      padding: 6px 12px;
+    }
+  }
+
+  .badge-square {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+  }
+
+  .badge-p-5 {
+    padding: 5px;
+  }
+}
+
+.image-badges {
+  span {
+    img {
+      height: 24px;
+    }
+
+    &.vr {
+      min-height: 12px;
+      height: auto;
+    }
+  }
+}
+
+/**=====================
+  2.4 Badge CSS Ends
+==========================**/

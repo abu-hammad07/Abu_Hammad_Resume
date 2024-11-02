@@ -1,0 +1,38 @@
+// footer start
+if footer_dark
+  footer.footer.footer-dark
+       .container-fluid
+            .row
+                .col-md-12.footer-copyright.d-flex.flex-wrap.align-items-center.justify-content-between
+                    p.mb-0.f-w-600 Copyright 
+                      span.year-update 
+                      |  © Mofi theme by pixelstrap   
+                    p.mb-0.f-w-600 Hand crafted & made with
+                      svg.footer-icon
+                        use(href='../assets/svg/icon-sprite.svg#footer-heart')               
+                    
+
+else if footer_fix
+  footer.footer.footer-fix
+       .container-fluid
+            .row
+                .col-md-12.footer-copyright.d-flex.flex-wrap.align-items-center.justify-content-between
+                    p.mb-0.f-w-600 Copyright 
+                      span.year-update 
+                      |  © Mofi theme by pixelstrap  
+                    p.mb-0.f-w-600 Hand crafted & made with
+                      svg.footer-icon
+                        use(href='../assets/svg/icon-sprite.svg#footer-heart') 
+
+else
+  footer.footer
+       .container-fluid
+            .row
+                .col-md-12.footer-copyright.d-flex.flex-wrap.align-items-center.justify-content-between
+                    p.mb-0.f-w-600 Copyright 
+                      span.year-update 
+                      |  © Mofi theme by pixelstrap  
+                    p.mb-0.f-w-600 Hand crafted & made with
+                      svg.footer-icon
+                        use(href='../assets/svg/icon-sprite.svg#footer-heart') 
+

@@ -1,0 +1,46 @@
+- var page_Title = 'Sample Page';
+- var theme_customizer      = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+include ../../components/mixin
+
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Pages','Sample Page'],'Sample Page')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-sm-12
+                .card
+                  .card-header
+                    h4 Sample Card
+                    p.f-m-light.mt-1 Here you can enter a sub-title for your card.
+                  .card-body
+                    p
+                      strong Web Design Trends: 
+                      |  Stay up-to-date with the latest trends in web design, such as the use of animations, micro-interactions, dark mode, and unique navigation techniques.Keep your website's navigation simple and intuitive, allowing users to find what they need easily without overwhelming them with options.
+                    p
+                      strong Design Tools: 
+                      |  Information on popular design software like Adobe Photoshop, Sketch, Figma, or Adobe XD, along with tips and tricks for efficient workflow and collaboration.Compress and optimize images to improve website loading speed and overall performance, providing a better user experience.
+                    p
+                      strong Front-End Development: 
+                      |  A basic understanding of HTML, CSS, and JavaScript can enhance your web design skills, enabling you to create interactive and dynamic elements.Ensure sufficient contrast between text and background colors to enhance readability and accessibility, especially for users with visual impairments.
+
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

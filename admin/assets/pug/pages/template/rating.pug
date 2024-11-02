@@ -1,0 +1,253 @@
+- var page_Title = 'Rating';
+- var theme_customizer      = true;
+- var ratings               = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+- var height_equal          = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Bonus Ui','Rating'],'Rating')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-xxl-4.col-md-6
+                .card.height-equal
+                  .card-header
+                    h4 Star Rating
+                    p.f-m-light.mt-1
+                      | Use
+                      code  main-star-rating
+                      |  class to set default rating.
+                  .card-body
+                    .main-star-rating
+                      .common-flex.star-box.justify-content-center
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+              .col-xxl-4.col-md-6
+                .card.height-equal
+                  .card-header
+                    h4 Stroke Star Rating
+                    p.f-m-light.mt-1
+                      | Use
+                      code  star-box1
+                      |  class to set stroke rating.
+                  .card-body
+                    .main-star-rating
+                      .common-flex.star-box1.justify-content-center
+                        i.fa.fa-star-o
+                        i.fa.fa-star-o
+                        i.fa.fa-star-o
+                        i.fa.fa-star-o
+                        i.fa.fa-star-o
+              .col-xxl-4.col-md-6
+                .card.height-equal
+                  .card-header
+                    h4 Star with Message Rating
+                    p.f-m-light.mt-1
+                      | Use
+                      code  msg-emojis-wrapper
+                      |  class to set star with message rating.
+                  .card-body
+                    .msg-emojis-wrapper
+                      .star-widget
+                        input#rate-5(type='radio' name='rate')
+                        label.fa.fa-star(for='rate-5')
+                        input#rate-4(type='radio' name='rate')
+                        label.fa.fa-star(for='rate-4')
+                        input#rate-3(type='radio' name='rate')
+                        label.fa.fa-star(for='rate-3')
+                        input#rate-2(type='radio' name='rate')
+                        label.fa.fa-star(for='rate-2')
+                        input#rate-1(type='radio' name='rate')
+                        label.fa.fa-star(for='rate-1')
+                        form(action='#')
+                          header
+              
+              .col-xxl-4.col-md-6
+                .card.height-equal
+                  .card-header
+                    h4 Reset Rating
+                    p.f-m-light.mt-1
+                      | Use
+                      code  reset-rating
+                      |  class to set and reset rating.
+                  .card-body.reset-rating-wrapper
+                    .ratingCard
+                      .reset-rating
+                        input#rating-5(type='radio' name='rating')
+                        label.fa.fa-star(for='rating-5')
+                        input#rating-4(type='radio' name='rating')
+                        label.fa.fa-star(for='rating-4')
+                        input#rating-3(type='radio' name='rating')
+                        label.fa.fa-star(for='rating-3')
+                        input#rating-2(type='radio' name='rating')
+                        label.fa.fa-star(for='rating-2')
+                        input#rating-1(type='radio' name='rating')
+                        label.fa.fa-star(for='rating-1')
+                        input#rating-0(type='radio' name='rating')
+                      .buttonContainer
+                        button.reset-btn.btn.btn-primary Reset
+              .col-xxl-4.col-md-6
+                .card.height-equal
+                  .card-header
+                    h4 Slider Emoji Rating
+                    p.f-m-light.mt-1
+                      | Use
+                      code  stars
+                      |  class to set slider emoji ratings.
+                  .card-body.rating-stars-2
+                    .emoji-rating
+                      input#star-1(type='radio' name='rate')
+                      input#star-2(type='radio' name='rate')
+                      input#star-3(type='radio' name='rate')
+                      input#star-4(type='radio' name='rate')
+                      input#star-5(type='radio' name='rate')
+                      .common-align.flex-column
+                        .outer-emoji
+                          ul.emojis
+                            li.slide-emoji
+                              i.icofont.icofont-emo-angry
+                            li
+                              i.icofont.icofont-emo-expressionless
+                            li
+                              i.icofont.icofont-emo-slightly-smile
+                            li
+                              i.icofont.icofont-emo-heart-eyes
+                            li
+                              i.icofont.icofont-emo-laughing
+                        .stars
+                          label.star-1.fa.fa-star(for='star-1')
+                          label.star-2.fa.fa-star(for='star-2')
+                          label.star-3.fa.fa-star(for='star-3')
+                          label.star-4.fa.fa-star(for='star-4')
+                          label.star-5.fa.fa-star(for='star-5')
+                      .main-emoji-text
+                        span.emoji-msg
+                        span.emoji-number
+              .col-xxl-4.col-md-6
+                .card.height-equal
+                  .card-header
+                    h4 Range Rating
+                    p.f-m-light.mt-1
+                      | Use
+                      code  emoji__face
+                      |  class to set all expression of emoji.
+                  .card-body.rating_expression
+                    form.emoji
+                      label.emoji__label(for='face-rating') Rate your experience? 
+                      .emoji__face(role='img' aria-label='Straight face')
+                          .emoji__face-right-eye(data-right='')
+                          .emoji__face-left-eye(data-left='')
+                          .emoji__face-mouth-lower(data-mouth-lower='')
+                          .emoji__face-mouth-upper(data-mouth-upper='')
+                      input#face-rating.emoji__input.emoji_slider(type='range' value='2.5' min='0' max='5' step='0.1')
+              
+              .col-xxl-4.col-md-6
+                .card.height-equal
+                  .card-header
+                    h4 Half Star Rating
+                    p.f-m-light.mt-1
+                      | Use
+                      code  half-star-rating
+                      |  class to set a half rating for any star.
+                  .card-body.half-star-rating
+                    .row
+                      .col-12
+                        #starrate.starrate(data-val='2.5' data-max='5')
+                          span.ctrl
+                          span.cont
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star-half-o
+                            i.fa.fa-star-o
+                            i.fa.fa-star-o
+                      #rating-result.col-12.rating-result 2.5
+              .col-xxl-4.col-md-6
+                .card.height-equal
+                  .card-header
+                    h4 Animated Rating
+                    p.f-m-light.mt-1
+                      | Use 
+                      code angry, sad, ok, good, happy
+                      |  classes to set emoji ratings.
+                  .card-body
+                    .rating-container
+                      ul.feedback
+                        li.angry.me-0
+                          div
+                            svg.eye.left
+                              use(xlink:href='../assets/svg/icon-sprite.svg#eye')
+                            svg.eye.right
+                              use(xlink:href='../assets/svg/icon-sprite.svg#eye')
+                            svg.mouth
+                              use(xlink:href='../assets/svg/icon-sprite.svg#mouth')
+                        li.sad.me-0
+                          div
+                            svg.eye.left
+                              use(xlink:href='../assets/svg/icon-sprite.svg#eye')
+                            svg.eye.right
+                              use(xlink:href='../assets/svg/icon-sprite.svg#eye')
+                            svg.mouth
+                              use(xlink:href='../assets/svg/icon-sprite.svg#mouth')
+                        li.ok.me-0
+                          div
+                        li.good.active.me-0
+                          div
+                            svg.eye.left
+                              use(xlink:href='../assets/svg/icon-sprite.svg#eye')
+                            svg.eye.right
+                              use(xlink:href='../assets/svg/icon-sprite.svg#eye')
+                            svg.mouth
+                              use(xlink:href='../assets/svg/icon-sprite.svg#mouth')
+                        li.happy.me-0
+                          div
+                            svg.eye.left
+                              use(xlink:href='../assets/svg/icon-sprite.svg#eye')
+                            svg.eye.right
+                              use(xlink:href='../assets/svg/icon-sprite.svg#eye')
+              
+              .col-xxl-4.col-md-12
+                .card.height-equal
+                  .card-header
+                    h4 Animated Heart Rating
+                    p.f-m-light.mt-1
+                      | Use
+                      code  rating-system3
+                      |  class to set heart with message rating.
+                  .card-body
+                    .heart-rating
+                      .rating-system3
+                          input#star5_3(type='radio' name='rate3')
+                          label(for='star5_3')
+                          input#star4_3(type='radio' name='rate3')
+                          label(for='star4_3')
+                          input#star3_3(type='radio' name='rate3')
+                          label(for='star3_3')
+                          input#star2_3(type='radio' name='rate3')
+                          label(for='star2_3')
+                          input#star1_3(type='radio' name='rate3')
+                          label.ms-1(for='star1_3')
+                          .rating-text
+            
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

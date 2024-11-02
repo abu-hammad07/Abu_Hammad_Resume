@@ -1,0 +1,77 @@
+/*
+Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+*/
+
+html,
+body {
+	background-color: transparent;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	padding: 10px;
+}
+
+body,
+td,
+input,
+select,
+textarea {
+	font-size: 11px;
+	font-family: 'Microsoft Sans Serif', Arial, Helvetica, Verdana;
+}
+
+.midtext {
+	padding: 0px;
+	margin: 10px;
+}
+
+.midtext p {
+	padding: 0px;
+	margin: 10px;
+}
+
+.Button {
+	border: #737357 1px dashed;
+	color: #3b3b1f;
+	background-color: #c7c78f;
+}
+
+.PopupTabArea {
+	color: #737357;
+	background-color: #e3e3c7;
+}
+
+.PopupTitleBorder {
+	border-bottom: #d5d59d 1px dashed;
+}
+
+.PopupTabEmptyArea {
+	padding-left: 10px;
+	border-bottom: #d5d59d 1px dashed;
+}
+
+.PopupTab,
+.PopupTabSelected {
+	border-right: #d5d59d 1px dashed;
+	border-top: #d5d59d 1px dashed;
+	border-left: #d5d59d 1px dashed;
+	padding: 3px 5px 3px 5px;
+	color: #737357;
+}
+
+.PopupTab {
+	margin-top: 1px;
+	border-bottom: #d5d59d 1px dashed;
+	cursor: pointer;
+}
+
+.PopupTabSelected {
+	font-weight: bold;
+	cursor: default;
+	padding-top: 4px;
+	border-bottom: #f1f1e3 1px dashed;
+	background-color: #f1f1e3;
+}

@@ -1,0 +1,334 @@
+- var page_Title = 'Course List';
+- var theme_customizer      = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Course','Course List'],'Course List')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-xl-9.xl-60.order-xl-0.order-1.box-col-12
+                .row
+                  .col-xl-12
+                    .card
+                      .blog-box.blog-list.row
+                        .col-sm-5
+                          img.img-fluid.sm-100-w(src='../assets/images/faq/1.jpg', alt='')
+                        .col-sm-7
+                          .blog-details
+                            .blog-date
+                              span 05
+                              |  January 2024
+                            h4 Java Language 
+                            .blog-bottom-content
+                              ul.blog-social
+                                li by: Paige Turner
+                                li 15 Hits
+                              hr
+                              p.mt-0
+                                | Java is an object-oriented programming language. Sun Microsystems first released Java in the year 1995. It is popularly used for developing Java applications in data centers, laptops, cell phones, game consoles, and scientific supercomputers. There are multiple websites and applications which will not work if Java is not installed.
+                  .col-xl-12
+                    .card
+                      .blog-box.blog-list.row
+                        .col-sm-5
+                          img.img-fluid.sm-100-w(src='../assets/images/faq/2.jpg', alt='')
+                        .col-sm-7
+                          .blog-details
+                            .blog-date
+                              span 10
+                              |  March 2024
+                            h4 Web Development 
+                            .blog-bottom-content
+                              ul.blog-social
+                                li by: Petey Cruiser
+                                li 34 Hits
+                              hr
+                              p.mt-0
+                                | Web development is the work involved in developing a website for the Internet or an intranet (a private network).Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services, and many more such applications and websites are being created every day.
+                  .col-xl-4.xl-50.col-sm-6.box-col-6
+                    .card
+                      .blog-box.blog-grid.text-center.product-box
+                        .product-img
+                          img.img-fluid.top-radius-blog(src='../assets/images/faq/3.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                i.icon-link
+                              li
+                                i.icon-import
+                        .blog-details-main
+                          ul.blog-social
+                            li 9 April 2018
+                            li by: Admin
+                            li 0 Hits
+                          hr
+                          h5.f-w-600 Web Devlopment.
+                          p.blog-bottom-details This course is designed to start you on a path toward future studies in web development and design.
+                  .col-xl-4.xl-50.col-sm-6.box-col-6
+                    .card
+                      .blog-box.blog-grid.text-center.product-box
+                        .product-img
+                          img.img-fluid.top-radius-blog(src='../assets/images/faq/1.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                i.icon-link
+                              li
+                                i.icon-import
+                        .blog-details-main
+                          ul.blog-social
+                            li 9 April 2018
+                            li by: Admin
+                            li 0 Hits
+                          hr
+                          h5.f-w-600 Web Design.
+                          p.blog-bottom-details Web designing course belongs to the field of computer science and IT. It enables students to learn.
+                  .col-xl-4.xl-50.col-sm-6.box-col-6
+                    .card
+                      .blog-box.blog-grid.text-center.product-box
+                        .product-img
+                          img.img-fluid.top-radius-blog(src='../assets/images/faq/4.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                i.icon-link
+                              li
+                                i.icon-import
+                        .blog-details-main
+                          ul.blog-social
+                            li 9 April 2018
+                            li by: Admin
+                            li 0 Hits
+                          hr
+                          h5.f-w-600 UX Development.
+                          p.blog-bottom-details User interface design (UI) is the design for machines and software, such as mobile devices, computers.
+                  .col-xl-4.xl-50.col-sm-6.box-col-6
+                    .card
+                      .blog-box.blog-grid.text-center.product-box
+                        .product-img
+                          img.img-fluid.top-radius-blog(src='../assets/images/faq/2.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                i.icon-link
+                              li
+                                i.icon-import
+                        .blog-details-main
+                          ul.blog-social
+                            li 9 April 2018
+                            li by: Admin
+                            li 0 Hits
+                          hr
+                          h5.f-w-600 Spoken English
+                          p.blog-bottom-details Spoken english courses are pursued by candidates from all levels to improve their communication skills.
+                  .col-xl-4.xl-50.col-sm-6.box-col-6
+                    .card
+                      .blog-box.blog-grid.text-center.product-box
+                        .product-img
+                          img.img-fluid.top-radius-blog(src='../assets/images/faq/4.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                i.icon-link
+                              li
+                                i.icon-import
+                        .blog-details-main
+                          ul.blog-social
+                            li 9 April 2018
+                            li by: Admin
+                            li 0 Hits
+                          hr
+                          h5.f-w-600 Web Devlopment.
+                          p.blog-bottom-details This course is designed to start you on a path toward future studies in web development and design.
+                  .col-xl-4.xl-50.col-sm-6.box-col-6
+                    .card
+                      .blog-box.blog-grid.text-center.product-box
+                        .product-img
+                          img.img-fluid.top-radius-blog(src='../assets/images/faq/3.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                i.icon-link
+                              li
+                                i.icon-import
+                        .blog-details-main
+                          ul.blog-social
+                            li 9 April 2018
+                            li by: Admin
+                            li 0 Hits
+                          hr
+                          h5.f-w-600 Advance Design.
+                          p.blog-bottom-details Web development course belongs to the field of computer science and IT. It enables students to learn.
+              .col-xl-3.xl-40.box-col-12.learning-filter
+                .md-sidebar
+                  a.btn.btn-primary.email-aside-toggle.md-sidebar-toggle Learning filter
+                  .md-sidebar-aside.job-sidebar.job-default-sidebar
+                    #accordionoc.default-according.style-1.faq-accordion.job-accordion
+                      .row
+                        .col-xl-12
+                          .card
+                            .card-header
+                              h5.mb-0
+                                button.btn.btn-link(data-bs-toggle='collapse', data-bs-target='#collapseicon', aria-expanded='true', aria-controls='collapseicon') Find Course
+                            #collapseicon.collapse.show(aria-labelledby='collapseicon', data-bs-parent='#accordion')
+                              .card-body.filter-cards-view.animate-chk
+                                .job-filter
+                                  .faq-form
+                                    input.form-control(type='text', placeholder='Search..')
+                                    i.search-icon(data-feather='search')
+                                .checkbox-animated
+                                  .learning-header
+                                    span.f-w-600 Categories
+                                  label.d-block(for='chk-ani')
+                                    input#chk-ani.checkbox_animated(type='checkbox')
+                                    |                       Accounting
+                                  label.d-block(for='chk-ani0')
+                                    input#chk-ani0.checkbox_animated(type='checkbox')
+                                    |                             Design
+                                  label.d-block(for='chk-ani1')
+                                    input#chk-ani1.checkbox_animated(type='checkbox')
+                                    |                             Development
+                                  label.d-block(for='chk-ani2')
+                                    input#chk-ani2.checkbox_animated(type='checkbox')
+                                    |                             Management
+                                .checkbox-animated.mt-0
+                                  .learning-header
+                                    span.f-w-600 Duration
+                                  label.d-block(for='chk-ani6')
+                                    input#chk-ani6.checkbox_animated(type='checkbox')
+                                    |                             0-50 hours
+                                  label.d-block(for='chk-ani7')
+                                    input#chk-ani7.checkbox_animated(type='checkbox')
+                                    |                             50-100 hours
+                                  label.d-block(for='chk-ani8')
+                                    input#chk-ani8.checkbox_animated(type='checkbox')
+                                    |                             100+ hours
+                                .checkbox-animated.mt-0
+                                  .learning-header
+                                    span.f-w-600 Price
+                                  label.d-block(for='edo-ani')
+                                    input#edo-ani.radio_animated(type='radio', name='rdo-ani', checked='')
+                                    |                             All Courses
+                                  label.d-block(for='edo-ani1')
+                                    input#edo-ani1.radio_animated(type='radio', name='rdo-ani', checked='')
+                                    |                             Paid Courses
+                                  label.d-block(for='edo-ani2')
+                                    input#edo-ani2.radio_animated(type='radio', name='rdo-ani', checked='')
+                                    |                             Free Courses
+                                .checkbox-animated.mt-0
+                                  .learning-header
+                                    span.f-w-600 Status
+                                  label.d-block(for='chk-ani3')
+                                    input#chk-ani3.checkbox_animated(type='checkbox')
+                                    |                             Registration
+                                  label.d-block(for='chk-ani4')
+                                    input#chk-ani4.checkbox_animated(type='checkbox')
+                                    |                             Progress
+                                  label.d-block(for='chk-ani5')
+                                    input#chk-ani5.checkbox_animated(type='checkbox')
+                                    |                             Completed
+                                button.btn.btn-primary.text-center(type='button') Filter
+                        .col-xl-12
+                          .card
+                            .card-header
+                              h5.mb-0
+                                button.btn.btn-link(data-bs-toggle='collapse', data-bs-target='#collapseicon1', aria-expanded='true', aria-controls='collapseicon1') Categories
+                            #collapseicon1.collapse.card-body.px-0.show(aria-labelledby='collapseicon1', data-bs-parent='#accordion')
+                              .categories
+                                .learning-header
+                                  span.pt-3.f-w-600 Design
+                                ul
+                                  li
+                                    a(href='#') UI Design 
+                                    span.badge.badge-primary.pull-right 28
+                                  li
+                                    a(href='#') UX Design 
+                                    span.badge.badge-primary.pull-right 35
+                                  li
+                                    a(href='#') Interface Design 
+                                    span.badge.badge-primary.pull-right 17
+                                  li
+                                    a(href='#') User Experience 
+                                    span.badge.badge-primary.pull-right 26
+                              .categories.pt-0
+                                .learning-header
+                                  span.pt-3.f-w-600 Development
+                                ul
+                                  li
+                                    a(href='#') Frontend Development
+                                    span.badge.badge-primary.pull-right 48
+                                  li
+                                    a(href='#') Backend Development
+                                    span.badge.badge-primary.pull-right 19
+                        .col-xl-12
+                          .card
+                            .card-header
+                              h5.mb-0
+                                button.btn.btn-link(data-bs-toggle='collapse', data-bs-target='#collapseicon2', aria-expanded='true', aria-controls='collapseicon2') Upcoming Courses
+                            #collapseicon2.collapse.show(aria-labelledby='collapseicon2', data-bs-parent='#accordion')
+                              .upcoming-course.card-body
+                                .d-flex
+                                  .flex-grow-1
+                                    span.f-w-600 UX Development
+                                    span.d-block
+                                      | Course By 
+                                      a(href='#') Howard Moore
+                                    span.d-block
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star-half-o.font-warning
+                                  div
+                                    h5.mb-0.font-primary 18
+                                    span.d-block Dec
+                                .d-flex
+                                  .flex-grow-1
+                                    span.f-w-600 Business Analyst
+                                    span.d-block
+                                      | Course By 
+                                      a(href='#') Crystal Markey
+                                    span.d-block
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star.font-warning
+                                  div
+                                    h5.mb-0.font-primary 28
+                                    span.d-block Dec
+                                .d-flex
+                                  .flex-grow-1
+                                    span.f-w-600 Web Development
+                                    span.d-block
+                                      | Course By 
+                                      a(href='#') Jerry Reel 
+                                    span.d-block
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star-o.font-warning
+                                  div
+                                    h5.mb-0.font-primary 5
+                                    span.d-block Jan
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

@@ -1,0 +1,169 @@
+- var page_Title = 'Tour';
+- var tour                  = true;
+- var theme_customizer      = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Bonus Ui','Tour'],'Tour')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .user-profile
+              .row
+                // Container-fluid starts
+          .container-fluid
+            .user-profile
+              .row
+                // user profile first-style start
+                .col-sm-12
+                  .card.hovercard.text-center
+                    .cardheader
+                    .user-image
+                      .avatar
+                        img(alt='', src='../assets/images/user/7.jpg', data-intro='This is mofi profile')
+                      .icon-wrapper
+                        i.icofont.icofont-pencil-alt-5(data-intro='Change mofi profile image here')
+                    .info
+                      .row.g-3(data-intro='This is your profile details')
+                        .col-sm-6.col-xl-4.order-sm-1.order-xl-0
+                          .row.g-3
+                            .col-md-6
+                              .text-start.tour-email
+                                h6.tour-mb-space
+                                  i.fa.fa-envelope
+                                  |    Email
+                                span.text-truncate William@jourrapide.com
+                            .col-md-6
+                              .text-start.ttl-sm-mb-0.tour-email
+                                h6.tour-mb-space
+                                  i.fa.fa-calendar
+                                  |    BOD
+                                span 02 January 1988
+                        .col-sm-12.col-xl-4.order-sm-0.order-xl-1
+                          .user-designation.tour-email
+                            .title
+                              a(target='_blank', href='') William C. Jennings
+                            .desc.mt-2  Web Designer
+                        .col-sm-6.col-xl-4.order-sm-2.order-xl-2
+                          .row.g-3
+                            .col-md-6.mt-0.mt-sm-3
+                              .text-start.ttl-xs-mt.tour-email
+                                h6.tour-mb-space
+                                  i.fa.fa-phone
+                                  |    Contact Us
+                                span US 310-273-0666
+                            .col-md-6
+                              .text-start.ttl-sm-mb-0.tour-email
+                                h6.tour-mb-space
+                                  i.fa.fa-location-arrow
+                                  |    Location
+                                span 4377 Libby Street Beverly Hills
+                      hr
+                      .social-media(data-intro='This is your social details')
+                        ul.list-inline
+                          li.list-inline-item
+                            a(href='https://www.facebook.com/' target="_blank")
+                              i.fa.fa-facebook
+                          li.list-inline-item
+                            a(href='https://accounts.google.com/' target="_blank")
+                              i.fa.fa-google-plus
+                          li.list-inline-item
+                            a(href='https://twitter.com/' target="_blank")
+                              i.fa.fa-twitter
+                          li.list-inline-item
+                            a(href='https://www.instagram.com/' target="_blank")
+                              i.fa.fa-instagram
+                          li.list-inline-item
+                            a(href='https://rss.app/' target="_blank")
+                              i.fa.fa-rss
+                      .follow
+                        .row
+                          .col-6.border-right
+                            .follow-num.counter 25.8K
+                            span Follower
+                          .col-6
+                            .follow-num.counter 65.2M
+                            span Following
+                // user profile first-style end
+                // user profile third-style start
+                .col-sm-12
+                  .card
+                    .profile-img-style
+                      .row.g-2
+                        .col-sm-8
+                          .d-flex
+                            img.img-thumbnail.rounded-circle.me-3(src='../assets/images/user/7.jpg', alt='Generic placeholder image')
+                            .flex-grow-1.align-self-center
+                              h5.mt-0.user-name William C. Jennings
+                              .tour-wrapper
+                                span 25 Jan
+                                i.tour-dot.fa.fa-circle
+                                span.txt-danger 1 min read
+                        .col-sm-4.align-self-center.mt-0.text-end
+                          .social-media.social-tour(data-intro='This is your social details')
+                            ul.list-inline
+                              li.list-inline-item
+                                a(href='https://www.facebook.com/' target="_blank")
+                                  i.fa.fa-facebook
+                              li.list-inline-item
+                                a(href='https://accounts.google.com/' target="_blank")
+                                  i.fa.fa-google-plus
+                              li.list-inline-item
+                                a(href='https://twitter.com/' target="_blank")
+                                  i.fa.fa-twitter
+                              li.list-inline-item
+                                a(href='https://www.instagram.com/' target="_blank")
+                                  i.fa.fa-instagram
+                              li.list-inline-item
+                                a(href='https://rss.app/' target="_blank")
+                                  i.fa.fa-rss
+                            .float-sm-end
+                              small 10 Hours ago
+                      hr
+                      p.block-ellipsis
+                        | A person who interacts with a given system, platform, or gadget in order to carry out a particular activity or obtain specific data is referred to as a user. A user is someone who interacts with software, websites, or electronic gadgets in the context of technology.
+                      #aniimated-thumbnials-2.row.g-3.mt-2.pictures
+                        a.col-sm-6(href='javascript:void(0)')
+                          .tour-blog
+                            img.img-fluid.rounded(src='../assets/images/other-images/mountain.jpg', alt='mountain')
+                        a.col-sm-6(href='javascript:void(0)')
+                          .tour-blog
+                            img.img-fluid.rounded(src='../assets/images/other-images/sea.jpg', alt='sea')
+                      .like-comment.mt-4(data-intro='This is your like-comment-share icons')
+                        ul.list-inline
+                          li.list-inline-item.b-r-gray.pe-3
+                            label.m-0
+                              a(href='#')
+                                i.fa.fa-heart
+                              |   Like
+                          li.list-inline-item.b-r-gray.pe-3
+                            label.m-0
+                              a(href='#')
+                                i.fa.fa-comment
+                              |   Comment
+                          li.list-inline-item
+                            label.m-0
+                              a(href='#')
+                                i.fa.fa-paper-plane
+                              |   Share
+                // user profile third-style end
+
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

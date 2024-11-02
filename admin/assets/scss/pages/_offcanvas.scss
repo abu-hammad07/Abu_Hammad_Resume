@@ -1,0 +1,26 @@
+  /**=====================
+     14. Offcanvas CSS Start
+==========================**/
+
+.common-offcanvas {
+  .offcanvas {
+    position: fixed;
+    background-color: $white;
+    z-index: 1045;
+    &.offcanvas-start {
+      &.show {
+        box-shadow: 8px 0 20px -2px rgba($dark-gray, 0.4);
+      }
+    }
+    .offcanvas-header {
+      padding-bottom: 0;
+      .btn-close {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+  /**=====================
+    14. Offcanvas CSS Ends
+==========================**/

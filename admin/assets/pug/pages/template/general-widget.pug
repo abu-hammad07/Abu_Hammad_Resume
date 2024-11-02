@@ -1,0 +1,381 @@
+- var page_Title = 'General Widget';
+- var height_equal          = true;
+- var theme_customizer      = true;
+- var date_picker           = true;
+- var apex                  = true;
+- var general_widget        = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Widgets','General'],' General')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-xl-3.col-sm-6 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top.daily-revenue-card
+                      h4 Total Sells
+                      .dropdown.icon-dropdown
+                        button#userdropdown.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.pb-0.total-sells
+                    .d-flex.align-items-center.gap-3  
+                      .flex-shrink-0
+                        img(src='../assets/images/dashboard-3/icon/coin1.png' alt="icon")
+                      .flex-grow-1
+                        div.d-flex.align-items-center.gap-2 
+                          h2 $ 12,463
+                          div.d-flex.total-icon
+                            p.mb-0.up-arrow.bg-light-success
+                              i.fa.fa-arrow-up.font-success
+                            span.f-w-500.font-success + 20.08% 
+                        p.text-truncate Compared to Jan 2024
+                    #admissionRatio
+              .col-xl-3.col-sm-6 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top.daily-revenue-card
+                      h4 Orders Value
+                      .dropdown.icon-dropdown
+                        button#userdropdown2.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown2')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.pb-0.total-sells-2
+                    .d-flex.align-items-center.gap-3  
+                      .flex-shrink-0
+                        img(src='../assets/images/dashboard-3/icon/shopping1.png' alt="icon")
+                      .flex-grow-1
+                        div.d-flex.align-items-center.gap-2 
+                          h2 $ 12,463
+                          div.d-flex.total-icon
+                            p.mb-0.up-arrow.bg-light-danger
+                              i.fa.fa-arrow-down.font-danger
+                            span.f-w-500.font-danger - 20.08% 
+                        p.text-truncate Compared to Jan 2024
+                    #order-value
+              .col-xl-3.col-sm-6 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top.daily-revenue-card
+                      h4 Daily Orders
+                      .dropdown.icon-dropdown
+                        button#userdropdown3.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown3')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.pb-0.total-sells-3
+                    .d-flex.align-items-center.gap-3  
+                      .flex-shrink-0
+                        img(src='../assets/images/dashboard-3/icon/sent1.png' alt="icon")
+                      .flex-grow-1
+                        div.d-flex.align-items-center.gap-2 
+                          h2 $ 12,463
+                          div.d-flex.total-icon
+                            p.mb-0.up-arrow.bg-light-success
+                              i.fa.fa-arrow-up.font-success
+                            span.f-w-500.font-success + 20.08% 
+                        p.text-truncate Compared to Jan 2024
+                    #daily-value
+              .col-xl-3.col-sm-6 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top.daily-revenue-card
+                      h4 Daily Revenue
+                      .dropdown.icon-dropdown
+                        button#userdropdown4.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown4')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.pb-0.total-sells-4
+                    .d-flex.align-items-center.gap-3  
+                      .flex-shrink-0
+                        img(src='../assets/images/dashboard-3/icon/revenue1.png' alt="icon")
+                      .flex-grow-1
+                        div.d-flex.align-items-center.gap-2 
+                          h2 $ 12,463
+                          div.d-flex.total-icon
+                            p.mb-0.up-arrow.bg-light-danger
+                              i.fa.fa-arrow-down.font-danger
+                            span.f-w-500.font-danger - 20.08% 
+                        p.text-truncate Compared to Jan 2024
+                    #daily-revenue
+              .col-xxl-3.col-xl-4.col-sm-6
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Website Design
+                      .dropdown.icon-dropdown
+                        button#userdropdown20.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown20')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.designer-card
+                    div   
+                      .d-flex.align-items-center.gap-2  
+                        .flex-shrink-0
+                          img(src='../assets/images/dashboard-2/user/16.png' alt="user")
+                        .flex-grow-1
+                          a(href="product-page.html")
+                            h5 Square Dashboard
+                          p karson123@gmail.com
+                      .design-button
+                        button.btn.bg-light-primary.font-primary.f-w-500 UX Design
+                        button.btn.bg-light-secondary.font-secondary.f-w-500 3D Deisgn
+                      .ratting-button   
+                        div 
+                          .d-flex.align-items-center.gap-2.mb-0 
+                            .flex-shrink-0
+                              p.f-w-500 12  
+                            .flex-grow-1
+                              span.f-w-500 Issues
+                        div 
+                          .d-flex.align-items-center.gap-2.mb-0  
+                            .flex-shrink-0
+                              p.f-w-500 5 
+                            .flex-grow-1
+                              span.f-w-500 Resolved 
+                        div 
+                          .d-flex.align-items-center.gap-2.mb-0  
+                            .flex-shrink-0
+                              p.f-w-500 7  
+                            .flex-grow-1
+                              span.f-w-500 Comment
+                      h5.f-w-500.pb-2 Task Completed: 6/10
+                      .progress.progress-striped-primary
+                        .progress-bar(role='progressbar', style='width: 50%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+              .col-xxl-3.col-xl-4.col-sm-6
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Opening of leaflets
+                      .dropdown.icon-dropdown
+                        button#userdropdown17.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown17')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.pb-0.opening-box
+                    div.d-flex.align-items-center.gap-2 
+                      h2 $ 12,463
+                      div.d-flex
+                        p.mb-0.up-arrow
+                          i.fa.fa-arrow-up
+                        span.f-w-500.font-success + 20.08%
+                    #growthchart 
+              .col-xxl-6.col-xl-4.col-md-12
+                .card.visitor-card 
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h5.f-w-600.m-0 Visitors
+                        span.f-14.font-primary.f-w-500.ms-1
+                          svg.svg-fill.me-1
+                            use(href='../assets/svg/icon-sprite.svg#user-visitor')
+                          | (+2.8)
+                      .card-header-right-icon
+                        .dropdown.icon-dropdown
+                          button#visitorButton.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                            i.icon-more-alt
+                          .dropdown-menu.dropdown-menu-end(aria-labelledby='visitorButton')
+                            a.dropdown-item(href='#') Today
+                            a.dropdown-item(href='#') Tomorrow
+                            a.dropdown-item(href='#') Yesterday
+                  .card-body.pt-3
+                    .visitors-container
+                      #visitor-chart
+              .col-xl-3.col-sm-6 
+                .card.social-widget
+                  .card-body
+                    .d-flex.align-items-center.justify-content-between
+                      div.d-flex.align-items-center.gap-2
+                        .social-icons
+                          img(src="../assets/images/dashboard/social/1.png", alt="facebook icon")
+                        span.f-w-600 Facebook
+                      span.font-success.f-12.d-xxl-block.d-xl-none +22.9%
+                    .social-content
+                      div 
+                        h5.mb-1 12,098
+                        span.f-light Followers
+                      .social-chart
+                        #radial-facebook
+              .col-xl-3.col-sm-6 
+                .card.social-widget
+                  .card-body
+                    .d-flex.align-items-center.justify-content-between
+                      div.d-flex.align-items-center.gap-2
+                        .social-icons
+                          img(src="../assets/images/dashboard/social/3.png", alt="twitter icon")
+                        span.f-w-600 Twitter
+                      span.font-success.f-12.d-xxl-block.d-xl-none +14.09%
+                    .social-content
+                      div 
+                        h5.mb-1 12,564
+                        span.f-light Followers
+                      .social-chart
+                        #radial-twitter
+              .col-xl-3.col-sm-6  
+                .card.social-widget
+                  .card-body
+                    .d-flex.align-items-center.justify-content-between
+                      div.d-flex.align-items-center.gap-2
+                        .social-icons
+                          img(src="../assets/images/dashboard/social/2.png", alt="instagram icon")
+                        span.f-w-600 Instagram
+                      span.font-success.f-12.d-xxl-block.d-xl-none +27.4%
+                    .social-content
+                      div 
+                        h5.mb-1 15,080
+                        span.f-light Followers
+                      .social-chart
+                        #radial-instagram
+              .col-xl-3.col-sm-6 
+                .card.social-widget
+                  .card-body
+                    .d-flex.align-items-center.justify-content-between
+                      div.d-flex.align-items-center.gap-2
+                        .social-icons
+                          img(src="../assets/images/dashboard/social/4.png", alt="you tube icon")
+                        span.f-w-600 Youtube
+                      span.font-success.f-12.d-xxl-block.d-xl-none +22.9%
+                    .social-content
+                      div 
+                        h5.mb-1 68,954
+                        span.f-light Followers
+                      .social-chart
+                        #radial-youtube 
+              .col-xl-6.col-md-12.proorder-md-1   
+                .row 
+                  .col-xl-6.col-sm-6 
+                    .card
+                      .card-body.student
+                        .d-flex.gap-2.align-items-end 
+                          .flex-grow-1
+                            h2 42,954
+                            p.mb-0.text-truncate  Total Students
+                            div.d-flex.student-arrow.text-truncate.gap-1
+                              p.mb-0.up-arrow.bg-light-danger
+                                i.icon-arrow-down.font-danger
+                              span.f-w-500.font-danger - 17.06%
+                              | than last 6 Month
+                          .flex-shrink-0
+                            img(src='../assets/images/dashboard-4/icon/student.png' alt="")
+                  .col-xl-6.col-sm-6 
+                    .card
+                      .card-body.student-2
+                        .d-flex.gap-2.align-items-end 
+                          .flex-grow-1
+                            h2 659
+                            p.mb-0.text-truncate  Total Teachers
+                            div.d-flex.student-arrow.text-truncate.gap-1
+                              p.mb-0.up-arrow.bg-light-success
+                                i.icon-arrow-up.font-success
+                              span.f-w-500.font-success +27.02%
+                              | than last 4 Month
+                          .flex-shrink-0
+                            img(src='../assets/images/dashboard-4/icon/teacher.png' alt="")
+                  .col-xl-6.col-sm-6 
+                    .card
+                      .card-body.student-3
+                        .d-flex.gap-2.align-items-end 
+                          .flex-grow-1
+                            h2 984
+                            p.mb-0.text-truncate  Events
+                            div.d-flex.student-arrow.text-truncate.gap-1
+                              p.mb-0.up-arrow.bg-light-success
+                                i.icon-arrow-up.font-success
+                              span.f-w-500.font-success + 12.01%
+                              | than last 8 Month
+                          .flex-shrink-0
+                            img(src='../assets/images/dashboard-4/icon/calendar.png' alt="")
+                  .col-xl-6.col-sm-6 
+                    .card
+                      .card-body.student-4
+                        .d-flex.gap-2.align-items-end 
+                          .flex-grow-1
+                            h2 1,984
+                            p.mb-0.text-truncate  Invoice Status
+                            div.d-flex.student-arrow.text-truncate.gap-1
+                              p.mb-0.up-arrow.bg-light-danger
+                                i.icon-arrow-down.font-danger
+                              span.f-w-500.font-danger - 15.02%
+                              | than last 5 Month
+                          .flex-shrink-0
+                            img(src='../assets/images/dashboard-4/icon/invoice.png' alt="")
+              .col-xxl-6.col-xl-6.box-col-6.proorder-xl-7.proorder-md-8 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Upcoming Appointments
+                  .card-body.appointments.relative
+                    .row  
+                      .col-5 
+                        ul.appointments-user
+                          li.d-flex.align-items-center
+                            .flex-shrink-0
+                              img(src='../assets/images/dashboard/user/05.png' alt="")
+                            .flex-grow-1
+                              a(href="private-chat.html")
+                                h5 John Elliot
+                              p 21 Oct 2024
+                                span (15:55 AM)
+                          li.d-flex.align-items-center
+                            .flex-shrink-0
+                              img(src='../assets/images/dashboard/user/06.png' alt="")
+                            .flex-grow-1
+                              a(href="private-chat.html")
+                                h5 Ashley Hart
+                              p 12 Oct 2024
+                                span (10:20 AM)
+                          li.d-flex.align-items-center
+                            .flex-shrink-0
+                              img(src='../assets/images/dashboard/user/07.png' alt="")
+                            .flex-grow-1
+                              a(href="private-chat.html")
+                                h5 Anna lverson
+                              p 05 Oct 2024
+                                span (14:30 AM)
+                          li.d-flex.align-items-center
+                            .flex-shrink-0
+                              img(src='../assets/images/dashboard/user/08.png' alt="")
+                            .flex-grow-1
+                              a(href="private-chat.html")
+                                h5 Dana Lemon
+                              p 01 Oct 2024
+                                span (18:45 AM)
+                      .col-7 
+                        .default-datepicker
+                          .datepicker-here(data-language='en')
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

@@ -1,0 +1,641 @@
+- var page_Title = 'Education Dashboard';
+- var theme_customizer      = true;
+- var sidebar               = true;
+- var apex                  = true;
+- var page_datatable        = true;
+- var datatable             = true;
+- var page_datatable1       = true;
+- var dashboard_4           = true;
+- var apexmoment            = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper StartMy Currencies
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Dashboard','Education'],' Education Dashboard')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid.dashboard-4
+            .row
+              .col-xl-6.col-md-12.proorder-md-1   
+                .row 
+                  .col-xl-6.col-sm-6 
+                    .card
+                      .card-body.student
+                        .d-flex.gap-2.align-items-end 
+                          .flex-grow-1
+                            h2 42,954
+                            p.mb-0.text-truncate  Total Students
+                            div.d-flex.student-arrow.text-truncate
+                              p.mb-0.up-arrow.bg-light-danger
+                                i.icon-arrow-down.font-danger
+                              span.f-w-500.font-danger - 17.06%
+                              | than last 6 Month
+                          .flex-shrink-0
+                            img(src='../assets/images/dashboard-4/icon/student.png' alt="")
+                  .col-xl-6.col-sm-6 
+                    .card
+                      .card-body.student-2
+                        .d-flex.gap-2.align-items-end 
+                          .flex-grow-1
+                            h2 659
+                            p.mb-0.text-truncate  Total Teachers
+                            div.d-flex.student-arrow.text-truncate
+                              p.mb-0.up-arrow.bg-light-success
+                                i.icon-arrow-up.font-success
+                              span.f-w-500.font-success +27.02%
+                              | than last 4 Month
+                          .flex-shrink-0
+                            img(src='../assets/images/dashboard-4/icon/teacher.png' alt="")
+                  .col-xl-6.col-sm-6 
+                    .card
+                      .card-body.student-3
+                        .d-flex.gap-2.align-items-end 
+                          .flex-grow-1
+                            h2 984
+                            p.mb-0.text-truncate  Events
+                            div.d-flex.student-arrow.text-truncate
+                              p.mb-0.up-arrow.bg-light-success
+                                i.icon-arrow-up.font-success
+                              span.f-w-500.font-success + 12.01%
+                              | than last 8 Month
+                          .flex-shrink-0
+                            img(src='../assets/images/dashboard-4/icon/calendar.png' alt="")
+                  .col-xl-6.col-sm-6 
+                    .card
+                      .card-body.student-4
+                        .d-flex.gap-2.align-items-end 
+                          .flex-grow-1
+                            h2 1,984
+                            p.mb-0.text-truncate  Invoice Status
+                            div.d-flex.student-arrow.text-truncate
+                              p.mb-0.up-arrow.bg-light-danger
+                                i.icon-arrow-down.font-danger
+                              span.f-w-500.font-danger - 15.02%
+                              | than last 5 Month
+                          .flex-shrink-0
+                            img(src='../assets/images/dashboard-4/icon/invoice.png' alt="")
+              .col-xl-6.col-md-6.proorder-md-2 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Study Statistics
+                      .dropdown.icon-dropdown
+                        button#userdropdown.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body  
+                    .studay-statistics  
+                      ul.d-flex.align-item-center.gap-2
+                        li 
+                          span.bg-primary 
+                          | UX Design
+                        li 
+                          span.bg-secondary 
+                          | Illustrations
+                    #study-statistics
+              .col-xl-8.col-md-12.proorder-md-4 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Assignments
+                      .dropdown.icon-dropdown
+                        button#userdropdown1.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown1')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.pt-0.assignments-table.px-0
+                    .table-responsive.theme-scrollbar
+                      table#assignments-table.table.display(style='width:100%')
+                        thead
+                          tr
+                            th
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            th Id no  
+                            th Teacher
+                            th Subject  
+                            th Start Date
+                            th End Date
+                            th Progress
+                            th Actions
+                        tbody
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td  
+                              span 0542
+                            td
+                              .d-flex.align-items-center
+                                .flex-shrink-0
+                                  img(src='../assets/images/dashboard-4/user/1.png' alt="")
+                                .flex-grow-1.ms-2
+                                  a(href="product-page.html")
+                                    h6 Gary payi
+                                .active-status.active-online
+                            td Accounts
+                            td 12 May 2024  
+                            td 20 May 2024 
+                            td 
+                              .progress-showcase
+                                .progress.sm-progress-bar.progress-border-primary
+                                  .progress-bar(role='progressbar', style='width: 80%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 
+                            td.text-center
+                              .dropdown.icon-dropdown
+                                button#userdropdown2.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown2')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td
+                              span 9548
+                            td
+                              .d-flex.align-items-center
+                                .flex-shrink-0
+                                  img(src='../assets/images/dashboard-4/user/2.png' alt="")
+                                .flex-grow-1.ms-2
+                                  a(href="product-page.html")
+                                    h6 Ralph Waters
+                                .active-status.active-online
+                            td UI/UX Design
+                            td 06 May 2024
+                            td 16 May 2024
+                            td 
+                              .progress-showcase
+                                .progress.sm-progress-bar.progress-border-secondary
+                                  .progress-bar(role='progressbar', style='width: 60%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 
+                            td.text-center
+                              .dropdown.icon-dropdown
+                                button#userdropdown3.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown3')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td
+                              span 2950
+                            td
+                              .d-flex.align-items-center
+                                .flex-shrink-0
+                                  img(src='../assets/images/dashboard-4/user/3.png' alt="")
+                                .flex-grow-1.ms-2
+                                  a(href="product-page.html")
+                                    h6 Edwin Day
+                                .active-status.active-online
+                            td Mathematics
+                            td 25 Sep 2024  
+                            td 30 May 2024 
+                            td 
+                              .progress-showcase
+                                .progress.sm-progress-bar.progress-border-warning
+                                  .progress-bar(role='progressbar', style='width: 50%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 
+                            td.text-center
+                              .dropdown.icon-dropdown
+                                button#userdropdown4.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown4')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td
+                              span 9605
+                            td
+                              .d-flex.align-items-center
+                                .flex-shrink-0
+                                  img(src='../assets/images/dashboard-4/user/4.png' alt="")
+                                .flex-grow-1.ms-2
+                                  a(href="product-page.html")
+                                    h6 Aaron Hogan
+                                .active-status.active-online
+                            td Computer App
+                            td 23 May 2024  
+                            td 26 May 2024
+                            td 
+                              .progress-showcase
+                                .progress.sm-progress-bar.progress-border-tertiary
+                                  .progress-bar(role='progressbar', style='width: 65%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 
+                            td.text-center
+                              .dropdown.icon-dropdown
+                                button#userdropdown5.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown5')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td  
+                              span 1552
+                            td
+                              .d-flex.align-items-center
+                                .flex-shrink-0
+                                  img(src='../assets/images/dashboard-4/user/2.png' alt="")
+                                .flex-grow-1.ms-2
+                                  a(href="product-page.html")
+                                    h6 Ralph Waters
+                                .active-status.active-online
+                            td Accounts
+                            td 15 May 2024  
+                            td 26 May 2024 
+                            td 
+                              .progress-showcase
+                                .progress.sm-progress-bar.progress-border-success
+                                  .progress-bar(role='progressbar', style='width: 40%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 
+                            td.text-center
+                              .dropdown.icon-dropdown
+                                button#userdropdown6.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown6')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td
+                              span 125
+                            td
+                              .d-flex.align-items-center
+                                .flex-shrink-0
+                                  img(src='../assets/images/dashboard-4/user/3.png' alt="")
+                                .flex-grow-1.ms-2
+                                  a(href="product-page.html")
+                                    h6 Aaron Hogan
+                                .active-status.active-online
+                            td Accounts
+                            td 05 May 2024  
+                            td 19 May 2024 
+                            td 
+                              .progress-showcase
+                                .progress.sm-progress-bar.progress-border-danger
+                                  .progress-bar(role='progressbar', style='width: 70%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 
+                            td.text-center
+                              .dropdown.icon-dropdown
+                                button#userdropdown7.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown7')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td
+                              span 254
+                            td
+                              .d-flex.align-items-center
+                                .flex-shrink-0
+                                  img(src='../assets/images/dashboard-4/user/1.png' alt="")
+                                .flex-grow-1.ms-2
+                                  a(href="product-page.html")
+                                    h6 Gary payi
+                                .active-status.active-online
+                            td Accounts
+                            td 22 May 2024  
+                            td 02 May 2024 
+                            td 
+                              .progress-showcase
+                                .progress.sm-progress-bar.progress-border-info
+                                  .progress-bar(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 
+                            td.text-center
+                              .dropdown.icon-dropdown
+                                button#userdropdown8.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown8')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+              .col-xl-4.col-md-6.proorder-md-5 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Live Meeting
+                      .location-menu.dropdown
+                        button#userdropdown9.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | 1pm-2pm
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown9')
+                          a.dropdown-item(href='#') Address Selection
+                          a.dropdown-item(href='#') Geo-Menu
+                          a.dropdown-item(href='#') Place Picker
+                  .card-body.live-meet
+                    .live-metting   
+                      img.img-fluid(src="../assets/images/dashboard-4/metting/teacher.png", alt="")
+                      .star-img
+                        img.img-fluid(src="../assets/images/dashboard-4/metting/chart.png", alt="")
+                        img.img-fluid(src="../assets/images/dashboard-4/metting/message.png", alt="")
+                        img(src="../assets/images/dashboard-4/metting/1.png", alt="")
+                        img(src="../assets/images/dashboard-4/metting/2.png", alt="")
+                        img(src="../assets/images/dashboard-4/metting/3.png", alt="")
+                        img(src="../assets/images/dashboard-4/metting/4.png", alt="")
+                        img(src="../assets/images/dashboard-4/metting/5.png", alt="")
+                        img(src="../assets/images/dashboard-4/metting/6.png", alt="")
+                        img(src="../assets/images/dashboard-4/metting/7.png", alt="")
+                        img(src="../assets/images/dashboard-4/metting/8.png", alt="")
+                        img(src="../assets/images/dashboard-4/metting/9.png", alt="")
+                        img(src="../assets/images/dashboard-4/metting/10.png", alt="")
+                    ul
+                      li 
+                        h5.text-truncate 
+                          span Class: 
+                          | Technique of Drawing in One Line
+                      li
+                        h5.text-truncate 
+                          span Batch: 
+                          | GDM (2/3) 
+                      li
+                        a(href="https://support.pixelstrap.com/ " target="_blank")
+                          h5.font-primary.text-truncate  
+                            span Class Link: 
+                            | https://support.pixelstrap.com/ 
+                    
+              .col-xxl-4.col-xl-7.box-col-7.col-md-6.proorder-md-3 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Actively Hours
+                      .dropdown.icon-dropdown
+                        button#userdropdown10.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown10')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body
+                    #actively-hours
+              .col-xxl-3.col-xl-5.box-col-5.col-md-6.proorder-md-6 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Enrolled Classes
+                      .dropdown.icon-dropdown
+                        button#userdropdown11.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown11')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.pt-0.pb-1
+                    ul.enrolled-class 
+                      li.d-flex.align-items-center.gap-2
+                        span.b-primary.bg-primary
+                        .flex-grow-1 
+                          a(href="")
+                            h5.text-truncate After Effects CC Masterclass 
+                          p 10:20 -11:30
+                        .flex-shrink-0 
+                          .dropdown.icon-dropdown
+                            button#userdropdown12.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                              i.icon-angle-right
+                            .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown12')
+                              a.dropdown-item(href='#') Weekly
+                              a.dropdown-item(href='#') Monthly
+                              a.dropdown-item(href='#') Yearly
+                      li.d-flex.align-items-center.gap-2
+                        span.b-secondary.bg-secondary
+                        .flex-grow-1 
+                          a(href="")
+                            h5.text-truncate Design from A to Z
+                          p 09:00 -10:30
+                        .flex-shrink-0 
+                          .dropdown.icon-dropdown
+                            button#userdropdown13.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                              i.icon-angle-right
+                            .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown13')
+                              a.dropdown-item(href='#') Weekly
+                              a.dropdown-item(href='#') Monthly
+                              a.dropdown-item(href='#') Yearly
+                      li.d-flex.align-items-center.gap-2
+                        span.b-warning.bg-warning
+                        .flex-grow-1 
+                          a(href="")
+                            h5.text-truncate Graphic Design Bootcamp
+                          p 15:00 -16:00
+                        .flex-shrink-0 
+                          .dropdown.icon-dropdown
+                            button#userdropdown14.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                              i.icon-angle-right
+                            .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown14')
+                              a.dropdown-item(href='#') Weekly
+                              a.dropdown-item(href='#') Monthly
+                              a.dropdown-item(href='#') Yearly
+                      li.d-flex.align-items-center.gap-2
+                        span.b-tertiary.bg-tertiary
+                        .flex-grow-1 
+                          a(href="")
+                            h5.text-truncate The Ultimate Guide to Usabillity
+                          p 13:25 -14:30
+                        .flex-shrink-0 
+                          .dropdown.icon-dropdown
+                            button#userdropdown15.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                              i.icon-angle-right
+                            .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown15')
+                              a.dropdown-item(href='#') Weekly
+                              a.dropdown-item(href='#') Monthly
+                              a.dropdown-item(href='#') Yearly
+                      li.d-flex.align-items-center.gap-2
+                        span.b-success.bg-success
+                        .flex-grow-1 
+                          a(href="")
+                            h5.text-truncate After Effects CC Masterclass
+                          p 12:45 -14:20
+                        .flex-shrink-0 
+                          .dropdown.icon-dropdown
+                            button#userdropdown16.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                              i.icon-angle-right
+                            .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown16')
+                              a.dropdown-item(href='#') Weekly
+                              a.dropdown-item(href='#') Monthly
+                              a.dropdown-item(href='#') Yearly
+              .col-xxl-5.col-xl-6.box-col-6.proorder-4-xl-1.proorder-md-7 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Featured Courses
+                      .dropdown.icon-dropdown
+                        button#userdropdown17.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown17')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.p-0.featured-table
+                    .table-responsive.theme-scrollbar
+                      table#featured-table.table.display(style='width:100%')
+                        thead
+                          tr
+                            th Course Name
+                            th Start
+                            th Rate
+                            th Type
+                            th Save
+                        tbody
+                          tr
+                            td
+                              .d-flex.align-items-center.gap-2
+                                .flex-shrink-0  
+                                  img(src='../assets/images/dashboard-4/featured/1.png' alt="")
+                                .flex-grow-1
+                                  a(href="product-page.html")
+                                    h5 Mobile UX
+                                  span Erin Mooney
+                            td Feb 15
+                            td 
+                              span.d-flex.align-item-center.gap-2.font-primary 
+                                i(data-feather='star').font-primary 
+                                | 4.8
+                            td UX/UI Design
+                            td#colorChangeButton.initial-color
+                              i(data-feather='bookmark') 
+                          tr
+                            td
+                              .d-flex.align-items-center.gap-2 
+                                .flex-shrink-0
+                                  img(src='../assets/images/dashboard-4/featured/2.png' alt="")
+                                .flex-grow-1
+                                  a(href="product-page.html")
+                                    h5 Illustration
+                                  span Elsie Lemon
+                            td Mar 22
+                            td 
+                              span.d-flex.align-item-center.gap-2.font-primary 
+                                i(data-feather='star').font-primary 
+                                | 2.3
+                            td Web Designer
+                            td#colorChangeButton1.initial-color
+                              i(data-feather='bookmark') 
+                          tr
+                            td
+                              .d-flex.align-items-center.gap-2
+                                .flex-shrink-0
+                                  img(src='../assets/images/dashboard-4/featured/3.png' alt="")
+                                .flex-grow-1
+                                  a(href="product-page.html")
+                                    h5 Design System
+                                  span Anna Green
+                            td Jun 28
+                            td 
+                              span.d-flex.align-item-center.gap-2.font-primary 
+                                i(data-feather='star').font-primary 
+                                | 1.5
+                            td Developer
+                            td#colorChangeButton2.initial-color
+                              i(data-feather='bookmark') 
+                          tr
+                            td
+                              .d-flex.align-items-center.gap-2
+                                .flex-shrink-0
+                                  img(src='../assets/images/dashboard-4/featured/4.png' alt="")
+                                .flex-grow-1
+                                  a(href="product-page.html")
+                                    h5 Leadership
+                                  span John  Elliot
+                            td Apr 04
+                            td 
+                              span.d-flex.align-item-center.gap-2.font-primary 
+                                i(data-feather='star').font-primary 
+                                | 2.4
+                            td UX/UI Design
+                            td#colorChangeButton3.initial-color
+                              i(data-feather='bookmark') 
+                          tr
+                            td
+                              .d-flex.align-items-center.gap-2
+                                .flex-shrink-0
+                                  img(src='../assets/images/dashboard-4/featured/5.png' alt="")
+                                .flex-grow-1
+                                  a(href="product-page.html")
+                                    h5 Latest Figma
+                                  span Dylan Field
+                            td jun 01
+                            td
+                              span.d-flex.align-item-center.gap-2.font-primary 
+                                i(data-feather='star').font-primary 
+                                | 5.4
+                            td Graphic Designer
+                            td#colorChangeButton4.initial-color
+                              i(data-feather='bookmark') 
+              .col-xxl-7.col-xl-12.box-col-12.proorder-md-8 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Monthly  Attendance Report (Feb)
+                      .dropdown.icon-dropdown
+                        button#userdropdown18.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown18')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.pb-0
+                    .monthly-report
+                      ul.d-flex.align-item-center.gap-2
+                        li 
+                          span.bg-primary 
+                          | Teacher
+                        li 
+                          span.bg-secondary 
+                          | Student
+                    #monthly-reportchart
+              .col-xxl-5.col-xl-6.box-col-6.proorder-md-9 
+                .card
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h4 Schedule
+                      .dropdown.icon-dropdown
+                        button#userdropdown19.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown19')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.schedult-calendar.pt-0
+                    .schedule-container 
+                      #schedulechart
+            
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

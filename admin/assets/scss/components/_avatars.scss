@@ -1,0 +1,129 @@
+/**=====================
+  2.3 Avatars CSS start
+==========================**/
+.avatars {
+    .avatar {
+        display: inline-block;
+        margin-right: 10px;
+        position: relative;
+        width: auto;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.ratio {
+            img {
+                width: auto;
+            }
+        }
+
+        .status {
+            position: absolute;
+            height: 12%;
+            width: 12%;
+            border-radius: 100%;
+            bottom: 12%;
+            right: 4%;
+        }
+    }
+    &.badge-avatar {
+        .avatar {
+            .badge {
+                width: 20px;
+                height: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+            }
+        }
+    }
+}
+
+.customers {
+    ul {
+        display: inline-block;
+
+        li {
+            img {
+                border: 2px solid var(--white);
+                transition: 0.5s;
+
+                &:hover {
+                    transform: translateY(-4px) scale(1.02);
+                    transition: 0.5s;
+                }
+            }
+
+            +li {
+                margin-left: -7%;
+            }
+        }
+    }
+
+    &.avatar-group {
+        margin-right: 30px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.avatar-showcase {
+    margin-bottom: -10px;
+
+    .avatars {
+        .avatar {
+            margin-bottom: 10px;
+        }
+    }
+
+    .avatar-group {
+        margin-bottom: 10px;
+    }
+
+    .ratio {
+        >* {
+            position: relative;
+            top: unset;
+            left: unset;
+        }
+    }
+}
+
+.letter-avatar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+
+    h6 {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+}
+
+.animation-ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+
+    75%,
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+
+}
+
+/**=====================
+    2.3 Avatars CSS Ends
+==========================**/

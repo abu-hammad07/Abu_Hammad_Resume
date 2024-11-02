@@ -1,0 +1,1000 @@
+- var page_Title = 'Tag-Pills';
+- var theme_customizer      = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+- var height_equal          = true;
+- var prism                 = true;
+- var clipboard             = true;
+- var customcard            = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Ui Kits','Tag & Pills'],'Tag & Pills')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-sm-12.col-xl-6
+                .card
+                  .card-header
+                    h4 Badges Contextual Variations
+                    p.f-m-light.mt-1 
+                      | Use
+                      code  badge 
+                      | class to make more badges.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card  
+                  .card-body
+                    .badge-spacing
+                      span.badge.badge-primary Primary
+                      span.badge.badge-secondary Secondary
+                      span.badge.badge-success Success
+                      span.badge.badge-info Info
+                      span.badge.badge-warning Warning
+                      span.badge.badge-danger Danger
+                      span.badge.badge-light.txt-dark Light
+                      span.badge.badge-dark Dark
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#badge-c-variations', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#badge-c-variations
+                          |&lt;div class="badge-spacing"&gt;
+                          |  &lt;span class="badge badge-primary"&gt;Primary&lt;/span&gt;
+                          |  &lt;span class="badge badge-secondary"&gt;Secondary&lt;/span&gt;
+                          |  &lt;span class="badge badge-success"&gt;Success&lt;/span&gt;
+                          |  &lt;span class="badge badge-info"&gt;Info&lt;/span&gt;
+                          |  &lt;span class="badge badge-warning"&gt;Warning&lt;/span&gt;
+                          |  &lt;span class="badge badge-danger"&gt;Danger&lt;/span&gt;
+                          |  &lt;span class="badge badge-light txt-dark"&gt;Light&lt;/span&gt;
+                          |  &lt;span class="badge badge-dark"&gt;Dark&lt;/span&gt;
+                          |&lt;/div&gt;
+              .col-sm-12.col-xl-6
+                .card
+                  .card-header
+                    h4 Badges Outline Contextual Variations
+                    p.f-m-light.mt-1 
+                      | Use
+                      code  badge 
+                      | class to make more badges.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card  
+                  .card-body
+                    .badge-spacing
+                      span.badge.badge-b-primary.txt-primary Primary
+                      span.badge.badge-b-secondary.txt-secondary Secondary
+                      span.badge.badge-b-success.txt-success Success
+                      span.badge.badge-b-info.txt-info Info
+                      span.badge.badge-b-warning.txt-warning Warning
+                      span.badge.badge-b-danger.txt-danger Danger
+                      span.badge.badge-b-light.txt-dark Light
+                      span.badge.badge-b-dark.txt-dark Dark
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#badge-outline-variations', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#badge-outline-variations
+                          |&lt;div class="badge-spacing"&gt;
+                          |  &lt;span class="badge badge-b-primary txt-primary"&gt;Primary&lt;/span&gt;
+                          |  &lt;span class="badge badge-b-secondary txt-secondary"&gt;Secondary&lt;/span&gt;
+                          |  &lt;span class="badge badge-b-success txt-success"&gt;Success&lt;/span&gt;
+                          |  &lt;span class="badge badge-b-info txt-info"&gt;Info&lt;/span&gt;
+                          |  &lt;span class="badge badge-b-warning txt-warning"&gt;Warning&lt;/span&gt;
+                          |  &lt;span class="badge badge-b-danger txt-danger"&gt;Danger&lt;/span&gt;
+                          |  &lt;span class="badge badge-b-light txt-dark"&gt;Light&lt;/span&gt;
+                          |  &lt;span class="badge badge-b-dark txt-dark"&gt;Dark&lt;/span&gt;
+                          |&lt;/div&gt;
+              .col-sm-12.col-xl-6
+                .card
+                  .card-header
+                    h4 Pill Contextual Variations
+                    p.f-m-light.mt-1 
+                      | Use
+                      code  rounded-pill
+                      | class to make badges with background (badge-*) more rounded with a larger 
+                      code border-radius
+                      |.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .badge-spacing
+                      span.badge.rounded-pill.badge-primary Primary
+                      span.badge.rounded-pill.badge-secondary Secondary
+                      span.badge.rounded-pill.badge-success Success
+                      span.badge.rounded-pill.badge-info Info
+                      span.badge.rounded-pill.badge-warning Warning
+                      span.badge.rounded-pill.badge-danger Danger
+                      span.badge.rounded-pill.badge-light.txt-dark Light
+                      span.badge.rounded-pill.badge-dark Dark
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#pills-variations', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#pills-variations
+                          |&lt;div class="badge-spacing"&gt;
+                          |  &lt;span class="badge rounded-pill badge-primary"&gt;Primary&lt;/span&gt;
+                          |  &lt;span class="badge rounded-pill badge-secondary"&gt;Secondary&lt;/span&gt;
+                          |  &lt;span class="badge rounded-pill badge-success"&gt;Success&lt;/span&gt;
+                          |  &lt;span class="badge rounded-pill badge-info"&gt;Info&lt;/span&gt;
+                          |  &lt;span class="badge rounded-pill badge-warning"&gt;Warning&lt;/span&gt;
+                          |  &lt;span class="badge rounded-pill badge-danger"&gt;Danger&lt;/span&gt;
+                          |  &lt;span class="badge rounded-pill badge-light txt-dark"&gt;Light&lt;/span&gt;
+                          |  &lt;span class="badge rounded-pill badge-dark"&gt;Dark&lt;/span&gt;
+                          |&lt;/div&gt;
+              .col-sm-12.col-xl-6
+                .card
+                  .card-header
+                    h4 Pill Outline Variations
+                    p.f-m-light.mt-1 
+                      | Use
+                      code  rounded-pill
+                      |  class to make badges with background (badge-b-*) more rounded with a larger 
+                      code border-radius
+                      |.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .badge-spacing
+                      span.badge.rounded-pill.txt-primary.badge-b-primary Primary
+                      span.badge.rounded-pill.txt-secondary.badge-b-secondary Secondary
+                      span.badge.rounded-pill.txt-success.badge-b-success Success
+                      span.badge.rounded-pill.txt-info.badge-b-info Info
+                      span.badge.rounded-pill.txt-warning.badge-b-warning Warning
+                      span.badge.rounded-pill.txt-danger.badge-b-danger Danger
+                      span.badge.rounded-pill.txt-dark.badge-b-light Light
+                      span.badge.rounded-pill.txt-dark.badge-b-dark Dark
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#pills-outline-variations', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#pills-outline-variations
+                          |&lt;div class="badge-spacing"&gt;
+                          |  &lt;span class="badge rounded-pill txt-primary badge-b-primary"&gt;Primary&lt;/span&gt;
+                          |  &lt;span class="badge rounded-pill txt-secondary badge-b-secondary"&gt;Secondary&lt;/span&gt;
+                          |  &lt;span class="badge rounded-pill txt-success badge-b-success"&gt;Success&lt;/span&gt;
+                          |  &lt;span class="badge rounded-pill txt-info badge-b-info"&gt;Info&lt;/span&gt;
+                          |  &lt;span class="badge rounded-pill txt-warning badge-b-warning"&gt;Warning&lt;/span&gt;
+                          |  &lt;span class="badge rounded-pill txt-danger badge-b-danger"&gt;Danger&lt;/span&gt;
+                          |  &lt;span class="badge rounded-pill txt-light badge-b-light txt-dark"&gt;Light&lt;/span&gt;
+                          |  &lt;span class="badge rounded-pill txt-dark badge-b-dark"&gt;Dark&lt;/span&gt;
+                          |&lt;/div&gt;
+              .col-sm-12.col-xl-6
+                .card
+                  .card-header
+                    h4 Number of Badges
+                    p.f-m-light.mt-1 
+                      | Use
+                      code  badge
+                      |  class to make square badges with numbers.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .badge-spacing
+                      a.badge.badge-primary(href='#') 1
+                      a.badge.badge-secondary(href='#') 2
+                      a.badge.badge-success(href='#') 3
+                      a.badge.badge-info(href='#') 4
+                      a.badge.badge-warning(href='#') 5
+                      a.badge.badge-danger(href='#') 6
+                      a.badge.badge-light.txt-dark(href='#') 7
+                      a.badge.badge-dark(href='#') 8
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#number-of-badge', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#number-of-badge
+                          |&lt;div class="badge-spacing"&gt;
+                          |  &lt;a class="badge badge-primary" href="#"&gt;1&lt;/a&gt;
+                          |  &lt;a class="badge badge-secondary" href="#"&gt;2&lt;/a&gt;
+                          |  &lt;a class="badge badge-success" href="#"&gt;3&lt;/a&gt;
+                          |  &lt;a class="badge badge-info" href="#"&gt;4&lt;/a&gt;
+                          |  &lt;a class="badge badge-warning" href="#"&gt;5&lt;/a&gt;
+                          |  &lt;a class="badge badge-danger" href="#"&gt;6&lt;/a&gt;
+                          |  &lt;a class="badge badge-light txt-dark" href="#"&gt;7&lt;/a&gt;
+                          |  &lt;a class="badge badge-dark" href="#"&gt;8&lt;/a&gt;
+                          |&lt;/div&gt;
+              .col-sm-12.col-xl-6
+                .card
+                  .card-header
+                    h4 Number of Pill Badges
+                    p.f-m-light.mt-1 
+                      | Use
+                      code  rounded-circle
+                      |  class to make rounded badges with numbers.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .badge-spacing
+                      span.badge.rounded-circle.badge-p-space.badge-primary 1
+                      span.badge.rounded-circle.badge-p-space.badge-secondary 2
+                      span.badge.rounded-circle.badge-p-space.badge-success 3
+                      span.badge.rounded-circle.badge-p-space.badge-info 4
+                      span.badge.rounded-circle.badge-p-space.badge-warning 5
+                      span.badge.rounded-circle.badge-p-space.badge-danger 6
+                      span.badge.rounded-circle.badge-p-space.badge-light.txt-dark 7
+                      span.badge.rounded-circle.badge-p-space.badge-dark 8
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#number-of-pills', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#number-of-pills
+                          |&lt;div class="badge-spacing"&gt;
+                          |  &lt;span class="badge rounded-circle badge-p-space badge-primary"&gt;1&lt;/span&gt;
+                          |  &lt;span class="badge rounded-circle badge-p-space badge-secondary"&gt;2&lt;/span&gt;
+                          |  &lt;span class="badge rounded-circle badge-p-space badge-success"&gt;3&lt;/span&gt;
+                          |  &lt;span class="badge rounded-circle badge-p-space badge-info"&gt;4&lt;/span&gt;
+                          |  &lt;span class="badge rounded-circle badge-p-space badge-warning"&gt;5&lt;/span&gt;
+                          |  &lt;span class="badge rounded-circle badge-p-space badge-danger"&gt;6&lt;/span&gt;
+                          |  &lt;span class="badge rounded-circle badge-p-space badge-light txt-dark"&gt;7&lt;/span&gt;
+                          |  &lt;span class="badge rounded-circle badge-p-space badge-dark"&gt;8&lt;/span&gt;
+                          |&lt;/div&gt;
+              .col-sm-12.col-xl-6
+                .card
+                  .card-header
+                    h4 Badge Tag with Icons
+                    p.f-m-light.mt-1 
+                      | Use
+                      code  badge 
+                      |  class to make square badges with icons.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .badge-spacing
+                      a.badge.b-ln-height.badge-primary(href='#')
+                        i(data-feather='dollar-sign')
+                      a.badge.b-ln-height.badge-secondary(href='#')
+                        i(data-feather='headphones')
+                      a.badge.b-ln-height.badge-success(href='#')
+                        i(data-feather='link')
+                      a.badge.b-ln-height.badge-info(href='#')
+                        i(data-feather='github')
+                      a.badge.b-ln-height.badge-warning(href='#')
+                        i(data-feather='award')
+                      a.badge.b-ln-height.badge-danger(href='#')
+                        i(data-feather='activity')
+                      a.badge.b-ln-height.badge-light.txt-dark(href='#')
+                        i(data-feather='heart')
+                      a.badge.badge-dark(href='#')
+                        i(data-feather='mail')
+                      .code-box-copy
+                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#badge-icons', title='Copy')
+                          i.icofont.icofont-copy-alt
+                        pre.theme-scrollbar
+                          code.language-html#badge-icons
+                            |&lt;div class="badge-spacing"&gt;
+                            |  &lt;a class="badge b-ln-height badge-primary" href="#"&gt;
+                            |    &lt;i data-feather="dollar-sign"&gt;&lt;/i&gt;
+                            |  &lt;/a&gt;
+                            |  &lt;a class="badge b-ln-height badge-secondary" href="#"&gt;
+                            |    &lt;i data-feather="headphones"&gt;&lt;/i&gt;
+                            |  &lt;/a&gt;
+                            |  &lt;a class="badge b-ln-height badge-success" href="#"&gt;
+                            |    &lt;i data-feather="link"&gt;&lt;/i&gt;
+                            |  &lt;/a&gt;
+                            |  &lt;a class="badge b-ln-height badge-info" href="#"&gt;
+                            |    &lt;i data-feather="github"&gt;&lt;/i&gt;
+                            |  &lt;/a&gt;
+                            |  &lt;a class="badge b-ln-height badge-warning" href="#"&gt;
+                            |    &lt;i data-feather="award"&gt;&lt;/i&gt;
+                            |  &lt;/a&gt;
+                            |  &lt;a class="badge b-ln-height badge-danger" href="#"&gt;
+                            |    &lt;i data-feather="activity"&gt;&lt;/i&gt;
+                            |  &lt;/a&gt;
+                            |  &lt;a class="badge b-ln-height badge-light txt-dark" href="#"&gt;
+                            |    &lt;i data-feather="heart"&gt;&lt;/i&gt;
+                            |  &lt;/a&gt;
+                            |  &lt;a class="badge badge-dark" href="#"&gt;
+                            |    &lt;i data-feather="mail"&gt;&lt;/i&gt;
+                            |  &lt;/a&gt;
+                            |&lt;/div&gt;
+              .col-sm-12.col-xl-6
+                .card
+                  .card-header
+                    h4 Rounded Pills with Icons
+                    p.f-m-light.mt-1 
+                      | Use
+                      code  rounded-circle 
+                      |  class to make rounded badges with icons.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .badge-spacing
+                      a.badge.rounded-circle.p-2.badge-primary(href='#')
+                        i(data-feather='dollar-sign')
+                      a.badge.rounded-circle.p-2.badge-secondary(href='#')
+                        i(data-feather='headphones')
+                      a.badge.rounded-circle.p-2.badge-success(href='#')
+                        i(data-feather='link')
+                      a.badge.rounded-circle.p-2.badge-info(href='#')
+                        i(data-feather='github')
+                      a.badge.rounded-circle.p-2.badge-warning(href='#')
+                        i(data-feather='award')
+                      a.badge.rounded-circle.p-2.badge-danger(href='#')
+                        i(data-feather='activity')
+                      a.badge.rounded-circle.p-2.badge-light.txt-dark(href='#')
+                        i(data-feather='heart')
+                      a.badge.rounded-circle.p-2.badge-dark(href='#')
+                        i(data-feather='mail')
+                    .code-box-copy
+                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#rounded-pills-icons', title='Copy')
+                          i.icofont.icofont-copy-alt
+                        pre.theme-scrollbar
+                          code.language-html#rounded-pills-icons
+                            |&lt;div class="badge-spacing"&gt;
+                            |  &lt;a class="badge rounded-circle p-2 badge-primary" href="#"&gt;
+                            |    &lt;i data-feather="dollar-sign"&gt;&lt;/i&gt;
+                            |  &lt;/a&gt;
+                            |  &lt;a class="badge rounded-circle p-2 badge-secondary" href="#"&gt;
+                            |    &lt;i data-feather="headphones"&gt;&lt;/i&gt;
+                            |  &lt;/a&gt;
+                            |  &lt;a class="badge rounded-circle p-2 badge-success" href="#"&gt;
+                            |    &lt;i data-feather="link"&gt;&lt;/i&gt;
+                            |  &lt;/a&gt;
+                            |  &lt;a class="badge rounded-circle p-2 badge-info" href="#"&gt;
+                            |    &lt;i data-feather="github"&gt;&lt;/i&gt;
+                            |  &lt;/a&gt;
+                            |  &lt;a class="badge rounded-circle p-2 badge-warning" href="#"&gt;
+                            |    &lt;i data-feather="award"&gt;&lt;/i&gt;
+                            |  &lt;/a&gt;
+                            |  &lt;a class="badge rounded-circle p-2 badge-danger" href="#"&gt;
+                            |    &lt;i data-feather="activity"&gt;&lt;/i&gt;
+                            |  &lt;/a&gt;
+                            |  &lt;a class="badge rounded-circle p-2 badge-light txt-dark" href="#"&gt;
+                            |    &lt;i data-feather="heart"&gt;&lt;/i&gt;
+                            |  &lt;/a&gt;
+                            |  &lt;a class="badge rounded-circle p-2 badge-dark" href="#"&gt;
+                            |    &lt;i data-feather="mail"&gt;&lt;/i&gt;
+                            |  &lt;/a&gt;
+                            |&lt;/div&gt;
+              .col-sm-12.col-xl-6.box-col-12
+                .card.height-equal
+                  .card-header
+                    h4 Badge Headings
+                    p.f-m-light.mt-1 
+                      | All html headings, 
+                      code &lt;h1&gt;
+                      |  through 
+                      code &lt;h6&gt;
+                      |  , are available in 
+                      code badge 
+                      | tags.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.badge-heading
+                    h1
+                      | Example heading 
+                      span.badge.text-bg-secondary New
+                    h2
+                      | Example heading 
+                      span.badge.text-bg-secondary New
+                    h3
+                      | Example heading 
+                      span.badge.text-bg-secondary New
+                    h4
+                      | Example heading 
+                      span.badge.text-bg-secondary New
+                    h5
+                      | Example heading 
+                      span.badge.text-bg-secondary New
+                    h6
+                      | Example heading 
+                      span.badge.text-bg-secondary New
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#badge-headings', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#badge-headings
+                          |&lt;div class="card-body badge-heading"&gt;
+                          |  &lt;h1&gt;Example heading
+                          |    &lt;span class="badge text-bg-secondary"&gt;New&lt;/span&gt;
+                          |  &lt;/h1&gt;
+                          |  &lt;h2&gt;Example heading
+                          |    &lt;span class="badge text-bg-secondary"&gt;New&lt;/span&gt;
+                          |  &lt;/h2&gt;
+                          |  &lt;h3&gt;Example heading
+                          |    &lt;span class="badge text-bg-secondary"&gt;New&lt;/span&gt;
+                          |  &lt;/h3&gt;
+                          |  &lt;h4&gt;Example heading
+                          |    &lt;span class="badge text-bg-secondary"&gt;New&lt;/span&gt;
+                          |  &lt;/h4&gt;
+                          |  &lt;h5&gt;Example heading
+                          |    &lt;span class="badge text-bg-secondary"&gt;New&lt;/span&gt;
+                          |  &lt;/h5&gt;
+                          |  &lt;h6&gt;Example heading
+                          |    &lt;span class="badge text-bg-secondary"&gt;New&lt;/span&gt;
+                          |  &lt;/h6&gt;
+                          |&lt;/div&gt;
+              .col-sm-12.col-xl-6.box-col-12
+                .row 
+                  .col-12
+                    .card
+                      .card-header
+                        h4 Positioned Badges
+                        p.f-m-light.mt-1 
+                          | Use utilities to modify a 
+                          code badge 
+                          | and position it in the corner of a link or button.
+                        .card-header-right
+                          ul.list-unstyled.card-option
+                            li
+                              i.icon-more-alt
+                            li
+                              i.view-html.fa.fa-code
+                            li
+                              i.icofont.icofont-maximize.full-card
+                            li
+                              i.icofont.icofont-minus.minimize-card
+                            li
+                              i.icofont.icofont-refresh.reload-card
+                            li
+                              i.icofont.icofont-error.close-card
+                      .card-body
+                        .badge-flex
+                          button.btn.btn-primary.position-relative(type='button')
+                            | Inbox
+                            span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger
+                              | 99+
+                          button.btn.btn-primary.position-relative(type='button')
+                            | Inbox
+                            span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger
+                              | 99+
+                          button.btn.btn-info.position-relative.badge-square(type='button')
+                            i.fa.fa-twitter
+                            span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger
+                              | 8
+                          button.btn.btn-primary.position-relative(type='button')
+                            | Profile
+                            span.position-absolute.top-0.start-100.translate-middle.bg-danger.border.border-light.rounded-circle.badge-p-5
+                              span.visually-hidden New alerts
+                          button.btn.btn-info.position-relative.badge-square(type='button')
+                            i.fa.fa-linkedin
+                            span.position-absolute.top-0.start-100.translate-middle.badge-p-5.bg-danger.border.border-light.rounded-circle
+                              span.visually-hidden New alerts
+                          button.btn.btn-success.position-relative.badge-square(type='button')
+                            i.fa.fa-wechat
+                            span.position-absolute.top-0.start-100.translate-middle.badge-p-5.bg-danger.border.border-light.rounded-circle
+                              span.visually-hidden New alerts
+                          button.btn.btn-info.position-relative.badge-square(type='button')
+                            i.fa.fa-twitter
+                            span.position-absolute.top-0.start-100.translate-middle.badge-p-5.bg-danger.border.border-light.rounded-circle
+                              span.visually-hidden New alerts
+                        .code-box-copy
+                          button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#position-badge', title='Copy')
+                            i.icofont.icofont-copy-alt
+                          pre.theme-scrollbar
+                            code.language-html#position-badge
+                              |&lt;div class="badge-flex"&gt;
+                              |  &lt;button class="btn btn-primary position-relative" type="button"&gt;Inbox
+                              |    &lt;span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"&gt;99+&lt;/span&gt;
+                              |  &lt;/button&gt;
+                              |  &lt;button class="btn btn-primary position-relative" type="button"&gt;Inbox
+                              |    &lt;span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"&gt;99+&lt;/span&gt;
+                              |  &lt;/button&gt;
+                              |  &lt;button class="btn btn-info position-relative badge-square" type="button"&gt;
+                              |    &lt;i class="fa fa-twitter"&gt;&lt;/i&gt;
+                              |    &lt;span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"&gt;8&lt;/span&gt;
+                              |  &lt;/button&gt;
+                              |  &lt;button class="btn btn-primary position-relative" type="button"&gt;Profile
+                              |    &lt;span class="position-absolute top-0 start-100 translate-middle bg-danger border border-light rounded-circle badge-p-5"&gt;
+                              |      &lt;span class="visually-hidden"&gt;New alerts&lt;/span&gt;
+                              |    &lt;/span&gt;
+                              |  &lt;/button&gt;
+                              |  &lt;button class="btn btn-info position-relative badge-square" type="button"&gt;
+                              |    &lt;i class="fa fa-linkedin"&gt;&lt;/i&gt;
+                              |    &lt;span class="position-absolute top-0 start-100 translate-middle badge-p-5 bg-danger border border-light rounded-circle"&gt;
+                              |      &lt;span class="visually-hidden"&gt;New alerts&lt;/span&gt;
+                              |    &lt;/span&gt;
+                              |  &lt;/button&gt;
+                              |  &lt;button class="btn btn-success position-relative badge-square" type="button"&gt;
+                              |    &lt;i class="fa fa-wechat"&gt;&lt;/i&gt;
+                              |    &lt;span class="position-absolute top-0 start-100 translate-middle badge-p-5 bg-danger border border-light rounded-circle"&gt;
+                              |      &lt;span class="visually-hidden"&gt;New alerts&lt;/span&gt;
+                              |    &lt;/span&gt;
+                              |  &lt;/button&gt;
+                              |  &lt;button class="btn btn-info position-relative badge-square" type="button"&gt;
+                              |    &lt;i class="fa fa-twitter"&gt;&lt;/i&gt;
+                              |    &lt;span class="position-absolute top-0 start-100 translate-middle badge-p-5 bg-danger border border-light rounded-circle"&gt;
+                              |      &lt;span class="visually-hidden"&gt;New alerts&lt;/span&gt;
+                              |    &lt;/span&gt;
+                              |  &lt;/button&gt;
+                              |&lt;/div&gt;
+                  .col-12
+                    .card
+                      .card-header
+                        h4 Button Badges
+                        p.f-m-light.mt-1 
+                          code  badge 
+                          |  can be used as part of links or buttons to provide a counter.
+                        .card-header-right
+                          ul.list-unstyled.card-option
+                            li
+                              i.icon-more-alt
+                            li
+                              i.view-html.fa.fa-code
+                            li
+                              i.icofont.icofont-maximize.full-card
+                            li
+                              i.icofont.icofont-minus.minimize-card
+                            li
+                              i.icofont.icofont-refresh.reload-card
+                            li
+                              i.icofont.icofont-error.close-card
+                      .card-body
+                        .badge-flex
+                          button.btn.btn-primary
+                            | Notifications 
+                            span.badge.text-bg-danger.ms-2 4
+                          button.btn.button-light-primary
+                            | Sale
+                            span.badge.text-bg-danger.rounded-pill.ms-2 9
+                          button.btn.border-dashed-primary
+                            | Instagram 
+                            span.badge.text-bg-danger.ms-2 6
+                          button.btn.btn-pill.button-light-info.txt-info
+                            | LinkedIn 
+                            span.badge.text-bg-info.rounded-pill.ms-2.txt-light 3
+                        .code-box-copy
+                          button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#button-badge', title='Copy')
+                            i.icofont.icofont-copy-alt
+                          pre.theme-scrollbar
+                            code.language-html#button-badge
+                              |&lt;div class="badge-flex"&gt;
+                              |  &lt;button class="btn btn-primary"&gt;Notifications
+                              |    &lt;span class="badge text-bg-danger ms-2"&gt;4&lt;/span&gt;
+                              |  &lt;/button&gt;
+                              |  &lt;button class="btn button-light-primary"&gt;Sale
+                              |    &lt;span class="badge text-bg-danger rounded-pill ms-2"&gt;9&lt;/span&gt;
+                              |  &lt;/button&gt;
+                              |  &lt;button class="btn border-dashed-primary"&gt;Instagram
+                              |    &lt;span class="badge text-bg-danger ms-2"&gt;6&lt;/span&gt;
+                              |  &lt;/button&gt;
+                              |  &lt;button class="btn btn-pill button-light-info txt-info"&gt;LinkedIn
+                              |    &lt;span class="badge text-bg-info rounded-pill ms-2 txt-light"&gt;3&lt;/span&gt;
+                              |  &lt;/button&gt;
+                              |&lt;/div&gt;
+              .col-xl-6 
+                .card
+                  .card-header
+                    h4 Image Badges
+                    p.f-m-light.mt-1 
+                      | Use
+                      code  image-badges 
+                      | class to set image sizes. 
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .badge-spacing.image-badges
+                      span.badge.common-align.txt-primary.rounded-pill.badge-l-primary.rounded-pill.border.border-primary
+                        img.rounded-circle.me-1(src="../assets/images/dashboard/user/01.jpg", alt="user")
+                        | Primary   
+                      span.badge.common-align.txt-secondary.rounded-pill.badge-l-secondary.rounded-pill.border.border-secondary
+                        img.rounded-circle.me-1(src="../assets/images/dashboard/user/02.jpg", alt="user")
+                        | Secondary 
+                      span.badge.common-align.txt-success.rounded-pill.badge-l-success.rounded-pill.border.border-success
+                        img.rounded-circle.me-1(src="../assets/images/dashboard/user/03.jpg", alt="user")
+                        | Success 
+                      span.badge.common-align.txt-danger.rounded-pill.badge-l-danger.rounded-pill.border.border-danger
+                        img.rounded-circle.me-1(src="../assets/images/dashboard/user/04.jpg", alt="user")
+                        | Danger
+                      span.badge.common-align.txt-warning.rounded-pill.badge-l-warning.rounded-pill.border.border-warning
+                        img.rounded-circle.me-1(src="../assets/images/dashboard/user/05.png", alt="user")
+                        | Warning
+                      span.badge.common-align.txt-info.rounded-pill.badge-l-info.rounded-pill.border.border-info
+                        img.rounded-circle.me-1(src="../assets/images/dashboard/user/06.png", alt="user")
+                        | Info
+                      span.badge.common-align.txt-dark.rounded-pill.badge-l-light.rounded-pill.border.border-light
+                        img.rounded-circle.me-1(src="../assets/images/dashboard/user/07.png", alt="user")
+                        | Light
+                      span.badge.common-align.txt-dark.rounded-pill.badge-l-dark.rounded-pill.border.border-dark
+                        img.rounded-circle.me-1(src="../assets/images/dashboard/user/08.png", alt="user")
+                        | Dark
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#image-badges', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#image-badges
+                          |&lt;div class="badge-spacing image-badges"&gt;
+                          |  &lt;span class="badge common-align txt-primary rounded-pill badge-l-primary rounded-pill border border-primary"&gt;
+                          |    &lt;img class="rounded-circle me-1" src="../assets/images/dashboard-9/user/5.png" alt="user"&gt;Primary
+                          |  &lt;/span&gt;
+                          |  &lt;span class="badge common-align txt-secondary rounded-pill badge-l-secondary rounded-pill border border-secondary"&gt;
+                          |    &lt;img class="rounded-circle me-1" src="../assets/images/dashboard-9/user/2.png" alt="user"&gt;Secondary
+                          |  &lt;/span&gt;
+                          |  &lt;span class="badge common-align txt-success rounded-pill badge-l-success rounded-pill border border-success"&gt;
+                          |    &lt;img class="rounded-circle me-1" src="../assets/images/dashboard-9/user/3.png" alt="user"&gt;Success
+                          |  &lt;/span&gt;
+                          |  &lt;span class="badge common-align txt-danger rounded-pill badge-l-danger rounded-pill border border-danger"&gt;
+                          |    &lt;img class="rounded-circle me-1" src="../assets/images/dashboard-9/user/4.png" alt="user"&gt;Danger
+                          |  &lt;/span&gt;
+                          |  &lt;span class="badge common-align txt-warning rounded-pill badge-l-warning rounded-pill border border-warning"&gt;
+                          |    &lt;img class="rounded-circle me-1" src="../assets/images/dashboard/user/11.jpg" alt="user"&gt;Warning
+                          |  &lt;/span&gt;
+                          |  &lt;span class="badge common-align txt-info rounded-pill badge-l-info rounded-pill border border-info"&gt;
+                          |    &lt;img class="rounded-circle me-1" src="../assets/images/dashboard/user/4.jpg" alt="user"&gt;Info
+                          |  &lt;/span&gt;
+                          |  &lt;span class="badge common-align txt-light rounded-pill badge-l-light rounded-pill border border-light"&gt;
+                          |    &lt;img class="rounded-circle me-1" src="../assets/images/dashboard/user/10.jpg" alt="user"&gt;Light
+                          |  &lt;/span&gt;
+                          |  &lt;span class="badge common-align txt-dark rounded-pill badge-l-dark rounded-pill border border-dark"&gt;
+                          |    &lt;img class="rounded-circle me-1" src="../assets/images/dashboard/user/7.jpg" alt="user"&gt;Dark
+                          |  &lt;/span&gt;
+                          |&lt;/div&gt;
+              .col-xl-6 
+                .card
+                  .card-header
+                    h4 Close Badges
+                    p.f-m-light.mt-1 
+                      | Use
+                      code  badge-l-*
+                      | classes to provide background-colors and 
+                      code border-* 
+                      | classes to provide border-colors.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .badge-spacing.image-badges
+                      span.badge.common-align.txt-primary.rounded-pill.badge-l-primary.rounded-pill.border.border-primary
+                        | Primary   
+                        a(href="#!") 
+                          i.ms-1.stroke-primary(data-feather='x-circle') 
+                      span.badge.common-align.txt-secondary.rounded-pill.badge-l-secondary.rounded-pill.border.border-secondary
+                        | Secondary   
+                        a(href="#!") 
+                          i.ms-1.stroke-secondary(data-feather='x-circle') 
+                      span.badge.common-align.txt-success.rounded-pill.badge-l-success.rounded-pill.border.border-success
+                        | Success   
+                        a(href="#!") 
+                          i.ms-1.stroke-success(data-feather='x-circle') 
+                      span.badge.common-align.txt-danger.rounded-pill.badge-l-danger.rounded-pill.border.border-danger
+                        | Danger   
+                        a(href="#!") 
+                          i.ms-1.stroke-danger(data-feather='x-circle') 
+                      span.badge.common-align.txt-warning.rounded-pill.badge-l-warning.rounded-pill.border.border-warning
+                        | Warning   
+                        a(href="#!") 
+                          i.ms-1.stroke-warning(data-feather='x-circle') 
+                      span.badge.common-align.txt-info.rounded-pill.badge-l-info.rounded-pill.border.border-info
+                        | Info   
+                        a(href="#!") 
+                          i.ms-1.stroke-info(data-feather='x-circle') 
+                      span.badge.common-align.txt-dark.rounded-pill.badge-l-light.rounded-pill.border.border-light
+                        | Light   
+                        a(href="#!") 
+                          i.ms-1.stroke-dark(data-feather='x-circle') 
+                      span.badge.common-align.txt-dark.rounded-pill.badge-l-dark.rounded-pill.border.border-dark
+                        | Dark   
+                        a(href="#!") 
+                          i.ms-1.stroke-dark(data-feather='x-circle')
+                      .code-box-copy
+                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#close-badges', title='Copy')
+                          i.icofont.icofont-copy-alt
+                        pre.theme-scrollbar
+                          code.language-html#close-badges
+                            |&lt;div class="badge-spacing image-badges"&gt;
+                            |  &lt;span class="badge common-align txt-primary rounded-pill badge-l-primary rounded-pill border border-primary"&gt;Primary
+                            |    &lt;a href="#!"&gt;
+                            |      &lt;i class="ms-1 stroke-primary" data-feather="x-circle"&gt;&lt;/i&gt;
+                            |    &lt;/a&gt;
+                            |  &lt;/span&gt;
+                            |  &lt;span class="badge common-align txt-secondary rounded-pill badge-l-secondary rounded-pill border border-secondary"&gt;Secondary
+                            |    &lt;a href="#!"&gt;
+                            |      &lt;i class="ms-1 stroke-secondary" data-feather="x-circle"&gt;&lt;/i&gt;
+                            |    &lt;/a&gt;
+                            |  &lt;/span&gt;
+                            |  &lt;span class="badge common-align txt-success rounded-pill badge-l-success rounded-pill border border-success"&gt;Success
+                            |    &lt;a href="#!"&gt;
+                            |      &lt;i class="ms-1 stroke-success" data-feather="x-circle"&gt;&lt;/i&gt;
+                            |    &lt;/a&gt;
+                            |  &lt;/span&gt;
+                            |  &lt;span class="badge common-align txt-danger rounded-pill badge-l-danger rounded-pill border border-danger"&gt;Danger
+                            |    &lt;a href="#!"&gt;
+                            |      &lt;i class="ms-1 stroke-danger" data-feather="x-circle"&gt;&lt;/i&gt;
+                            |    &lt;/a&gt;
+                            |  &lt;/span&gt;
+                            |  &lt;span class="badge common-align txt-warning rounded-pill badge-l-warning rounded-pill border border-warning"&gt;Warning
+                            |    &lt;a href="#!"&gt;
+                            |      &lt;i class="ms-1 stroke-warning" data-feather="x-circle"&gt;&lt;/i&gt;
+                            |    &lt;/a&gt;
+                            |  &lt;/span&gt;
+                            |  &lt;span class="badge common-align txt-info rounded-pill badge-l-info rounded-pill border border-info"&gt;Info
+                            |    &lt;a href="#!"&gt;
+                            |      &lt;i class="ms-1 stroke-info" data-feather="x-circle"&gt;&lt;/i&gt;
+                            |    &lt;/a&gt;
+                            |  &lt;/span&gt;
+                            |  &lt;span class="badge common-align txt-light rounded-pill badge-l-light rounded-pill border border-light"&gt;Light
+                            |    &lt;a href="#!"&gt;
+                            |      &lt;i class="ms-1 stroke-light" data-feather="x-circle"&gt;&lt;/i&gt;
+                            |    &lt;/a&gt;
+                            |  &lt;/span&gt;
+                            |  &lt;span class="badge common-align txt-dark rounded-pill badge-l-dark rounded-pill border border-dark"&gt;Dark
+                            |    &lt;a href="#!"&gt;
+                            |      &lt;i class="ms-1 stroke-dark" data-feather="x-circle"&gt;&lt;/i&gt;
+                            |    &lt;/a&gt;
+                            |  &lt;/span&gt;
+                            |&lt;/div&gt;
+              .col-12
+                .card
+                  .card-header
+                    h4 Image with Close Badges
+                    p.f-m-light.mt-1 
+                      | Use
+                      code  badge-l-* 
+                      | classes to provide background-color. and 
+                      code vr 
+                      | classes to partitions.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .badge-spacing.image-badges
+                      span.badge.common-align.txt-primary.rounded-pill.badge-l-primary.rounded-pill.border.border-primary
+                        img.rounded-circle.me-1(src="../assets/images/dashboard-2/user/1.png", alt="user")
+                        | Primary
+                        span.vr.mx-2
+                        a(href="#!") 
+                          i.stroke-primary(data-feather='x-circle')  
+                      span.badge.common-align.txt-secondary.rounded-pill.badge-l-secondary.rounded-pill.border.border-secondary
+                        img.rounded-circle.me-1(src="../assets/images/dashboard-2/user/2.png", alt="user")
+                        | Secondary   
+                        span.vr.mx-2
+                        a(href="#!") 
+                          i.stroke-secondary(data-feather='x-circle') 
+                      span.badge.common-align.txt-success.rounded-pill.badge-l-success.rounded-pill.border.border-success
+                        img.rounded-circle.me-1(src="../assets/images/dashboard-2/user/3.png", alt="user")
+                        | Success   
+                        span.vr.mx-2
+                        a(href="#!") 
+                          i.stroke-success(data-feather='x-circle') 
+                      span.badge.common-align.txt-danger.rounded-pill.badge-l-danger.rounded-pill.border.border-danger
+                        img.rounded-circle.me-1(src="../assets/images/dashboard-2/user/4.png", alt="user")
+                        | Danger   
+                        span.vr.mx-2
+                        a(href="#!") 
+                          i.stroke-danger(data-feather='x-circle') 
+                      span.badge.common-align.txt-warning.rounded-pill.badge-l-warning.rounded-pill.border.border-warning
+                        img.rounded-circle.me-1(src="../assets/images/dashboard-2/user/5.png", alt="user")
+                        | Warning   
+                        span.vr.mx-2
+                        a(href="#!") 
+                          i.stroke-warning(data-feather='x-circle') 
+                      span.badge.common-align.txt-info.rounded-pill.badge-l-info.rounded-pill.border.border-info
+                        img.rounded-circle.me-1(src="../assets/images/dashboard-2/user/6.png", alt="user")
+                        | Info   
+                        span.vr.mx-2
+                        a(href="#!") 
+                          i.stroke-info(data-feather='x-circle') 
+                      span.badge.common-align.txt-dark.rounded-pill.badge-l-light.rounded-pill.border.border-light
+                        img.rounded-circle.me-1(src="../assets/images/dashboard-2/user/7.png", alt="user")
+                        | Light   
+                        span.vr.mx-2
+                        a(href="#!") 
+                          i.stroke-dark(data-feather='x-circle') 
+                      span.badge.common-align.txt-dark.rounded-pill.badge-l-dark.rounded-pill.border.border-dark
+                        img.rounded-circle.me-1(src="../assets/images/dashboard-2/user/8.png", alt="user")
+                        | Dark   
+                        span.vr.mx-2
+                        a(href="#!") 
+                          i.stroke-dark(data-feather='x-circle') 
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#img-close-badges', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#img-close-badges
+                          |&lt;div class="badge-spacing image-badges"&gt;
+                          |  &lt;span class="badge common-align txt-primary rounded-pill badge-l-primary rounded-pill border border-primary"&gt;
+                          |    &lt;img class="rounded-circle me-1" src="../assets/images/dashboard/user/1.jpg" alt="user"&gt;Primary
+                          |    &lt;span class="vr mx-2"&gt;&lt;/span&gt;
+                          |    &lt;a href="#!"&gt;
+                          |      &lt;i class="stroke-primary" data-feather="x-circle"&gt;&lt;/i&gt;
+                          |    &lt;/a&gt;
+                          |  &lt;/span&gt;
+                          |  &lt;span class="badge common-align txt-secondary rounded-pill badge-l-secondary rounded-pill border border-secondary"&gt;
+                          |    &lt;img class="rounded-circle me-1" src="../assets/images/dashboard/user/2.jpg" alt="user"&gt;Secondary
+                          |    &lt;span class="vr mx-2"&gt;&lt;/span&gt;
+                          |    &lt;a href="#!"&gt;
+                          |      &lt;i class="stroke-secondary" data-feather="x-circle"&gt;&lt;/i&gt;
+                          |    &lt;/a&gt;
+                          |  &lt;/span&gt;
+                          |  &lt;span class="badge common-align txt-success rounded-pill badge-l-success rounded-pill border border-success"&gt;
+                          |    &lt;img class="rounded-circle me-1" src="../assets/images/dashboard/user/3.jpg" alt="user"&gt;Success
+                          |    &lt;span class="vr mx-2"&gt;&lt;/span&gt;
+                          |    &lt;a href="#!"&gt;
+                          |      &lt;i class="stroke-success" data-feather="x-circle"&gt;&lt;/i&gt;
+                          |    &lt;/a&gt;
+                          |  &lt;/span&gt;
+                          |  &lt;span class="badge common-align txt-danger rounded-pill badge-l-danger rounded-pill border border-danger"&gt;
+                          |    &lt;img class="rounded-circle me-1" src="../assets/images/dashboard/user/5.jpg" alt="user"&gt;Danger
+                          |    &lt;span class="vr mx-2"&gt;&lt;/span&gt;
+                          |    &lt;a href="#!"&gt;
+                          |      &lt;i class="stroke-danger" data-feather="x-circle"&gt;&lt;/i&gt;
+                          |    &lt;/a&gt;
+                          |  &lt;/span&gt;
+                          |  &lt;span class="badge common-align txt-warning rounded-pill badge-l-warning rounded-pill border border-warning"&gt;
+                          |    &lt;img class="rounded-circle me-1" src="../assets/images/dashboard/user/6.jpg" alt="user"&gt;Warning
+                          |    &lt;span class="vr mx-2"&gt;&lt;/span&gt;
+                          |    &lt;a href="#!"&gt;
+                          |      &lt;i class="stroke-warning" data-feather="x-circle"&gt;&lt;/i&gt;
+                          |    &lt;/a&gt;
+                          |  &lt;/span&gt;
+                          |  &lt;span class="badge common-align txt-info rounded-pill badge-l-info rounded-pill border border-info"&gt;
+                          |    &lt;img class="rounded-circle me-1" src="../assets/images/dashboard/user/12.jpg" alt="user"&gt;Info
+                          |    &lt;span class="vr mx-2"&gt;&lt;/span&gt;
+                          |    &lt;a href="#!"&gt;
+                          |      &lt;i class="stroke-info" data-feather="x-circle"&gt;&lt;/i&gt;
+                          |    &lt;/a&gt;
+                          |  &lt;/span&gt;
+                          |  &lt;span class="badge common-align txt-light rounded-pill badge-l-light rounded-pill border border-light"&gt;
+                          |    &lt;img class="rounded-circle me-1" src="../assets/images/user/3.png" alt="user"&gt;Light
+                          |    &lt;span class="vr mx-2"&gt;&lt;/span&gt;
+                          |    &lt;a href="#!"&gt;
+                          |      &lt;i class="stroke-light" data-feather="x-circle"&gt;&lt;/i&gt;
+                          |    &lt;/a&gt;
+                          |  &lt;/span&gt;
+                          |  &lt;span class="badge common-align txt-dark rounded-pill badge-l-dark rounded-pill border border-dark"&gt;
+                          |    &lt;img class="rounded-circle me-1" src="../assets/images/user/6.jpg" alt="user"&gt;Dark
+                          |    &lt;span class="vr mx-2"&gt;&lt;/span&gt;
+                          |    &lt;a href="#!"&gt;
+                          |      &lt;i class="stroke-dark" data-feather="x-circle"&gt;&lt;/i&gt;
+                          |    &lt;/a&gt;
+                          |  &lt;/span&gt;
+                          |&lt;/div&gt;
+          // Container-fluid Ends
+        include ../../components/footer
+      include ../../components/footer-files   

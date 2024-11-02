@@ -1,0 +1,698 @@
+- var page_Title = 'Toasts';
+- var theme_customizer      = true;
+- var toasts                = true;
+- var page_notify           = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+- var clipboard             = true;
+- var prism                 = true;
+- var customcard            = true;
+- var height_equal          = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Bonus Ui','Toasts'],'Toasts')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-12
+                .card
+                  .card-header
+                    h4 Message Toasts
+                    p.f-m-light.mt-1 
+                      | Use the 
+                      code .position-fixed
+                      |   class through 
+                      code  [top/end/start/bottom]
+                      |  toasts.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.common-flex.common-toasts
+                    button#liveToastBtn6.btn.btn-success(type='button') Success Toast
+                    .toast-container.position-fixed.top-0.end-0.p-3.toast-index.toast-rtl
+                      #liveToast6.toast(role='alert' aria-live='polite' aria-atomic='true')
+                        .d-flex.justify-content-between.align-items-center.alert-light-success
+                          .toast-body
+                            i(data-feather='check-square').close-search.stroke-success
+                            | Success: We've updated your info
+                          button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
+                    button#liveToastBtn5.btn.btn-warning(type='button') Warning Toast
+                    .toast-container.position-fixed.top-50.end-0.p-3.toast-index.toast-rtl
+                      #liveToast5.toast(role='alert' aria-live='polite' aria-atomic='true')
+                        .d-flex.justify-content-between.align-items-center.alert-light-warning
+                          .toast-body
+                            i(data-feather='alert-triangle').close-search.stroke-warning
+                            | Software drivers needed to be updated in advance
+                          button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
+                    button#liveToastBtn4.btn.btn-danger(type='button') Error Toast
+                    .toast-container.position-fixed.bottom-0.end-0.p-3.toast-index.toast-rtl
+                      #liveToast4.toast(role='alert' aria-live='polite' aria-atomic='true')
+                        .d-flex.justify-content-between.align-items-center.alert-light-danger
+                          .toast-body
+                            i(data-feather='x-circle').close-search.stroke-danger
+                            | A database connection error has occurred
+                          button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#message-toast-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#message-toast-copy
+                          |&lt;div class="card-body common-flex common-toasts"&gt;
+                          |  &lt;button class="btn btn-success" id="liveToastBtn6" type="button"&gt;Success Toast&lt;/button&gt;
+                          |  &lt;div class="toast-container position-fixed top-0 end-0 p-3 toast-index toast-rtl"&gt;
+                          |    &lt;div class="toast" id="liveToast6" role="alert" aria-live="polite" aria-atomic="true"&gt;
+                          |      &lt;div class="d-flex justify-content-between align-items-center alert-light-success"&gt;
+                          |        &lt;div class="toast-body"&gt;
+                          |          &lt;i class="close-search stroke-success" data-feather="check-square"&gt;&lt;/i&gt;Success: We've updated your info
+                          |        &lt;/div&gt;
+                          |        &lt;button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;button class="btn btn-warning" id="liveToastBtn5" type="button"&gt;Warning Toast&lt;/button&gt;
+                          |  &lt;div class="toast-container position-fixed top-50 end-0 p-3 toast-index toast-rtl"&gt;
+                          |    &lt;div class="toast" id="liveToast5" role="alert" aria-live="polite" aria-atomic="true"&gt;
+                          |      &lt;div class="d-flex justify-content-between align-items-center alert-light-warning"&gt;
+                          |        &lt;div class="toast-body"&gt;
+                          |          &lt;i class="close-search stroke-warning" data-feather="alert-triangle"&gt;&lt;/i&gt;Software drivers needed to be updated in advance
+                          |        &lt;/div&gt;
+                          |        &lt;button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;button class="btn btn-danger" id="liveToastBtn4" type="button"&gt;Error Toast&lt;/button&gt;
+                          |  &lt;div class="toast-container position-fixed bottom-0 end-0 p-3 toast-index toast-rtl"&gt;
+                          |    &lt;div class="toast" id="liveToast4" role="alert" aria-live="polite" aria-atomic="true"&gt;
+                          |      &lt;div class="d-flex justify-content-between align-items-center alert-light-danger"&gt;
+                          |        &lt;div class="toast-body"&gt;
+                          |          &lt;i class="close-search stroke-danger" data-feather="x-circle"&gt;&lt;/i&gt;A database connection error has occurred
+                          |        &lt;/div&gt;
+                          |        &lt;button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-lg-6
+                .card
+                  .card-header
+                    h4 Live Toast
+                    p.f-m-light.mt-1 
+                      | Use the 
+                      code .hide 
+                      | class through hide toast and 
+                      code .show 
+                      | class through visible toast and given directions.
+                      code [top-0/bottom-0/start-0/end-0]
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.position-relative.common-flex
+                    button#liveToastBtn.btn.btn-primary(type='button') Top-right toast
+                    .toast-container.position-fixed.top-0.end-0.p-3.toast-index.toast-rtl
+                      #liveToast.toast.hide.toast.fade(role='alert' aria-live='assertive' aria-atomic='true')
+                        .toast-header.toast-img
+                          img.rounded.me-2(src='../assets/images/other-images/profile.png' alt='profile')
+                          strong.me-auto Mofi Theme
+                          small 5 min ago
+                          button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
+                        .toast-body.toast-dark
+                          | Hello, I'm a web-designer.
+                    button#liveToastBtn1.btn.btn-secondary(type='button') Bottom-right toast
+                    .toast-container.position-fixed.bottom-0.end-0.p-3.toast-index.toast-rtl
+                      #liveToast1.toast.hide.toast.fade(role='alert' aria-live='assertive' aria-atomic='true')
+                        .d-flex.justify-content-between.alert-secondary
+                          .toast-body
+                            | Your time over after 5 minute.
+                          button.btn-close.btn-close-white.me-2.m-auto(type='button' data-bs-dismiss='toast' aria-label='Close')
+                    button#liveToastBtn2.btn.btn-warning(type='button') Top-left toast
+                    .toast-container.position-fixed.start-0.top-0.p-3.toast-index.toast-rtl
+                      #liveToast2.toast.hide.toast.fade(role='alert' aria-live='assertive' aria-atomic='true')
+                        .toast-header.toast-img
+                          img.rounded.me-2(src='../assets/images/other-images/profile.png' alt='profile')
+                          strong.me-auto Mofi Theme
+                          small.d-sm-block.d-none 10 min ago
+                          button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
+                        .toast-body.toast-dark
+                          strong.txt-success Well done!
+                          |  You successfully read this important message.
+                    button#liveToastBtn3.btn.btn-success(type='button') Bottom-left toast
+                    .toast-container.position-fixed.start-0.bottom-0.p-3.toast-index.toast-rtl
+                      #liveToast3.toast.hide.toast.fade(role='alert' aria-live='assertive' aria-atomic='true')
+                        .toast-header.toast-img
+                          img.rounded.me-2(src='../assets/images/other-images/profile.png' alt='profile')
+                          strong.me-auto Mofi Theme
+                          button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
+                        .toast-body.toast-dark
+                          h6.mb-2 Your account will be permanently deleted?
+                          p.mb-0 Do you intend to continue?
+                          .mt-2.pt-2.border-top.d-flex.gap-2
+                            button.btn.btn-dark.btn-sm(type='button') I'm not sure
+                            button.btn.btn-danger.btn-sm(type='button' data-bs-dismiss='toast') Remove My Account
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#live-toast-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#live-toast-copy
+                          |&lt;div class="card-body position-relative common-flex"&gt;
+                          |  &lt;button class="btn btn-primary" id="liveToastBtn" type="button"&gt;Top-right Toast&lt;/button&gt;
+                          |  &lt;div class="toast-container position-fixed top-0 end-0 p-3 toast-index toast-rtl"&gt;
+                          |    &lt;div class="toast hide toast fade" id="liveToast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+                          |      &lt;div class="toast-header toast-img"&gt;
+                          |        &lt;img class="rounded me-2" src="../assets/images/dashboard-5/profile.png" alt="profile"&gt;
+                          |        &lt;strong class="me-auto"&gt;Cuba Theme&lt;/strong&gt;
+                          |        &lt;small&gt;5 min ago&lt;/small&gt;
+                          |        &lt;button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="toast-body toast-dark"&gt;Hello, I'm a web-designer.&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;button class="btn btn-secondary" id="liveToastBtn1" type="button"&gt;Bottom-right Toast&lt;/button&gt;
+                          |  &lt;div class="toast-container position-fixed bottom-0 end-0 p-3 toast-index toast-rtl"&gt;
+                          |    &lt;div class="toast hide toast fade" id="liveToast1" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+                          |      &lt;div class="d-flex justify-content-between alert-secondary"&gt;
+                          |        &lt;div class="toast-body"&gt;Your time over after 5 minute.&lt;/div&gt;
+                          |        &lt;button class="btn-close btn-close-white me-2 m-auto" type="button" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;button class="btn btn-warning" id="liveToastBtn2" type="button"&gt;Top-left Toast&lt;/button&gt;
+                          |  &lt;div class="toast-container position-fixed start-0 top-0 p-3 toast-index toast-rtl"&gt;
+                          |    &lt;div class="toast hide toast fade" id="liveToast2" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+                          |      &lt;div class="toast-header toast-img"&gt;
+                          |        &lt;img class="rounded me-2" src="../assets/images/dashboard-5/profile.png" alt="profile"&gt;
+                          |        &lt;strong class="me-auto"&gt;Cuba Theme&lt;/strong&gt;&lt;small class="d-sm-block d-none"&gt;10 min ago&lt;/small&gt;
+                          |        &lt;button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="toast-body toast-dark"&gt;
+                          |        &lt;strong class="txt-success"&gt;Well done!&lt;/strong&gt; You successfully read this important message.
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;button class="btn btn-success" id="liveToastBtn3" type="button"&gt;Bottom-left Toast&lt;/button&gt;
+                          |  &lt;div class="toast-container position-fixed start-0 bottom-0 p-3 toast-index toast-rtl"&gt;
+                          |    &lt;div class="toast hide toast fade" id="liveToast3" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+                          |      &lt;div class="toast-header toast-img"&gt;
+                          |        &lt;img class="rounded me-2" src="../assets/images/dashboard-5/profile.png" alt="profile"&gt;
+                          |        &lt;strong class="me-auto"&gt;Cuba Theme&lt;/strong&gt;
+                          |        &lt;button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="toast-body toast-dark"&gt;
+                          |        &lt;h6 class="mb-2"&gt;Your account will be permanently deleted?&lt;/h6&gt;
+                          |        &lt;p class="mb-0"&gt;Do you intend to continue?&lt;/p&gt;
+                          |        &lt;div class="mt-2 pt-2 border-top d-flex gap-2"&gt;
+                          |          &lt;button class="btn btn-dark btn-sm" type="button"&gt;I'm not sure&lt;/button&gt;
+                          |          &lt;button class="btn btn-danger btn-sm" type="button" data-bs-dismiss="toast"&gt;Remove My Account&lt;/button&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-lg-6
+                .card
+                  .card-header
+                    h4 Colors Schemes
+                    p.f-m-light.mt-1 
+                      | Use the 
+                      code .hide 
+                      | class through hide toast and 
+                      code .show 
+                      | class through visible toast.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.toast-rtl
+                    .toast.default-show-toast.align-items-center.text-light.bg-warning.border-0.fade.show(role='alert' aria-live='assertive' aria-atomic='true' data-bs-autohide='false')
+                      .d-flex.justify-content-between
+                        .toast-body
+                          | Your time over after 5 minute.
+                        button.btn-close.btn-close-white.me-2.m-auto(type='button' data-bs-dismiss='toast' aria-label='Close')
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#color-toast-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#color-toast-copy
+                          |&lt;div class="card-body toast-rtl"&gt;
+                          |  &lt;div class="toast default-show-toast align-items-center text-light bg-warning border-0 fade show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false"&gt;
+                          |    &lt;div class="d-flex justify-content-between"&gt;
+                          |      &lt;div class="toast-body"&gt;Your time over after 5 minute.&lt;/div&gt;
+                          |      &lt;button class="btn-close btn-close-white me-2 m-auto" type="button" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-md-6
+                .card
+                  .card-header
+                    h4 Stacking Toasts
+                    p.f-m-light.mt-1 
+                      | You can stack toasts by wrapping them in a toast container, which will vertically add some spacing.
+                      code [toast-*]
+                      |  through change icons colors.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.toast-rtl
+                    .toast-container.position-static
+                      .toast.show(role='alert' aria-live='assertive' aria-atomic='true'  data-bs-autohide='false')
+                        .toast-header
+                          i.toast-icons.toast-primary(data-feather='bell')
+                          strong.me-auto Mofi theme
+                          small.txt-danger just now
+                          button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
+                        .toast-body.toast-dark
+                          | Hello, I'm a web-designer.
+                      .toast.show(role='alert' aria-live='assertive' aria-atomic='true' data-bs-autohide='false')
+                        .toast-header
+                          i.toast-icons.toast-warning(data-feather='bell')
+                          strong.me-auto Roxo theme
+                          small.text-muted 2 sec ago
+                          button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
+                        .toast-body.toast-dark
+                          | Hello, I'm a UX-designer.
+                      .toast.show(role='alert' aria-live='assertive' aria-atomic='true' data-bs-autohide='false')
+                        .toast-header
+                          i.toast-icons.toast-danger(data-feather='bell')
+                          strong.me-auto Zeta theme
+                          small.text-muted 6 min ago
+                          button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
+                        .toast-body.toast-dark
+                          | Hello, I'm a Software developer.
+                      .toast.show(role='alert' aria-live='assertive' aria-atomic='true' data-bs-autohide='false')
+                        .toast-header
+                          i.toast-icons.toast-success(data-feather='bell')
+                          strong.me-auto Voxo theme
+                          small.text-muted 3 sec ago
+                          button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
+                        .toast-body.toast-dark
+                          | Hello, I'm a professional web-designer.
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#stacking-toast', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#stacking-toast 
+                          |&lt;div class="card-body toast-rtl"&gt;
+                          |  &lt;div class="toast-container position-static"&gt;
+                          |    &lt;div class="toast show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false"&gt;
+                          |      &lt;div class="toast-header"&gt;
+                          |        &lt;i class="toast-icons toast-primary" data-feather="bell"&gt;&lt;/i&gt;
+                          |        &lt;strong class="me-auto"&gt;Cuba Theme&lt;/strong&gt;
+                          |        &lt;small class="txt-danger"&gt;just now&lt;/small&gt;
+                          |        &lt;button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="toast-body toast-dark"&gt;Hello, I'm a web-designer.&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="toast show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false"&gt;
+                          |      &lt;div class="toast-header"&gt;
+                          |        &lt;i class="toast-icons toast-warning" data-feather="bell"&gt;&lt;/i&gt;
+                          |        &lt;strong class="me-auto"&gt;Roxo Theme&lt;/strong&gt;
+                          |        &lt;small class="text-muted"&gt;2 sec ago&lt;/small&gt;
+                          |        &lt;button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="toast-body toast-dark"&gt;Hello, I'm a UX-designer.&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="toast show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false"&gt;
+                          |      &lt;div class="toast-header"&gt;
+                          |        &lt;i class="toast-icons toast-danger" data-feather="bell"&gt;&lt;/i&gt;
+                          |        &lt;strong class="me-auto"&gt;Zeta Theme&lt;/strong&gt;
+                          |        &lt;small class="text-muted"&gt;6 min ago&lt;/small&gt;
+                          |        &lt;button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="toast-body toast-dark"&gt;Hello, I'm a Software developer.&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="toast show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false"&gt;
+                          |      &lt;div class="toast-header"&gt;
+                          |        &lt;i class="toast-icons toast-success" data-feather="bell"&gt;&lt;/i&gt;
+                          |        &lt;strong class="me-auto"&gt;Voxo Theme&lt;/strong&gt;
+                          |        &lt;small class="text-muted"&gt;3 sec ago&lt;/small&gt;
+                          |        &lt;button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="toast-body toast-dark"&gt;Hello, I'm a professional web-designer.&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-md-6
+                .card.overflow-hidden
+                  .card-header
+                    h4 Translucent Toasts
+                    p.f-m-light.mt-1 
+                      | Use the 
+                      code .hide 
+                      | class through hide toast and 
+                      code .show 
+                      | class through visible toast and given directions.
+                      code [toast-*]
+                      |  through change icons colors.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.toast-rtl.bg-dark
+                    .toast-container
+                      .toast.show(role='alert' aria-live='assertive' aria-atomic='true' data-bs-autohide="false")
+                        .toast-header
+                          i.toast-icons.toast-info(data-feather='disc')
+                          strong.me-auto Mofi theme
+                          small.text-muted.d-sm-block.d-none 11 mins ago
+                          button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
+                        .toast-body.toast-dark
+                          |  Hello, I'm a web-designer.
+                      .toast.show(role='alert' aria-live='assertive' aria-atomic='true' data-bs-autohide="false")
+                        .toast-header
+                          i.toast-icons.toast-dark(data-feather='disc')
+                          strong.me-auto Koho theme
+                          small.text-muted.d-sm-block.d-none 1 sec ago
+                          button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
+                        .toast-body.toast-dark
+                          |  Hello, I'm a full-stack developer.
+                      .toast.show(role='alert' aria-live='assertive' aria-atomic='true' data-bs-autohide="false")
+                        .toast-header
+                          i.toast-icons.toast-secondary(data-feather='disc')
+                          strong.me-auto Fastkart theme
+                          small.txt-danger.d-sm-block.d-none just now
+                          button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
+                        .toast-body.toast-dark
+                          |  Hello, I'm a UX-designer.
+                      .toast.show(role='alert' aria-live='assertive' aria-atomic='true' data-bs-autohide="false")
+                        .toast-header
+                          i.toast-icons.toast-success(data-feather='disc')
+                          strong.me-auto Oslo theme
+                          small.text-muted.d-sm-block.d-none 44 min ago
+                          button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
+                        .toast-body.toast-dark
+                          |  Hello, I'm a penetration-tester.
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#translucent-toast', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#translucent-toast 
+                          |&lt;div class="card-body toast-rtl bg-dark"&gt;
+                          |  &lt;div class="toast-container"&gt;
+                          |    &lt;div class="toast show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="80000"&gt;
+                          |      &lt;div class="toast-header"&gt;
+                          |        &lt;i class="toast-icons toast-info" data-feather="disc"&gt;&lt;/i&gt;
+                          |        &lt;strong class="me-auto"&gt;Cuba Theme&lt;/strong&gt;
+                          |        &lt;small class="text-muted d-sm-block d-none"&gt;11 mins ago&lt;/small&gt;
+                          |        &lt;button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="toast-body toast-dark"&gt; Hello, I'm a web-designer.&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="toast show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="80000"&gt;
+                          |      &lt;div class="toast-header"&gt;
+                          |        &lt;i class="toast-icons toast-dark" data-feather="disc"&gt;&lt;/i&gt;
+                          |        &lt;strong class="me-auto"&gt;Koho Theme&lt;/strong&gt;
+                          |        &lt;small class="text-muted d-sm-block d-none"&gt;1 sec ago&lt;/small&gt;
+                          |        &lt;button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="toast-body toast-dark"&gt; Hello, I'm a full-stack developer.&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="toast show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="80000"&gt;
+                          |      &lt;div class="toast-header"&gt;
+                          |        &lt;i class="toast-icons toast-secondary" data-feather="disc"&gt;&lt;/i&gt;
+                          |        &lt;strong class="me-auto"&gt;Fastkart Theme&lt;/strong&gt;
+                          |        &lt;small class="txt-danger d-sm-block d-none"&gt;just now&lt;/small&gt;
+                          |        &lt;button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="toast-body toast-dark"&gt; Hello, I'm a UX-designer.&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="toast show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="80000"&gt;
+                          |      &lt;div class="toast-header"&gt;
+                          |        &lt;i class="toast-icons toast-success" data-feather="disc"&gt;&lt;/i&gt;
+                          |        &lt;strong class="me-auto"&gt;Oslo Theme&lt;/strong&gt;
+                          |        &lt;small class="text-muted d-sm-block d-none"&gt;44 min ago&lt;/small&gt;
+                          |        &lt;button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="toast-body toast-dark"&gt; Hello, I'm a penetration-tester.&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-md-6
+                .card.height-equal
+                  .card-header
+                    h4 Default Toast
+                    p.f-m-light.mt-1 
+                      | Use the 
+                      code .hide 
+                      | class through hide toast and 
+                      code .show 
+                      | class through visible toast.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.toast-rtl
+                    .toast.default-show-toast.toast.show(role='alert' aria-live='assertive' aria-atomic='true' data-bs-autohide='false')
+                      .toast-header.toast-img
+                        img.rounded.me-2(src='../assets/images/other-images/profile.png' alt='profile')
+                        strong.me-auto Mofi Theme
+                        small.d-sm-block.d-none 10 min ago
+                        button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
+                      .toast-body.toast-dark
+                        strong.txt-success Well done!
+                        |  You successfully read this important message.
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#default-toast-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#default-toast-copy 
+                          |&lt;div class="card-body toast-rtl"&gt;
+                          |  &lt;div class="toast default-show-toast toast show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false"&gt;
+                          |    &lt;div class="toast-header toast-img"&gt;
+                          |      &lt;img class="rounded me-2" src="../assets/images/dashboard-5/profile.png" alt="profile"&gt;
+                          |      &lt;strong class="me-auto"&gt;Cuba Theme&lt;/strong&gt;&lt;small class="d-sm-block d-none"&gt;10 min ago&lt;/small&gt;
+                          |      &lt;button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="toast-body toast-dark"&gt;
+                          |      &lt;strong class="txt-success"&gt;Well done!&lt;/strong&gt; You successfully read this important message.
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-md-6
+                .card.height-equal
+                  .card-header
+                    h4 Unique Toast
+                    p.f-m-light.mt-1 
+                      | Use the 
+                      code .hide 
+                      | class through hide toast and 
+                      code .show 
+                      | class through visible toast.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.toast-rtl
+                    .toast.fade.show(role='alert' aria-live='assertive' aria-atomic='true' data-bs-autohide='false')
+                      .toast-header.toast-img
+                        img.rounded.me-2(src='../assets/images/other-images/profile.png' alt='profile')
+                        strong.me-auto Mofi Theme
+                        button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
+                      .toast-body.toast-dark
+                        h6.mb-2 Your account will be permanently deleted?
+                        p.mb-0 Do you intend to continue?
+                        .mt-2.pt-2.border-top.d-flex.gap-2
+                          button.btn.btn-dark.btn-sm(type='button') I'm not sure
+                          button.btn.btn-danger.btn-sm(type='button' data-bs-dismiss='toast') Remove My Account
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#unique-toast-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#unique-toast-copy 
+                          |&lt;div class="card-body toast-rtl"&gt;
+                          |  &lt;div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false"&gt;
+                          |    &lt;div class="toast-header toast-img"&gt;
+                          |      &lt;img class="rounded me-2" src="../assets/images/dashboard-5/profile.png" alt="profile"&gt;
+                          |      &lt;strong class="me-auto"&gt;Cuba Theme&lt;/strong&gt;
+                          |      &lt;button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="toast-body toast-dark"&gt;
+                          |      &lt;h6 class="mb-2"&gt;Your account will be permanently deleted?&lt;/h6&gt;
+                          |      &lt;p class="mb-0"&gt;Do you intend to continue?&lt;/p&gt;
+                          |      &lt;div class="mt-2 pt-2 border-top d-flex gap-2"&gt;
+                          |        &lt;button class="btn btn-dark btn-sm" type="button"&gt;I'm not sure&lt;/button&gt;
+                          |        &lt;button class="btn btn-danger btn-sm" type="button" data-bs-dismiss="toast"&gt;Remove My Account&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-sm-12
+                .card
+                  .card-header
+                    h4 Toast Placement
+                    p.f-m-light.mt-1 
+                      | Use the 
+                      code .hide 
+                      | class through hide toast and 
+                      code .show 
+                      | class through visible toast.
+                      code .form-select
+                      |  through select any positions.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.toast-rtl.toast-dark
+                    form
+                      .mb-3
+                        select#selectToastPlacement.form-select.mt-2
+                          option(value='' selected='') Select a position...
+                          option(value='top-0 start-0') Top left
+                          option(value='top-0 start-50 translate-middle-x') Top center
+                          option(value='top-0 end-0') Top right
+                          option(value='top-50 start-0 translate-middle-y') Middle left
+                          option(value='top-50 start-50 translate-middle') Middle center
+                          option(value='top-50 end-0 translate-middle-y') Middle right
+                          option(value='bottom-0 start-0') Bottom left
+                          option(value='bottom-0 start-50 translate-middle-x') Bottom center
+                          option(value='bottom-0 end-0') Bottom right
+                    .bg-light.position-relative.bd-example-toasts(aria-live='polite' aria-atomic='true' data-bs-autohide='false')
+                      #toastPlacement.toast-container.p-3.position-absolute
+                        .toast.toast-fade.show(data-bs-autohide='false')
+                          .toast-header.toast-img
+                            img.rounded.me-2(src='../assets/images/other-images/profile.png' alt='profile')
+                            strong.me-auto Mofi Theme
+                            small.d-sm-block.d-none 25 min ago
+                          .toast-body.toast-dark.txt-dark
+                            p.toast-content
+                              em.txt-danger Attackers
+                              |  on malicious activity may trick you into doing something dangerous like installing software or revealing your personal information's.
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#placement-toast-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#placement-toast-copy 
+                          |&lt;div class="card-body toast-rtl toast-dark"&gt;
+                          |  &lt;form&gt;
+                          |    &lt;div class="mb-3"&gt;
+                          |      &lt;select class="form-select mt-2" id="selectToastPlacement"&gt;
+                          |        &lt;option value="" selected&gt;Select a position...&lt;/option&gt;
+                          |        &lt;option value="top-0 start-0"&gt;Top left&lt;/option&gt;
+                          |        &lt;option value="top-0 start-50 translate-middle-x"&gt;Top center&lt;/option&gt;
+                          |        &lt;option value="top-0 end-0"&gt;Top right&lt;/option&gt;
+                          |        &lt;option value="top-50 start-0 translate-middle-y"&gt;Middle left&lt;/option&gt;
+                          |        &lt;option value="top-50 start-50 translate-middle"&gt;Middle center&lt;/option&gt;
+                          |        &lt;option value="top-50 end-0 translate-middle-y"&gt;Middle right&lt;/option&gt;
+                          |        &lt;option value="bottom-0 start-0"&gt;Bottom left&lt;/option&gt;
+                          |        &lt;option value="bottom-0 start-50 translate-middle-x"&gt;Bottom center&lt;/option&gt;
+                          |        &lt;option value="bottom-0 end-0"&gt;Bottom right&lt;/option&gt;
+                          |      &lt;/select&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/form&gt;
+                          |  &lt;div class="bg-light position-relative bd-example-toasts" aria-live="polite" aria-atomic="true" data-bs-autohide="true"&gt;
+                          |    &lt;div class="toast-container p-3 position-absolute" id="toastPlacement"&gt;
+                          |      &lt;div class="toast toast-fade show"&gt;
+                          |        &lt;div class="toast-header toast-img"&gt;
+                          |          &lt;img class="rounded me-2" src="../assets/images/dashboard-5/profile.png" alt="profile"&gt;
+                          |          &lt;strong class="me-auto"&gt;Cuba Theme&lt;/strong&gt;
+                          |          &lt;small class="d-sm-block d-none"&gt;25 min ago&lt;/small&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="toast-body toast-dark txt-dark"&gt;
+                          |          &lt;p class="toast-content"&gt;
+                          |            &lt;em class="txt-danger"&gt;Attackers&lt;/em&gt;on malicious activity may trick you into doing something dangerous like installing software or revealing your personal information's.
+                          |          &lt;/p&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files      

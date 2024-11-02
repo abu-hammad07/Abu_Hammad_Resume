@@ -1,0 +1,275 @@
+- var page_Title = 'User Profile';
+- var theme_customizer      = true;
+- var photo_swipe           = true;
+- var counter               = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Users','User Profile'],'User Profile')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .user-profile
+              .row
+                // user profile first-style start
+                .col-sm-12
+                  .card.hovercard.text-center
+                    .cardheader
+                    .user-image
+                      .avatar
+                        img(alt='', src='../assets/images/user/7.jpg')
+                      .icon-wrapper
+                        i.icofont.icofont-pencil-alt-5
+                    .info
+                      .row
+                        .col-sm-6.col-lg-4.order-sm-1.order-xl-0
+                          .row
+                            .col-md-6
+                              .ttl-info.text-start
+                                h6
+                                  i.fa.fa-envelope
+                                  |    Email
+                                span.text-truncate.w-100 Marekjecno@yahoo.com
+                            .col-md-6
+                              .ttl-info.text-start
+                                h6
+                                  i.fa.fa-calendar
+                                  |    BOD
+                                span 02 January 1988
+                        .col-sm-12.col-lg-4.order-sm-0.order-xl-1
+                          .user-designation
+                            .title
+                              a(target='_blank', href='') Emily Jecno
+                            .desc designer
+                        .col-sm-6.col-lg-4.order-sm-2.order-xl-2
+                          .row
+                            .col-md-6
+                              .ttl-info.text-start
+                                h6
+                                  i.fa.fa-phone
+                                  |    Contact Us
+                                span India +91 123-456-7890
+                            .col-md-6
+                              .ttl-info.text-start
+                                h6
+                                  i.fa.fa-location-arrow
+                                  |    Location
+                                span B69 Near Schoool Demo Home
+                      hr
+                      .social-media
+                        ul.list-inline
+                          li.list-inline-item
+                            a(href='https://www.facebook.com/' target="_blank")
+                              i.fa.fa-facebook
+                          li.list-inline-item
+                            a(href='https://accounts.google.com/' target="_blank")
+                              i.fa.fa-google-plus
+                          li.list-inline-item
+                            a(href='https://twitter.com/' target="_blank")
+                              i.fa.fa-twitter
+                          li.list-inline-item
+                            a(href='https://www.instagram.com/' target="_blank")
+                              i.fa.fa-instagram
+                          li.list-inline-item
+                            a(href='https://rss.app/' target="_blank")
+                              i.fa.fa-rss
+                      .follow
+                        .row
+                          .col-6.text-md-end.border-right
+                            .follow-num.counter 25869
+                            span Follower
+                          .col-6.text-md-start
+                            .follow-num.counter 659887
+                            span Following
+                // user profile first-style end
+                // user profile second-style start
+                .col-sm-12
+                  .card
+                    .profile-img-style
+                      .row
+                        .col-sm-8
+                          .d-flex
+                            img.img-thumbnail.rounded-circle.me-3(src='../assets/images/user/7.jpg', alt='Generic placeholder image')
+                            .flex-grow-1.align-self-center
+                              h5.mt-0.user-name AVA JONES
+                        .col-sm-4.align-self-center
+                          .float-sm-end
+                            small 10 Hours ago
+                      hr
+                      p
+                        | Spend time outdoors: Find a nearby park, forest, beach, or any natural setting where you can immerse yourself in nature. Take a walk, go hiking, or simply sit and observe the natural surroundings. Practice mindfulness: Engage in mindful activities that help you connect with nature on a deeper level.
+                      .img-container
+                        #aniimated-thumbnials.my-gallery(itemscope='')
+                          figure(itemprop='associatedMedia', itemscope='')
+                            a(href='../assets/images/other-images/profile-style-img3.png', itemprop='contentUrl', data-size='1600x950')
+                              img.img-fluid.rounded(src='../assets/images/other-images/profile-style-img3.png', itemprop='thumbnail', alt='gallery')
+                            figcaption(itemprop='caption description') Image caption  1
+                      .like-comment
+                        ul.list-inline
+                          li.list-inline-item.border-right.pe-3
+                            label.m-0
+                              a(href='#')
+                                i.fa.fa-heart
+                              |   Like
+                            span.ms-2.counter 2659
+                          li.list-inline-item.ms-2
+                            label.m-0
+                              a(href='#')
+                                i.fa.fa-comment
+                              |   Comment
+                            span.ms-2.counter 569
+                // user profile second-style end
+                // user profile third-style start
+                .col-sm-12
+                  .card
+                    .profile-img-style
+                      .row
+                        .col-sm-8
+                          .d-flex
+                            img.img-thumbnail.rounded-circle.me-3(src='../assets/images/user/7.jpg', alt='Generic placeholder image')
+                            .flex-grow-1.align-self-center
+                              h5.mt-0.user-name AVA JONES
+                        .col-sm-4.align-self-center
+                          .float-sm-end
+                            small 10 Hours ago
+                      hr
+                      p
+                        | Engage your senses: Explore nature with all your senses. Listen to the sounds of birds chirping or leaves rustling in the wind. Feel the texture of tree bark or the sensation of cool water on your skin. Observe the colors, shapes, and patterns in the environment.Participate in outdoor activities: Take part in activities that allow you to interact with nature actively. 
+                      #aniimated-thumbnials-2.row.mt-4.pictures.my-gallery(itemscope='')
+                        figure.col-sm-6(itemprop='associatedMedia', itemscope='')
+                          a(href='../assets/images/other-images/profile-style-img.png', itemprop='contentUrl', data-size='1600x950')
+                            img.img-fluid.rounded(src='../assets/images/other-images/profile-style-img.png', itemprop='thumbnail', alt='gallery')
+                          figcaption(itemprop='caption description') Image caption  1
+                        figure.col-sm-6(itemprop='associatedMedia', itemscope='')
+                          a(href='../assets/images/other-images/profile-style-img.png', itemprop='contentUrl', data-size='1600x950')
+                            img.img-fluid.rounded(src='../assets/images/other-images/profile-style-img.png', itemprop='thumbnail', alt='gallery')
+                          figcaption(itemprop='caption description') Image caption  2
+                      .like-comment
+                        ul.list-inline
+                          li.list-inline-item.border-right.pe-3
+                            label.m-0
+                              a(href='#')
+                                i.fa.fa-heart
+                              |   Like
+                            span.ms-2.counter 2659
+                          li.list-inline-item.ms-2
+                            label.m-0
+                              a(href='#')
+                                i.fa.fa-comment
+                              |   Comment
+                            span.ms-2.counter 569
+                // user profile third-style end
+                // user profile fourth-style start
+                .col-sm-12
+                  .card
+                    .profile-img-style
+                      .row
+                        .col-sm-8
+                          .d-flex
+                            img.img-thumbnail.rounded-circle.me-3(src='../assets/images/user/7.jpg', alt='Generic placeholder image')
+                            .flex-grow-1.align-self-center
+                              h5.mt-0.user-name AVA JONES
+                        .col-sm-4.align-self-center
+                          .float-sm-end
+                            small 10 Hours ago
+                      hr
+                      p
+                        | Learn about local flora and fauna: Expand your knowledge of the natural world by learning about the plants, animals, and ecosystems in your area. Visit local nature centers, read books or online resources, or join guided nature walks to deepen your understanding.Participate in outdoor activities: Take part in activities that allow you to interact with nature actively. This could include gardening, birdwatching, cycling, or even outdoor yoga or meditation.Engage your senses: Explore nature with all your senses. Listen to the sounds of birds chirping or leaves rustling in the wind. Feel the texture of tree bark or the sensation of cool water on your skin. Observe the colors, shapes, and patterns in the environment.
+                      .like-comment.mt-4
+                        ul.list-inline
+                          li.list-inline-item.border-right.pe-3
+                            label.m-0
+                              a(href='#')
+                                i.fa.fa-heart
+                              |   Like
+                            span.ms-2.counter 2659
+                          li.list-inline-item.ms-2
+                            label.m-0
+                              a(href='#')
+                                i.fa.fa-comment
+                              |   Comment
+                            span.ms-2.counter 569
+                // user profile fourth-style end
+                // user profile fifth-style start
+                .col-sm-12
+                  .card
+                    .profile-img-style
+                      .row
+                        .col-sm-8
+                          .d-flex
+                            img.img-thumbnail.rounded-circle.me-3(src='../assets/images/user/7.jpg', alt='Generic placeholder image')
+                            .flex-grow-1.align-self-center
+                              h5.mt-0.user-name AVA JONES
+                        .col-sm-4.align-self-center
+                          .float-sm-end
+                            small 10 Hours ago
+                      hr
+                      .row
+                        .col-lg-12.col-xl-4
+                          #aniimated-thumbnials-3.my-gallery(itemscope='')
+                            figure(itemprop='associatedMedia', itemscope='')
+                              a(href='../assets/images/blog/img.png', itemprop='contentUrl', data-size='1600x950')
+                                img.img-fluid.rounded(src='../assets/images/blog/img.png', itemprop='thumbnail', alt='gallery')
+                              figcaption(itemprop='caption description') Image caption  1
+                          .like-comment.mt-4.like-comment-sm-mb
+                            ul.list-inline
+                              li.list-inline-item.border-right.pe-3
+                                label.m-0
+                                  a(href='#')
+                                    i.fa.fa-heart
+                                  |   Like
+                                span.ms-2.counter 2659
+                              li.list-inline-item.ms-2
+                                label.m-0
+                                  a(href='#')
+                                    i.fa.fa-comment
+                                  |   Comment
+                                span.ms-2.counter 569
+                        .col-xl-6
+                          p
+                            | Dressing is a way of life. My customers are successful working women. I want people to be afraid of the women I dress. Age is something only in your head or a stereotype. Age means nothing when you are passionate about something. There has to be a balance between your mental satisfaction and the financial needs of your company.Success isn't about the end result, it's about what you learn along the way. Confidence. If you have it, you can make anything look good. Grunge is a hippied romantic version of punk. I'm an accomplice to helping women get what they want. Clothes can transform your mood and confidence. I think it's an old fashioned notion that fashion needs to be exclusive to be fashionable.
+                // user profile fifth-style end
+                .pswp(tabindex='-1', role='dialog', aria-hidden='true')
+                  .pswp__bg
+                  .pswp__scroll-wrap
+                    .pswp__container
+                      .pswp__item
+                      .pswp__item
+                      .pswp__item
+                    .pswp__ui.pswp__ui--hidden
+                      .pswp__top-bar
+                        .pswp__counter
+                        button.pswp__button.pswp__button--close(title='Close (Esc)')
+                        button.pswp__button.pswp__button--share(title='Share')
+                        button.pswp__button.pswp__button--fs(title='Toggle fullscreen')
+                        button.pswp__button.pswp__button--zoom(title='Zoom in/out')
+                        .pswp__preloader
+                          .pswp__preloader__icn
+                            .pswp__preloader__cut
+                              .pswp__preloader__donut
+                      .pswp__share-modal.pswp__share-modal--hidden.pswp__single-tap
+                        .pswp__share-tooltip
+                      button.pswp__button.pswp__button--arrow--left(title='Previous (arrow left)')
+                      button.pswp__button.pswp__button--arrow--right(title='Next (arrow right)')
+                      .pswp__caption
+                        .pswp__caption__center
+
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

@@ -1,0 +1,340 @@
+- var page_Title = 'Wishlist';
+- var theme_customizer      = true;
+- var tooltip               = true;
+- var page_datatable        = true;
+- var datatable             = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Ecommerce','Wishlist'],'Wishlist')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts 
+          .container-fluid
+            .row
+              .col-sm-12
+                .card
+                  .card-header
+                    h4 Wishlist
+                  .card-body
+                    .row.g-sm-4.g-3
+                      .col-xl-4.col-md-6
+                        .prooduct-details-box                                  
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-6.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Women Top
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex.border-0.p-0 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Move to Cart
+                      .col-xl-4.col-md-6
+                        .prooduct-details-box 
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-5.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Men T-shirt
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex.border-0.p-0 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Move to Cart
+                      .col-xl-4.col-md-6
+                        .prooduct-details-box 
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-4.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Cyclamen 
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex.border-0.p-0 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Move to Cart
+                      .col-xl-4.col-md-6
+                        .prooduct-details-box 
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-3.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Black Shirt
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex.border-0.p-0 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Move to Cart
+                      .col-xl-4.col-md-6
+                        .prooduct-details-box 
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-2.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Printed Top
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex.border-0.p-0 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Move to Cart
+                      .col-xl-4.col-md-6
+                        .prooduct-details-box 
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-1.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Women Dress
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex.border-0.p-0 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Move to Cart
+                      .col-xl-4.col-md-6
+                        .prooduct-details-box 
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-1.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Women Dress
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex.border-0.p-0 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Move to Cart
+
+
+                      .col-xl-4.col-md-6
+                        .prooduct-details-box                                  
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-6.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Women Top
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex.border-0.p-0 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Move to Cart
+                      .col-xl-4.col-md-6
+                        .prooduct-details-box 
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-5.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Men T-shirt
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex.border-0.p-0 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Move to Cart
+                      .col-xl-4.col-md-6
+                        .prooduct-details-box 
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-4.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Cyclamen
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex.border-0.p-0 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Move to Cart
+                      .col-xl-4.col-md-6
+                        .prooduct-details-box 
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-3.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Black Shirt
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex.border-0.p-0 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Move to Cart
+                      .col-xl-4.col-md-6
+                        .prooduct-details-box 
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-3.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Black Shirt
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex.border-0.p-0 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Move to Cart
+                      .col-xl-4.col-md-6
+                        .prooduct-details-box 
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-2.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Printed Top
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex.border-0.p-0 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Move to Cart
+                      .col-xl-4.col-md-6
+                        .prooduct-details-box                                  
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-6.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Women Top
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex.border-0.p-0 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Move to Cart
+                      .col-xl-4.col-md-6
+                        .prooduct-details-box 
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-5.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Men T-shirt
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex.border-0.p-0 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Move to Cart              
+            // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

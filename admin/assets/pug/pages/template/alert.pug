@@ -1,0 +1,936 @@
+- var page_Title = 'Alert';
+- var theme_customizer      = true;
+- var height_equal          = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var clipboard             = true;
+- var prism                 = true;
+- var customcard            = true;
+- var animate               = true;
+- var scrollbar             = true;
+- var alert                 = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Ui Kits','Alert'],'Alert')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-xl-12
+                .card
+                  .card-header
+                    h4 Link Color in Dark Theme
+                    p.f-m-light.mt-1
+                      | Use
+                      code  alert-*
+                      |  class to make an alert.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .row.gy-3 
+                      .col-xl-6 
+                        p.mb-1 Primary Alert
+                        .alert.alert-primary.dark(role='alert')
+                          p.txt-light
+                            | The 
+                            a.alert-link.text-white(href='#!') "alert-primary" 
+                            | class can be used to create an alert like this one.
+                        p.mb-1 Secondary Alert
+                        .alert.alert-secondary.dark(role='alert')
+                          p.txt-light
+                            | The 
+                            a.alert-link.text-white(href='#!') "alert-secondary" 
+                            | class can be used to create an alert like this one.
+                        p.mb-1 Success Alert
+                        .alert.alert-success.dark(role='alert')
+                          p.txt-light
+                            | The 
+                            a.alert-link.text-white(href='#!') "alert-success" 
+                            | class can be used to create an alert like this one.
+                        p.mb-1 Info Alert
+                        .alert.alert-info.dark(role='alert')
+                          p.txt-light
+                            | The 
+                            a.alert-link.text-white(href='#!') "alert-info" 
+                            | class can be used to create an alert like this one.
+                      .col-xl-6
+                        p.mb-1 Warning Alert
+                        .alert.alert-warning.dark(role='alert')
+                          p.txt-light
+                            | The 
+                            a.alert-link.text-white(href='#!') "alert-warning" 
+                            | class can be used to create an alert like this one.
+                        p.mb-1 Danger Alert
+                        .alert.alert-danger.dark(role='alert')
+                          p.txt-light
+                            | The 
+                            a.alert-link.text-white(href='#!') "alert-danger" 
+                            | class can be used to create an alert like this one.
+                        p.mb-1 Light Alert
+                        .alert.alert-light.dark(role='alert')
+                          p
+                            | The 
+                            a.alert-link.text-dark(href='#!') "alert-light" 
+                            | class can be used to create an alert like this one.
+                        p.mb-1 Dark Alert
+                        .alert.alert-dark.dark(role='alert')
+                          p.txt-light
+                            | The 
+                            a.alert-link.text-white(href='#!') "alert-dark" 
+                            | class can be used to create an alert like this one.
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#link-alert-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#link-alert-copy
+                          |&lt;div class="row"&gt; 
+                          |  &lt;div class="col-xl-6"&gt; 
+                          |    &lt;p class="mb-1"&gt;Primary Alert&lt;/p&gt;
+                          |    &lt;div class="alert alert-primary dark" role="alert"&gt;
+                          |      &lt;p class="txt-light"&gt;The
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"alert-primary"&lt;/a&gt;class can be used to create an alert like this one.
+                          |      &lt;/p&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;p class="mb-1"&gt;Secondary Alert&lt;/p&gt;
+                          |    &lt;div class="alert alert-secondary dark" role="alert"&gt;
+                          |      &lt;p class="txt-light"&gt;The
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"alert-secondary"&lt;/a&gt;class can be used to create an alert like this one.
+                          |      &lt;/p&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;p class="mb-1"&gt;Success Alert&lt;/p&gt;
+                          |    &lt;div class="alert alert-success dark" role="alert"&gt;
+                          |      &lt;p class="txt-light"&gt;The
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"alert-success"&lt;/a&gt;class can be used to create an alert like this one.
+                          |      &lt;/p&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;p class="mb-1"&gt;Info Alert&lt;/p&gt;
+                          |    &lt;div class="alert alert-info dark" role="alert"&gt;
+                          |      &lt;p class="txt-light"&gt;The
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"alert-info"&lt;/a&gt;class can be used to create an alert like this one.
+                          |      &lt;/p&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="col-xl-6"&gt;
+                          |    &lt;p class="mb-1"&gt;Warning Alert&lt;/p&gt;
+                          |    &lt;div class="alert alert-warning dark" role="alert"&gt;
+                          |      &lt;p class="txt-light"&gt;The
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"alert-warning"&lt;/a&gt;class can be used to create an alert like this one.
+                          |      &lt;/p&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;p class="mb-1"&gt;Danger Alert&lt;/p&gt;
+                          |    &lt;div class="alert alert-danger dark" role="alert"&gt;
+                          |      &lt;p class="txt-light"&gt;The
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"alert-danger"&lt;/a&gt;class can be used to create an alert like this one.
+                          |      &lt;/p&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;p class="mb-1"&gt;Light Alert&lt;/p&gt;
+                          |    &lt;div class="alert alert-light dark" role="alert"&gt;
+                          |      &lt;p&gt;The
+                          |        &lt;a class="alert-link text-dark" href="#!"&gt;"alert-light"&lt;/a&gt;class can be used to create an alert like this one.
+                          |      &lt;/p&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;p class="mb-1"&gt;Dark Alert&lt;/p&gt;
+                          |    &lt;div class="alert alert-dark dark" role="alert"&gt;
+                          |      &lt;p class="txt-light"&gt;The
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"alert-dark"&lt;/a&gt;class can be used to create an alert like this one.
+                          |      &lt;/p&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-xl-12
+                .card
+                  .card-header
+                    h4 Link Color in Light Theme
+                    p.f-m-light.mt-1
+                      | Use 
+                      code alert-light-*
+                      |  class to make an alert.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .row.gy-3 
+                      .col-xl-6
+                        p.mb-1 Primary Light Alert
+                        .alert.alert-light-primary(role='alert')
+                          p.txt-primary
+                            | The 
+                            a.alert-link.txt-primary(href='#!') "alert-light-primary" 
+                            | class can be used to create an alert like this one.
+                        p.mb-1 Secondary Light Alert
+                        .alert.alert-light-secondary(role='alert')
+                          p.txt-secondary
+                            | The 
+                            a.alert-link.txt-secondary(href='#!') "alert-light-secondary" 
+                            | class can be used to create an alert like this one.
+                        p.mb-1 Success Light Alert
+                        .alert.alert-light-success(role='alert')
+                          .txt-success
+                            | The 
+                            a.alert-link.txt-success(href='#!') "alert-light-success" 
+                            | class can be used to create an alert like this one.
+                        p.mb-1 Info Light Alert
+                        .alert.alert-light-info(role='alert')
+                          .txt-info
+                            | The 
+                            a.alert-link.txt-info(href='#!') "alert-light-info" 
+                            | class can be used to create an alert like this one.
+                      .col-xl-6
+                        p.mb-1 Warning Light Alert
+                        .alert.alert-light-warning(role='alert')
+                          p.txt-warning
+                            | The 
+                            a.alert-link.txt-warning(href='#!') "alert-light-warning" 
+                            | class can be used to create an alert like this one.
+                        p.mb-1 Danger Light Alert
+                        .alert.alert-light-danger(role='alert')
+                          p.txt-danger
+                            | The 
+                            a.alert-link.txt-danger(href='#!') "alert-light-danger" 
+                            | class can be used to create an alert like this one.
+                        p.mb-1 White Light Alert
+                        .alert.alert-light-light(role='alert')
+                          p.txt-dark
+                            | The 
+                            a.alert-link.txt-dark(href='#!') "alert-light-light" 
+                            | class can be used to create an alert like this one.
+                        p.mb-1 Dark Light Alert
+                        .alert.alert-light-dark(role='alert')
+                          p.txt-dark
+                            | The 
+                            a.alert-link.txt-dark(href='#!') "alert-light-dark" 
+                            | class can be used to create an alert like this one.
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#light-alert-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#light-alert-copy
+                          |&lt;div class="row"&gt; 
+                          |  &lt;div class="col-xl-6"&gt;
+                          |    &lt;p class="mb-1"&gt;Primary Light Alert&lt;/p&gt;
+                          |    &lt;div class="alert alert-light-primary" role="alert"&gt;
+                          |      &lt;p class="txt-primary"&gt;The
+                          |        &lt;a class="alert-link txt-primary" href="#!"&gt;"alert-light-primary"&lt;/a&gt;class can be used to create an alert like this one.
+                          |      &lt;/p&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;p class="mb-1"&gt;Secondary Light Alert&lt;/p&gt;
+                          |    &lt;div class="alert alert-light-secondary" role="alert"&gt;
+                          |      &lt;p class="txt-secondary"&gt;The
+                          |        &lt;a class="alert-link txt-secondary" href="#!"&gt;"alert-light-secondary"&lt;/a&gt;class can be used to create an alert like this one.
+                          |      &lt;/p&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;p class="mb-1"&gt;Success Light Alert&lt;/p&gt;
+                          |    &lt;div class="alert alert-light-success" role="alert"&gt;
+                          |      &lt;div class="txt-success"&gt;The
+                          |        &lt;a class="alert-link txt-success" href="#!"&gt;"alert-light-success"&lt;/a&gt;class can be used to create an alert like this one.
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;p class="mb-1"&gt;Info Light Alert&lt;/p&gt;
+                          |    &lt;div class="alert alert-light-info" role="alert"&gt;
+                          |      &lt;div class="txt-info"&gt;The
+                          |        &lt;a class="alert-link txt-info" href="#!"&gt;"alert-light-info"&lt;/a&gt;class can be used to create an alert like this one.
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="col-xl-6"&gt;
+                          |    &lt;p class="mb-1"&gt;Warning Light Alert&lt;/p&gt;
+                          |    &lt;div class="alert alert-light-warning" role="alert"&gt;
+                          |      &lt;p class="txt-warning"&gt;The
+                          |        &lt;a class="alert-link txt-warning" href="#!"&gt;"alert-light-warning"&lt;/a&gt;class can be used to create an alert like this one.
+                          |      &lt;/p&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;p class="mb-1"&gt;Danger Light Alert&lt;/p&gt;
+                          |    &lt;div class="alert alert-light-danger" role="alert"&gt;
+                          |      &lt;p class="txt-danger"&gt;The
+                          |        &lt;a class="alert-link txt-danger" href="#!"&gt;"alert-light-danger"&lt;/a&gt;class can be used to create an alert like this one.
+                          |      &lt;/p&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;p class="mb-1"&gt;White Light Alert&lt;/p&gt;
+                          |    &lt;div class="alert alert-light-light" role="alert"&gt;
+                          |      &lt;p class="txt-dark"&gt;The
+                          |        &lt;a class="alert-link txt-dark" href="#!"&gt;"alert-light-light"&lt;/a&gt;class can be used to create an alert like this one.
+                          |      &lt;/p&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;p class="mb-1"&gt;Dark Light Alert&lt;/p&gt;
+                          |    &lt;div class="alert alert-light-dark" role="alert"&gt;
+                          |      &lt;p class="txt-dark"&gt;The
+                          |        &lt;a class="alert-link txt-dark" href="#!"&gt;"alert-light-dark"&lt;/a&gt;class can be used to create an alert like this one.
+                          |      &lt;/p&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-sm-12
+                .card
+                  .card-header
+                    h4 Outline Dark and Light Alerts
+                    p.f-m-light.mt-1
+                      | Use
+                      code  border-* 
+                      | utility class to provide matching border and border-width within any alert
+                      code  [solid/double/inset/outset]
+                      | .
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.outline-alerts
+                    .row.gy-3 
+                      .col-xl-6
+                        .alert.txt-primary.border-primary.alert-dismissible.fade.show(role='alert')
+                          i(data-feather='clock')
+                          p
+                            | The 
+                            code "border-primary" 
+                            | class has the ability to generate on its own alerts.
+                          button.btn-close(type='button', data-bs-dismiss='alert', aria-label='Close')
+                        .alert.txt-success.border-success.outline-2x.alert-dismissible.fade.show.alert-icons(role='alert')
+                          i(data-feather='thumbs-up')
+                          p
+                            | The 
+                            b.txt-success "border-success" 
+                            | with 
+                            b.txt-success "outline-2x" 
+                            | class has the ability to generate on its own alerts.
+                          button.btn-close(type='button', data-bs-dismiss='alert', aria-label='Close')
+                      .col-xl-6
+                        .alert.txt-warning.double-border.border-warning.alert-dismissible.fade.show.alert-icons(role='alert')
+                          i(data-feather='alert-triangle')
+                          p
+                            | The 
+                            b.txt-warning "double-border"
+                            | &
+                            b.txt-warning "border-warning" 
+                            | class has the ability to generate on its own alerts.
+                          button.btn-close(type='button', data-bs-dismiss='alert', aria-label='Close')
+                        .alert.txt-danger.inset-border.border-danger.outline-2x.alert-dismissible.fade.show.alert-icons(role='alert')
+                          i(data-feather='alert-octagon')
+                          p
+                            | The 
+                            b.txt-danger "inset-border" 
+                            | with 
+                            b.txt-danger "border-danger" 
+                            | class has the ability to generate on its own alerts.
+                          button.btn-close(type='button', data-bs-dismiss='alert', aria-label='Close')
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#outline-alert-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#outline-alerts-copy
+                          |&lt;div class="row gy-3"&gt; 
+                          |  &lt;div class="col-xl-6"&gt;
+                          |    &lt;div class="alert txt-primary border-primary alert-dismissible fade show" role="alert"&gt;
+                          |      &lt;i data-feather="clock"&gt;&lt;/i&gt;
+                          |      &lt;p&gt;The&lt;code&gt;"border-primary"&lt;/code&gt;class has the ability to generate on its own alerts.&lt;/p&gt;
+                          |      &lt;button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="alert txt-success border-success outline-2x alert-dismissible fade show alert-icons" role="alert"&gt;
+                          |      &lt;i data-feather="thumbs-up"&gt;&lt;/i&gt;
+                          |      &lt;p&gt;The
+                          |        &lt;b class="txt-success"&gt;"border-success"&lt;/b&gt;with
+                          |        &lt;b class="txt-success"&gt;"outline-2x"&lt;/b&gt;class has the ability to generate on its own alerts.
+                          |      &lt;/p&gt;
+                          |      &lt;button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="col-xl-6"&gt;
+                          |    &lt;div class="alert txt-warning double-border border-warning alert-dismissible fade show alert-icons" role="alert"&gt;
+                          |      &lt;i data-feather="alert-triangle"&gt;&lt;/i&gt;
+                          |      &lt;p&gt;The
+                          |        &lt;b class="txt-warning"&gt;"double-border"&lt;/b&gt;;&amp;
+                          |        &lt;b class="txt-warning"&gt;"border-warning"&lt;/b&gt;class has the ability to generate on its own alerts.
+                          |      &lt;/p&gt;
+                          |      &lt;button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="alert txt-danger inset-border border-danger outline-2x alert-dismissible fade show alert-icons" role="alert"&gt;
+                          |      &lt;i data-feather="alert-octagon"&gt;&lt;/i&gt;
+                          |      &lt;p&gt;The
+                          |        &lt;b class="txt-danger"&gt;"inset-border"&lt;/b&gt;with
+                          |        &lt;b class="txt-danger"&gt;"border-danger"&lt;/b&gt;class has the ability to generate on its own alerts.
+                          |      &lt;/p&gt;
+                          |      &lt;button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-sm-12.col-xl-6
+                .card
+                  .card-header
+                    h4 Alerts with Icons and Text Actions
+                    p.f-m-light.mt-1
+                      | Use 
+                      code border-*
+                      |  class to add dismiss text instead of icon.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.dark-txt
+                    .alert.border-warning.alert-dismissible.fade.show.p-0(role='alert')
+                      .alert-arrow.bg-warning
+                        i.icon-timer
+                      p
+                        | Your time Over after                            
+                        strong.txt-dark 5
+                        |   minute
+                      button.p-0.border-0.me-2.ms-auto(type='button' data-bs-dismiss='alert' aria-label='Close')
+                        span.bg-warning.px-3.py-1(aria-hidden='true') Check
+                    .alert.border-danger.alert-dismissible.fade.show.p-0.mb-0(role='alert')
+                      .alert-arrow.bg-danger
+                        i.icon-heart
+                      p
+                        | Oh snap! Change a few things up 
+                        strong.txt-dark  Notification check
+                      button.p-0.border-0.me-2.ms-auto(type='button' data-bs-dismiss='alert' aria-label='Close')
+                        span.bg-danger.text-white.px-3.py-1(aria-hidden='true') Alert
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#alert-icon-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#alert-icon-copy
+                          |&lt;div class="alert border-warning alert-dismissible fade show p-0" role="alert"&gt;
+                          |  &lt;div class="alert-arrow bg-warning"&gt;
+                          |    &lt;i class="icon-timer"&gt;&lt;/i&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;p&gt;Your time Over after&lt;strong class="txt-dark"&gt;5&lt;/strong&gt;minute&lt;/p&gt;
+                          |  &lt;button class="p-0 border-0 me-2 ms-auto" type="button" data-bs-dismiss="alert" aria-label="Close"&gt;
+                          |    &lt;span class="bg-warning px-3 py-1" aria-hidden="true"&gt;Check&lt;/span&gt;
+                          |  &lt;/button&gt;
+                          |&lt;/div&gt;
+                          |&lt;div class="alert border-danger alert-dismissible fade show p-0 mb-0" role="alert"&gt;
+                          |  &lt;div class="alert-arrow bg-danger"&gt;
+                          |    &lt;i class="icon-heart"&gt;&lt;/i&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;p&gt;Oh snap! Change a few things up
+                          |    &lt;strong class="txt-dark"&gt; Notification check&lt;/strong&gt;
+                          |  &lt;/p&gt;
+                          |  &lt;button class="p-0 border-0 me-2 ms-auto" type="button" data-bs-dismiss="alert" aria-label="Close"&gt;
+                          |    &lt;span class="bg-danger text-white px-3 py-1" aria-hidden="true"&gt;Alert&lt;/span&gt;
+                          |  &lt;/button&gt;
+                          |&lt;/div&gt;
+              .col-xl-6
+                .card
+                  .card-header 
+                    h4 Live Alert
+                    p.f-m-light.mt-1 
+                      | Click the button below to show an alert (hidden with inline styles to start), then dismiss (and destroy) it with the built-in close button.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.live-dark
+                    #liveAlertPlaceholder
+                    button#liveAlertBtn.btn.btn-dark(type='button') Show Live Alert
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#live-alert-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#live-alert-copy
+                          |&lt;div id="liveAlertPlaceholder"&gt;&lt;/div&gt;
+                          |&lt;button class="btn btn-dark" id="liveAlertBtn" type="button"&gt;Show Live Alert&lt;/button&gt;
+              .col-sm-12.col-xl-6
+                .card
+                  .card-header
+                    h4 Dismissing Light Alert
+                    p.f-m-light.mt-1
+                      | Use 
+                      code alert-light-*
+                      |  class can be used to generate a light alerts and
+                      code  alert-dismissible
+                      |  utility class to remove the alerts.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .alert.alert-light-warning.alert-dismissible.fade.show.mb-0(role='alert')
+                      i(data-feather='bell')
+                      p
+                        | The 
+                        a.alert-link.txt-warning(href='#!') "alert-light-warning" 
+                        | class can be used to create an alert like this one.
+                      button.btn-close(type='button', data-bs-dismiss='alert', aria-label='Close')
+                    .code-box-copy
+                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#dismissing-light-alert', title='Copy')
+                          i.icofont.icofont-copy-alt
+                        pre.theme-scrollbar
+                          code.language-html#dismissing-light-alert
+                            |&lt;div class="alert alert-light-warning alert-dismissible fade show" role="alert"&gt;
+                            |  &lt;i data-feather="bell"&gt;&lt;/i&gt;
+                            |  &lt;p&gt;The 
+                            |    &lt;a class="alert-link txt-warning" href="#!"&gt;"alert-light-warning"&lt;/a&gt;class can be used to create an alert like this one.
+                            |  &lt;/p&gt;
+                            |  &lt;button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                            |&lt;/div&gt;
+              .col-sm-12.col-xl-6
+                .card
+                  .card-header
+                    h4 Dismissing Dark Alert
+                    p.f-m-light.mt-1
+                      | Use 
+                      code alert-*
+                      |  class can be used to generate a dark alerts and
+                      code  alert-dismissible
+                      |  utility class to remove the alerts.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .alert.alert-secondary.dark.alert-dismissible.fade.show.mb-0(role='alert')
+                      i(data-feather='heart')
+                      p.txt-light
+                        | The 
+                        a.alert-link.txt-light(href='#!') "alert-secondary" 
+                        | class can be used to create an alert like this one.
+                      button.btn-close(type='button', data-bs-dismiss='alert', aria-label='Close')
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#dismissing-alert-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#dismissing-alert-copy
+                          |&lt;div class="alert alert-dark dark alert-dismissible fade show" role="alert"&gt;
+                          |  &lt;i data-feather="heart"&gt;&lt;/i&gt;
+                          |  &lt;p class="txt-light"&gt;The
+                          |    &lt;a class="alert-link txt-light" href="#!"&gt;"alert-dark"&lt;/a&gt;class can be used to create an alert like this one.
+                          |  &lt;/p&gt;
+                          |  &lt;button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                          |&lt;/div&gt;
+              .col-xl-6
+                .card.height-equal
+                  .card-header 
+                    h4 Left Border Alert
+                    p.f-m-light.mt-1 
+                      | Use 
+                      code border-left-*
+                      |  class to add left border to alert.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.live-dark
+                    .alert.alert-light-dark.light.alert-dismissible.fade.show.txt-dark.border-left-dark(role='alert')
+                      i(data-feather='help-circle')
+                      p Dark Alert: border-left-wrapper
+                      button.btn-close(type='button', data-bs-dismiss='alert', aria-label='Close')
+                    .alert.alert-light-secondary.light.alert-dismissible.fade.show.txt-secondary.border-left-secondary(role='alert')
+                      i(data-feather='alert-octagon')
+                      p Secondary Alert: border-left-secondary
+                      button.btn-close(type='button', data-bs-dismiss='alert', aria-label='Close')
+                    .alert.alert-light-success.light.alert-dismissible.fade.show.txt-success.border-left-success.mb-0(role='alert')
+                      i(data-feather='check-square')
+                      p Success Alert: border-left-success
+                      button.btn-close(type='button', data-bs-dismiss='alert', aria-label='Close')
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#border-alert-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#border-alert-copy
+                          |&lt;div class="alert alert-light-dark light alert-dismissible fade show txt-dark border-left-dark" role="alert"&gt;
+                          |  &lt;i data-feather="help-circle"&gt;&lt;/i&gt;
+                          |  &lt;p&gt;Dark Alert: border-left-wrapper&lt;/p&gt;
+                          |  &lt;button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                          |&lt;/div&gt;
+                          |&lt;div class="alert alert-light-secondary light alert-dismissible fade show txt-secondary border-left-secondary" role="alert"&gt;
+                          |  &lt;i data-feather="alert-octagon"&gt;&lt;/i&gt;
+                          |  &lt;p&gt;Secondary Alert: border-left-secondary&lt;/p&gt;
+                          |  &lt;button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                          |&lt;/div&gt;
+                          |&lt;div class="alert alert-light-success light alert-dismissible fade show txt-success border-left-success" role="alert"&gt;
+                          |  &lt;i data-feather="check-square"&gt;&lt;/i&gt;
+                          |  &lt;p&gt;Success Alert: border-left-success&lt;/p&gt;
+                          |  &lt;button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                          |&lt;/div&gt;
+              .col-xl-6
+                .card.height-equal
+                  .card-header 
+                    h4 Custom Alert Popup
+                    p.f-m-light.mt-1 
+                      | Use
+                      code  alert 
+                      | class can be used to generate a custom alert.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    .alert-box
+                      .alert.alert-dismissible.justify-content-center.p-0.fade.show(role='alert')
+                        .alert-body
+                          svg 
+                            use(href='../assets/svg/icon-sprite.svg#alert-popup')
+                          h5.mb-1 A Crucial Update is Now Available
+                          p For improved security and functionality, install the most recent version right away.
+                          .button-box
+                            button.btn.light-background Later
+                            button.btn.btn-warning Right Now
+                        button.btn-close(type='button', data-bs-dismiss='alert', aria-label='Close')
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#custom-alert-popup', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#custom-alert-popup
+                          |&lt;div class="alert-box"&gt;
+                          |  &lt;div class="alert alert-dismissible justify-content-center p-0 fade show" role="alert"&gt;
+                          |    &lt;div class="alert-body"&gt;
+                          |      &lt;svg&gt; 
+                          |        &lt;use href="../assets/svg/icon-sprite.svg#alert-popup"&gt;&lt;/use&gt;
+                          |      &lt;/svg&gt;
+                          |      &lt;h6 class="mb-1"&gt;A Crucial Update is Now Available&lt;/h6&gt;
+                          |      &lt;p&gt;For improved security and functionality, install the most recent version right away.&lt;/p&gt;
+                          |      &lt;div class="button-box"&gt;
+                          |        &lt;button class="btn light-background"&gt;Later&lt;/button&gt;
+                          |        &lt;button class="btn btn-warning"&gt;Right Now&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;                                            
+              .col-xl-12
+                .card
+                  .card-header 
+                    h4 Icons with Alerts
+                    p.f-m-light.mt-1 
+                      | Use
+                      code  alert  alert-* 
+                      | classes to add SVG icons to the alerts.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.alerts-icon
+                    .row.gy-3 
+                      .col-xl-6 
+                        .alert.alert-primary.d-flex.align-items-center(role='alert')
+                          div
+                            i.stroke-primary(data-feather='bar-chart-2')
+                          span.txt-light Use 
+                            a.alert-link.text-white(href='#!') "alert-primary"
+                            |  and 
+                            a.alert-link.text-white(href='#!') "stroke-primary"
+                            |  classes for alerts like this one. 
+                          
+                        .alert.alert-secondary.d-flex.align-items-center(role='alert')
+                          div
+                            i.stroke-secondary(data-feather='layers')
+                          span.txt-light Use 
+                            a.alert-link.text-white(href='#!') "alert-secondary"
+                            |  and 
+                            a.alert-link.text-white(href='#!') "stroke-secondary"
+                            |  classes for alerts like this one. 
+                        .alert.alert-warning.d-flex.align-items-center(role='alert')
+                          div
+                            i.stroke-warning(data-feather='alert-triangle')
+                          span.txt-light Use 
+                            a.alert-link.text-white(href='#!') "alert-warning"
+                            |  and 
+                            a.alert-link.text-white(href='#!') "stroke-warning"
+                            |  classes for alerts like this one. 
+                        .alert.alert-success.d-flex.align-items-center(role='alert')
+                          div
+                            i.stroke-success(data-feather='check-square')
+                          span.txt-light Use 
+                            a.alert-link.text-white(href='#!') "alert-success"
+                            |  and 
+                            a.alert-link.text-white(href='#!') "stroke-success"
+                            |  classes for alerts like this one. 
+                      .col-xl-6 
+                        .alert.alert-danger.d-flex.align-items-center(role='alert')
+                          div
+                            i.stroke-danger(data-feather='alert-circle')
+                          span.txt-light Use 
+                            a.alert-link.text-white(href='#!') "alert-danger"
+                            |  and 
+                            a.alert-link.text-white(href='#!') "stroke-danger"
+                            |  classes for alerts like this one. 
+                        .alert.alert-info.d-flex.align-items-center(role='alert')
+                          div
+                            i.stroke-info(data-feather='octagon')
+                          span.txt-light Use 
+                            a.alert-link.text-white(href='#!') "alert-info"
+                            |  and 
+                            a.alert-link.text-white(href='#!') "stroke-info"
+                            |  classes for alerts like this one. 
+                        .alert.alert-light.d-flex.align-items-center(role='alert')
+                          div
+                            i.stroke-dark(data-feather='thumbs-up')
+                          span Use 
+                            a.alert-link.text-dark(href='#!') "alert-light"
+                            |  and 
+                            a.alert-link.text-dark(href='#!') "stroke-dark"
+                            |  classes for alerts like this one. 
+                        .alert.alert-dark.d-flex.align-items-center(role='alert')
+                          div
+                            i.stroke-dark(data-feather='loader')
+                          span.txt-light Use 
+                            a.alert-link.text-white(href='#!') "alert-dark"
+                            |  and 
+                            a.alert-link.text-white(href='#!') "stroke-dark"
+                            |  classes for alerts like this one. 
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#icon-alert-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#icon-alert-copy
+                          |&lt;div class="row gy-3"&gt; 
+                          |  &lt;div class="col-md-6"&gt; 
+                          |    &lt;div class="alert alert-primary d-flex align-items-center" role="alert"&gt;
+                          |      &lt;div&gt;
+                          |        &lt;i class="stroke-primary" data-feather="bar-chart-2"&gt;&lt;/i&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;span class="txt-light"&gt;Use
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"alert-primary"&lt;/a&gt;and
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"stroke-primary"&lt;/a&gt;classes for alerts like this one.
+                          |      &lt;/span&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+                          |      &lt;div&gt;
+                          |        &lt;i class="stroke-secondary" data-feather="layers"&gt;&lt;/i&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;span class="txt-light"&gt;Use
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"alert-secondary"&lt;/a&gt;and
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"stroke-secondary"&lt;/a&gt;classes for alerts like this one.
+                          |      &lt;/span&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="alert alert-warning d-flex align-items-center" role="alert"&gt;
+                          |      &lt;div&gt;
+                          |        &lt;i class="stroke-warning" data-feather="alert-triangle"&gt;&lt;/i&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;span class="txt-light"&gt;Use
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"alert-warning"&lt;/a&gt;and
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"stroke-warning"&lt;/a&gt;classes for alerts like this one.
+                          |      &lt;/span&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="alert alert-success d-flex align-items-center" role="alert"&gt;
+                          |      &lt;div&gt;
+                          |        &lt;i class="stroke-success" data-feather="check-square"&gt;&lt;/i&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;span class="txt-light"&gt;Use
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"alert-success"&lt;/a&gt;and
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"stroke-success"&lt;/a&gt;classes for alerts like this one.
+                          |      &lt;/span&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="col-md-6"&gt; 
+                          |    &lt;div class="alert alert-danger d-flex align-items-center" role="alert"&gt;
+                          |      &lt;div&gt;
+                          |        &lt;i class="stroke-danger" data-feather="alert-circle"&gt;&lt;/i&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;span class="txt-light"&gt;Use
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"alert-danger"&lt;/a&gt;and
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"stroke-danger"&lt;/a&gt;classes for alerts like this one.
+                          |      &lt;/span&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="alert alert-info d-flex align-items-center" role="alert"&gt;
+                          |      &lt;div&gt;
+                          |        &lt;i class="stroke-info" data-feather="octagon"&gt;&lt;/i&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;span class="txt-light"&gt;Use
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"alert-info"&lt;/a&gt;and
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"stroke-info"&lt;/a&gt;classes for alerts like this one.
+                          |      &lt;/span&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="alert alert-light d-flex align-items-center" role="alert"&gt;
+                          |      &lt;div&gt;
+                          |        &lt;i class="stroke-dark" data-feather="thumbs-up"&gt;&lt;/i&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;span&gt;Use
+                          |        &lt;a class="alert-link text-dark" href="#!"&gt;"alert-light"&lt;/a&gt;and
+                          |        &lt;a class="alert-link text-dark" href="#!"&gt;"stroke-dark"&lt;/a&gt;classes for alerts like this one.
+                          |      &lt;/span&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="alert alert-dark d-flex align-items-center" role="alert"&gt;
+                          |      &lt;div&gt;
+                          |        &lt;i class="stroke-dark" data-feather="loader"&gt;&lt;/i&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;span class="txt-light"&gt;Use
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"alert-dark"&lt;/a&gt;and
+                          |        &lt;a class="alert-link text-white" href="#!"&gt;"stroke-dark"&lt;/a&gt;classes for alerts like this one.
+                          |      &lt;/span&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-sm-12
+                .card
+                  .card-header
+                    h4 Additional Contents
+                    p.f-m-light.mt-1 
+                      | Use
+                      code alert 
+                      |  utility class to provide additional content within any alerts.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.dark-alert
+                    .alert.alert-light-primary(role='alert')
+                      h5.alert-heading.pb-2.txt-primary Please! Check your notifications
+                      p
+                        | Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+                      hr
+                      p.mb-0
+                        | Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+                    .alert.alert-light-secondary(role='alert')
+                      h5.alert-heading.pb-2.txt-secondary Something went wrong! Please, chrome update.
+                      p
+                        | Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+                      hr
+                      p.mb-0
+                        | Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+                    .alert.alert-light-success.mb-0(role='alert')
+                      h5.alert-heading.pb-2.txt-success Please! Hidden cameras were not installed.
+                      p
+                        | Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+                      hr
+                      p.mb-0
+                        | Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#additional-content-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#additional-content-copy
+                          |&lt;div class="alert alert-light-primary" role="alert"&gt;
+                          |  &lt;h5 class="alert-heading pb-2 txt-primary"&gt;Please! Check your notifications&lt;/h5&gt;
+                          |  &lt;p&gt;Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.&lt;/p&gt;
+                          |  &lt;hr&gt;
+                          |  &lt;p class="mb-0"&gt;Whenever you need to, be sure to use margin utilities to keep things nice and tidy.&lt;/p&gt;
+                          |&lt;/div&gt;
+                          |&lt;div class="alert alert-light-secondary" role="alert"&gt;
+                          |  &lt;h5 class="alert-heading pb-2 txt-secondary"&gt;Something went wrong! Please, chrome update.&lt;/h5&gt;
+                          |  &lt;p&gt;Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.&lt;/p&gt;
+                          |  &lt;hr&gt;
+                          |  &lt;p class="mb-0"&gt;Whenever you need to, be sure to use margin utilities to keep things nice and tidy.&lt;/p&gt;
+                          |&lt;/div&gt;
+                          |&lt;div class="alert alert-light-success mb-0" role="alert"&gt;
+                          |  &lt;h5 class="alert-heading pb-2 txt-success"&gt;Please! Hidden cameras were not installed.&lt;/h5&gt;
+                          |  &lt;p&gt;Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.&lt;/p&gt;
+                          |  &lt;hr&gt;
+                          |  &lt;p class="mb-0"&gt;Whenever you need to, be sure to use margin utilities to keep things nice and tidy.&lt;/p&gt;
+                          |&lt;/div&gt;
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files      

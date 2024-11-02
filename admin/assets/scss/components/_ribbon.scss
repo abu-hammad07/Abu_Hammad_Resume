@@ -1,0 +1,596 @@
+/**=====================
+  2.26 Ribbon CSS Start
+==========================**/
+[class*="ribbon-wrapper"] {
+  position: relative;
+  padding: 58px 18px 28px 18px;
+}
+
+.ribbon {
+  padding: 0 20px;
+  height: 30px;
+  line-height: 30px;
+  clear: left;
+  position: absolute;
+  top: 12px;
+  left: 0px;
+  color: $white;
+  z-index: 2;
+}
+
+.ribbon-clip {
+  left: -14px;
+
+  &:before {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 0;
+    height: 0;
+    content: "";
+    border: 7px dashed transparent;
+    border-top-color: $dark-color;
+    border-right-color: $dark-color;
+  }
+}
+
+.ribbon-vertical-left-wrapper {
+  padding-left: 40px;
+  position: relative;
+}
+
+.ribbon-vertical-right-wrapper {
+  padding-right: 40px;
+}
+
+.ribbon-wrapper-bottom {
+  padding-bottom: 40px;
+  padding-top: 0;
+}
+
+.ribbon-wrapper-right-bottom {
+  padding-right: 40px;
+}
+
+.ribbon-space-bottom {
+  top: 0px;
+}
+
+.ribbon-bookmark {
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: block;
+    width: 0;
+    height: 0;
+    content: '';
+    border: 15px dashed $dark-color;
+    border-right: 10px dashed transparent;
+  }
+}
+
+.ribbon-right {
+  left: auto;
+  right: -2px;
+}
+
+.ribbon-clip-right {
+  right: -14px;
+
+  &:before {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 0;
+    height: 0;
+    content: "";
+    border: 7px dashed transparent;
+    border-top-color: $dark-color;
+    border-right-color: $dark-color;
+  }
+}
+
+.ribbon-clip-bottom {
+  left: -14px;
+  bottom: 12px;
+  top: auto;
+
+  &:before {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 0;
+    height: 0;
+    content: "";
+    border: 7px dashed transparent;
+    border-top-color: $dark-color;
+    border-right-color: $dark-color;
+  }
+}
+
+.ribbon-clip-bottom-right {
+  right: -14px;
+  left: auto;
+  bottom: 12px;
+  top: auto;
+
+  &:before {
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    width: 0;
+    height: 0;
+    content: "";
+    border: 7px dashed transparent;
+    border-top-color: $dark-color;
+    border-right-color: $dark-color;
+  }
+}
+
+.ribbon-bookmark.ribbon-right:before {
+  right: 100%;
+  left: auto;
+  border-right: 15px dashed $dark-color;
+  border-left: 10px dashed transparent;
+}
+
+.ribbon-vertical-left {
+  clear: none;
+  padding: 0 5px;
+  height: 70px;
+  width: 30px;
+  line-height: 70px;
+  text-align: center;
+  left: 12px;
+  top: -2px;
+}
+
+.ribbon-vertical-right {
+  clear: none;
+  padding: 0 5px;
+  height: 70px;
+  width: 30px;
+  line-height: 70px;
+  text-align: center;
+  top: -2px;
+  left: auto;
+  right: 20px;
+
+  [dir="rtl"] & {
+    left: auto !important;
+    right: 20px !important;
+  }
+}
+
+.ribbon-bookmark {
+
+  &.ribbon-vertical-left:before,
+  &.ribbon-vertical-right:before {
+    top: 100%;
+    left: 0;
+    margin-top: -14px;
+    border-right: 15px dashed $dark-color;
+    border-bottom: 10px dashed transparent;
+  }
+}
+
+@each $ribbon-name,
+$ribbon-color in (primary, $primary-color),
+(secondary, $secondary-color),
+(success, $success-color),
+(danger, $danger-color),
+(info, $info-color),
+(light, $light-color),
+(dark, $dark-color),
+(warning, $warning-color) {
+  .ribbon-#{$ribbon-name} {
+    background: $ribbon-color;
+  }
+
+  .ribbon-#{$ribbon-name} {
+    background: $ribbon-color;
+  }
+
+  .ribbon-bookmark {
+    &.ribbon-#{$ribbon-name}:before {
+      border-color: $ribbon-color;
+      border-right-color: transparent;
+    }
+
+    &.ribbon-right.ribbon-#{$ribbon-name}:before {
+      border-right-color: $ribbon-color;
+      border-left-color: transparent;
+    }
+
+    &.ribbon-vertical-left.ribbon-#{$ribbon-name}:before,
+    &.ribbon-vertical-right.ribbon-#{$ribbon-name}:before {
+      border-right-color: $ribbon-color;
+      border-bottom-color: transparent;
+    }
+  }
+
+  .ribbon-#{$ribbon-name}.ribbon-corner {
+    &:before {
+      border-top-color: $ribbon-color;
+      border-left-color: $ribbon-color;
+    }
+
+    &.ribbon-right:before {
+      border-right-color: $ribbon-color;
+      border-left-color: transparent;
+    }
+
+    &.ribbon-bottom:before {
+      border-top-color: transparent;
+      border-bottom-color: $ribbon-color;
+    }
+  }
+
+  .ribbon-#{$ribbon-name}.ribbon-clip {
+    &:before {
+      border-color: transparent;
+      border-top-color: darken($ribbon-color, 10%);
+      border-right-color: darken($ribbon-color, 10%);
+    }
+  }
+
+  .ribbon-#{$ribbon-name}.ribbon-clip-right {
+    &:before {
+      border-right-color: transparent;
+      border-top-color: darken($ribbon-color, 10%);
+      border-left-color: darken($ribbon-color, 10%);
+    }
+  }
+
+  .ribbon-#{$ribbon-name}.ribbon-clip-bottom {
+    &:before {
+      border-top-color: transparent;
+      border-bottom-color: darken($ribbon-color, 10%);
+      border-right-color: darken($ribbon-color, 10%);
+    }
+  }
+
+  .ribbon-#{$ribbon-name}.ribbon-clip-bottom-right {
+    &:before {
+      border-top-color: transparent;
+      border-bottom-color: darken($ribbon-color, 10%);
+      border-right-color: transparent;
+      border-left-color: darken($ribbon-color, 10%);
+    }
+  }
+}
+
+.vertical-lp-space {
+  padding: 58px 28px 28px 50px;
+}
+
+.vertical-rp-space {
+  padding: 58px 50px 28px 28px;
+}
+
+.clip-bp-space {
+  padding: 28px 18px 58px 18px;
+}
+
+.ribbon-wrapper {
+  transform: translate(20deg);
+}
+
+//  animation ribbons 
+.animated-ribbon {
+  position: relative;
+
+  .box {
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%, 50%);
+    perspective: 50px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .1);
+    position: relative;
+
+    .ribbon {
+      position: absolute;
+      right: -21px;
+      bottom: 10px;
+      height: 60px;
+      transform-style: preserve-3d;
+      line-height: 2.2;
+
+      i {
+        position: absolute;
+        display: block;
+        bottom: 0px;
+        transition: all .2s ease-in;
+
+        &.back {
+          background: var(--theme-default);
+          width: 0px;
+          height: 36px;
+          left: 100%;
+          transform: skewY(-30deg);
+          transform-origin: 0% 100%;
+          transition-delay: .45s;
+        }
+
+        &.front {
+          width: 0px;
+          background: var(--theme-default);
+          height: 36px;
+          right: -10px;
+          bottom: 11px;
+          transition-delay: .35s;
+        }
+
+        &.fold {
+          background: var(--theme-default);
+          right: 180px;
+          height: 40px;
+          width: 0px;
+          bottom: 11px;
+          transform: rotateY(-45deg) skewY(-40deg);
+          transform-origin: 100% 0%;
+          transition-delay: .15s;
+        }
+
+        &.foldback {
+          width: 0px;
+          background: var(--theme-default);
+          height: 29px;
+          right: 200px;
+          bottom: 16px;
+          transition-delay: 0s;
+        }
+
+        span {
+          position: absolute;
+          opacity: 0;
+          color: $white;
+          text-align: center;
+          padding: 3px 38px;
+          transition: all .4s ease-out;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .ribbon {
+      i {
+        &.back {
+          width: 10px;
+          transition-delay: 0s;
+        }
+
+        &.front {
+          width: 145px;
+          transition-delay: .15s;
+        }
+
+        span {
+          opacity: 1;
+          transition-delay: .2s;
+        }
+      }
+    }
+  }
+}
+
+//  second animation
+.smooth-animate {
+  &:hover {
+    .label {
+      padding-left: 1em;
+      [ dir = "rtl" ] & {
+        padding-left: 0.75em;
+        padding-right: 1em;
+      }
+    }
+
+  }
+
+  .media-image {
+    display: inline-block;
+    width: auto;
+    position: relative;
+
+    img {
+      display: block;
+    }
+  }
+
+  .label {
+    position: absolute;
+    top: -122px;
+    left: -24px;
+    display: inline-block;
+    padding: 0 0.75em;
+    border-radius: 5px 2px 2px 0px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    line-height: 2.35em;
+    font-weight: bold;
+    color: $white;
+    background-color: $danger-color;
+    z-index: 7;
+    box-shadow: 0px 2px 0 rgba($dark-color, .1);
+    transition: all 0.1s;
+    [dir = "rtl"] & {
+      left: unset;
+      right: -24px;
+      border-radius: 2px 5px 0px 2px;
+    }
+
+    &:before {
+      content: " ";
+      display: block;
+      position: absolute;
+      width: 5px;
+      height: 4px;
+      left: 0;
+      bottom: -4px;
+      background-color: $danger-color;
+      [dir = "rtl"] & {
+        left: unset;
+        right: 0;
+      }
+    }
+
+    &:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      width: 5px;
+      height: 6px;
+      bottom: -6px;
+      left: 0;
+      background-color: $danger-color;
+      border-radius: 5px 0 0 5px;
+      [dir = "rtl"] & {
+        left: unset;
+        right: 0;
+      }
+    }
+  }
+}
+
+// vertical left animate
+.vertical-left-animate {
+  .ribbon-wrapper {
+    overflow: hidden;
+
+    .ribbon {
+      left: -50px;
+      transition: all 0.2s ease;
+      [ dir = "rtl"] & {
+        direction: ltr;
+      }
+
+      i {
+        margin-left: 12px;
+      }
+
+      span {
+        opacity: 0;
+        transition: all 0.2s ease;
+      }
+
+    }
+
+    .ribbon-bookmark {
+      &::before {
+        left: 84%;
+      }
+    }
+  }
+
+  &:hover {
+    .ribbon-wrapper {
+      .ribbon {
+        left: 0px;
+        transition: all 0.2s ease;
+
+        span {
+          opacity: 1;
+          transition: all 0.2s ease;
+        }
+      }
+    }
+  }
+}
+
+// Triangular decoration
+
+.triangular-ribbon {
+  transition: all 0.3s ease;
+
+  .ribbon-wrapper {
+    overflow: hidden;
+
+    .triangular-ribbon-box {
+      width: 100px;
+      height: 100px;
+      background: $light-primary;
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      transform: rotate(315deg);
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      border: 3px solid var(--theme-default);
+      transition: all 0.3s ease;
+      opacity: 0;
+
+      >div {
+        position: absolute;
+        bottom: -2px;
+        left: 36px;
+
+        svg {
+          width: 20px;
+          height: 20px;
+          stroke: var(--theme-default);
+        }
+      }
+    }
+  }
+
+  &:hover {
+    transition: all 0.3s ease;
+
+    .triangular-ribbon-box {
+      opacity: 1;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+// Vertical ribbon animate
+.vertical-ribbon-animate {
+  &:hover {
+    .ribbon-vertical-right {
+      animation: shrink .3s ease;
+    }
+  }
+
+  .ribbon-vertical-right {
+    width: 115px;
+    line-height: 45px;
+    height: 45px;
+    border-radius: 0 0 50% 50%;
+    box-shadow: 0px 8px 16px -4px rgba(0, 0, 0, 0.25);
+    top: 0;
+
+    &::before {
+      content: unset;
+    }
+
+    >div {
+      i {
+        margin-right: 6px;
+        [dir = "rtl"] & {
+          margin-right: unset;
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+
+  .ribbon-bottom-arrow {
+    position: absolute;
+    left: 38px;
+    line-height: 40px;
+    border-radius: 0;
+    top: calc(-1*12px);
+    border-left: 12px dashed #0005;
+    border-bottom: 14px dashed #0000;
+    clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 14px), calc(50% + 12px/2) 100%, 12px calc(100% - 14px), 12px 12px, 0 12px);
+  }
+}
+
+/**=====================
+  2.26 Ribbon CSS Ends
+==========================**/

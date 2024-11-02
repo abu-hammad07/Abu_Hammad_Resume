@@ -1,0 +1,419 @@
+- var page_Title = 'Timeline-v-1';
+- var animate               = true;
+- var theme_customizer      = true;
+- var timeline              = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var scrollbar             = true;
+- var height_equal          = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Timeline','Timeline 1'],'Timeline')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-sm-12.box-col-12
+                .card
+                  .card-header
+                    h4 Animated Timeline
+                    p.f-m-light.mt-1 
+                      | Use 
+                      code  animated-timeline
+                      |  class to your animated timeline.
+                  .card-body.overflow-hidden
+                    .animated-timeline
+                      .timeline-block
+                        .each-year
+                          .title 2024
+                          .timeline-event
+                            .timeline-desc
+                              h5.pb-1.f-w-600 Project Mofi:
+                              span The goal of this january initiative was to enhance the online theme experience for customers.
+                          .timeline-event
+                            .timeline-desc
+                              h5.pb-1.f-w-600 Development:
+                              span Marked the beginning of the development phase.
+                          .timeline-event
+                            .timeline-desc
+                              h5.pb-1.f-w-600 Lunch Theme:
+                              span Official launch and ongoing quality control checks.
+                      .timeline-block
+                        .each-year
+                          .title 2023
+                          .timeline-event
+                            .timeline-desc
+                              h5.pb-1.f-w-600 Viho Goal:
+                              span Project viho was introduced in may with the goal of improving tools for internal communication.
+                          .timeline-event
+                            .timeline-desc
+                              h5.pb-1.f-w-600 Planning:
+                              span Creating a team and planning the project.
+                          .timeline-event
+                            .timeline-desc
+                              h5.pb-1.f-w-600 Training:
+                              span Training sessions and rollout to all workers.
+                      .timeline-block
+                        .each-year
+                          .title 2022
+                          .timeline-event
+                            .timeline-desc
+                              h5.pb-1.f-w-600 Goal:
+                              span The goal of project tivo , which was introduced in January, is to improve consumer interaction through a mobile app.
+                          .timeline-event
+                            .timeline-desc
+                              h5.pb-1.f-w-600 Project Lunch:
+                              span Market study and project launch in January.
+                          .timeline-event
+                            .timeline-desc
+                              h5.pb-1.f-w-600 Official App:
+                              span Marketing campaign and official app launch.
+                      .timeline-block
+                        .each-year
+                          .title 2021
+                          .timeline-event
+                            .timeline-desc
+                              h5.pb-1.f-w-600 Project Zeta:
+                              span Dedicated to improving cybersecurity, it was launched in August.
+                          .timeline-event
+                            .timeline-desc
+                              h5.pb-1.f-w-600 Vulnerability Analysis:
+                              span Vulnerability analysis and security audit and the application of improved security protocols.
+                          .timeline-event
+                            .timeline-desc
+                              h5.pb-1.f-w-600 Program:
+                              span Programmes for employees and ongoing observation.
+              .col-xl-6.box-col-6.notification.main-timeline
+                .card.height-equal
+                  .card-header 
+                    h4 Basic Timeline 
+                    p.f-m-light.mt-1 
+                      | Use 
+                      code timeline-dot-*
+                      |  class to a square style timeline.
+                  .card-body.dark-timeline.basic-timeline
+                    ul 
+                      li.d-flex
+                        .timeline-dot-primary
+                        .w-100.ms-3
+                          p.d-flex.justify-content-between.mb-2
+                            span.date-content.light-background 2 Feb 2024
+                            span 7:00 AM 
+                          h6.mb-0 Conference with client
+                            span.dot-notification
+                          p.f-light At noon today, there will be a meeting with a UK client.
+                      li.d-flex
+                        .timeline-dot-secondary
+                        .w-100.ms-3
+                          p.d-flex.justify-content-between.mb-2
+                            span.date-content.light-background 22 March 2024
+                            span 3:45 PM
+                          h6.mb-0 Discussion with marketing Team
+                            span.dot-notification
+                          p.f-light discussion with the marketing staff on the success of the most recent project
+                      li.d-flex
+                        .timeline-dot-success
+                        .w-100.ms-3
+                          p.d-flex.justify-content-between.mb-2
+                            span.date-content.light-background 16 May 2024
+                            span 1:22 AM
+                          h6.mb-0 Invest in a new hosting plan
+                            span.dot-notification
+                          p.f-light today at 2 pm AM, purchase a new hosting package as agreed upon with the management team.
+                      li.d-flex
+                        .timeline-dot-warning
+                        .w-100.ms-3
+                          p.d-flex.justify-content-between.mb-2
+                            span.date-content.light-background 23 Nov 2024
+                            span 6:56 AM
+                          h6.mb-0 Discussion with designer team
+                            span.dot-notification
+                          p.f-light discussion with the designer employee on the success of the most recent project.
+                      li.d-flex
+                        .timeline-dot-info
+                        .w-100.ms-3
+                          p.d-flex.justify-content-between.mb-2
+                            span.date-content.light-background 12 Dec 2024
+                            span 12:05 AM
+                          h6.mb-0 Discussion with new theme launch 
+                            span.dot-notification
+                          p.f-light discussion with the how many themes made in our portfolio.
+                      li.d-flex
+                        .timeline-dot-danger
+                        .w-100.ms-3
+                          p.d-flex.justify-content-between.mb-2
+                            span.date-content.light-background 02 Jan 2024
+                            span 6:56 AM
+                          h6.mb-0 Purchase new chairs for office 
+                            span.dot-notification
+                          p.f-light online purchase new chairs for office                       
+              .col-xl-6 
+                .card.height-equal
+                  .card-header 
+                    h4 Hovering Timeline 
+                    p.f-m-light.mt-1 
+                      | Use
+                      code  square-timeline 
+                      |  main class to create new variations of the timeline.
+                  .card-body
+                    ul.square-timeline
+                      li.timeline-event
+                        label.timeline-event-icon
+                        .timeline-event-wrapper
+                          p.timeline-thumbnail
+                            | January 2024- Annual Function
+                          h5 Location
+                          .f-light Largo Febo,10225012-Calvisano BS
+                          p.pt-3.mb-4
+                            | What a dynamic performance by the eighth-grade students, Let's welcome the ninth-grade kid to the stage.
+                      li.timeline-event
+                        label.timeline-event-icon
+                        .timeline-event-wrapper
+                          p.timeline-thumbnail
+                            | March 2024 - Fresher Interview
+                          h5 Ofwrrior Company
+                          .f-light A fresher's interview is to be conducted
+                            .list-group.main-lists-content
+                              a.list-group-item.list-group-item-action.border-0.p-0.mb-4(href='#' aria-current='true')
+                                .d-flex.w-100.justify-content-between.align-items-center
+                                  .list-wrapper
+                                      img.list-img.me-0(src="../assets/images/user/1.jpg", alt="profile")
+                                      .list-content 
+                                        h6 Molly Boake
+                                        p MollyBoake@rhyta.com
+                                  .timeline-icon
+                                    i.icon-facebook
+                                    i.icon-google 
+                                    i.icon-twitter-alt
+                                p.mb-1 Next step is to choose a tone of voice for your content type.
+                      li.timeline-event
+                        label.timeline-event-icon
+                        .timeline-event-wrapper
+                          p.timeline-thumbnail
+                            | December 2024 - Meetup
+                          h5 US Meeting
+                          .f-light 2209 Leverton Cove RoadSpringfield, MA 01109
+                            .designer-details
+                              .designer-profile 
+                                .designer-wrap
+                                    img.designer-img(src="../assets/images/avtar/4.jpg", alt="profile")
+                                    .designer-content 
+                                        h6 Lillian J. Goodfellow
+                                        p 239-664-7751
+                              .designer-profile 
+                                .designer-wrap
+                                    img.designer-img(src="../assets/images/avtar/7.jpg", alt="profile")
+                                    .designer-content 
+                                        h6 Carolyn A. Sutton
+                                        p 218-793-6609
+              .col-xxl-4.col-xl-5.notification.box-col-12
+                .card
+                  .card-header
+                    h4 Variation Timeline 
+                    p.f-m-light.mt-1  
+                      | Use 
+                      code  activity-dot-* 
+                      | class to create rounded animations on the timeline.
+                  .card-body.dark-timeline
+                    ul 
+                      li.d-flex
+                        .activity-dot-primary
+                        .w-100.ms-3
+                          p.d-flex.justify-content-between.mb-2
+                            span.date-content.light-background 8th March, 2024 
+                            span 1 day ago
+                          h6 Updated Product
+                            span.dot-notification
+                          p.f-light Key milestones throughout history...
+                      li.d-flex
+                        .activity-dot-warning
+                        .w-100.ms-3
+                          p.d-flex.justify-content-between.mb-2
+                            span.date-content.light-background 5th Feb, 2024 
+                            span Today
+                          h6 Added Bew Items
+                            span.dot-notification
+                          span.f-light Timeline showcasing historical events...
+                          .recent-images  
+                            ul 
+                              li 
+                                .recent-img-wrap
+                                  img(src="../assets/images/dashboard-2/product/1.png", alt="chair")
+                              li 
+                                .recent-img-wrap
+                                  img(src="../assets/images/dashboard-2/product/2.png", alt="chair")
+                              li 
+                                .recent-img-wrap
+                                  img(src="../assets/images/dashboard-2/product/3.png", alt="men t-shirt")
+                      li.d-flex.pb-0
+                        .activity-dot-secondary
+                        .w-100.ms-3
+                          p.d-flex.justify-content-between.mb-2
+                            span.date-content.light-background 20th Sep, 2024 
+                            span 12:00 PM
+                          h6 Tello just like your product
+                            span.dot-notification
+                          p Explore a chronological journey through...
+              .col-xxl-8.col-xl-7.box-col-12
+                .card
+                  .card-header 
+                    h4 Horizontal Timeline 
+                    p.f-m-light.mt-1 
+                      | Use
+                      code  event-list 
+                      | and 
+                      code events
+                      |  classes to create a new horizontal timeline.
+                  .card-body
+                    .list-inline.events.timeline-list.timeline-border.row
+                      .col-xxl-4.col-sm-6
+                        div
+                          .list-inline-item.event-list
+                            .px-4
+                              .event-date.alert-light-secondary.txt-secondary 1 Jan
+                              h5 Conference 
+                              p.f-light.text-truncate
+                                | Conferences are intended to bring individuals with similar interests together to discuss problems.
+                              div.read-more-btn
+                                a.btn.btn-primary.px-3(href='#!') Read more
+                          .vertical-line
+                      .col-xxl-4.col-sm-6
+                        div
+                          .list-inline-item.event-list
+                            .px-4
+                              .event-date.alert-light-primary.txt-primary 4 Feb
+                              h5 Meet-up
+                              p.f-light.text-truncate You may connect with males from all around the world using the friend-forward.
+                              div.read-more-btn
+                                a.btn.btn-primary.px-3(href='#!') Read more
+                          .vertical-line
+                      .col-xxl-4.horizontal-timeline
+                        div
+                          .list-inline-item.event-list
+                            .px-4
+                              .event-date.alert-light-secondary.txt-secondary 22 March
+                              h5 Meeting
+                              p.f-light.text-truncate If several languages coalesce the grammar of the resulting simple and regular social networking platform.
+                              div.read-more-btn
+                                a.btn.btn-primary.px-3(href='#!') Read more
+                          .vertical-line
+                    .list-inline.events.border-0.timeline-list.row
+                      .col-xxl-4.col-sm-6
+                        div 
+                          .vertical-line
+                          .list-inline-item.event-list
+                            .px-4
+                              .event-date.alert-light-primary.txt-primary 4 Jan
+                              h5 Conference 
+                              p.f-light.text-truncate
+                                | A gathering of two or more people to talk about issues of interest.
+                              div
+                                a.btn.btn-primary.px-3(href='#!') Read more
+                      .col-xxl-4.col-sm-6
+                        div
+                          .vertical-line  
+                          .list-inline-item.event-list
+                            .px-4
+                              .event-date.alert-light-secondary.txt-secondary 22 March
+                              h5 Meeting
+                              p.f-light.text-truncate If several languages coalesce the grammar of the resulting simple and regular social networking platform.
+                              div
+                                a.btn.btn-primary.px-3(href='#!') Read more
+                      .col-xxl-4.horizontal-timeline
+                        div
+                          .vertical-line  
+                          .list-inline-item.event-list
+                            .px-4
+                              .event-date.alert-light-primary.txt-primary 7 Dec
+                              h5 Launch Theme
+                              p.f-light.text-truncate Responsive Website is the approach that suggests website design and development should respond.
+                              div
+                                a.btn.btn-primary.px-3(href='#!') Read more
+              .col-sm-12.box-col-12
+                .card
+                  .card-header
+                    h4 Half Rounded Timeline
+                    p.f-m-light.mt-1 
+                      | Use 
+                      code  rounded-timeline
+                      |  class to your rounded timeline.
+                  .card-body.rounded-timeline
+                    .timeline
+                      .container.left
+                        .date 15 Dec
+                        i.icon.fa.fa-home
+                        .content
+                          .timeline-wrapper
+                            .badge.bg-danger app-ideas
+                          h4.mb-2
+                            | Established new the app-ideas repository.
+                          p.mb-0.f-light   
+                            | developers who are just beginning their learning process. those who often concentrate on developing programmes with a user interface.
+                      .container.right
+                        .date 22 Oct
+                        i.icon.fa.fa-code-fork
+                        .content
+                          .timeline-wrapper
+                            .badge.bg-warning Blog
+                          h4.mb-2
+                            | Implemented the program for weekly code challenges.
+                          p.mb-0.f-light   
+                            | You can improve your understanding of programming and problem-solving techniques by taking on challenges.
+                      .container.left
+                        .date 10 Jul
+                        i.icon.fa.fa-tencent-weibo
+                        .content
+                          .timeline-wrapper
+                            .badge.bg-primary Designer
+                          h4.mb-2
+                            | Research about most recent design trends.
+                          p.mb-0.f-light   
+                            | With our extensive analysis of the most recent design trends, discover the cutting edge of web aesthetics.
+                      .container.right
+                        .date 18 May
+                        i.icon.fa.fa-modx
+                        .content
+                          .timeline-wrapper
+                            .badge.bg-success Latest
+                          h4.mb-2
+                            | Freelance UX designer
+                          p.mb-0.f-light   
+                            | Our professionals improve the usability and engagement of your website by creating user-friendly interfaces and user-centered designs, resulting in an unmatched online experience.        
+                      .container.left
+                        .date 10 Feb
+                        i.icon.fa.fa-file-audio-o
+                        .content
+                          .timeline-wrapper
+                            .badge.bg-primary Audio testing
+                          h4.mb-2
+                            | Musical trends and predictability
+                          p.mb-1.f-light   
+                            | So, the next time you listen to music, you might or might not consider how it's actively altering your mood.
+                          audio(controls='')
+                            source(src='../assets/audio/horse.ogg', type='audio/ogg')
+                      .container.right
+                        .date 01 Jan
+                        i.icon.fa.fa-group
+                        .content
+                          .timeline-wrapper
+                            .badge.bg-success Meet-up
+                          h4.mb-2
+                            | Web-designer's meet-up
+                          p.mb-0.f-light   
+                            | Find nearby web designers to network with! A Web Design Meetup is a place where you can discuss tools.     
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

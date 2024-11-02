@@ -1,0 +1,771 @@
+/**=====================
+  2.9 Buttons CSS start
+==========================**/
+.btn-link {
+  color: var(--theme-default);
+}
+
+.purchase-btn {
+  background: linear-gradient(90deg, var(--theme-default) -18.33%, #563EE0 62.78%);
+  padding: 12px 20px;
+  min-width: 200px;
+  border: none;
+  transition: 0.5s;
+
+  &:hover {
+    background: linear-gradient(90deg, #563EE0 -18.33%, var(--theme-default) 62.78%);
+    transition: 0.5s;
+  }
+
+  @media (max-width: 991px) {
+    min-width: 160px;
+  }
+
+  @media (max-width: 767px) {
+    min-width: 140px;
+    padding: 10px 17px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 14px;
+  }
+}
+
+.btn-light {
+  &:not([disabled]):not(.disabled).active.active {
+    color: $theme-body-font-color;
+    background-color: darken($light-color, 2%) !important;
+  }
+}
+
+@mixin btn-gradien($deg, $leftcolor, $leftcolor-per, $rightcolor, $rightcolor-per, $font-color) {
+  background-image: linear-gradient(to right, $leftcolor 0%, $rightcolor 51%, $leftcolor 100%);
+  border: none;
+  color: $font-color;
+  background-size: auto 200%;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-gradien {
+  @include btn-gradien(60, lighten($primary-color, 8%), 0%, darken($primary-color, 8%), 100%, $white);
+  color: $white;
+
+  &:focus,
+  &:active,
+  &.active {
+    transition: 1.5s;
+    background-position: right center;
+    background-image: linear-gradient(to right, lighten($primary-color, 8%), 0%, darken($primary-color, 8%), 100%, $white) !important;
+  }
+}
+
+.btn-secondary-gradien {
+  @include btn-gradien(60, lighten($secondary-color, 8%), 0%, darken($secondary-color, 8%), 100%, $white);
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  &.hover {
+    transition: 1.5s;
+    background-position: right center;
+    background-image: linear-gradient(to right, lighten($secondary-color, 8%), 0%, darken($secondary-color, 8%), 100%, $white) !important;
+  }
+}
+
+.btn-success-gradien {
+  @include btn-gradien(60, lighten($success-color, 8%), 0%, darken($success-color, 8%), 100%, $white);
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  &.hover {
+    transition: 1.5s;
+    background-position: right center;
+    background-image: linear-gradient(to right, lighten($success-color, 8%), 0%, darken($success-color, 8%), 100%, $white) !important;
+  }
+}
+
+.btn-danger-gradien {
+  @include btn-gradien(60, lighten($danger-color, 8%), 0%, darken($danger-color, 8%), 100%, $white);
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  &.hover {
+    transition: 1.5s;
+    background-position: right center;
+    background-image: linear-gradient(to right, lighten($danger-color, 8%), 0%, darken($danger-color, 8%), 100%, $white) !important;
+  }
+}
+
+.btn-warning-gradien {
+  @include btn-gradien(60, lighten($warning-color, 8%), 0%, darken($warning-color, 8%), 100%, $white);
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  &.hover {
+    transition: 1.5s;
+    background-position: right center;
+    background-image: linear-gradient(to right, lighten($warning-color, 8%), 0%, darken($warning-color, 8%), 100%, $white) !important;
+  }
+}
+
+.btn-info-gradien {
+  @include btn-gradien(60, lighten($info-color, 8%), 0%, darken($info-color, 8%), 100%, $white);
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  &.hover {
+    transition: 1.5s;
+    background-position: right center;
+    background-image: linear-gradient(to right, lighten($info-color, 8%), 0%, darken($info-color, 8%), 100%, $white) !important;
+  }
+}
+
+.btn-light-gradien {
+  @include btn-gradien(60, lighten($light-color, 8%), 0%, darken($light-color, 8%), 100%, $white);
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  &.hover {
+    transition: 1.5s;
+    background-position: right center;
+    background-image: linear-gradient(to right, lighten($light-color, 8%), 0%, darken($light-color, 8%), 100%, $white) !important;
+  }
+}
+
+.btn-dark-gradien {
+  @include btn-gradien(60, lighten($dark-color, 8%), 0%, darken($dark-color, 8%), 100%, $white);
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  &.hover {
+    transition: 1.5s;
+    background-position: right center;
+    background-image: linear-gradient(to right, lighten($dark-color, 8%), 0%, darken($dark-color, 8%), 100%, $white) !important;
+  }
+}
+
+
+@mixin btn-squre($border-radius) {
+  border-radius: $border-radius+px;
+}
+
+@mixin btn-pill($border-radius) {
+  border-radius: $border-radius+px;
+}
+
+@mixin btn-pill-first($radius) {
+  border-radius: $radius+px 0 0 $radius+px;
+}
+
+@mixin btn-pill-last($radius) {
+  border-radius: 0 $radius+px $radius+px 0;
+}
+
+.btn {
+  padding: $btn-padding;
+
+  &.bg-light-primary {
+    &:hover {
+      background: $primary-color  !important;
+      color: $white  !important;
+    }
+  }
+
+  &.bg-light-secondary {
+    &:hover {
+      background: $secondary-color  !important;
+      color: $white  !important;
+    }
+  }
+
+  &.bg-light-warning {
+    &:hover {
+      background: $warning-color  !important;
+      color: $white  !important;
+    }
+  }
+
+  &.bg-light-tertiary {
+    &:hover {
+      background: $tertiary-color  !important;
+      color: $white  !important;
+    }
+  }
+
+}
+
+.btn-lg {
+  font-size: $btn-lg-font-size;
+}
+
+.btn-sm {
+  font-size: $btn-sm-font-size;
+}
+
+.btn-xs {
+  padding: $btn-xs-padding;
+  font-size: $btn-xs-font-size;
+}
+
+.large-btn {
+  .btn {
+    margin-right: 5px;
+    margin-bottom: 15px;
+  }
+
+  margin-bottom: -20px;
+}
+
+.btn-outline-white {
+  border: 1px dashed $white;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    background: $white;
+  }
+}
+
+// outline buttons//
+@each $btn-name,
+$btn-color in (primary, $primary-color),
+(secondary, $secondary-color),
+(success, $success-color),
+(danger, $danger-color),
+(tertiary, $tertiary-color),
+(info, $info-color),
+(light, $light-color),
+(dark, $dark-color),
+(warning, $warning-color) {
+  .btn-air-#{$btn-name} {
+    box-shadow: 0 5px 10px 2px rgba(88, 103, 221, .19) !important;
+
+    &:hover,
+    &:active,
+    &:not([disabled]):not(.disabled):active {
+      background-color: darken($btn-color, 10%);
+      border-color: darken($btn-color, 10%);
+    }
+  }
+
+  .input-air-#{$btn-name} {
+    box-shadow: 0 3px 5px 1px rgba($btn-color , 0.10) !important;
+
+    &:focus {
+      border-color: $btn-color;
+    }
+  }
+}
+
+.btn-gradient {
+  color: $white  !important;
+  font-weight: 500;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background: $gradient-primary;
+  letter-spacing: 0.06rem;
+
+  &:hover {
+    background-size: 100% !important;
+  }
+}
+
+.btn-warning {
+  color: $white;
+
+  &:hover,
+  &.disabled {
+    color: $white;
+  }
+}
+
+[class*='-gradien'] {
+  &:hover {
+    background-size: 50% 100%;
+    transition: all 0.3s ease;
+    color: $white;
+  }
+}
+
+.btn-square {
+  @include btn-squre(0);
+}
+
+.btn-pill {
+  @include btn-squre(60);
+}
+
+.btn-group-pill {
+  .btn {
+    &:first-child {
+      @include btn-pill-first(60);
+    }
+
+    &:last-child {
+      @include btn-pill-last(60);
+    }
+  }
+}
+
+.btn-group-square {
+  .btn {
+    &:first-child {
+      @include btn-pill-first(0);
+    }
+
+    &:last-child {
+      @include btn-pill-last(0);
+    }
+  }
+}
+
+.btn-showcase {
+  .btn {
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  margin-bottom:-10px;
+}
+
+.btn-dropdown-showcase {
+  .dropdown {
+    margin-bottom: 10px;
+    margin-right: 18px;
+  }
+
+  .btn-group {
+    margin-bottom: 10px;
+    margin-right: 18px;
+  }
+
+  margin-bottom:-10px;
+}
+
+.btn-group {
+  .radio {
+    label {
+      &::before {
+        top: 2px;
+      }
+
+      &::after {
+        top: 7px;
+      }
+    }
+  }
+
+  .checkbox {
+    label {
+      margin-top: 3px;
+    }
+  }
+}
+
+.tooltiptext {
+  visibility: visible;
+  width: 120px;
+  background-color: #555;
+  color: $white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 1;
+  transition: opacity 0.3s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: dashed;
+    border-color: #555 transparent transparent transparent;
+  }
+}
+
+// Default button on hover 
+.card-header-right-icon {
+  .btn {
+    &.badge-light-primary {
+      &:hover {
+        color: var(--white);
+      }
+    }
+  }
+}
+
+
+// Button Group
+// .btn-radio {
+//   .btn-group {
+//     .btn {
+//       padding: 8px 16px;
+
+//       .radio {
+//         label {
+//           [dir="rtl"] & {
+//             padding-left: unset;
+//             padding-right: 5px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+.visual-button {
+
+  button,
+  .btn {
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    &.btn-pill {
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      border: unset;
+      svg {
+        vertical-align: middle;
+      }
+
+      @media (max-width:1200px) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    width: 45px;
+    height: 45px;
+    padding: 0;
+
+    @media (max-width:1200px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &.visual-button1 {
+
+    .btn,
+    .btn-pill {
+      width: auto;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 28px;
+    }
+
+    .btn-pill {
+      border-radius: 60px;
+    }
+  }
+}
+.button-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex-direction: column;
+
+  .btn-group {
+    .btn {
+      vertical-align: middle;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &.select-checkbox {
+      label {
+        @media (max-width:1190px) {
+          padding: 6px;
+        }
+
+        &.btn-outline-primary {
+          @media (max-width:1065px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &.button-box {
+    .btn-group {
+      .btn {
+        @media (max-width:1065px) {
+          padding: 6px 10px;
+        }
+      }
+    }
+  }
+
+  &.button-outlined {
+    .btn-group {
+      .btn {
+        line-height: 0.8;
+      }
+    }
+  }
+}
+.btn-radio {
+  .btn-group {
+    .btn {
+
+      @media (max-width:360px) {
+        border-radius: 6px !important;
+      }
+
+      +.btn {
+        @media (max-width:360px) {
+          display: none;
+        }
+      }
+
+      &:hover {
+        color: var(--body-font-color);
+      }
+
+      &:focus,
+      &:active {
+        color: unset;
+        box-shadow: unset;
+      }
+    }
+  }
+}
+
+.btn-toolbar {
+  gap: 12px;
+}
+.card-wrapper {
+  .btn-option {
+    .btn {
+      &:hover {
+        color: var(--body-font-color);
+      }
+
+      &:focus,
+      &:active {
+        color: unset;
+        box-shadow: unset;
+      }
+      +.btn {
+        @media (max-width:365px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.loader-buttons {
+  button {
+    i {
+      margin-left: 8px;
+      [dir = "rtl"] & {
+        margin-left: unset;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+.ripple-button {
+  overflow: hidden;
+  position: relative;
+  transform-origin: center center;
+
+  &:focus,
+  &:active {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  .ripple-span {
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    transform: scale(0);
+    animation: ripple 0.7s linear;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@keyframes ripple {
+  from {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+
+  to {
+    transform: scale(30);
+    opacity: 0;
+  }
+}
+.mix-hover-btn {
+  .btn {
+    position: relative;
+
+    &.btn-border-pop {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        border: 2px solid var(--theme-default);
+        transition: top, left, right, bottom, 100ms ease-in-out;
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          top: -5px;
+          left: -5px;
+          right: -5px;
+          bottom: -5px;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    &.btn-bg-slide {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        background-color: var(--theme-default);
+        transition: transform 300ms ease-in-out;
+        transform: scaleX(0);
+        transform-origin: left;
+        border-radius: 10px;
+      }
+
+      &:hover,
+      &:focus {
+        color: var(--white);
+
+        &::before {
+          transform: scaleX(1);
+        }
+      }
+
+      transition: color 300ms ease-in-out;
+      z-index: 1;
+    }
+
+    &.btn-border-bottom {
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: var(--theme-default);
+        transform: scaleX(0);
+        transition: transform 300ms ease-in-out;
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+
+// ----------
+.button--winona {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  -webkit-transition: border-color 0.3s, background-color 0.3s;
+  transition: border-color 0.3s, background-color 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  border: 2px solid $primary-color;
+  background-color: transparent;
+  color: $theme-body-font-color;
+
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    color: $primary-color;
+    -webkit-transform: translate3d(0, 25%, 0);
+    transform: translate3d(0, 25%, 0);
+  }
+
+  >span {
+    display: block;
+  }
+
+  &::after,
+  >span {
+    padding: 6px 28px;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  }
+
+  &:hover {
+    background-color: rgba($primary-color, 0.1);
+
+    &::after {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+
+    >span {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -25%, 0);
+      transform: translate3d(0, -25%, 0);
+    }
+  }
+}
+
+/**=====================
+    2.9 Buttons CSS end
+==========================**/

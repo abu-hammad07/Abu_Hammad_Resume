@@ -1,0 +1,76 @@
+- var page_Title = 'Summernote-Editor';
+- var summernote            = true;
+- var theme_customizer      = true;
+- var tooltip               = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+- var jquery_ui             = true;
+
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Editors','Summer Note'],'Summer Note')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts                    
+          .container-fluid
+            .row
+              .col-sm-12
+                .card
+                  .card-header.card-no-border.pb-0
+                    h4 Default Summer note
+                  .card-body
+                    .summernote
+                      p.text-muted
+                        | A qualified expert who is in charge of developing and designing websites is known as a web designer. They make advantage of their knowledge of current web design trends to create websites that are both aesthetically pleasing and user-friendly. Making sure that the websites they develop are responsive—that is, that they easily adjust to multiple screen sizes and devices—is a crucial component of their work. This guarantees that users, regardless of the device they are using, can access and navigate the website efficiently. A web designer is technically proficient as well as having a good sense of aesthetics and colour. They take care to choose colour palettes that go with the corporate identity and deliver the intended message. The website's efficacy and overall user experience can be significantly impacted by the colour scheme. A web designer can develop a visually appealing website that grabs visitors' attention and improves their surfing experience by adding the right color choices. Web designers use CSS as a crucial tool to realise their creative ambitions. The layout, appearance, and style of web pages are managed using this language. To maintain uniformity and coherence throughout the website, a web designer's CSS knowledge is essential. Every component of the website may be altered with CSS, from typefaces and spacing to picture and button placement. By leveraging CSS, a web designer is able to create a visually stunning website that aligns with the client's objectives and enhances the user's interaction with the site. A web designer not only concentrates on producing websites that are aesthetically pleasing but also pays great attention to the appropriate use of colour. They are aware of the psychology underlying colour and how it might influence people' feelings and behaviours. A web designer may create a unified and aesthetically pleasant experience for visitors by carefully selecting colour schemes that complement the brand and message of the website. A practitioner with expertise in building attractive and useful websites is known as a web designer. Their primary objective is to create responsive websites, which can adjust to and show properly on various platforms including PCs, tablets, and mobile phones. A web designer gives considerable thought to a website's style, navigation, and general user experience to make sure the target audience will find it easy to use and visually appealing. Knowledge of user psychology, design concepts, and usability testing techniques are essential for UX designers. Additionally, they must possess strong communication skills with both technical and user stakeholders.training and education The educational road to become a UX designer is not one-size-fits-all. The majority of UX designers, however, have degrees in design, computer science, or human-computer interaction. Additionally, there are several UX design courses and bootcamps that are offered both online and in person.Career prospects: Job prospects for UX designers are excellent. UX designers' employment is expected to increase by 13% between 2020 and 2030, according to the Bureau of Labour Statistics, which is substantially faster than the average for all occupations.Making a product or service functional, pleasurable, and accessible is the responsibility of the UX designer. Although many businesses create user experiences, the phrase is frequently connected to digital design for websites and mobile applications. The broad design phases tend to remain the same, even though the actual process changes from product to product and firm to company. The professional who is in charge with designing a website's visual elements is known as a web designer. Their primary priorities are with a website's aesthetics and user experience (UX), in order to ensure that it conveys the intended message or corporate identity in an effective, pleasing to the eye and comprehensible way. Web designers produce layouts, colour schemes, typography, and other visual elements of a website using a variety of graphic design tools and software. They frequently work along with stakeholders or clients to comprehend their brand requirements and style preferences.
+              .col-sm-12
+                .card
+                  .card-header.card-no-border.pb-0
+                    h4 Air-mode Summernote
+                  .card-body.pt-0
+                    .inline-editor
+                      h5.mb-3.mt-3 You can select content and edit inline
+                      p
+                        | As a web designer, your role is crucial in creating visually appealing and user-friendly websites. You are responsible for designing the layout, selecting color schemes, and creating an intuitive user interface. You work closely with clients to understand their requirements and translate them into stunning website designs.
+                      ul.list-icons
+                        li
+                          i.icofont.icofont-heart-alt
+                          |    Artist
+                        li
+                          i.icofont.icofont-heart-alt
+                          |    Developer
+                        li
+                          i.icofont.icofont-heart-alt
+                          |    Musician
+              .col-sm-12
+                .card
+                  .card-header.card-no-border.pb-0
+                    h4 Hint for words Summernote
+                  .card-body
+                    .hint2basic
+              .col-sm-12
+                .card
+                  .card-header.card-no-border.pb-0
+                    h4 Click To Edit Summernote
+                  .card-body
+                    .click2edit.m-b-30
+                      span Hello Click on Edit button & Change The Text Then Save It.
+                    button#edit.btn.btn-primary(onclick='edit()', type='button') Edit
+                    button#save.btn.btn-primary(onclick='save()', type='button') Save
+
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files   

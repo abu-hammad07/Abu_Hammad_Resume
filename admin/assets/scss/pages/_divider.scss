@@ -1,0 +1,334 @@
+/**=====================
+  2.3 Divider CSS start
+==========================**/
+
+.main-divider {
+    .divider-body {
+        gap: calc(14px + (30 - 14) * ((100vw - 320px) / (1920 - 320)));
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::before,
+        &::after {
+            flex-grow: 1;
+        }
+
+        div[class*='divider-p-'] {
+            padding: 8px;
+        }
+
+        .divider-circle {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+
+            i {
+                font-size: 16px;
+            }
+        }
+
+        &-1 {
+
+            &::before,
+            &::after {
+                content: '';
+                border: 1px solid;
+            }
+        }
+
+        &-2 {
+
+            &::before,
+            &::after {
+                content: '';
+                border: 1px dashed;
+            }
+        }
+
+        &-3 {
+
+            &::before,
+            &::after {
+                content: '';
+                border: 2px dotted;
+            }
+        }
+
+        &-4 {
+
+            &::before,
+            &::after {
+                content: '';
+                border: 4px double;
+            }
+        }
+    }
+
+    .divider-body-3 {
+
+        &::after,
+        &::before {
+            flex-grow: unset;
+            width: 100%;
+        }
+    }
+
+    &.horizontal-variation {
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:before,
+            &:after {
+                content: "";
+                flex: 1;
+            }
+
+            &.linear-line {
+                &::before {
+                    margin: 0 24px 0 0;
+                    height: 1px;
+
+                    [dir="rtl"] & {
+                        margin: 0 0 0 24px;
+                    }
+                }
+
+                &::after {
+                    margin: 0 0 0 24px;
+                    height: 1px;
+
+                    [dir="rtl"] & {
+                        margin: 0 24px 0 0;
+                    }
+                }
+            }
+
+            &.double-line {
+
+                &:before,
+                &:after {
+                    height: 3px;
+                    border-width: 0;
+                }
+
+                &-1 {
+
+                    &::before,
+                    &::after {
+                        box-shadow: 0 -0.6px 0 var(--theme-default), 0 0.6px 0 var(--theme-default);
+                    }
+                }
+
+                &-2 {
+
+                    &::before,
+                    &::after {
+                        box-shadow: 0 -1.6px 0 $secondary-color, 0 1.6px 0 $secondary-color;
+                    }
+                }
+
+                &-3 {
+
+                    &::before,
+                    &::after {
+                        box-shadow: 0 -2.6px 0 $success-color, 0 2.6px 0 $success-color;
+                    }
+                }
+
+                &-4 {
+
+                    &::before,
+                    &::after {
+                        box-shadow: 0 -3.6px 0 $warning-color, 0 3.6px 0 $warning-color;
+                    }
+                }
+
+                &-5 {
+
+                    &::before,
+                    &::after {
+                        box-shadow: 0 -3.6px 0 $danger-color, 0 3.6px 0 $danger-color;
+                    }
+                }
+
+                &-6 {
+
+                    &::before,
+                    &::after {
+                        box-shadow: 0 -3.6px 0 $info-color, 0 3.6px 0 $info-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .vertical-divider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        .vertical-line {
+            min-height: 80px;
+            border-left: 2px dashed;
+
+            [dir="rtl"] & {
+                border-left: unset;
+                border-right: 2px dashed;
+            }
+        }
+
+        p {
+            padding: 8px;
+
+            @media (max-width: 1570px) {
+                padding: 8px 4px;
+            }
+
+            @media (max-width:1464px) {
+                font-size: 13px;
+            }
+        }
+
+        svg {
+            width: 22px;
+            height: 42px;
+        }
+    }
+
+    .dotted-divider {
+        .vertical-divider {
+            .vertical-line {
+                border-left: 2px dotted;
+
+                [dir="rtl"] & {
+                    border-left: unset;
+                    border-right: 2px dotted;
+                }
+            }
+        }
+    }
+
+    .double-divider {
+        .vertical-divider {
+            .vertical-line {
+                border-style: double;
+                border-width: 3px;
+            }
+        }
+    }
+}
+
+.animated-divider {
+    width: 100%;
+    height: 1px;
+    display: block;
+    position: relative;
+    padding: 12px 0;
+
+    &:after,
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 50%;
+        left: 0;
+
+        [dir="rtl"] & {
+            left: unset;
+            right: 0;
+        }
+    }
+
+    &:after {
+        transition: opacity 0.3s ease, animation 0.3s ease;
+        background: linear-gradient(to right, $success-color 5%, $warning-color 15%, $warning-color 25%, $danger-color 35%, $danger-color 45%, $primary-color 55%, $primary-color 65%, $info-color 75%, $info-color 85%, $success-color 95%);
+        background-size: 200%;
+        background-position: 0%;
+        animation: linear-line 15s linear infinite;
+        animation-duration: 2s;
+    }
+
+    &:hover {
+        &:before {
+            animation-duration: 20s;
+        }
+    }
+
+    &.animated-line {
+        &:before {
+            background: linear-gradient(90deg, $white 0%, $white 5%, transparent 5%, transparent 10%, $white 10%, $white 15%, transparent 15%, transparent 20%, $white 20%, $white 25%, transparent 25%, transparent 30%, $white 30%, $white 35%, transparent 35%, transparent 40%, $white 40%, $white 45%, transparent 45%, transparent 50%, $white 50%, $white 55%, transparent 55%, transparent 60%, $white 60%, $white 65%, transparent 65%, transparent 70%, $white 70%, $white 75%, transparent 75%, transparent 80%, $white 80%, $white 85%, transparent 85%, transparent 90%, $white 90%, $white 95%, transparent 95%, transparent 100%);
+            background-size: 15px * 10;
+            background-position: center;
+            z-index: 1;
+            animation: linear-line 16s linear infinite;
+        }
+    }
+}
+
+@keyframes linear-line {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 200%;
+    }
+}
+
+.divider-h-line {
+    height: 1px;
+    margin-block: 22px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.vr {
+    height: 160px;
+    margin-inline: 18px;
+    opacity: 1;
+
+    @media (max-width:575px) {
+        margin-inline-start: 15px;
+    }
+}
+
+.linear-divider {
+    p {
+        @media (max-width:1399px) {
+            display: -webkit-box;
+            max-width: 100%;
+            height: 100px;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+/**=====================
+  2.3 Divider CSS end
+==========================**/

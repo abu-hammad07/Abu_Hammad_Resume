@@ -1,0 +1,1291 @@
+- var page_Title = 'Dropdown';
+- var theme_customizer      = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+- var height_equal          = true;
+- var prism                 = true;
+- var clipboard             = true;
+- var customcard            = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Ui Kits','Dropdown'],'Dropdown')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-xl-6
+                .card.height-equal
+                  .card-header
+                    h4 Basic Dropdowns
+                    p.f-m-light.mt-1 
+                      | To create any dropdown, use the 
+                      code dat-bs-toggle="dropdown" 
+                      | attribute.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card  
+                  .card-body.rtl-dropdown
+                    .common-flex  
+                      .btn-group
+                          button.btn.btn-primary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                              | Dashboard
+                          ul.dropdown-menu.dropdown-block
+                              li
+                                  a.dropdown-item(href='#!') Project
+                              li
+                                  a.dropdown-item(href='#!') Ecommerce
+                              li
+                                  a.dropdown-item(href='#!') Crypto
+                      .btn-group
+                          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                              |  Ecommerce
+                          ul.dropdown-menu.dropdown-block
+                              li
+                                  a.dropdown-item(href='#!') Product
+                              li
+                                  a.dropdown-item(href='#!') Product details
+                              li
+                                  a.dropdown-item(href='#!') Cart
+                      .btn-group
+                        button.btn.btn-warning.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                            | Ui kits
+                        ul.dropdown-menu.dropdown-block
+                            li
+                                a.dropdown-item(href='#!') Typography
+                            li
+                                a.dropdown-item(href='#!') Avatars
+                            li
+                                a.dropdown-item(href='#!') Grid
+                      .btn-group
+                        button.btn.btn-danger.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                            | Error page
+                        ul.dropdown-menu.dropdown-block
+                            li
+                                a.dropdown-item(href='#!') Error 400
+                            li
+                                a.dropdown-item(href='#!') Error 403
+                            li
+                                a.dropdown-item(href='#!') Error 500
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#basic-dropdown', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#basic-dropdown
+                          |&lt;div class="common-flex"&gt; 
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Dashboard&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Project&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Ecommerce&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Crypto&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt; Ecommerce&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Product&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Product details&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Cart&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Ui kits&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Typography&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Avatars&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Grid&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Error page&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Error 400&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Error 403&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Error 500&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-xl-6
+                .card.height-equal
+                  .card-header
+                    h4 Rounded Dropdowns
+                    p.f-m-light.mt-1
+                      | Use 
+                      code rounded-pill 
+                      | class through to change rounded dropdowns.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card  
+                  .card-body.rtl-dropdown
+                    .common-flex
+                      .btn-group
+                        button.btn.btn-primary.rounded-pill.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                            | Primary
+                        ul.dropdown-menu.dropdown-block
+                            li
+                                a.dropdown-item(href='#!') Dark
+                            li
+                                a.dropdown-item(href='#!') Light
+                            li
+                                a.dropdown-item(href='#!') Lighter
+                      .btn-group
+                        button.btn.btn-secondary.rounded-pill.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                            | Secondary
+                        ul.dropdown-menu.dropdown-block
+                            li
+                                a.dropdown-item(href='#!') Dark
+                            li
+                                a.dropdown-item(href='#!') Light
+                            li
+                                a.dropdown-item(href='#!') Lighter
+                      .btn-group
+                        button.btn.btn-success.rounded-pill.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                            | Success 
+                        ul.dropdown-menu.dropdown-block
+                            li
+                                a.dropdown-item(href='#!') Dark
+                            li
+                                a.dropdown-item(href='#!') Light 
+                            li
+                                a.dropdown-item(href='#!') Lighter 
+                      .btn-group
+                        button.btn.btn-warning.rounded-pill.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                            | Warning
+                        ul.dropdown-menu.dropdown-block
+                            li
+                                a.dropdown-item(href='#!') Dark 
+                            li
+                                a.dropdown-item(href='#!') Light 
+                            li
+                                a.dropdown-item(href='#!') Lighter 
+                      .btn-group
+                        button.btn.btn-info.rounded-pill.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                            | Info 
+                        ul.dropdown-menu.dropdown-block
+                            li
+                                a.dropdown-item(href='#!') Dark 
+                            li
+                                a.dropdown-item(href='#!') Light 
+                            li
+                                a.dropdown-item(href='#!') Lighter 
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#rounded-dropdown', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#rounded-dropdown
+                          |&lt;div class="common-flex"&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-primary rounded-pill dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Primary&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Dark&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Light&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Lighter&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-secondary rounded-pill dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Secondary&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Dark&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Light&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Lighter&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-success rounded-pill dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Success&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Dark&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Light&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Lighter&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-warning rounded-pill dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Warning&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Dark&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Light&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Lighter&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-info rounded-pill dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Info&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Dark&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Light&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Lighter&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-sm-12.col-xl-12
+                .card
+                  .card-header
+                    h4  Split Dropdowns
+                    p.f-m-light.mt-1
+                      | Use 
+                      code dropdown-toggle-split 
+                      | for proper spacing around the dropdown caret.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card  
+                  .card-body.dropdown-basic.m-0
+                    .common-flex
+                      .btn-group
+                        button.btn.btn-outline-primary(type='button') Widgets
+                        .dropdown.separated-btn
+                          button.btn.btn-primary(type='button')
+                            i.icofont.icofont-arrow-down
+                          .dropdown-content
+                            a(href='#!') General
+                            a(href='#!') Chart
+                      .btn-group
+                        button.btn.btn-outline-secondary(type='button') Animations
+                        .dropdown.separated-btn
+                          button.btn.btn-secondary(type='button')
+                            i.icofont.icofont-arrow-down
+                          .dropdown-content
+                            a(href='#!') Animate 
+                            a(href='#!') AOS animations
+                      .btn-group
+                        button.btn.btn-outline-success(type='button') Charts
+                        .dropdown.separated-btn
+                          button.btn.btn-success(type='button')
+                            i.icofont.icofont-arrow-down
+                          .dropdown-content
+                            a(href='#!') Echarts
+                            a(href='#!') Apex chart
+                      .btn-group
+                        button.btn.btn-outline-info(type='button') Email
+                        .dropdown.separated-btn
+                          button.btn.btn-info(type='button')
+                            i.icofont.icofont-arrow-down
+                          .dropdown-content
+                            a(href='#!') Email app 
+                            a(href='#!') Email compose
+                      .btn-group
+                        button.btn.btn-outline-warning(type='button') Icons
+                        .dropdown.separated-btn
+                          button.btn.btn-warning(type='button')
+                            i.icofont.icofont-arrow-down
+                          .dropdown-content
+                            a(href='#!') Flag icons 
+                            a(href='#!') Fontawesome icons  
+                            a(href='#!') Ico icons
+                            a(href="#") Feather icons 
+                      .btn-group
+                        button.btn.btn-outline-danger(type='button') Learning
+                        .dropdown.separated-btn
+                          button.btn.btn-danger(type='button')
+                            i.icofont.icofont-arrow-down
+                          .dropdown-content
+                            a(href='#!') Learning List
+                            a(href='#!') Detailed Course
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#split-dropdown', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#split-dropdown
+                          |&lt;div class="common-flex"&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-outline-primary"&gt;Maps&lt;/button&gt;
+                          |    &lt;div class="dropdown separated-btn"&gt;
+                          |      &lt;button class="btn btn-primary dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;&lt;i class="icofont icofont-arrow-down"&gt;&lt;/i&gt;&lt;/button&gt;
+                          |      &lt;ul class="dropdown-menu"&gt;
+                          |        &lt;li class="dropdown-item"&gt; &lt;a href="#!"&gt;Google map&lt;/a&gt;&lt;/li&gt;
+                          |        &lt;li class="dropdown-item"&gt;&lt;a href="#!"&gt;Vector map&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;/ul&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-outline-secondary"&gt;Animations&lt;/button&gt;
+                          |    &lt;div class="dropdown separated-btn"&gt;
+                          |      &lt;button class="btn btn-secondary dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;&lt;i class="icofont icofont-arrow-down"&gt;&lt;/i&gt;&lt;/button&gt;
+                          |      &lt;ul class="dropdown-menu"&gt;
+                          |        &lt;li class="dropdown-item"&gt;&lt;a href="#!"&gt;Animate &lt;/a&gt;&lt;/li&gt;
+                          |        &lt;li class="dropdown-item"&gt;&lt;a href="#!"&gt;AOS animations&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;/ul&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-outline-success"&gt;Charts&lt;/button&gt;
+                          |    &lt;div class="dropdown separated-btn"&gt;
+                          |      &lt;button class="btn btn-success dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;&lt;i class="icofont icofont-arrow-down"&gt;&lt;/i&gt;&lt;/button&gt;
+                          |      &lt;ul class="dropdown-menu"&gt;
+                          |        &lt;li class="dropdown-item"&gt;&lt;a href="#!"&gt;E-charts&lt;/a&gt;&lt;/li&gt;
+                          |        &lt;li class="dropdown-item"&gt;&lt;a href="#!"&gt;Apex chart&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;/ul&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-outline-info"&gt;Email&lt;/button&gt;
+                          |    &lt;div class="dropdown separated-btn"&gt;
+                          |      &lt;button class="btn btn-info dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;&lt;i class="icofont icofont-arrow-down"&gt;&lt;/i&gt;&lt;/button&gt;
+                          |      &lt;ul class="dropdown-menu"&gt;
+                          |        &lt;li class="dropdown-item"&gt;&lt;a href="#!"&gt;Email app &lt;/a&gt;&lt;/li&gt;
+                          |        &lt;li class="dropdown-item"&gt;&lt;a href="#!"&gt;Email compose&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;/ul&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-outline-warning"&gt;Icons&lt;/button&gt;
+                          |    &lt;div class="dropdown separated-btn"&gt;
+                          |      &lt;button class="btn btn-warning dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;&lt;i class="icofont icofont-arrow-down"&gt;&lt;/i&gt;&lt;/button&gt;
+                          |      &lt;ul class="dropdown-menu"&gt;
+                          |        &lt;li class="dropdown-item"&gt;&lt;a href="#!"&gt;Flag icon&lt;/a&gt;&lt;/li&gt;
+                          |        &lt;li class="dropdown-item"&gt;&lt;a href="#!"&gt;Themify icon&lt;/a&gt;&lt;/li&gt;
+                          |        &lt;li class="dropdown-item"&gt;&lt;a href="#!"&gt;Ico icon&lt;/a&gt;&lt;/li&gt;
+                          |        &lt;li class="dropdown-item"&gt;&lt;a href="#"&gt;Feather icon&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;/ul&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-outline-danger"&gt;Learning&lt;/button&gt;
+                          |    &lt;div class="dropdown separated-btn"&gt;
+                          |      &lt;button class="btn btn-danger dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;&lt;i class="icofont icofont-arrow-down"&gt;&lt;/i&gt;&lt;/button&gt;
+                          |      &lt;ul class="dropdown-menu"&gt;
+                          |        &lt;li class="dropdown-item"&gt;&lt;a href="#!"&gt;Learning list&lt;/a&gt;&lt;/li&gt;
+                          |        &lt;li class="dropdown-item"&gt;&lt;a href="#!"&gt;Detailed course&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;/ul&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-lg-4.col-md-6
+                .card.height-equal
+                  .card-header
+                    h4  Heading Dropdown
+                    p.f-m-light.mt-1
+                      | Use 
+                      code heading-dropdown 
+                      | class to create dropdown heading.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card  
+                  .card-body.rtl-dropdown.heading-dropdown
+                    .common-flex
+                      .btn-group
+                        button.btn.btn-success.rounded-pill.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | Party
+                        ul.dropdown-menu.dropdown-block
+                          li
+                            a.dropdown-item.fw-bold.fs-6(href='#!') Party List 
+                            ul
+                              li  
+                                a.dropdown-item(href='#!') Balloons
+                              li 
+                                a.dropdown-item(href='#!') Cake 
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#heading-dropdown', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#heading-dropdown
+                          |&lt;div class="common-flex"&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-success rounded-pill dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Party&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item fw-bold fs-6" href="#!"&gt;Party List&lt;/a&gt;
+                          |        &lt;ul&gt;
+                          |          &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Balloons&lt;/a&gt;&lt;/li&gt;
+                          |          &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Cake &lt;/a&gt;&lt;/li&gt;
+                          |        &lt;/ul&gt;
+                          |      &lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-lg-4.col-md-6
+                .card.height-equal
+                  .card-header
+                    h4  With Input Type
+                    p.f-m-light.mt-1
+                      | Use checkbox using dropdown 
+                      code (type='checkbox'/'radio')
+                      | .
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card  
+                  .card-body
+                    .common-flex
+                      btn-group
+                        button.btn.btn-warning(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | Inputs 
+                        ul.dropdown-menu.dropdown-block.dropdown-wrapper.dark-input-type
+                          li 
+                            .input-group.rounded-0.border-0.shadow-none
+                              .input-group-text
+                                input.form-check-input.mt-0.checkbox-primary(type='checkbox' value='' aria-label='Checkbox for following text input')
+                              span.f-14 Default checkbox
+                            .input-group.rounded-0.border-0.shadow-none
+                              .input-group-text
+                                input.form-check-input.mt-0.checkbox-primary(type='radio' value='' aria-label='Radio button for following text input')
+                              span.f-14 Default radio
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#input-type-dropdown', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#input-type-dropdown
+                          |&lt;div class="common-flex"&gt;
+                          |  &lt;btn-group&gt;
+                          |    &lt;button class="btn btn-warning" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Inputs&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block dropdown-wrapper dark-input-type"&gt;
+                          |      &lt;li&gt; 
+                          |        &lt;div class="input-group rounded-0 border-0 shadow-none"&gt;
+                          |          &lt;div class="input-group-text"&gt;
+                          |            &lt;input class="form-check-input mt-0 checkbox-primary" type="checkbox" value="" aria-label="Checkbox for following text input"&gt;
+                          |          &lt;/div&gt;&lt;span class="f-14"&gt;Default checkbox&lt;/span&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="input-group rounded-0 border-0 shadow-none"&gt;
+                          |          &lt;div class="input-group-text"&gt;
+                          |            &lt;input class="form-check-input mt-0 checkbox-primary" type="radio" value="" aria-label="Radio button for following text input"&gt;
+                          |          &lt;/div&gt;&lt;span class="f-14"&gt;Default radio&lt;/span&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/btn-group&gt;
+                          |&lt;/div&gt;
+              .col-lg-4.col-md-6
+                .card.height-equal
+                  .card-header
+                    h4  Dark Dropdown
+                    p.f-m-light.mt-1
+                      | To access the dark mode, use the 
+                      code dropdown-menu-dark 
+                      | class.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card  
+                  .card-body.dropdown-basic.m-0.rtl-dropdown
+                    .common-flex.dark-dropdown
+                      button.btn.btn-dark.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                        | Dark Night
+                      ul.dropdown-menu.dropdown-menu-dark.dropdown-block
+                        li
+                          a.dropdown-item.active(href='#!') Dark moon
+                        li
+                          a.dropdown-item(href='#!') Dark owl 
+                        li
+                          a.dropdown-item(href='#!') Nightfall
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#dark-dropdown', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#dark-dropdown
+                          |&lt;div class="common-flex dark-dropdown"&gt;
+                          |  &lt;button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Dark Night&lt;/button&gt;
+                          |  &lt;ul class="dropdown-menu dropdown-menu-dark dropdown-block"&gt;
+                          |    &lt;li&gt;&lt;a class="dropdown-item active" href="#!"&gt;Dark moon&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Dark owl &lt;/a&gt;&lt;/li&gt;
+                          |    &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Nightfall&lt;/a&gt;&lt;/li&gt;
+                          |  &lt;/ul&gt;
+                          |&lt;/div&gt;
+              .col-md-6
+                .card
+                  .card-header
+                    h4 Unique Dropdown
+                    p.f-m-light.mt-1
+                      | Use 
+                      code data-bs-toggle="dropdown"
+                      |  to make any dropdown like form and text.
+                      | Unique way to represent form dropdown and text dropdown.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card  
+                  .card-body.rtl-dropdown
+                    .common-flex
+                      .btn-group
+                        button.btn.btn-primary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false' data-bs-auto-close='outside')
+                          | Dropdown form
+                        form.dropdown-menu.p-4.form-wrapper.dark-form
+                          .mb-3
+                            label.form-label.f-w-500(for='exampleDropdownFormEmail2') Email address
+                            input#exampleDropdownFormEmail2.form-control(type='email' placeholder='email@example.com')
+                          .mb-3
+                            label.form-label.f-w-500(for='exampleDropdownFormPassword2') Password
+                            input#exampleDropdownFormPassword2.form-control(type='password' placeholder='Password')
+                          .mb-3
+                            .form-check
+                              input#dropdownCheck2.form-check-input.checkbox-primary(type='checkbox')
+                              label.form-check-label.f-14(for='dropdownCheck2')
+                                | Remember me
+                          button.btn.btn-primary(type='submit') Sign in
+                      .btn-group
+                        button.btn.btn-dark.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | Text 
+                        .dropdown-menu.p-4.form-wrapper
+                          p
+                            | Some example text that&apos;s free-flowing within the dropdown menu.
+                          p.mb-0
+                            | And this is more example text. 
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#unique-dropdown', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#unique-dropdown
+                          |&lt;div class="common-flex"&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"&gt;Dropdown form&lt;/button&gt;
+                          |    &lt;form class="dropdown-menu p-4 form-wrapper dark-form"&gt;
+                          |      &lt;div class="mb-3"&gt;
+                          |        &lt;label class="form-label f-w-500" for="exampleDropdownFormEmail2"&gt;Email Address&lt;/label&gt;
+                          |        &lt;input class="form-control" id="exampleDropdownFormEmail2" type="email" placeholder="email@example.com"&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="mb-3"&gt;
+                          |        &lt;label class="form-label f-w-500" for="exampleDropdownFormPassword2"&gt;Password&lt;/label&gt;
+                          |        &lt;input class="form-control" id="exampleDropdownFormPassword2" type="password" placeholder="Password"&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="mb-3"&gt;
+                          |        &lt;div class="form-check"&gt;
+                          |          &lt;input class="form-check-input checkbox-primary" id="dropdownCheck2" type="checkbox"&gt;
+                          |          &lt;label class="form-check-label f-14" for="dropdownCheck2"&gt;Remember me&lt;/label&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;button class="btn btn-primary" type="submit"&gt;Sign in&lt;/button&gt;
+                          |    &lt;/form&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Text&lt;/button&gt;
+                          |    &lt;div class="dropdown-menu p-4 form-wrapper"&gt;
+                          |      &lt;p&gt;Some example text that&apos;s free-flowing within the dropdown menu.&lt;/p&gt;
+                          |      &lt;p class="mb-0"&gt;And this is more example text.&lt;/p&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-lg-6
+                .card
+                  .card-header
+                    h4  Justify Contents
+                    p.f-m-light.mt-1
+                      | Use 
+                      code text-start / text-center / text-end
+                      |  to change dropdown texts.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card  
+                  .card-body.dropdown-basic.m-0
+                    .common-flex
+                      .btn-group
+                        button.btn.btn-primary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | Text-left
+                        ul.dropdown-menu.dropdown-block.text-start
+                          li
+                            a.dropdown-item(href='#!') Hello..
+                          li
+                            a.dropdown-item(href='#!') How are you?
+                          li
+                            a.dropdown-item(href='#!') What are you doing?
+                      .btn-group
+                        button.btn.btn-info.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | Text-center
+                        ul.dropdown-menu.dropdown-block.text-center
+                          li
+                            a.dropdown-item(href='#!') Chocolate
+                          li
+                            a.dropdown-item(href='#!') Ice-cream
+                          li
+                            a.dropdown-item(href='#!') Trophy
+                      .btn-group
+                        button.btn.btn-primary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | Text-right 
+                        ul.dropdown-menu.dropdown-block.text-end
+                          li
+                            a.dropdown-item(href='#!') I'm fine.
+                          li
+                            a.dropdown-item(href='#!') ohh wow!!
+                          li
+                            a.dropdown-item(href='#!') That's the good news! 
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#justify-dropdown', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#justify-dropdown
+                          |&lt;div class="common-flex"&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Text-left&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block text-start"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Hello..&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;How are you?&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;What are you doing?&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Text-center&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block text-center"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Chocolate&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Ice-cream&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Trophy&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Text-right&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block text-end"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;I'm fine.&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;ohh wow!!&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;That's the good news! &lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-lg-12
+                .card
+                  .card-header
+                    h4 Alignment Options
+                    p.f-m-light.mt-1
+                      | Use
+                      code  dropdown-menu-lg-start / dropstart / dropup / dropend
+                      |  this classes through change dropdown directions.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card  
+                  .card-body.rtl-dropdown
+                    .common-flex
+                      .btn-group
+                        button.btn.btn-dark.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | Dropdown
+                        ul.dropdown-menu
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                      .btn-group
+                        button.btn.btn-dark.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | Right-aligned menu
+                        ul.dropdown-menu.dropdown-menu-end
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                      .btn-group
+                        button.btn.btn-dark.dropdown-toggle(type='button' data-bs-toggle='dropdown' data-bs-display='static' aria-expanded='false')
+                          | Left-aligned, right-aligned lg
+                        ul.dropdown-menu.dropdown-menu-lg-end
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                      .btn-group
+                        button.btn.btn-dark.dropdown-toggle(type='button' data-bs-toggle='dropdown' data-bs-display='static' aria-expanded='false')
+                          | Right-aligned, left-aligned lg
+                        ul.dropdown-menu.dropdown-menu-end.dropdown-menu-lg-start
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                      .btn-group.dropstart
+                        button.btn.btn-dark.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | Dropstart
+                        ul.dropdown-menu
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                      .btn-group.dropend
+                        button.btn.btn-dark.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | Dropend
+                        ul.dropdown-menu
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                      .btn-group.dropup
+                        button.btn.btn-dark.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | Dropup
+                        ul.dropdown-menu
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                          li
+                            a.dropdown-item(href='#!') Menu item
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#alignment-dropdown', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#alignment-dropdown
+                          |&lt;div class="common-flex"&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Dropdown&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Right-aligned menu&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-menu-end"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"&gt;Left-aligned, right-aligned lg&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-menu-lg-end"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"&gt;Right-aligned, left-aligned lg&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group dropstart"&gt;
+                          |    &lt;button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Dropstart&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group dropend"&gt;
+                          |    &lt;button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Dropend&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group dropup"&gt;
+                          |    &lt;button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Dropup&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-lg-6
+                .card
+                  .card-header
+                    h4 Helper Cards
+                    p.f-m-light.mt-1
+                      | Each dropdown uses  
+                      code data-bs-toggle='dropdown' 
+                      | attribute, which you can use to create helper class.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card  
+                  .card-body.rtl-dropdown.helper-cards
+                    .common-flex
+                      .btn-group
+                        button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | Helper Card
+                        ul.dropdown-menu.dropdown-block.p-3.dark-form
+                          li
+                            h6.fs-6.pb-2 Learn More!
+                            p.dropdown-item There is a lot of information available here
+                      .btn-group
+                        button.btn.btn-warning.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | Warning Card
+                        ul.dropdown-menu.dropdown-block.p-3.dark-form
+                          li
+                            h6.fs-6.pb-2 Warning!
+                            p.dropdown-item.helper-truncate Please! Check your notifications.
+                      .btn-group
+                        button.btn.btn-info.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | Alert Card
+                        ul.dropdown-menu.dropdown-block.p-3.dark-form
+                          li
+                            h6.fs-6.pb-2 Danger
+                            p.dropdown-item.helper-truncate It's a danger path.
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#helper-dropdown', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#helper-dropdown
+                          |&lt;div class="common-flex"&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Helper Card&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block p-3 dark-form"&gt;
+                          |      &lt;li&gt;
+                          |        &lt;h6 class="fs-6 pb-2"&gt;Learn More!&lt;/h6&gt;
+                          |        &lt;p class="dropdown-item"&gt;There is a lot of information available here&lt;/p&gt;
+                          |      &lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Warning Card&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block p-3 dark-form"&gt;
+                          |      &lt;li&gt;
+                          |        &lt;h6 class="fs-6 pb-2"&gt;Warning!&lt;/h6&gt;
+                          |        &lt;p class="dropdown-item helper-truncate"&gt;Please! Check your notifications.&lt;/p&gt;
+                          |      &lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Alert Card&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block p-3 dark-form"&gt;
+                          |      &lt;li&gt;
+                          |        &lt;h6 class="fs-6 pb-2"&gt;Danger&lt;/h6&gt;
+                          |        &lt;p class="dropdown-item helper-truncate"&gt;It's a danger path.&lt;/p&gt;
+                          |      &lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-lg-6
+                .card
+                  .card-header
+                    h4 Divider Dropdowns
+                    p.f-m-light.mt-1
+                      | Use 
+                      code dropdown-divider 
+                      | class through separate groups of related menu items with a divider.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card  
+                  .card-body.rtl-dropdown
+                    .common-flex
+                      .btn-group
+                        button.btn.btn-success.rounded-pill.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | Wishlist
+                        ul.dropdown-menu.dropdown-block
+                          li
+                            a.dropdown-item(href='#!') Shoes 
+                          li
+                            a.dropdown-item(href='#!') Bag
+                          li
+                            a.dropdown-item(href='#!') Clothes 
+                          li
+                            hr.dropdown-divider
+                          li
+                            a.dropdown-item(href='#!') Separated link
+                      .btn-group
+                        button.btn.btn-primary.rounded-pill.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | Sports 
+                        ul.dropdown-menu.dropdown-block
+                          li
+                            a.dropdown-item(href='#!') Badminton
+                          li
+                            a.dropdown-item(href='#!') Tenis 
+                          li
+                            a.dropdown-item(href='#!') Kho-Kho
+                          li
+                            hr.dropdown-divider
+                          li
+                            a.dropdown-item(href='#!') Separated link
+                      .btn-group
+                        button.btn.btn-secondary.rounded-pill.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | Colors 
+                        ul.dropdown-menu.dropdown-block
+                          li
+                            a.dropdown-item(href='#!') Orange 
+                          li
+                            a.dropdown-item(href='#!') Yellow 
+                          li
+                            a.dropdown-item(href='#!') Red 
+                          li
+                            hr.dropdown-divider
+                          li
+                            a.dropdown-item(href='#!') Separated link
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#divider-dropdown', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#divider-dropdown
+                          |&lt;div class="common-flex"&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-success rounded-pill dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Wishlist&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Shoes &lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Bag&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Clothes&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;
+                          |        &lt;hr class="dropdown-divider"&gt;
+                          |      &lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-primary rounded-pill dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Sports &lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Badminton&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Cricket&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Kho-Kho&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;
+                          |        &lt;hr class="dropdown-divider"&gt;
+                          |      &lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-secondary rounded-pill dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Colors&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Orange&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Yellow&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Red &lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;
+                          |        &lt;hr class="dropdown-divider"&gt;
+                          |      &lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-md-12
+                .card
+                  .card-header
+                    h4  Dropdown Sizing
+                    p.f-m-light.mt-1
+                      | Use 
+                      code btn-*
+                      | [sm / lg] class through buttons of all sizes including default and split dropdown buttons.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card  
+                  .card-body.rtl-dropdown
+                    .common-flex
+                      .btn-group
+                        button.btn.btn-dark.light.btn-lg.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | Large button 
+                        ul.dropdown-menu.dropdown-block
+                          li
+                            a.dropdown-item(href='#!') Action
+                          li
+                            a.dropdown-item(href='#!') Another action 
+                          li
+                            a.dropdown-item(href='#!') Something else here 
+                          li
+                              hr.dropdown-divider
+                          li
+                            a.dropdown-item(href='#!') Separated link
+                      .btn-group
+                        button.btn.btn-outline-secondary.btn-lg(type='button')
+                          | Large split button
+                        button.btn.btn-lg.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                        ul.dropdown-menu.dropdown-block
+                          li
+                            a.dropdown-item(href='#!') Action
+                          li
+                            a.dropdown-item(href='#!') Another action
+                          li
+                            a.dropdown-item(href='#!') Something else here
+                          li
+                              hr.dropdown-divider
+                          li
+                            a.dropdown-item(href='#!') Separated link 
+                      .btn-group
+                        button.btn.btn-dark.light.btn-sm.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          | Small button 
+                        ul.dropdown-menu.dropdown-block
+                          li
+                            a.dropdown-item(href='#!') Action
+                          li
+                            a.dropdown-item(href='#!') Another action
+                          li
+                            a.dropdown-item(href='#!') Something else here 
+                          li
+                              hr.dropdown-divider
+                          li
+                            a.dropdown-item(href='#!') Separated link 
+                      .btn-group
+                        button.btn.btn-outline-secondary.btn-sm(type='button')
+                          | Small split button
+                        button.btn.btn-sm.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                        ul.dropdown-menu.dropdown-block
+                          li
+                            a.dropdown-item(href='#!') Action
+                          li
+                            a.dropdown-item(href='#!') Another action
+                          li
+                            a.dropdown-item(href='#!') Something else here
+                          li
+                              hr.dropdown-divider
+                          li
+                            a.dropdown-item(href='#!') Separated link
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#size-dropdown', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#size-dropdown
+                          |&lt;div class="common-flex"&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-dark light btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Large button&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Action&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;
+                          |        &lt;hr class="dropdown-divider"&gt;
+                          |      &lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-outline-secondary btn-lg" type="button"&gt;Large split button&lt;/button&gt;
+                          |    &lt;button class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Action&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;
+                          |        &lt;hr class="dropdown-divider"&gt;
+                          |      &lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-dark light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Small button&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Action&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Something else here &lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;
+                          |        &lt;hr class="dropdown-divider"&gt;
+                          |      &lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-outline-secondary btn-sm" type="button"&gt;Small split button&lt;/button&gt;
+                          |    &lt;button class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu dropdown-block"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Action&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;
+                          |        &lt;hr class="dropdown-divider"&gt;
+                          |      &lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-md-12
+                .card
+                  .card-header
+                    h4  Dropdown options
+                    p.f-m-light.mt-1
+                      | Use 
+                      code data-bs-offset 
+                      |  or 
+                      code data-bs-reference
+                      |  to change the location of the dropdown.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card  
+                  .card-body
+                    .common-flex.dropdown-option
+                      .dropdown
+                        button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false' data-bs-offset='10,20')
+                          | Offset
+                        ul.dropdown-menu
+                          li
+                            a.dropdown-item(href='#') Action
+                          li
+                            a.dropdown-item(href='#') Another action
+                          li
+                            a.dropdown-item(href='#') Something else here
+                      .btn-group
+                        button.btn.btn-secondary(type='button') Reference
+                        button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button' data-bs-toggle='dropdown' aria-expanded='false' data-bs-reference='parent')
+                          span.visually-hidden Toggle Dropdown
+                        ul.dropdown-menu
+                          li
+                            a.dropdown-item(href='#') Action
+                          li
+                            a.dropdown-item(href='#') Another action
+                          li
+                            a.dropdown-item(href='#') Something else here
+                          li
+                            hr.dropdown-divider
+                          li
+                            a.dropdown-item(href='#') Separated link
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#dropdown-option', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#dropdown-option
+                          |&lt;div class="common-flex dropdown-option"&gt;
+                          |  &lt;div class="dropdown"&gt;
+                          |    &lt;button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20"&gt;Offset&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Action&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="btn-group"&gt;
+                          |    &lt;button class="btn btn-secondary" type="button"&gt;Reference&lt;/button&gt;
+                          |    &lt;button class="btn btn-secondary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent"&gt;&lt;span class="visually-hidden"&gt;Toggle Dropdown&lt;/span&gt;&lt;/button&gt;
+                          |    &lt;ul class="dropdown-menu"&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Action&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                          |      &lt;li&gt;
+                          |        &lt;hr class="dropdown-divider"&gt;
+                          |      &lt;/li&gt;
+                          |      &lt;li&gt;&lt;a class="dropdown-item" href="#!"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

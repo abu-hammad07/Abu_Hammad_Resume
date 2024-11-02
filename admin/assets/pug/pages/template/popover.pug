@@ -1,0 +1,237 @@
+- var page_Title = 'Popover';
+- var theme_customizer      = true;
+- var popover_custom        = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+- var prism                 = true;
+- var clipboard             = true;
+- var customcard            = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Ui Kits','Popover'],'Popover')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row.popover-main
+              .col-sm-12
+                .card
+                  .card-header
+                    h4 Basic Popover
+                    p.f-m-light.mt-1 
+                      | Use the common class 
+                      code data-bs-toggle='popover' 
+                      | and hover to use the 
+                      code data-bs-trigger='hover'
+                      | attributes.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card  
+                  .card-body.common-flex.popover-wrapper
+                    button.btn.btn-primary.example-popover.mb-0.me-0(type='button', data-bs-toggle='popover', data-bs-placement='left', title='Popover title', data-bs-content="And here's some amazing content. It's very engaging. Right?") Hurry Up! 
+                    button.example-popover.btn.btn-success.mb-0.me-0(type='button', data-bs-trigger='hover', data-container='body', data-bs-toggle='popover', data-bs-placement='bottom', title='Hover Popover', data-offset='-20px -20px', data-bs-content=' Several utility instruction sets have been featured in the Bootstrap 4 to promote very easy learning for beginners in the business of web building.')
+                      | Hover tooltip
+                    .code-box-copy
+                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#hover-variations', title='Copy')
+                          i.icofont.icofont-copy-alt
+                        pre.theme-scrollbar
+                          code.language-html#hover-variations
+                            |&lt;button class="btn btn-primary example-popover mb-0 me-0" type="button" data-bs-toggle="popover" data-bs-placement="left" title="Popover Title" data-bs-content="And here's some amazing content. It's very engaging. Right?"&gt;Hurry Up!&lt;/button&gt;
+                            |&lt;button class="example-popover btn btn-success mb-0 me-0" type="button" data-bs-trigger="hover" data-container="body" data-bs-toggle="popover" data-bs-placement="bottom" title="Hover Popover" data-offset="-20px -20px" data-bs-content=" Several utility instruction sets have been featured in the Bootstrap 4 to promote very easy learning for beginners in the business of web building."&gt;Hover Tooltip&lt;/button&gt;               
+              .col-lg-4
+                .card
+                  .card-header
+                    h4 Disabled Elements
+                    p.f-m-light.mt-1 
+                      | Use the
+                      code  data-bs-toggle="*"
+                      |  through set disabled popover. 
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card 
+                  .card-body.common-flex.popover-wrapper
+                    span.d-inline-block(tabindex='0' data-bs-toggle='popover' data-bs-trigger='hover focus', title='Disable popover title', data-bs-content="And here's some amazing content. It's very engaging. Right?")
+                      button.btn.btn-primary(type='button' disabled='') Disabled button
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#disable-popover', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#disable-popover
+                          |&lt;div class="card-body common-flex popover-wrapper"&gt;
+                          |  &lt;span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" title="Disable Popover Title" data-bs-content="And here's some amazing content. It's very engaging. Right?"&gt;
+                          |      &lt;button class="btn btn-primary" type="button" disabled=""&gt;Disabled Button&lt;/button&gt;
+                          |  &lt;/span&gt;
+                          |&lt;/div&gt;
+              .col-lg-4
+                .card
+                  .card-header
+                    h4 Delay Popover
+                    p.f-m-light.mt-1 
+                      | Use the
+                      code  data-bs-delay="{value}"
+                      |  through set delay popover.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card 
+                  .card-body.common-flex.popover-wrapper
+                    button.btn.btn-primary.example-popover.mb-0.me-0(type='button', data-bs-toggle='popover', data-bs-placement='right', title='Popover title', data-bs-delay='{"show":1500,"hide":1800}', data-bs-content="And here's some amazing content. It's very engaging. Right?") Delay Popover
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#delay-popover', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#delay-popover
+                          |&lt;button class="btn btn-primary example-popover mb-0 me-0" type="button" data-bs-toggle="popover" data-bs-placement="right" title="Popover Title" data-bs-delay="{&quot;show&quot;:1500,&quot;hide&quot;:1800}" data-bs-content="And here's some amazing content. It's very engaging. Right?"&gt;Delay Popover&lt;/button&gt;
+              .col-lg-4
+                .card
+                  .card-header
+                    h4 Dismiss Popover
+                    p.f-m-light.mt-1 
+                      | Use the
+                      code  data-bs-dismiss='*'
+                      |  through set dismiss popover.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-
+                        li
+                          i.icofont.icofont-error.close-card 
+                  .card-body.common-flex.popover-wrapper
+                    a.btn.btn-secondary(tabindex='0' role='button' data-bs-toggle='popover' data-bs-trigger='focus', title='Dismissible popover', data-bs-title='Dismissible popover', data-bs-dismiss='true', data-bs-content="And here's some amazing content. It's very engaging. Right?") Dismissible popover
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#dismiss-popover', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#dismiss-popover
+                          |&lt;a class="btn btn-danger popover-dismiss" tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Dismissible Popover" data-bs-title="Dismissible Popover" data-bs-dismiss="true" data-bs-content="And here's some amazing content. It's very engaging. Right?"&gt;Dismissible Popover&lt;/a&gt;     
+              .col-sm-12
+                .card
+                  .card-header
+                    h4 Popover Direction
+                    p.f-m-light.mt-1 
+                      | Use the
+                      code  data-bs-placement='*'
+                      |  [top/left/bottom/top] to change directions.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card 
+                  .card-body.common-flex.popover-wrapper
+                    button.example-popover.btn.btn-warning.mb-0.me-0(type='button', data-container='body', data-bs-toggle='popover', data-bs-placement='top', title='Top Popover', data-bs-content='Popovers need the tooltip plugin considering that a dependency.')
+                      | Popover on top
+                    button.example-popover.btn.btn-danger.mb-0.me-0(type='button', data-container='body', data-bs-toggle='popover', data-bs-placement='right', title='Right Popover', data-bs-content='Popovers are opt-in for effectiveness causes, in this way you have to initialize them yourself.')
+                      | Popover on right
+                    button.example-popover.btn.btn-info.mb-0.me-0(type='button', data-container='body', data-bs-toggle='popover', data-bs-placement='bottom', title='Bottom Popover', data-bs-content='Identify container:to evade rendering problems in more complex components (like Bootstrap input groups, button groups, etc).')
+                      | Popover on bottom
+                    button.example-popover.btn.btn-dark.mb-0.me-0(type='button', data-container='body', data-bs-toggle='popover', data-bs-placement='left', title='Left Popover', data-bs-content='Popovers are opt-in for effectiveness causes, in this way you have to initialize them yourself.')
+                      | Popover on left
+                    .code-box-copy
+                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#direction-variations', title='Copy')
+                          i.icofont.icofont-copy-alt
+                        pre.theme-scrollbar
+                          code.language-html#direction-variations
+                            |&lt;button class="example-popover btn btn-warning mb-0 me-0" type="button" data-container="body" data-bs-toggle="popover" data-bs-placement="top" title="Top Popover" data-bs-content="Popovers need the tooltip plugin considering that a dependency."&gt;Popover on Top&lt;/button&gt;
+                            |&lt;button class="example-popover btn btn-danger mb-0 me-0" type="button" data-container="body" data-bs-toggle="popover" data-bs-placement="right" title="Right Popover" data-bs-content="Popovers are opt-in for effectiveness causes, in this way you have to initialize them yourself."&gt;Popover on Right&lt;/button&gt;
+                            |&lt;button class="example-popover btn btn-info mb-0 me-0" type="button" data-container="body" data-bs-toggle="popover" data-bs-placement="bottom" title="Bottom Popover" data-bs-content="Identify container:to evade rendering problems in more complex components (like Bootstrap input groups, button groups, etc)."&gt;Popover on Bottom&lt;/button&gt;
+                            |&lt;button class="example-popover btn btn-dark mb-0 me-0" type="button" data-container="body" data-bs-toggle="popover" data-bs-placement="left" title="Left Popover" data-bs-content="Popovers are opt-in for effectiveness causes, in this way you have to initialize them yourself."&gt;Popover on Left&lt;/button&gt;   
+              .col-sm-12
+                .card
+                  .card-header
+                    h4 Popover Offset 
+                    p.f-m-light.mt-1 
+                      | Use the
+                      code  data-bs-offset="*,*"
+                      |  through set popover offset. 
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card 
+                  .card-body.common-flex.popover-wrapper
+                    button.btn.btn-secondary.mb-0.me-0(type='button' data-bs-offset="50,0" data-bs-toggle='popover' data-bs-delay-show='5000' title='Popover title' data-bs-content="And here's some amazing content. It's very engaging. Right?" data-kt-initialized="1")
+                      | Popover offset 50
+                    button.example-popover.btn.btn-dark.mb-0.me-0(type='button' data-bs-offset="-50,0" data-container='body', data-bs-toggle='popover', data-bs-placement='left', title='Popover On Left', data-bs-content='Popovers are opt-in for effectiveness causes, in this way you have to initialize them yourself.')
+                      | Popover offset -50
+                    .code-box-copy
+                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#offset-variations', title='Copy')
+                          i.icofont.icofont-copy-alt
+                        pre.theme-scrollbar
+                          code.language-html#offset-variations
+                            |&lt;button class="btn btn-secondary mb-0 me-0" type="button" data-bs-offset="50,0" data-bs-toggle="popover" data-bs-delay-show="5000" title="Popover Title" data-bs-content="And here's some amazing content. It's very engaging. Right?" data-kt-initialized="1"&gt;Popover Offset 50&lt;/button&gt;
+                            |&lt;button class="example-popover btn btn-dark mb-0 me-0" type="button" data-bs-offset="-50,0" data-container="body" data-bs-toggle="popover" data-bs-placement="left" title="Popover Title" data-bs-content="Popovers are opt-in for effectiveness causes, in this way you have to initialize them yourself."&gt;Popover Offset -50&lt;/button&gt;
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

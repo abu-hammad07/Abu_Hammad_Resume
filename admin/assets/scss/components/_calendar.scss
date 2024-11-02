@@ -1,0 +1,150 @@
+.timeline-calendar {
+	.custom-calendar {
+		height: 345px;
+
+		.time-line {
+			overflow: auto;
+
+			&.fc-theme-standard {
+				th {
+					border: none;
+				}
+			}
+
+			// &.fc-view-harness {
+			// 	.fc-timegrid {
+			// 		.fc-scrollgrid {
+			// 			thead {
+			// 				position: absolute !important;
+			// 				bottom: 0 !important;
+			// 			}
+			// 		}
+			// 	}
+			// }
+
+			.fc-col-header-cell-cushion {
+				padding: 15px;
+			}
+
+			.fc-scrollgrid-sync-table {
+				display: none;
+			}
+
+			.fc-timegrid-divider {
+				display: none;
+			}
+
+			.fc-scrollgrid {
+				table {
+					thead {
+						tr {
+							background-color: rgba($primary-color, 0.1);
+						}
+					}
+				}
+			}
+
+			.fc-header-toolbar {
+				position: absolute;
+				right: 246px;
+				top: 8px;
+				margin-top: 10px;
+
+				.fc-toolbar-chunk {
+					.fc-button-group {
+						display: none;
+						gap: 10px;
+
+						button {
+							border-color: $light-color;
+							background-color: $white;
+
+							span {
+								color: $theme-body-font-color;
+							}
+						}
+					}
+
+					.fc-today-button {
+						display: none;
+					}
+
+					.fc-toolbar-title {
+						display: none;
+					}
+
+					&:last-child {
+						display: none;
+					}
+				}
+			}
+
+			.fc-timegrid-col {
+				.fc-timegrid-col-frame {
+					.fc-timegrid-event-harness {
+						border: none;
+
+						.fc-v-event {
+							border: 1px solid $dark-card-border;
+							border-radius: 4px;
+							min-width: 179px;
+							min-height: 54px;
+							max-height: 54px;
+
+							.fc-event-main {
+								color: var(--body-font-color);
+
+								.fc-sticky {
+									color: $theme-font-color;
+
+									.fc-task-text-box {
+										.fc-task-text {
+											color: $theme-body-font-color;
+											font-family: $font-outfit;
+											font-size: 14px;
+											font-weight: 500;
+										}
+
+										&:last-child {
+											span {
+												color: $theme-font-color;
+											}
+										}
+									}
+								}
+
+								.fc-event-main-frame {
+									padding: 8px 12px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.fc-scrollgrid-section {
+				.fc-timegrid-slots {
+					table {
+						tbody {
+							tr {
+								border: none;
+
+								td {
+									&.fc-scrollgrid-shrink {
+										padding: 10px;
+									}
+
+									&.fc-timegrid-slot-minor {
+										padding: 10px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	overflow: auto;
+}

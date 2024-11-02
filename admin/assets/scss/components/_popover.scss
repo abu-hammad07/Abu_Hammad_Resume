@@ -1,0 +1,105 @@
+/**=====================
+  2.23 Popover CSS Start
+==========================**/
+// .popover-header {
+//   background-color: $dark-color;
+//   color: $white;
+// }
+
+// popover
+.popover {
+  background-color: $white;
+  border: none;
+  -webkit-box-shadow: 0 0 20px rgba($primary-color, 0.1);
+  box-shadow: 0 0 20px rgba($primary-color, 0.1);
+
+  .popover-header {
+    background-color: $theme-medium-color;
+    color: $primary-color;
+    border-bottom: none;
+  }
+
+  .popover-body {
+    color: rgba(43, 43, 43, 0.7);
+  }
+}
+
+
+.popover-main {
+  .btn-showcase {
+    a {
+      color: $white;
+    }
+
+    button {
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.svg-tooltip {
+  .common-flex {
+    >div {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      border: 1px solid;
+
+      i {
+        font-size: 20px;
+      }
+
+      &:hover {
+        i {
+          stroke: var(--white) !important;
+        }
+      }
+    }
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+
+// 
+// .popover {
+//   .popover-arrow {
+
+//     &::before,
+//     &::after {
+//       border-top-color: $light;
+//     }
+//   }
+
+//   .popover-body {
+//     background-color: $light;
+//   }
+// }
+
+// .bs-popover-auto[data-popper-placement^=right]>.popover-arrow::before,
+// .bs-popover-end>.popover-arrow::before {
+//   border-right-color: $secondary-color;
+// }
+
+// .bs-popover-auto[data-popper-placement^=left]>.popover-arrow::before,
+// .bs-popover-start>.popover-arrow::before {
+//   border-left-color: $secondary-color;
+// }
+
+// .bs-popover-auto[data-popper-placement^=left]>.popover-arrow::after,
+// .bs-popover-start>.popover-arrow::after {
+//   border-left-color: $secondary-color;
+
+// }
+
+/**=====================
+  2.23 Popover CSS Ends
+==========================**/

@@ -1,0 +1,417 @@
+- var page_Title = 'Owl-carousel';
+- var theme_customizer      = true;
+- var swiper                = true;
+- var custom_swiper         = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+- var height_equal          = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Bonus Ui','Owl Carousel'],'Owl Carousel')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            h4.mb-3.common-title Carousel with Bootstrap
+            .row
+              .col-xl-6.col-12
+                .card
+                  .card-header
+                    h4 Slides Only 
+                    p.f-m-light.mt-1
+                      | The 
+                      code .active
+                      |  class needs to be added to one of the slides otherwise the carousel will not be visible.
+                      code .d-block
+                      |  and 
+                      code .w-100 
+                      |  on carousel images to prevent browser default image alignment.
+                  .card-body
+                    #carouselExampleSlidesOnly.carousel.slide(data-bs-ride='carousel')
+                      .carousel-inner
+                        .carousel-item.active
+                          img.d-block.w-100(src='../assets/images/slider/11.jpg' alt='drawing-room')
+                        .carousel-item
+                          img.d-block.w-100(src='../assets/images/slider/9.jpg' alt='drawing-room')
+                        .carousel-item
+                          img.d-block.w-100(src='../assets/images/slider/6.jpg' alt='drawing-room')
+              .col-xl-6.col-12
+                .card
+                  .card-header
+                    h4 With Controls
+                    p.f-m-light.mt-1
+                      | Use the 
+                      code .carousel-control-prev
+                      |  & 
+                      code .carousel-control-next
+                      |  through previous and next controls. We recommend using 
+                      code &lt;button&gt;
+                      |  elements, but you can also use 
+                      code &lt;a&gt;
+                      |  elements with 
+                      code role="button".
+                  .card-body
+                    #carouselExampleControls.carousel.slide(data-bs-ride='carousel')
+                      .carousel-inner
+                        .carousel-item.active
+                          img.d-block.w-100(src='../assets/images/slider/6.jpg' alt='drawing-room')
+                        .carousel-item
+                          img.d-block.w-100(src='../assets/images/slider/7.jpg' alt='drawing-room')
+                        .carousel-item
+                          img.d-block.w-100(src='../assets/images/slider/10.jpg' alt='drawing-room')
+                        .carousel-item
+                          img.d-block.w-100(src='../assets/images/slider/4.jpg' alt='drawing-room')
+                        .carousel-item
+                          img.d-block.w-100(src='../assets/images/slider/1.jpg' alt='drawing-room')
+                      button.carousel-control-prev(type='button' data-bs-target='#carouselExampleControls' data-bs-slide='prev')
+                        span.carousel-control-prev-icon(aria-hidden='true')
+                        span.visually-hidden Previous
+                      button.carousel-control-next(type='button' data-bs-target='#carouselExampleControls' data-bs-slide='next')
+                        span.carousel-control-next-icon(aria-hidden='true')
+                        span.visually-hidden Next             
+              .col-xl-6.col-12
+                .card
+                  .card-header
+                    h4 With Indicators
+                    p.f-m-light.mt-1
+                      | Use the 
+                      code .carousel-indicators
+                      |  through carousel indicates.
+                  .card-body
+                    #carouselExampleIndicators.carousel.slide(data-bs-ride='true')
+                      .carousel-indicators
+                        button.active(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+                        button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='1' aria-label='Slide 2')
+                        button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='2' aria-label='Slide 3')
+                      .carousel-inner
+                        .carousel-item.active
+                          img.d-block.w-100(src='../assets/images/slider/3.jpg' alt='drawing-room')
+                        .carousel-item
+                          img.d-block.w-100(src='../assets/images/slider/8.jpg' alt='drawing-room')
+                        .carousel-item
+                          img.d-block.w-100(src='../assets/images/slider/10.jpg' alt='drawing-room')
+                      button.carousel-control-prev(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='prev')
+                        span.carousel-control-prev-icon(aria-hidden='true')
+                        span.visually-hidden Previous
+                      button.carousel-control-next(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='next')
+                        span.carousel-control-next-icon(aria-hidden='true')
+                        span.visually-hidden Next
+              .col-xl-6.col-12
+                .card
+                  .card-header
+                    h4 With Captions
+                    p.f-m-light.mt-1
+                      | Add captions to your slides easily with the
+                      code  .carousel-caption
+                      |  element within any 
+                      code .carousel-item
+                      | .
+                  .card-body
+                    #carouselExampleCaptions.carousel.slide(data-bs-ride='false')
+                      .carousel-indicators
+                        button.active(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+                        button(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='1' aria-label='Slide 2')
+                        button(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='2' aria-label='Slide 3')
+                      .carousel-inner
+                        .carousel-item.active
+                          img.d-block.w-100(src='../assets/images/slider/9.jpg' alt='drawing-room')
+                          .carousel-caption.d-none.d-md-block
+                            h5 The area in the house that is most comfortable.
+                            p  You can watch folks you wouldn't have in your house amuse you in your living room thanks to the development of television.
+                        .carousel-item
+                          img.d-block.w-100(src='../assets/images/slider/1.jpg' alt='drawing-room')
+                          .carousel-caption.d-none.d-md-block
+                            h5 Drawing Room
+                            p Regardless of how big or tiny your home is, think about hiring an interior designer. They give you a calm living atmosphere in addition to decorating your home.
+                        .carousel-item
+                          img.d-block.w-100(src='../assets/images/slider/2.jpg' alt='drawing-room')
+                          .carousel-caption.d-none.d-md-block
+                            h5 House Interior
+                            p If you want to alter your way of life, start with redesigning your house's interior.
+                      button.carousel-control-prev(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide='prev')
+                        span.carousel-control-prev-icon(aria-hidden='true')
+                        span.visually-hidden Previous
+                      button.carousel-control-next(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide='next')
+                        span.carousel-control-next-icon(aria-hidden='true')
+                        span.visually-hidden Next
+              .col-xl-6.col-12
+                .card.height-equal
+                  .card-header
+                    h4 Cross-Fade
+                    p.f-m-light.mt-1
+                      | Add 
+                      code .carousel-fade
+                      |  to your carousel to animate slides with a fade transition instead of a slide. Depending on your carousel content.
+                  .card-body
+                    #carouselExampleFade.carousel.slide.carousel-fade(data-bs-ride='carousel')
+                      .carousel-inner
+                        .carousel-item.active
+                          img.d-block.w-100(src='../assets/images/slider/1.jpg' alt='drawing-room')
+                        .carousel-item
+                          img.d-block.w-100(src='../assets/images/slider/11.jpg' alt='drawing-room')
+                        .carousel-item
+                          img.d-block.w-100(src='../assets/images/slider/7.jpg' alt='drawing-room')
+                        .carousel-item
+                          img.d-block.w-100(src='../assets/images/slider/10.jpg' alt='drawing-room')
+                      button.carousel-control-prev(type='button' data-bs-target='#carouselExampleFade' data-bs-slide='prev')
+                        span.carousel-control-prev-icon(aria-hidden='true')
+                        span.visually-hidden Previous
+                      button.carousel-control-next(type='button' data-bs-target='#carouselExampleFade' data-bs-slide='next')
+                        span.carousel-control-next-icon(aria-hidden='true')
+                        span.visually-hidden Next
+              .col-xl-6.col-12
+                .card.height-equal
+                  .card-header
+                    h4 Individual Carousel-Item Interval
+                    p.f-m-light.mt-1
+                    | Add 
+                    code data-bs-interval=""
+                    |  to a
+                    code  .carousel-item
+                    |   to change the amount of time to delay between automatically cycling to the next item.
+                  .card-body
+                    #carouselExampleInterval.carousel.slide(data-bs-ride='carousel')
+                      .carousel-inner
+                        .carousel-item.active(data-bs-interval='10000')
+                          img.d-block.w-100(src='../assets/images/slider/5.jpg' alt='drawing-room')
+                        .carousel-item(data-bs-interval='2000')
+                          img.d-block.w-100(src='../assets/images/slider/2.jpg' alt='drawing-room')
+                        .carousel-item
+                          img.d-block.w-100(src='../assets/images/slider/10.jpg' alt='drawing-room')
+                      button.carousel-control-prev(type='button' data-bs-target='#carouselExampleInterval' data-bs-slide='prev')
+                        span.carousel-control-prev-icon(aria-hidden='true')
+                        span.visually-hidden Previous
+                      button.carousel-control-next(type='button' data-bs-target='#carouselExampleInterval' data-bs-slide='next')
+                        span.carousel-control-next-icon(aria-hidden='true')
+                        span.visually-hidden Next
+              .col-xl-6.col-12
+                .card.height-equal
+                  .card-header
+                    h4 Disable Touch Swiping
+                    p.f-m-light.mt-1
+                      | Carousels support swiping left/right on touchscreen devices to move between slides. This can be disabled using the 
+                      code data-bs-touch 
+                      |  attribute.
+                  .card-body
+                    #carouselExampleControlsNoTouching.carousel.slide(data-bs-touch='false')
+                      .carousel-inner
+                        .carousel-item.active
+                          img.d-block.w-100(src='../assets/images/slider/4.jpg' alt='drawing-room')
+                        .carousel-item
+                          img.d-block.w-100(src='../assets/images/slider/8.jpg' alt='drawing-room')
+                        .carousel-item
+                          img.d-block.w-100(src='../assets/images/slider/6.jpg' alt='drawing-room')
+                      button.carousel-control-prev(type='button' data-bs-target='#carouselExampleControlsNoTouching' data-bs-slide='prev')
+                        span.carousel-control-prev-icon(aria-hidden='true')
+                        span.visually-hidden Previous
+                      button.carousel-control-next(type='button' data-bs-target='#carouselExampleControlsNoTouching' data-bs-slide='next')
+                        span.carousel-control-next-icon(aria-hidden='true')
+                        span.visually-hidden Next
+              .col-xl-6.col-12
+                .card.height-equal
+                  .card-header
+                    h4 Dark Variant
+                    p.f-m-light.mt-1
+                      | Add 
+                      code .carousel-dark
+                      |   to the 
+                      code .carousel
+                      |   for darker controls, indicators, and captions. 
+                  .card-body
+                    #carouselExampleDark.carousel.carousel-dark.slide(data-bs-ride='carousel')
+                      .carousel-indicators
+                        button.active(type='button' data-bs-target='#carouselExampleDark' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+                        button(type='button' data-bs-target='#carouselExampleDark' data-bs-slide-to='1' aria-label='Slide 2')
+                        button(type='button' data-bs-target='#carouselExampleDark' data-bs-slide-to='2' aria-label='Slide 3')
+                      .carousel-inner
+                        .carousel-item.active(data-bs-interval='10000')
+                          img.d-block.w-100(src='../assets/images/slider/1.jpg' alt='drawing-room')
+                          .carousel-caption.d-none.d-md-block.carousel-opacity
+                            h5 We decorate our homes
+                            p If you have been dreaming about bringing your living room together, our designers are here to help. Come see what we can do for your space.
+                        .carousel-item(data-bs-interval='2000')
+                          img.d-block.w-100(src='../assets/images/slider/3.jpg' alt='drawing-room')
+                          .carousel-caption.d-none.d-md-block.carousel-opacity
+                            h5 This couch is a great topic of conversation.
+                            p A sofa is the ideal spot to enjoy a movie, nod off, and wake up.
+                        .carousel-item
+                          img.d-block.w-100(src='../assets/images/slider/6.jpg' alt='drawing-room')
+                          .carousel-caption.d-none.d-md-block.carousel-opacity
+                            h5 Sometimes all you really need to unwind is a comfortable couch.
+                            p A house you can create with your friends is a great place.
+                      button.carousel-control-prev(type='button' data-bs-target='#carouselExampleDark' data-bs-slide='prev')
+                        span.carousel-control-prev-icon(aria-hidden='true')
+                        span.visually-hidden Previous
+                      button.carousel-control-next(type='button' data-bs-target='#carouselExampleDark' data-bs-slide='next')
+                        span.carousel-control-next-icon(aria-hidden='true')
+                        span.visually-hidden Next
+            h4.my-4.common-title Swiper Sliders
+            .row
+              .col-xl-6.col-12
+                .card
+                  .card-header
+                    h4 Vertical Slider
+                    p.f-m-light.mt-1
+                      | Height of image can be set by adding 
+                      code vertical-sweeper & sweeper-h 
+                      | classes and images will be swept vertically.
+                  .card-body  
+                    .swiper.vertical-swiper.swiper-h
+                      .swiper-wrapper 
+                        .swiper-slide
+                          img(src="../assets/images/slider/1.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/2.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/3.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/4.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/5.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/6.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/7.jpg", alt="")
+                      .swiper-pagination
+              .col-xl-6.col-12
+                .card
+                  .card-header
+                    h4 Nested Swiper
+                    p.f-m-light.mt-1
+                      | Height of image can be set by adding 
+                      code nested-horizontal-swiper & sweeper-h 
+                      | classes and images will be swept vertically & horizontally.
+                  .card-body  
+                    .swiper.nested-horizontal-swiper.swiper-h
+                      .swiper-wrapper
+                        .swiper-slide 
+                            img(src="../assets/images/slider/7.jpg", alt="")
+                        .swiper-slide
+                          .swiper.nested-vertical-swiper
+                            .swiper-wrapper
+                              .swiper-slide 
+                                img(src="../assets/images/slider/8.jpg", alt="")
+                              .swiper-slide
+                                img(src="../assets/images/slider/10.jpg", alt="")
+                              .swiper-slide 
+                                img(src="../assets/images/slider/11.jpg", alt="")
+                              .swiper-slide
+                                img(src="../assets/images/slider/1.jpg", alt="")
+                              .swiper-slide
+                                img(src="../assets/images/slider/2.jpg", alt="")
+                            .swiper-pagination
+                        .swiper-slide 
+                          img(src="../assets/images/slider/3.jpg", alt="")
+                        .swiper-slide 
+                          img(src="../assets/images/slider/4.jpg", alt="")
+                      .swiper-pagination
+              .col-xl-6.col-12
+                .card
+                  .card-header
+                    h4 Mouse Wheel Variant
+                    p.f-m-light.mt-1
+                      | Height of image can be set by adding 
+                      code mouseweel-swiper & sweeper-h 
+                      | classes and images will be swept through mouseweel.
+                  .card-body  
+                    .swiper.mouseweel-swiper.swiper-h
+                      .swiper-wrapper
+                        .swiper-slide 
+                          img(src="../assets/images/slider/3.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/4.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/5.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/6.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/7.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/8.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/9.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/10.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/11.jpg", alt="")
+                      .swiper-pagination
+              .col-xl-6.col-12
+                .card
+                  .card-header
+                    h4 Auto Play Variant
+                    p.f-m-light.mt-1
+                      | Height of image can be set by adding 
+                      code autoplay-swiper & sweeper-h 
+                      | classes and images will be swept autoplay.
+                  .card-body  
+                    .swiper.autoplay-swiper.swiper-h
+                      .swiper-wrapper
+                        .swiper-slide 
+                          img(src="../assets/images/slider/11.jpg", alt="")
+                        .swiper-slide 
+                          img(src="../assets/images/slider/2.jpg", alt="")
+                        .swiper-slide 
+                          img(src="../assets/images/slider/3.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/4.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/5.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/6.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/7.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/8.jpg", alt="")
+                        .swiper-slide
+                          img(src="../assets/images/slider/10.jpg", alt="")
+                      .swiper-button-next
+                      .swiper-button-prev
+                      .swiper-pagination
+              .col-12
+                  .card
+                    .card-header
+                      h4 Effect Coverflow
+                      p.f-m-light.mt-1
+                        | Height of image can be set by adding 
+                        code coverflow-slider 
+                        | classes and images will be swept 3D way.
+                    .card-body
+                      .swiper.coverflow-slider
+                        .swiper-wrapper
+                          .swiper-slide
+                            img(src="../assets/images/slider/2.jpg", alt="")
+                          .swiper-slide
+                            img(src="../assets/images/slider/3.jpg", alt="")
+                          .swiper-slide
+                            img(src="../assets/images/slider/4.jpg", alt="")
+                          .swiper-slide
+                            img(src="../assets/images/slider/5.jpg", alt="")
+                          .swiper-slide
+                            img(src="../assets/images/slider/6.jpg", alt="")
+                          .swiper-slide
+                            img(src="../assets/images/slider/7.jpg", alt="")
+                          .swiper-slide
+                            img(src="../assets/images/slider/8.jpg", alt="")
+                          .swiper-slide
+                            img(src="../assets/images/slider/9.jpg", alt="")
+                          .swiper-slide
+                            img(src="../assets/images/slider/10.jpg", alt="")
+                        .swiper-pagination
+  
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

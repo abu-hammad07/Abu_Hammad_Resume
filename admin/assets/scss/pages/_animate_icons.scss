@@ -1,0 +1,172 @@
+/**=====================
+    1 Animate_icons CSS Start
+==========================**/
+.main-animate {
+    // display: flex;
+
+    // >div {
+    //     justify-content: center;
+    // }
+
+    a {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--light-bg);
+        overflow: hidden;
+    }
+
+    svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    svg {
+        stroke: var(--chart-text-color);
+        &.fill-secondary {
+            stroke: none;
+        }
+    }
+
+    i {
+        color: var(--chart-text-color);
+        border-radius: 50%;
+    }
+}
+
+.pulse-wrapper {
+    a {
+        border-radius: 50%;
+    }
+
+    svg {
+        animation: pulse-animate 1s infinite ease;
+        border-radius: 50%;
+    }
+
+    i {
+        animation: pulse-animate 1s infinite ease;
+    }
+}
+
+.heartbeat-wrapper {
+    a {
+        border-radius: 50%;
+    }
+
+    svg {
+        animation: heartbeat-rate 1s infinite ease;
+        border-radius: 50%;
+        stroke: $danger-color;
+    }
+
+    i {
+        color: $danger-color;
+        animation: heartbeat-rate 1s infinite ease;
+    }
+}
+
+.wave-wrapper {
+    a {
+        border-radius: 50%;
+    }
+
+    svg,
+    img {
+        animation: water-wave 1s infinite ease;
+        border-radius: 50%;
+    }
+
+    i {
+        animation: water-wave 1s infinite ease;
+    }
+}
+
+
+//  border animations
+.border-pulse-wrapper {
+    a {
+        border: 4px double var(--recent-dashed-border);
+        border-radius: unset;
+
+        svg,
+        i {
+            border-radius: 1%;
+        }
+    }
+}
+
+.pulse-rhombus {
+    a {
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+
+    svg,
+    i {
+        border-radius: 0;
+    }
+}
+
+.pulse-rabbet {
+    a {
+        clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+    }
+}
+
+@keyframes pulse-animate {
+    0% {
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.1);
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes heartbeat-rate {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    15% {
+        transform: scale(.8);
+    }
+
+    20% {
+        transform: scale(.85);
+        opacity: 1;
+    }
+
+    35% {
+        transform: scale(1.3);
+        opacity: .6;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes water-wave {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/**=====================
+    1 Animate_icons CSS End
+==========================**/

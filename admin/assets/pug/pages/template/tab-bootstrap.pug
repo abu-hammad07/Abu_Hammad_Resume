@@ -1,0 +1,1534 @@
+- var page_Title = 'Tab-bootstrap';
+- var theme_customizer      = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+- var clipboard             = true;
+- var prism                 = true;
+- var customcard            = true;
+- var height_equal          = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Ui Kits','Bootstrap Tabs'],'Bootstrap Tabs')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts                    
+          .container-fluid
+            .row
+              .col-sm-12.col-xl-6
+                .card
+                  .card-header
+                    h4 Simple Tabs
+                    p.mt-1.f-m-light
+                        | Use the 
+                        code nav-link
+                        |  with 
+                        code active
+                        |  class to jump particular tabs.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    ul.simple-wrapper#myTab.nav.nav-tabs(role='tablist')
+                      li.nav-item
+                          a#home-tab.nav-link.txt-primary(data-bs-toggle='tab' href='#home' role='tab' aria-controls='home' aria-selected='true') Home
+                      li.nav-item
+                          a#profile-tabs.nav-link.active.txt-primary(data-bs-toggle='tab' href='#profile' role='tab' aria-controls='profile' aria-selected='false') Profile
+                      li.nav-item
+                          a#contact-tab.nav-link.txt-primary(data-bs-toggle='tab' href='#contact' role='tab' aria-controls='contact' aria-selected='false') Contact
+                    #myTabContent.tab-content
+                      #home.tab-pane.fade(role='tabpanel' aria-labelledby='home-tab')
+                          p.pt-3
+                              | This is some placeholder content the 
+                              b Home tab's 
+                              | associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation. Bootstrap provides a flexible and easy-to-use tab component that allows developers to create tabbed navigation effortlessly.
+                      #profile.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='profile-tabs')
+                          div.pt-3.mb-0
+                              .flex-space.flex-wrap.align-items-center
+                                  img.tab-img(src="../assets/images/avtar/3.jpg", alt="profile") 
+                                  ul.d-flex.flex-column.gap-1
+                                    li 
+                                        strong Visit Us:
+                                        |  2600 Hollywood Blvd,Florida, United States-33020
+                                    li 
+                                        strong Mail Us:
+                                        |  contact@us@gmail.com
+                                    li
+                                        strong Contact Number: 
+                                        |  (954) 357-7760
+                      #contact.tab-pane.fade(role='tabpanel' aria-labelledby='contact-tab')
+                          ul.pt-3.d-flex.flex-column.gap-1
+                            li
+                                | Us Technology offers web & mobile development solutions for all industry verticals.Include a short form using fields that'll help your business understand who's contacting them.
+                            li 
+                                strong Visit Us: 
+                                |  2600 Hollywood Blvd,Florida, United States-	33020
+                            li 
+                                strong Mail Us:
+                                |  contact@us@gmail.com
+                            li 
+                                strong Contact Number: 
+                                |  (954) 357-7760
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#simple-tabs', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#simple-tabs
+                          |&lt;ul class="simple-wrapper nav nav-tabs" id="myTab" role="tablist"&gt;
+                          |  &lt;li class="nav-item"&gt;&lt;a class="nav-link txt-primary" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                          |  &lt;li class="nav-item"&gt;&lt;a class="nav-link active txt-primary" id="profile-tabs" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+                          |  &lt;li class="nav-item"&gt;&lt;a class="nav-link txt-primary" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                          |&lt;/ul&gt;
+                          |&lt;div class="tab-content" id="myTabContent"&gt;
+                          |  &lt;div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab"&gt;
+                          |    &lt;p class="pt-3"&gt;This is some placeholder content the&lt;b&gt;Home tab's&lt;/b&gt;associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation. Bootstrap provides a flexible and easy-to-use tab component that allows developers to create tabbed navigation effortlessly.&lt;/p&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tabs"&gt;
+                          |    &lt;div class="pt-3 mb-0"&gt;
+                          |      &lt;div class="flex-space flex-wrap align-items-center"&gt;&lt;img class="tab-img" src="../assets/images/avtar/3.jpg" alt="profile"&gt;
+                          |        &lt;ul class="d-flex flex-column gap-1"&gt;
+                          |          &lt;li&gt;
+                          |            &lt;strong&gt;Visit Us:&lt;/strong&gt;2600 Hollywood Blvd,Florida, United States-33020
+                          |          &lt;/li&gt;
+                          |          &lt;li&gt;
+                          |            &lt;strong&gt;Mail Us:&lt;/strong&gt;contact@us@gmail.com
+                          |          &lt;/li&gt;
+                          |          &lt;li&gt;
+                          |            &lt;strong&gt;Contact Number:&lt;/strong&gt;(954) 357-7760
+                          |          &lt;/li&gt;
+                          |        &lt;/ul&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"&gt;
+                          |    &lt;ul class="pt-3 d-flex flex-column gap-1"&gt;
+                          |      &lt;li&gt;Us Technology offers web & mobile development solutions for all industry verticals.Include a short form using fields that'll help your business understand who's contacting them.&lt;/li&gt;
+                          |      &lt;li&gt;
+                          |        &lt;strong&gt;Visit Us:&lt;/strong&gt;2600 Hollywood Blvd,Florida, United States-33020
+                          |      &lt;/li&gt;
+                          |      &lt;li&gt;
+                          |        &lt;strong&gt;Mail Us:&lt;/strong&gt;contact@us@gmail.com
+                          |      &lt;/li&gt;
+                          |      &lt;li&gt;
+                          |        &lt;strong&gt;Contact Number:&lt;/strong&gt;(954) 357-7760
+                          |      &lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+
+              .col-sm-12.col-xl-6
+                .card
+                  .card-header
+                    h4 Icons with Tabs
+                    p.mt-1.f-m-light
+                      | Use the 
+                      code nav-link 
+                      | with 
+                      code active 
+                      | class to switch particular tabs and with 
+                      code "Ico" 
+                      | icons you can take 
+                      code "tab".
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    ul#icon-tab.nav.nav-tabs(role='tablist')
+                      li.nav-item
+                          a#icon-home-tab.nav-link.active.txt-secondary(data-bs-toggle='tab' href='#icon-home' role='tab' aria-controls='icon-home' aria-selected='true') 
+                              i.icofont.icofont-ui-home
+                              |Home
+                      li.nav-item
+                          a#profile-icon-tabs.nav-link.txt-secondary(data-bs-toggle='tab' href='#profile-icon' role='tab' aria-controls='profile-icon' aria-selected='false')
+                              i.icofont.icofont-man-in-glasses
+                              | Profile
+                      li.nav-item
+                          a#contact-icon-tab.nav-link.txt-secondary(data-bs-toggle='tab' href='#contact-icon' role='tab' aria-controls='contact-icon' aria-selected='false')
+                              i.icofont.icofont-contacts
+                              | Contact
+                    #icon-tabContent.tab-content
+                      #icon-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='icon-home-tab')
+                          p.pt-3
+                              |  This is some placeholder content the 
+                              b Home tab's
+                              |  associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation. Bootstrap provides a flexible and easy-to-use tab component that allows developers to create tabbed navigation effortlessly.
+                      #profile-icon.tab-pane.fade(role='tabpanel' aria-labelledby='profile-icon-tabs')
+                          div.pt-3.mb-0
+                              .flex-space.flex-wrap.align-items-center
+                                  img.tab-img(src="../assets/images/avtar/7.jpg", alt="profile") 
+                                  ul.d-flex.flex-column.gap-1
+                                    li 
+                                        strong Visit Us:  
+                                        |  278 Green Avenue Oakland, CA 94612
+                                    li
+                                        strong Mail Us:
+                                        |  MichaelMMcGowan@teleworm.us
+                                    li
+                                        strong Contact Number: 
+                                        |  510-767-0025
+                      #contact-icon.tab-pane.fade(role='tabpanel' aria-labelledby='contact-icon-tab')
+                        p.pt-3
+                            | Us Technology offers web & mobile development solutions for all industry verticals.Include a short form using fields that'll help your business understand who's contacting them. 
+                        label.form-label(for='exampleFormControlone') Email address
+                        input#exampleFormControlone.form-control(type='email' placeholder='youremail@gmail.com')
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#icon-tab-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#icon-tab-copy
+                          |&lt;ul class="nav nav-tabs" id="icon-tab" role="tablist"&gt;
+                          |  &lt;li class="nav-item"&gt;
+                          |    &lt;a class="nav-link active txt-secondary" id="icon-home-tab" data-bs-toggle="tab" href="#icon-home" role="tab" aria-controls="icon-home" aria-selected="true"&gt;
+                          |      &lt;i class="icofont icofont-ui-home"&gt;&lt;/i&gt;Home
+                          |    &lt;/a&gt;
+                          |  &lt;/li&gt;
+                          |  &lt;li class="nav-item"&gt;
+                          |    &lt;a class="nav-link txt-secondary" id="profile-icon-tabs" data-bs-toggle="tab" href="#profile-icon" role="tab" aria-controls="profile-icon" aria-selected="false"&gt;
+                          |      &lt;i class="icofont icofont-man-in-glasses"&gt;&lt;/i&gt;Profile
+                          |    &lt;/a&gt;
+                          |  &lt;/li&gt;
+                          |  &lt;li class="nav-item"&gt;
+                          |    &lt;a class="nav-link txt-secondary" id="contact-icon-tab" data-bs-toggle="tab" href="#contact-icon" role="tab" aria-controls="contact-icon" aria-selected="false"&gt;
+                          |      &lt;i class="icofont icofont-contacts"&gt;&lt;/i&gt;Contact
+                          |    &lt;/a&gt;
+                          |  &lt;/li&gt;
+                          |&lt;/ul&gt;
+                          |&lt;div class="tab-content" id="icon-tabContent"&gt;
+                          |  &lt;div class="tab-pane fade show active" id="icon-home" role="tabpanel" aria-labelledby="icon-home-tab"&gt;
+                          |    &lt;p class="pt-3"&gt;This is some placeholder content the&lt;b&gt;home tab's&lt;/b&gt;associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation. Bootstrap provides a flexible and easy-to-use tab component that allows developers to create tabbed navigation effortlessly.&lt;/p&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="tab-pane fade" id="profile-icon" role="tabpanel" aria-labelledby="profile-icon-tabs"&gt;
+                          |    &lt;div class="pt-3 mb-0"&gt;
+                          |      &lt;div class="flex-space flex-wrap align-items-center"&gt;
+                          |        &lt;img class="tab-img" src="../assets/images/avtar/7.jpg" alt="profile"&gt;
+                          |        &lt;ul class="d-flex flex-column gap-1"&gt;
+                          |          &lt;li&gt;
+                          |            &lt;strong&gt;Visit Us:&lt;/strong&gt;278 Green Avenue Oakland, CA 94612
+                          |          &lt;/li&gt;
+                          |          &lt;li&gt;
+                          |            &lt;strong&gt;Mail Us:&lt;/strong&gt;MichaelMMcGowan@teleworm.us
+                          |          &lt;/li&gt;
+                          |          &lt;li&gt;
+                          |            &lt;strong&gt;Contact Number:&lt;/strong&gt;510-767-0025
+                          |          &lt;/li&gt;
+                          |        &lt;/ul&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="tab-pane fade" id="contact-icon" role="tabpanel" aria-labelledby="contact-icon-tab"&gt;
+                          |    &lt;p class="pt-3"&gt;Us Technology offers web & mobile development solutions for all industry verticals.Include a short form using fields that'll help your business understand who's contacting them.&lt;/p&gt;
+                          |    &lt;label class="form-label" for="exampleFormControlone"&gt;Email Address&lt;/label&gt;
+                          |    &lt;input class="form-control" id="exampleFormControlone" type="email" placeholder="youremail@gmail.com"&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+
+              .col-sm-12.col-xxl-6
+                .card.height-equal
+                  .card-header
+                    h4 Vertical Tabs
+                    p.mt-1.f-m-light
+                        | Use the 
+                        code #var-pills-tab
+                        |  id to change vertical tabs.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.main-vertical-tab
+                    .row.gy-2     
+                        .col-md-4.col-xs-12
+                            #ver-pills-tab.nav.flex-column.nav-pills.nav-success(role='tablist' aria-orientation='vertical')
+                                a#ver-pills-home-tab.nav-link(data-bs-toggle='pill' href='#ver-pills-home' role='tab' aria-controls='ver-pills-home' aria-selected='true') Home
+                                a#ver-pills-components-tab.nav-link.active(data-bs-toggle='pill' href='#ver-pills-components' role='tab' aria-controls='ver-pills-components' aria-selected='false') Components
+                                a#ver-pills-pages-tab.nav-link(data-bs-toggle='pill' href='#ver-pills-pages' role='tab' aria-controls='ver-pills-pages' aria-selected='false') Pages
+                                  span.badge.badge-light-light 3
+                                a#ver-pills-settings-tab.nav-link(data-bs-toggle='pill' href='#ver-pills-settings' role='tab' aria-controls='ver-pills-settings' aria-selected='false') Settings
+                        .col-md-8.col-xs-12
+                            #ver-pills-tabContent.tab-content
+                                #ver-pills-home.tab-pane.fade(role='tabpanel' aria-labelledby='ver-pills-home-tab')
+                                    p
+                                      | This is some placeholder content the 
+                                      b Home tab's 
+                                      |  associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other 
+                                      b.txt-danger .nav
+                                      | -powered navigation.
+                                #ver-pills-components.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='ver-pills-components-tab')
+                                    p
+                                      | This is some placeholder content the 
+                                      b Component tab's 
+                                      |  associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other 
+                                      b.txt-danger .nav
+                                      | -powered navigation.
+                                #ver-pills-pages.tab-pane.fade(role='tabpanel' aria-labelledby='ver-pills-pages-tab')
+                                    p
+                                      | This is some placeholder content the 
+                                      b Page tab's 
+                                      |  associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other 
+                                      b.txt-danger .nav
+                                      | -powered navigation.
+                                #ver-pills-settings.tab-pane.fade(role='tabpanel' aria-labelledby='ver-pills-settings-tab')
+                                  p
+                                      | This is some placeholder content the 
+                                      b Setting tab's 
+                                      |  associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other 
+                                      b.txt-danger .nav
+                                      | -powered navigation.
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#vertical-tab-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#vertical-tab-copy
+                          |&lt;div class="row"&gt;    
+                          |  &lt;div class="col-md-4 col-xs-12"&gt;
+                          |    &lt;div class="nav flex-column nav-pills nav-secondary" id="ver-pills-tab" role="tablist" aria-orientation="vertical"&gt;&lt;a class="nav-link" id="ver-pills-home-tab" data-bs-toggle="pill" href="#ver-pills-home" role="tab" aria-controls="ver-pills-home" aria-selected="true"&gt;Home&lt;/a&gt;&lt;a class="nav-link active" id="ver-pills-components-tab" data-bs-toggle="pill" href="#ver-pills-components" role="tab" aria-controls="ver-pills-components" aria-selected="false"&gt;Components&lt;/a&gt;&lt;a class="nav-link" id="ver-pills-pages-tab" data-bs-toggle="pill" href="#ver-pills-pages" role="tab" aria-controls="ver-pills-pages" aria-selected="false"&gt;Pages<span class="badge badge-light-light p-1 px-2"&gt;3</span>&lt;/a&gt;&lt;a class="nav-link" id="ver-pills-settings-tab" data-bs-toggle="pill" href="#ver-pills-settings" role="tab" aria-controls="ver-pills-settings" aria-selected="false"&gt;Settings&lt;/a&gt;&lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="col-md-8 col-xs-12"&gt;
+                          |    &lt;div class="tab-content" id="ver-pills-tabContent"&gt;
+                          |      &lt;div class="tab-pane fade" id="ver-pills-home" role="tabpanel" aria-labelledby="ver-pills-home-tab"&gt;
+                          |        &lt;p&gt;This is some placeholder content the&lt;b&gt;Home tab's&lt;/b&gt;associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other&lt;b&gt;.nav&lt;/b&gt;-powered navigation.&lt;/p&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="tab-pane fade show active" id="ver-pills-components" role="tabpanel" aria-labelledby="ver-pills-components-tab"&gt;
+                          |        &lt;p&gt;This is some placeholder content the&lt;b&gt;Component tab's&lt;/b&gt;associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other&lt;b&gt;.nav&lt;/b&gt;-powered navigation.&lt;/p&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="tab-pane fade" id="ver-pills-pages" role="tabpanel" aria-labelledby="ver-pills-pages-tab"&gt;
+                          |        &lt;p&gt;This is some placeholder content the&lt;b&gt;Page tab's&lt;/b&gt;associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other&lt;b&gt;.nav&lt;/b&gt;-powered navigation.&lt;/p&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="tab-pane fade" id="ver-pills-settings" role="tabpanel" aria-labelledby="ver-pills-settings-tab"&gt;
+                          |        &lt;p&gt;This is some placeholder content the&lt;b&gt;Setting tab's&lt;/b&gt;associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other&lt;b&gt;.nav&lt;/b&gt;-powered navigation.&lt;/p&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+      
+              .col-sm-12.col-xxl-6
+                .card.height-equal
+                  .card-header
+                    h4 Pills Tabs
+                    p.mt-1.f-m-light
+                        | Use the 
+                        code data-bs-toggle="pill"
+                        |  for tabs pill shape.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    ul#pills-tab.nav.nav-pills.nav-primary(role='tablist')
+                      li.nav-item
+                          a#pills-aboutus-tab.nav-link(data-bs-toggle='pill' href='#pills-aboutus' role='tab' aria-controls='pills-aboutus' aria-selected='true')
+                              | About us
+                      li.nav-item
+                          a#pills-contactus-tab.nav-link(data-bs-toggle='pill' href='#pills-contactus' role='tab' aria-controls='pills-contactus' aria-selected='false') Contact us
+                      li.nav-item
+                          a#pills-blog-tab.nav-link.active(data-bs-toggle='pill' href='#pills-blog' role='tab' aria-controls='pills-blog' aria-selected='false') Blog 
+                    #pills-tabContent.tab-content
+                      #pills-aboutus.tab-pane.fade(role='tabpanel' aria-labelledby='pills-aboutus-tab')
+                          p.pt-3
+                              | The ultimate goal of every web design is to create a site that will reach its audience and be useful to them. In order to achieve that, it is necessary to befriend Google's mechanisms and algorithms. There is no use of a pretty website, if it's displayed on a 10th page of search results, because this way no one will ever find it. That brings us to the topic of Google's Website Ranking.Generally speaking, it's a list of pages and their keywords, sorted in the order of search results. The higher your place in the ranking is, the more people are likely to see your page.
+                      #pills-contactus.tab-pane.fade(role='tabpanel' aria-labelledby='pills-contactus-tab')
+                          ul.d-flex.flex-column.gap-1.pt-3
+                            li
+                                |  Create professional web page design. Responsive, fully customizable with easy Drag-n-Drop Nicepage editor. Adjust colors, fonts, header and footer, layout and other design elements, as well as content and images.
+                            li
+                                strong Visit Us: 
+                                |  4 Marigold Close, Glenmore Park, New South Wales, 2745 Australia- 2745
+                            li 
+                                strong Mail Us:
+                                |  SamuelMario@armyspy.com
+                            li 
+                                strong Contact Number: 
+                                |  (02) 4733 6337
+                      #pills-blog.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-blog-tab')
+                          .pt-3.d-flex.align-items-center.gap-3.pills-blogger 
+                              .blog-wrapper 
+                                  img.blog-img(src="../assets/images/dashboard-2/headphones.png", alt="head-phone")
+                              .blog-content 
+                                  p 
+                                    strong Smart headphones
+                                    |   — also called smart earbuds or hearable — are high-tech in-ear devices that do more than transmit audio. These headphones are usually wireless, and they can sync up with your phone, tablet, computer or other Bluetooth-enabled device. The main appeal of hearables is convenience, as they allow you to complete common tasks without directly accessing your phone or computer. Smart wireless headphones sync up to other devices using Bluetooth technology, and many of their features rely on data from your smartphone or computer.
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#pills-tab-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#pills-tab-copy
+                          |&lt;ul class="nav nav-pills nav-primary" id="pills-tab" role="tablist"&gt;
+                          |  &lt;li class="nav-item"&gt;
+                          |    &lt;a class="nav-link" id="pills-aboutus-tab" data-bs-toggle="pill" href="#pills-aboutus" role="tab" aria-controls="pills-aboutus" aria-selected="true"&gt;About us
+                          |    &lt;/a&gt;
+                          |  &lt;/li&gt;
+                          |  &lt;li class="nav-item"&gt;
+                          |    &lt;a class="nav-link" id="pills-contactus-tab" data-bs-toggle="pill" href="#pills-contactus" role="tab" aria-controls="pills-contactus" aria-selected="false"&gt;Contact us
+                          |    &lt;/a&gt;
+                          |  &lt;/li&gt;
+                          |  &lt;li class="nav-item"&gt;
+                          |    &lt;a class="nav-link active" id="pills-blog-tab" data-bs-toggle="pill" href="#pills-blog" role="tab" aria-controls="pills-blog" aria-selected="false"&gt;Blog
+                          |    &lt;/a&gt;
+                          |  &lt;/li&gt;
+                          |&lt;/ul&gt;
+                          |&lt;div class="tab-content" id="pills-tabContent"&gt;
+                          |  &lt;div class="tab-pane fade" id="pills-aboutus" role="tabpanel" aria-labelledby="pills-aboutus-tab"&gt;
+                          |    &lt;p class="pt-3"&gt;The ultimate goal of every web design is to create a site that will reach its audience and be useful to them. In order to achieve that, it is necessary to befriend Google's mechanisms and algorithms. There is no use of a pretty website, if it's displayed on a 10th page of search results, because this way no one will ever find it. That brings us to the topic of Google's Website Ranking.Generally speaking, it's a list of pages and their keywords, sorted in the order of search results. The higher your place in the ranking is, the more people are likely to see your page.&lt;/p&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="tab-pane fade" id="pills-contactus" role="tabpanel" aria-labelledby="pills-contactus-tab"&gt;
+                          |    &lt;ul class="d-flex flex-column gap-1 pt-3"&gt;
+                          |      &lt;li&gt;Create professional web page design. Responsive, fully customizable with easy drag-n-drop nice page editor. Adjust colors, fonts, header and footer, layout and other design elements, as well as content and images.&lt;/li&gt;
+                          |      &lt;li&gt;
+                          |        &lt;strong&gt;Visit Us:&lt;/strong&gt;4 Marigold Close, Glenmore Park, New South Wales, 2745 Australia- 2745
+                          |      &lt;/li&gt;
+                          |      &lt;li&gt;
+                          |        &lt;strong&gt;Mail Us:&lt;/strong&gt;SamuelMario@armyspy.com
+                          |      &lt;/li&gt;
+                          |      &lt;li&gt;
+                          |        &lt;strong&gt;Contact Number:&lt;/strong&gt;(02) 4733 6337
+                          |      &lt;/li&gt;
+                          |    &lt;/ul&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="tab-pane fade show active" id="pills-blog" role="tabpanel" aria-labelledby="pills-blog-tab"&gt;
+                          |    &lt;div class="pt-3 d-flex align-items-center gap-3 pills-blogger"&gt; 
+                          |      &lt;div class="blog-wrapper"&gt;
+                          |        &lt;img class="blog-img" src="../assets/images/dashboard-2/headphones.png" alt="head-phone"&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="blog-content"&gt; 
+                          |        &lt;p&gt;
+                          |          &lt;strong&gt;Smart headphones&lt;/strong&gt; — also called smart earbuds or hearable — are high-tech in-ear devices that do more than transmit audio. These headphones are usually wireless, and they can sync up with your phone, tablet, computer or other Bluetooth-enabled device. The main appeal of hearables is convenience, as they allow you to complete common tasks without directly accessing your phone or computer. Smart wireless headphones sync up to other devices using Bluetooth technology, and many of their features rely on data from your smartphone or computer.
+                          |        &lt;/p&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+    
+              .col-xxl-6 
+                .card 
+                  .card-header
+                    h4 Justify Tabs
+                    p.mt-1.f-m-light
+                        | Use the 
+                        code nav-link
+                        |  with 
+                        code active 
+                        | class and set content using flex property.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    .card-header.d-flex.justify-content-between.align-items-center.flex-wrap.gap-2.pb-2.p-0
+                      p MOFI Profiles For New Employees:
+                      ul#j-pills-tab.nav.nav-pills.nav-warning(role='tablist')
+                        li.nav-item
+                          a#j-pills-web-designer-tab.nav-link(data-bs-toggle='pill' href='#j-pills-web-designer' role='tab' aria-controls='j-pills-web-designer' aria-selected='true')  Web designer
+                        li.nav-item
+                          a#j-pills-UX-designer-tab.nav-link.active(data-bs-toggle='pill' href='#j-pills-UX-designer' role='tab' aria-controls='j-pills-UX-designer' aria-selected='false') UX designer
+                        li.nav-item
+                          a#j-pills-IOT-developer-tab.nav-link(data-bs-toggle='pill' href='#j-pills-IOT-developer' role='tab' aria-controls='j-pills-IOT-developer' aria-selected='false') IOT developer
+                    .card-body.px-0.pb-0 
+                      #j-pills-tabContent.tab-content
+                          #j-pills-web-designer.tab-pane.fade(role='tabpanel' aria-labelledby='j-pills-web-designer-tab')
+                              .designer-details
+                                  .designer-profile 
+                                      .designer-wrap
+                                          img.designer-img(src="../assets/images/avtar/3.jpg", alt="profile")
+                                          .designer-content 
+                                              h6 Kathy M. Anderson
+                                              p  440-494-0729
+                                  .designer-profile 
+                                      .designer-wrap
+                                          img.designer-img(src="../assets/images/avtar/4.jpg", alt="profile")
+                                          .designer-content 
+                                              h6 Lillian J. Goodfellow
+                                              p 239-664-7751
+                                  .designer-profile 
+                                      .designer-wrap
+                                          img.designer-img(src="../assets/images/avtar/7.jpg", alt="profile")
+                                          .designer-content 
+                                              h6 Carolyn A. Sutton
+                                              p 218-793-6609
+                                  .designer-profile 
+                                      .designer-wrap
+                                          img.designer-img(src="../assets/images/avtar/11.jpg", alt="profile")
+                                          .designer-content 
+                                              h6 Mary O. Miller
+                                              p 720-744-0921
+                                  .designer-profile 
+                                      .designer-wrap
+                                          img.designer-img(src="../assets/images/avtar/16.jpg", alt="profile")
+                                          .designer-content 
+                                              h6 Patricia H. Hummel
+                                              p 314-445-1451
+                                  .designer-profile 
+                                      .designer-wrap
+                                          img.designer-img(src="../assets/images/blog/4.jpg", alt="profile")
+                                          .designer-content 
+                                              h6 Minnie F. Evans
+                                              p 718-740-8438
+                          #j-pills-UX-designer.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='j-pills-UX-designer-tab')
+                              .designer-details
+                                  .designer-profile 
+                                      .designer-wrap
+                                          img.designer-img(src="../assets/images/blog/9.jpg", alt="profile")
+                                          .designer-content 
+                                              h6 Thomas A. Leroy
+                                              p 305-539-6871
+                                  .designer-profile 
+                                      .designer-wrap
+                                          img.designer-img(src="../assets/images/blog/12.png", alt="profile")
+                                          .designer-content 
+                                              h6 Mark S. Ward
+                                              p 303-561-8880
+                                  .designer-profile 
+                                      .designer-wrap
+                                          img.designer-img(src="../assets/images/blog/14.png", alt="profile")
+                                          .designer-content 
+                                              h6 Emily T. Hooper
+                                              p 301-553-1836
+                                  .designer-profile 
+                                      .designer-wrap
+                                          img.designer-img(src="../assets/images/blog/comment.jpg", alt="profile")
+                                          .designer-content 
+                                              h6 Natasha W. Watson
+                                              p 267-605-4499
+                                  .designer-profile 
+                                      .designer-wrap
+                                          img.designer-img(src="../assets/images/blog/9.jpg", alt="profile")
+                                          .designer-content 
+                                              h6 Jennifer A. Camacho
+                                              p 770-527-7554
+                                  .designer-profile 
+                                      .designer-wrap
+                                          img.designer-img(src="../assets/images/avtar/3.jpg", alt="profile")
+                                          .designer-content 
+                                              h6 Ann J. Strickland
+                                              p 469-218-4678
+                          #j-pills-IOT-developer.tab-pane.fade(role='tabpanel' aria-labelledby='j-pills-IOT-developer-tab')
+                              .designer-details
+                                  .designer-profile 
+                                      .designer-wrap
+                                          img.designer-img(src="../assets/images/avtar/11.jpg", alt="profile")
+                                          .designer-content 
+                                              h6 Jaclyn T. Duncan
+                                              p 413-618-9222
+                                  .designer-profile 
+                                      .designer-wrap
+                                          img.designer-img(src="../assets/images/avtar/16.jpg", alt="profile")
+                                          .designer-content 
+                                              h6 Christine H. Lin
+                                              p 909-219-0342
+                                  .designer-profile 
+                                      .designer-wrap
+                                          img.designer-img(src="../assets/images/avtar/3.jpg", alt="profile")
+                                          .designer-content 
+                                              h6 Ronnie S. Mountain
+                                              p 978-426-9732
+                                  .designer-profile 
+                                      .designer-wrap
+                                          img.designer-img(src="../assets/images/blog/12.png", alt="profile")
+                                          .designer-content 
+                                              h6 Louise A. Hilliard
+                                              p 502-262-5600
+                                  .designer-profile 
+                                      .designer-wrap
+                                          img.designer-img(src="../assets/images/blog/comment.jpg", alt="profile")
+                                          .designer-content 
+                                              h6 Kayla Hutt
+                                              p 312-456-8275
+                                  .designer-profile 
+                                      .designer-wrap
+                                          img.designer-img(src="../assets/images/blog/4.jpg", alt="profile")
+                                          .designer-content 
+                                              h6 Amber Cecil
+                                              p 802-662-2407
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#justify-tab-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#justify-tab-copy
+                          |&lt;div class="tab-content" id="j-pills-tabContent"&gt;
+                          |  &lt;div class="tab-pane fade" id="j-pills-web-designer" role="tabpanel" aria-labelledby="j-pills-web-designer-tab"&gt;
+                          |    &lt;div class="designer-details"&gt;
+                          |      &lt;div class="designer-profile"&gt; 
+                          |        &lt;div class="designer-wrap"&gt;&lt;img class="designer-img" src="../assets/images/user/3.png" alt="profile"&gt;
+                          |          &lt;div class="designer-content"&gt; 
+                          |            &lt;h6&gt;Kathy M. Anderson&lt;/h6&gt;
+                          |            &lt;p&gt;440-494-0729&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="designer-profile"&gt; 
+                          |        &lt;div class="designer-wrap"&gt;&lt;img class="designer-img" src="../assets/images/avtar/4.jpg" alt="profile"&gt;
+                          |          &lt;div class="designer-content"&gt; 
+                          |            &lt;h6&gt;Lillian J. Goodfellow&lt;/h6&gt;
+                          |            &lt;p&gt;239-664-7751&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="designer-profile"&gt; 
+                          |        &lt;div class="designer-wrap"&gt;&lt;img class="designer-img" src="../assets/images/user/2.jpg" alt="profile"&gt;
+                          |          &lt;div class="designer-content"&gt; 
+                          |            &lt;h6&gt;Carolyn A. Sutton&lt;/h6&gt;
+                          |            &lt;p&gt;218-793-6609&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="designer-profile"&gt; 
+                          |        &lt;div class="designer-wrap"&gt;&lt;img class="designer-img" src="../assets/images/avtar/11.jpg" alt="profile"&gt;
+                          |          &lt;div class="designer-content"&gt; 
+                          |            &lt;h6&gt;Mary O. Miller&lt;/h6&gt;
+                          |            &lt;p&gt;720-744-0921&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="designer-profile"&gt; 
+                          |        &lt;div class="designer-wrap"&gt;&lt;img class="designer-img" src="../assets/images/avtar/16.jpg" alt="profile"&gt;
+                          |          &lt;div class="designer-content"&gt; 
+                          |            &lt;h6&gt;Patricia H. Hummel&lt;/h6&gt;
+                          |            &lt;p&gt;314-445-1451&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="designer-profile"&gt; 
+                          |        &lt;div class="designer-wrap"&gt;&lt;img class="designer-img" src="../assets/images/blog/4.jpg" alt="profile"&gt;
+                          |          &lt;div class="designer-content"&gt; 
+                          |            &lt;h6&gt;Minnie F. Evans&lt;/h6&gt;
+                          |            &lt;p&gt;718-740-8438&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="tab-pane fade show active" id="j-pills-UX-designer" role="tabpanel" aria-labelledby="j-pills-UX-designer-tab"&gt;
+                          |    &lt;div class="designer-details"&gt;
+                          |      &lt;div class="designer-profile"&gt; 
+                          |        &lt;div class="designer-wrap"&gt;&lt;img class="designer-img" src="../assets/images/dashboard-11/user/1.jpg" alt="profile"&gt;
+                          |          &lt;div class="designer-content"&gt; 
+                          |            &lt;h6&gt;Thomas A. Leroy&lt;/h6&gt;
+                          |            &lt;p&gt;305-539-6871&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="designer-profile"&gt; 
+                          |        &lt;div class="designer-wrap"&gt;&lt;img class="designer-img" src="../assets/images/dashboard-11/user/4.jpg" alt="profile"&gt;
+                          |          &lt;div class="designer-content"&gt; 
+                          |            &lt;h6&gt;Mark S. Ward&lt;/h6&gt;
+                          |            &lt;p&gt;303-561-8880&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="designer-profile"&gt; 
+                          |        &lt;div class="designer-wrap"&gt;&lt;img class="designer-img" src="../assets/images/dashboard-11/user/2.jpg" alt="profile"&gt;
+                          |          &lt;div class="designer-content"&gt; 
+                          |            &lt;h6&gt;Emily T. Hooper&lt;/h6&gt;
+                          |            &lt;p&gt;301-553-1836&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="designer-profile"&gt; 
+                          |        &lt;div class="designer-wrap"&gt;&lt;img class="designer-img" src="../assets/images/dashboard-11/user/7.jpg" alt="profile"&gt;
+                          |          &lt;div class="designer-content"&gt; 
+                          |            &lt;h6&gt;Natasha W. Watson&lt;/h6&gt;
+                          |            &lt;p&gt;267-605-4499&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="designer-profile"&gt; 
+                          |        &lt;div class="designer-wrap"&gt;&lt;img class="designer-img" src="../assets/images/dashboard-11/user/10.jpg" alt="profile"&gt;
+                          |          &lt;div class="designer-content"&gt; 
+                          |            &lt;h6&gt;Jennifer A. Camacho&lt;/h6&gt;
+                          |            &lt;p&gt;770-527-7554&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="designer-profile"&gt; 
+                          |        &lt;div class="designer-wrap"&gt;&lt;img class="designer-img" src="../assets/images/dashboard-11/user/11.jpg" alt="profile"&gt;
+                          |          &lt;div class="designer-content"&gt; 
+                          |            &lt;h6&gt;Ann J. Strickland&lt;/h6&gt;
+                          |            &lt;p&gt;469-218-4678&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="tab-pane fade" id="j-pills-IOT-developer" role="tabpanel" aria-labelledby="j-pills-IOT-developer-tab"&gt;
+                          |    &lt;div class="designer-details"&gt;
+                          |      &lt;div class="designer-profile"&gt; 
+                          |        &lt;div class="designer-wrap"&gt;&lt;img class="designer-img" src="../assets/images/dashboard-11/user/3.jpg" alt="profile"&gt;
+                          |          &lt;div class="designer-content"&gt; 
+                          |            &lt;h6&gt;Jaclyn T. Duncan&lt;/h6&gt;
+                          |            &lt;p&gt;413-618-9222&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="designer-profile"&gt; 
+                          |        &lt;div class="designer-wrap"&gt;&lt;img class="designer-img" src="../assets/images/dashboard-11/user/8.jpg" alt="profile"&gt;
+                          |          &lt;div class="designer-content"&gt; 
+                          |            &lt;h6&gt;Christine H. Lin&lt;/h6&gt;
+                          |            &lt;p&gt;909-219-0342&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="designer-profile"&gt; 
+                          |        &lt;div class="designer-wrap"&gt;&lt;img class="designer-img" src="../assets/images/dashboard-11/user/12.jpg" alt="profile"&gt;
+                          |          &lt;div class="designer-content"&gt; 
+                          |            &lt;h6&gt;Ronnie S. Mountain&lt;/h6&gt;
+                          |            &lt;p&gt;978-426-9732&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="designer-profile"&gt; 
+                          |        &lt;div class="designer-wrap"&gt;&lt;img class="designer-img" src="../assets/images/dashboard-11/user/5.jpg" alt="profile"&gt;
+                          |          &lt;div class="designer-content"&gt; 
+                          |            &lt;h6&gt;Louise A. Hilliard&lt;/h6&gt;
+                          |            &lt;p&gt;502-262-5600&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="designer-profile"&gt; 
+                          |        &lt;div class="designer-wrap"&gt;&lt;img class="designer-img" src="../assets/images/dashboard-9/user/3.png" alt="profile"&gt;
+                          |          &lt;div class="designer-content"&gt; 
+                          |            &lt;h6&gt;Kayla Hutt&lt;/h6&gt;
+                          |            &lt;p&gt;312-456-8275&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="designer-profile"&gt; 
+                          |        &lt;div class="designer-wrap"&gt;&lt;img class="designer-img" src="../assets/images/dashboard-11/user/9.jpg" alt="profile"&gt;
+                          |          &lt;div class="designer-content"&gt; 
+                          |            &lt;h6&gt;Amber Cecil&lt;/h6&gt;
+                          |            &lt;p&gt;802-662-2407&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+      
+              .col-xxl-6 
+                .card 
+                  .card-header
+                    h4 Material Style Left Tabs
+                    p.mt-1.f-m-light
+                        | Use the 
+                        code nav-link 
+                        | with 
+                        code active 
+                        | class for switching to another tabs and
+                        code  aria-orientation='vertical'
+                        | for vertical tabs.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                        .tabs-responsive-side
+                            .material-wrapper
+                                .d-flex
+                                    #sideline-tab.nav.flex-column.nav-secondary.border-tab.nav-left(role='tablist' aria-orientation='vertical')
+                                        a#sideline-home-tab.nav-link.nav-effect.active(data-bs-toggle='pill' href='#sideline-home' role='tab' aria-controls='sideline-home' aria-selected='true') Home
+                                        a#sideline-profile-tab.nav-link.nav-effect(data-bs-toggle='pill' href='#sideline-profile' role='tab' aria-controls='sideline-profile' aria-selected='false') Profile
+                                        a#sideline-messages-tab.nav-link.nav-effect(data-bs-toggle='pill' href='#sideline-messages' role='tab' aria-controls='sideline-messages' aria-selected='false') Inbox
+                                        a#sideline-settings-tab.nav-link.nav-effect.pb-0(data-bs-toggle='pill' href='#sideline-settings' role='tab' aria-controls='sideline-settings' aria-selected='false') Settings
+                                .material-content
+                                    #sideline-tabContent.tab-content
+                                        #sideline-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='sideline-home-tab')
+                                            p
+                                                | This product is meant for educational purposes only. Any resemblance to real persons, living or dead is purely coincidental. Void where prohibited. Some assembly required. List each check separately by bank number. Batteries not included.Google Web Designer gives you the power to create beautiful and compelling videos, images and HTML5 ads. Use animation and interactive elements to build out your creative vision, then scale your content for different sizes or audiences with responsive and dynamic workflows.
+                                        #sideline-profile.tab-pane.fade(role='tabpanel' aria-labelledby='sideline-profile-tab')
+                                            .flex-space.flex-wrap.align-items-center
+                                                img.tab-img(src="../assets/images/ecommerce/08.jpg", alt="profile") 
+                                                ul.d-flex.flex-column.gap-1
+                                                    li 
+                                                        strong  Name: 
+                                                        |  Jully Catlin
+                                                    li
+                                                        strong Visit Us: 
+                                                        |  50006 Ehrenberg/Parker,Arkansas-85334
+                                                    li
+                                                        strong Mail Us:
+                                                        |  hello.@gmail.com
+                                                    li
+                                                        strong Contact Number: 
+                                                        |  (928) 923-7940
+                                        #sideline-messages.tab-pane.fade(role='tabpanel' aria-labelledby='sideline-messages-tab')
+                                            .card-body.p-0
+                                                .main-inbox 
+                                                    .header-inbox.justify-content-start.gap-2
+                                                        .header-left-inbox
+                                                            .inbox-img
+                                                                img(src="../assets/images/ecommerce/07.jpg", alt="profile")
+                                                        .inbox-content 
+                                                            h6 Dalbult Caslin 
+                                                            p.text-muted stroman.rogers@gmail.com
+                                                    .body-inbox.mt-2
+                                                        .body-h-wrapper
+                                                            i.me-2.tab-space.icofont.icofont-star
+                                                            em Compare Prices Find the Best Computer Assessors Fronted Issue.
+                                                        p.pt-2 Site speed and design are two of the most important ranking factors Google takes into consideration, as they have the biggest effect of customer staying on site as the website respond faster.
+                                        #sideline-settings.tab-pane.fade(role='tabpanel' aria-labelledby='sideline-settings-tab')
+                                            p
+                                                strong  In this situation, you would probably do two things:
+                                                |  exit the page, or look for the trusty search bar. If you decide to stick around, a proper search function should take your query and send you to your destination. Problem solved. It's not a perfect experience, but it's a hard one to avoid on larger websites that simply can't link to every piece of content from the homepage.
+                        .code-box-copy
+                          button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#material-l-tab-copy', title='Copy')
+                            i.icofont.icofont-copy-alt
+                          pre.theme-scrollbar
+                            code.language-html#material-l-tab-copy
+                              |&lt;div class="tabs-responsive-side"&gt;
+                              |  &lt;div class="material-wrapper"&gt;
+                              |    &lt;div class="d-flex"&gt;
+                              |      &lt;div class="nav flex-column nav-secondary border-tab nav-left" id="sideline-tab" role="tablist" aria-orientation="vertical"&gt;&lt;a class="nav-link nav-effect active" id="sideline-home-tab" data-bs-toggle="pill" href="#sideline-home" role="tab" aria-controls="sideline-home" aria-selected="true"&gt;Home&lt;/a&gt;&lt;a class="nav-link nav-effect" id="sideline-profile-tab" data-bs-toggle="pill" href="#sideline-profile" role="tab" aria-controls="sideline-profile" aria-selected="false"&gt;Profile&lt;/a&gt;&lt;a class="nav-link nav-effect" id="sideline-messages-tab" data-bs-toggle="pill" href="#sideline-messages" role="tab" aria-controls="sideline-messages" aria-selected="false"&gt;Inbox&lt;/a&gt;&lt;a class="nav-link nav-effect pb-0" id="sideline-settings-tab" data-bs-toggle="pill" href="#sideline-settings" role="tab" aria-controls="sideline-settings" aria-selected="false"&gt;Settings&lt;/a&gt;&lt;/div&gt;
+                              |    &lt;/div&gt;
+                              |    &lt;div class="material-content"&gt;
+                              |      &lt;div class="tab-content" id="sideline-tabContent"&gt;
+                              |        &lt;div class="tab-pane fade show active" id="sideline-home" role="tabpanel" aria-labelledby="sideline-home-tab"&gt;
+                              |          &lt;p&gt;This product is meant for educational purposes only. Any resemblance to real persons, living or dead is purely coincidental. Void where prohibited. Some assembly required. List each check separately by bank number. Batteries not included.Google Web Designer gives you the power to create beautiful and compelling videos, images and HTML5 ads. Use animation and interactive elements to build out your creative vision, then scale your content for different sizes or audiences with responsive and dynamic workflows.&lt;/p&gt;
+                              |        &lt;/div&gt;
+                              |        &lt;div class="tab-pane fade" id="sideline-profile" role="tabpanel" aria-labelledby="sideline-profile-tab"&gt;
+                              |          &lt;div class="flex-space flex-wrap align-items-center"&gt;&lt;img class="tab-img" src="../assets/images/ecommerce/08.jpg" alt="profile"&gt;
+                              |            &lt;ul class="d-flex flex-column gap-1"&gt;
+                              |              &lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt;Jake Catlin&lt;/li&gt;
+                              |              &lt;li&gt;&lt;strong&gt;Visit Us:&lt;/strong&gt;50006 Ehrenberg/Parker,Arkansas-85334&lt;/li&gt;
+                              |              &lt;li&gt;&lt;strong&gt;Mail Us:&lt;/strong&gt;Jake.@gmail.com&lt;/li&gt;
+                              |              &lt;li&gt;&lt;strong&gt;Contact Number:&lt;/strong&gt;(928) 923-7940&lt;/li&gt;
+                              |            &lt;/ul&gt;
+                              |          &lt;/div&gt;
+                              |        &lt;/div&gt;
+                              |        &lt;div class="tab-pane fade" id="sideline-messages" role="tabpanel" aria-labelledby="sideline-messages-tab"&gt;
+                              |          &lt;div class="card-body p-0"&gt;
+                              |            &lt;div class="main-inbox"&gt; 
+                              |              &lt;div class="header-inbox justify-content-start gap-2"&gt;
+                              |                &lt;div class="header-left-inbox"&gt;
+                              |                  &lt;div class="inbox-img"&gt;&lt;img src="../assets/images/ecommerce/07.jpg" alt="profile"&gt;&lt;/div&gt;
+                              |                &lt;/div&gt;
+                              |                &lt;div class="inbox-content"&gt; 
+                              |                  &lt;h6&gt;Dalbult Caslin&lt;/h6&gt;
+                              |                  &lt;p class="text-muted"&gt;stroman.rogers@gmail.com&lt;/p&gt;
+                              |                &lt;/div&gt;
+                              |              &lt;/div&gt;
+                              |              &lt;div class="body-inbox mt-2"&gt;
+                              |                &lt;div class="body-h-wrapper"&gt;&lt;i class="me-2 tab-space icofont icofont-star"&gt;&lt;/i&gt;&lt;em&gt;Compare Prices Find the Best Computer Assessors Fronted Issue.&lt;/em&gt;&lt;/div&gt;
+                              |                &lt;p class="pt-2"&gt;Site speed and design are two of the most important ranking factors Google takes into consideration, as they have the biggest effect of customer staying on site as the website respond faster.&lt;/p&gt;
+                              |              &lt;/div&gt;
+                              |            &lt;/div&gt;
+                              |          &lt;/div&gt;
+                              |        &lt;/div&gt;
+                              |        &lt;div class="tab-pane fade" id="sideline-settings" role="tabpanel" aria-labelledby="sideline-settings-tab"&gt;
+                              |          &lt;p&gt;&lt;strong&gt;In this situation, you would probably do two things:&lt;/strong&gt; exit the page, or look for the trusty search bar. If you decide to stick around, a proper search function should take your query and send you to your destination. Problem solved. It's not a perfect experience, but it's a hard one to avoid on larger websites that simply can't link to every piece of content from the homepage.&lt;/p&gt;
+                              |        &lt;/div&gt;
+                              |      &lt;/div&gt;
+                              |    &lt;/div&gt;
+                              |  &lt;/div&gt;
+                              |&lt;/div&gt;
+
+              .col-xxl-6 
+                .card 
+                  .card-header
+                    h4 Material Style Tabs
+                    p.mt-1.f-m-light
+                        | Use the 
+                        code nav-link 
+                        | with 
+                        code active 
+                        | class to switch and customize tabs.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.bottom-border-tab
+                    ul#topline-tab.nav.nav-tabs.border-tab.border-0.mb-0.nav-danger(role='tablist')
+                      li.nav-item
+                          a#topline-top-user-tab.nav-link.active.nav-border.pt-0.txt-danger.nav-danger(data-bs-toggle='tab' href='#topline-top-user' role='tab' aria-controls='topline-top-user' aria-selected='true')
+                              i.icofont.icofont-man-in-glasses
+                              | User
+                      li.nav-item
+                          a#topline-top-description-tab.nav-link.nav-border.txt-danger.nav-danger(data-bs-toggle='tab' href='#topline-top-description' role='tab' aria-controls='topline-top-description' aria-selected='false')
+                              i.icofont.icofont-file-document
+                              | Description
+                      li.nav-item
+                          a#topline-top-review-tab.nav-link.nav-border.txt-danger.nav-danger(data-bs-toggle='tab' href='#topline-top-review' role='tab' aria-controls='topline-top-review' aria-selected='false')
+                              i.icofont.icofont-star
+                              | Review
+                    #topline-tabContent.tab-content
+                      #topline-top-user.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='topline-top-user-tab')
+                          .card-body.px-0.pb-0   
+                              .user-header.pb-2 
+                                  h6.fw-bold User Details:
+                              .user-content 
+                                .table-responsive
+                                    table.table.mb-0
+                                        thead
+                                            tr
+                                                th(scope='col') #
+                                                th(scope='col') Name
+                                                th(scope='col') Country
+                                                th(scope='col') Contact No
+                                        tbody
+                                            tr
+                                                th(scope='row') 1
+                                                td Neha
+                                                td India 
+                                                td 5698741236
+                                            tr
+                                                th(scope='row') 2
+                                                td Jacklin
+                                                td Thailand
+                                                td 7800030320
+                      #topline-top-description.tab-pane.fade(role='tabpanel' aria-labelledby='topline-top-description-tab')
+                          .card-body.px-0.pb-0 
+                              .user-header.pb-2 
+                                  h6.fw-bold Description:
+                              .user-content 
+                                .table-responsive
+                                    table.table.mb-0
+                                        thead
+                                            tr
+                                                th(scope='col') Technology
+                                                th(scope='col') Interest 
+                                                th(scope='col') Salary Expected 
+                                        tbody
+                                            tr
+                                                td Web Designer
+                                                td HTML,CSS,JS,SCSS
+                                                td 45000
+                                            tr
+                                                td UX Designer
+                                                td Figma,Photoshop,craft
+                                                td 20000
+                      #topline-top-review.tab-pane.fade(role='tabpanel' aria-labelledby='topline-top-review-tab')
+                          .card-body.px-0.pb-0
+                              .user-header.pb-2 
+                                  h6.fw-bold Review:
+                              .user-content 
+                                .table-responsive
+                                    table.table.mb-0
+                                        thead
+                                            tr
+                                                th(scope='col') #
+                                                th(scope='col') Name
+                                                th(scope='col') Country
+                                                th(scope='col') Rating 
+                                        tbody
+                                            tr
+                                                th(scope='row') 1
+                                                td Neha
+                                                td India 
+                                                td 
+                                                    i.ico-color.icofont.icofont-star
+                                                    i.ico-color.icofont.icofont-star
+                                                    i.ico-color.icofont.icofont-star
+                                                    i.ico-color.icofont.icofont-star
+                                            tr
+                                                th(scope='row') 2
+                                                td Irfan
+                                                td India
+                                                td 
+                                                    i.ico-color.icofont.icofont-star
+                                                    i.ico-color.icofont.icofont-star
+                                                    i.ico-color.icofont.icofont-star
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#material-tab-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#material-tab-copy
+                          |&lt;ul class="nav nav-tabs border-tab border-0 mb-0 nav-secondary" id="topline-tab" role="tablist"&gt;
+                          |  &lt;li class="nav-item"&gt;&lt;a class="nav-link active nav-border pt-0 txt-secondary nav-secondary" id="topline-top-user-tab" data-bs-toggle="tab" href="#topline-top-user" role="tab" aria-controls="topline-top-user" aria-selected="true"&gt;&lt;i class="icofont icofont-man-in-glasses"&gt;&lt;/i&gt;User&lt;/a&gt;&lt;/li&gt;
+                          |  &lt;li class="nav-item"&gt;&lt;a class="nav-link nav-border txt-secondary nav-secondary" id="topline-top-description-tab" data-bs-toggle="tab" href="#topline-top-description" role="tab" aria-controls="topline-top-description" aria-selected="false"&gt;&lt;i class="icofont icofont-file-document"&gt;&lt;/i&gt;Description&lt;/a&gt;&lt;/li&gt;
+                          |  &lt;li class="nav-item"&gt;&lt;a class="nav-link nav-border txt-secondary nav-secondary" id="topline-top-review-tab" data-bs-toggle="tab" href="#topline-top-review" role="tab" aria-controls="topline-top-review" aria-selected="false"&gt;&lt;i class="icofont icofont-star"&gt;&lt;/i&gt;Review&lt;/a&gt;&lt;/li&gt;
+                          |&lt;/ul&gt;
+                          |&lt;div class="tab-content" id="topline-tabContent"&gt;
+                          |  &lt;div class="tab-pane fade show active" id="topline-top-user" role="tabpanel" aria-labelledby="topline-top-user-tab"&gt;
+                          |    &lt;div class="card-body px-0 pb-0"&gt;  
+                          |      &lt;div class="user-header pb-2"&gt; 
+                          |        &lt;h6 class="fw-bold"&gt;User Details:&lt;/h6&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="user-content"&gt; 
+                          |        &lt;div class="table-responsive theme-scrollbar"&gt;
+                          |          &lt;table class="table mb-0"&gt;
+                          |            &lt;thead&gt;
+                          |              &lt;tr&gt;
+                          |                &lt;th scope="col"&gt;#&lt;/th&gt;
+                          |                &lt;th scope="col"&gt;Name&lt;/th&gt;
+                          |                &lt;th scope="col"&gt;Country&lt;/th&gt;
+                          |                &lt;th scope="col"&gt;Contact No&lt;/th&gt;
+                          |              &lt;/tr&gt;
+                          |            &lt;/thead&gt;
+                          |            &lt;tbody&gt;
+                          |              &lt;tr&gt;
+                          |                &lt;th scope="row"&gt;1&lt;/th&gt;
+                          |                &lt;td&gt;Neha&lt;/td&gt;
+                          |                &lt;td&gt;India &lt;/td&gt;
+                          |                &lt;td&gt;5698741236&lt;/td&gt;
+                          |              &lt;/tr&gt;
+                          |              &lt;tr&gt;
+                          |                &lt;th scope="row"&gt;2&lt;/th&gt;
+                          |                &lt;td&gt;Jacklin&lt;/td&gt;
+                          |                &lt;td&gt;Thailand&lt;/td&gt;
+                          |                &lt;td&gt;7800030320&lt;/td&gt;
+                          |              &lt;/tr&gt;
+                          |            &lt;/tbody&gt;
+                          |          &lt;/table&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="tab-pane fade" id="topline-top-description" role="tabpanel" aria-labelledby="topline-top-description-tab"&gt;
+                          |    &lt;div class="card-body px-0 pb-0"&gt; 
+                          |      &lt;div class="user-header pb-2"&gt; 
+                          |        &lt;h6 class="fw-bold"&gt;Description:&lt;/h6&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="user-content"&gt; 
+                          |        &lt;div class="table-responsive theme-scrollbar"&gt;
+                          |          &lt;table class="table mb-0"&gt;
+                          |            &lt;thead&gt;
+                          |              &lt;tr&gt;
+                          |                &lt;th scope="col"&gt;Technology&lt;/th&gt;
+                          |                &lt;th scope="col"&gt;Interests&lt;/th&gt;
+                          |                &lt;th scope="col"&gt;Salary Expected&lt;/th&gt;
+                          |              &lt;/tr&gt;
+                          |            &lt;/thead&gt;
+                          |            &lt;tbody&gt;
+                          |              &lt;tr&gt;
+                          |                &lt;td&gt;Web Designer&lt;/td&gt;
+                          |                &lt;td&gt;HTML,CSS,JS,SCSS&lt;/td&gt;
+                          |                &lt;td&gt;45000&lt;/td&gt;
+                          |              &lt;/tr&gt;
+                          |              &lt;tr&gt;
+                          |                &lt;td&gt;UX Designer&lt;/td&gt;
+                          |                &lt;td&gt;Figma,Photoshop,Sketch&lt;/td&gt;
+                          |                &lt;td&gt;20000&lt;/td&gt;
+                          |              &lt;/tr&gt;
+                          |            &lt;/tbody&gt;
+                          |          &lt;/table&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="tab-pane fade" id="topline-top-review" role="tabpanel" aria-labelledby="topline-top-review-tab"&gt;
+                          |    &lt;div class="card-body px-0 pb-0"&gt;
+                          |      &lt;div class="user-header pb-2"&gt; 
+                          |        &lt;h6 class="fw-bold"&gt;Review:&lt;/h6&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="user-content"&gt; 
+                          |        &lt;div class="table-responsive theme-scrollbar"&gt;
+                          |          &lt;table class="table mb-0"&gt;
+                          |            &lt;thead&gt;
+                          |              &lt;tr&gt;
+                          |                &lt;th scope="col"&gt;#&lt;/th&gt;
+                          |                &lt;th scope="col"&gt;Name&lt;/th&gt;
+                          |                &lt;th scope="col"&gt;Country&lt;/th&gt;
+                          |                &lt;th scope="col"&gt;Rating&lt;/th&gt;
+                          |              &lt;/tr&gt;
+                          |            &lt;/thead&gt;
+                          |            &lt;tbody&gt;
+                          |              &lt;tr&gt;
+                          |                &lt;th scope="row"&gt;1&lt;/th&gt;
+                          |                &lt;td&gt;Neha&lt;/td&gt;
+                          |                &lt;td&gt;India &lt;/td&gt;
+                          |                &lt;td&gt;&lt;i class="ico-color icofont icofont-star"&gt;&lt;/i&gt;&lt;i class="ico-color icofont icofont-star"&gt;&lt;/i&gt;&lt;i class="ico-color icofont icofont-star"&gt;&lt;/i&gt;&lt;i class="ico-color icofont icofont-star"&gt;&lt;/i&gt;&lt;i class="ico-color icofont icofont-star"&gt;&lt;/i&gt;&lt;/td&gt;
+                          |              &lt;/tr&gt;
+                          |              &lt;tr&gt;
+                          |                &lt;th scope="row"&gt;2&lt;/th&gt;
+                          |                &lt;td&gt;Irfan&lt;/td&gt;
+                          |                &lt;td&gt;India&lt;/td&gt;
+                          |                &lt;td&gt;&lt;i class="ico-color icofont icofont-star"&gt;&lt;/i&gt;&lt;i class="ico-color icofont icofont-star"&gt;&lt;/i&gt;&lt;i class="ico-color icofont icofont-star"&gt;&lt;/i&gt;&lt;/td&gt;
+                          |              &lt;/tr&gt;
+                          |            &lt;/tbody&gt;
+                          |          &lt;/table&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+
+              .col-xxl-6 
+                .card 
+                  .card-header
+                    h4 Border Tabs 
+                    p.mt-1.f-m-light
+                        | Use the 
+                        code nav-link 
+                        | with 
+                        code active 
+                        | class to add bottom border styles.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.bottom-border-tab
+                    ul#bottom-tab.nav.nav-tabs.border-tab.mb-0(role='tablist')
+                      li.nav-item
+                          a#bottom-home-tab.nav-link.nav-border.txt-info.tab-info.pt-0(data-bs-toggle='tab' href='#bottom-home' role='tab' aria-controls='bottom-home' aria-selected='true')
+                              i.icofont.icofont-ui-home 
+                              | Home
+                      li.nav-item
+                          a#bottom-inbox-tab.nav-link.nav-border.txt-info.tab-info.active(data-bs-toggle='tab' href='#bottom-inbox' role='tab' aria-controls='bottom-inbox' aria-selected='false')
+                              i.icofont.icofont-ui-message
+                              | Inbox
+                      li.nav-item
+                          a#bottom-contact-tab.nav-link.nav-border.txt-info.tab-info(data-bs-toggle='tab' href='#bottom-contact' role='tab' aria-controls='bottom-contact' aria-selected='false')
+                              i.icofont.icofont-man-in-glasses
+                              | Contact
+                    #bottom-tabContent.tab-content
+                      #bottom-home.tab-pane.fade(role='tabpanel' aria-labelledby='bottom-home-tab')
+                          p.pt-3
+                              | This is some placeholder content the 
+                              strong Home tab's 
+                              |  associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other 
+                              strong .nav
+                              | -powered navigation.To convey the 
+                              strong active 
+                              |  state to assistive technologies, use the 
+                              strong aria-current 
+                              |  attribute — using the page value for current page, or true for the current item in a set. The base 
+                              strong nav 
+                              |  component is built with flexbox and provide a strong foundation for building all types of navigation components.
+                      #bottom-inbox.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='bottom-inbox-tab')
+                          .card-body.pb-0
+                              .main-inbox 
+                                  .header-inbox 
+                                      .header-left-inbox
+                                          .inbox-img
+                                              img(src="../assets/images/ecommerce/06.jpg", alt="profile")
+                                          .inbox-content 
+                                              h6 Dalbult Caslin 
+                                              p.text-muted stroman.rogers@gmail.com
+                                      ul.header-right-inbox
+                                          li 
+                                              p 8 JAN 11:30PM
+                                          li 
+                                              i.txt-danger.icofont.icofont-ui-delete
+                                          li 
+                                              i.icofont.icofont-telegram
+                                  .body-inbox.mt-2
+                                      .body-h-wrapper
+                                          i.me-2.tab-space.icofont.icofont-star
+                                          em Compare Prices Find the Best Computer Assessors Fronted Issue.
+                                      p.pt-2 Site speed and design are two of the most important ranking factors Google takes into consideration, as they have the biggest effect of customer staying on site as the website respond faster.
+                      #bottom-contact.tab-pane.fade(role='tabpanel' aria-labelledby='bottom-contact-tab')
+                          .card-body.px-0.pb-0 
+                              .form 
+                                  .mb-3
+                                      label.form-label(for='exampleFormControltwo') Email address
+                                      input#exampleFormControltwo.form-control(type='email' placeholder='youremail@gmail.com')
+                                  .mb-0
+                                      label.form-label(for='exampleFormControlTextarea1') Example textarea
+                                      textarea#exampleFormControlTextarea1.form-control(rows='3')
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#border-tab-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#border-tab-copy
+                          |&lt;ul class="nav nav-tabs border-tab mb-0" id="border-tab" role="tablist"&gt;
+                          |  &lt;li class="nav-item"&gt;&lt;a class="nav-link nav-border txt-primary tab-primary pt-0" id="bottom-home-tab" data-bs-toggle="tab" href="#bottom-home" role="tab" aria-controls="bottom-home" aria-selected="true"&gt;&lt;i class="icofont icofont-ui-home"&gt; &lt;/i&gt;Home&lt;/a&gt;&lt;/li&gt;
+                          |  &lt;li class="nav-item"&gt;&lt;a class="nav-link nav-border txt-primary tab-primary active" id="bottom-inbox-tab" data-bs-toggle="tab" href="#bottom-inbox" role="tab" aria-controls="bottom-inbox" aria-selected="false"&gt;&lt;i class="icofont icofont-ui-message"&gt;&lt;/i&gt;Inbox&lt;/a&gt;&lt;/li&gt;
+                          |  &lt;li class="nav-item"&gt;&lt;a class="nav-link nav-border txt-primary tab-primary" id="bottom-contact-tab" data-bs-toggle="tab" href="#bottom-contact" role="tab" aria-controls="bottom-contact" aria-selected="false"&gt;&lt;i class="icofont icofont-man-in-glasses"&gt;&lt;/i&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                          |&lt;/ul&gt;
+                          |&lt;div class="tab-content" id="border-tabContent"&gt;
+                          |  &lt;div class="tab-pane fade" id="bottom-home" role="tabpanel" aria-labelledby="bottom-home-tab"&gt;
+                          |    &lt;p class="pt-3"&gt;This is some placeholder content the&lt;strong&gt;Home tab's&lt;/strong&gt;associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other&lt;strong&gt;.nav&lt;/strong&gt;-powered navigation.To convey the&lt;strong&gt;active&lt;/strong&gt; state to assistive technologies, use the&lt;strong&gt;aria-current&lt;/strong&gt; attribute — using the page value for current page, or true for the current item in a set. The base&lt;strong&gt;nav&lt;/strong&gt; component is built with flexbox and provide a strong foundation for building all types of navigation components.&lt;/p&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="tab-pane fade show active" id="bottom-inbox" role="tabpanel" aria-labelledby="bottom-inbox-tab"&gt;
+                          |    &lt;div class="card-body pb-0"&gt;
+                          |      &lt;div class="main-inbox"&gt; 
+                          |        &lt;div class="header-inbox"&gt; 
+                          |          &lt;div class="header-left-inbox"&gt;
+                          |            &lt;div class="inbox-img"&gt;&lt;img src="../assets/images/ecommerce/06.jpg" alt="profile"&gt;&lt;/div&gt;
+                          |            &lt;div class="inbox-content"&gt; 
+                          |              &lt;h6&gt;Dalbult Caslin &lt;/h6&gt;
+                          |              &lt;p class="text-muted"&gt;stroman.rogers@gmail.com&lt;/p&gt;
+                          |            &lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |          &lt;ul class="header-right-inbox"&gt;
+                          |            &lt;li&gt; 
+                          |              &lt;p&gt;8 JAN 11:30PM&lt;/p&gt;
+                          |            &lt;/li&gt;
+                          |            &lt;li&gt;&lt;i class="txt-danger icofont icofont-ui-delete"&gt;&lt;/i&gt;&lt;/li&gt;
+                          |            &lt;li&gt;&lt;i class="icofont icofont-telegram"&gt;&lt;/i&gt;&lt;/li&gt;
+                          |          &lt;/ul&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="body-inbox mt-2"&gt;
+                          |          &lt;div class="body-h-wrapper"&gt;&lt;i class="me-2 tab-space icofont icofont-star"&gt;&lt;/i&gt;&lt;em&gt;Compare Prices Find the Best Computer Assessors Fronted Issue.&lt;/em&gt;&lt;/div&gt;
+                          |          &lt;p class="pt-2"&gt;Site speed and design are two of the most important ranking factors Google takes into consideration, as they have the biggest effect of customer staying on site as the website respond faster.&lt;/p&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="tab-pane fade" id="bottom-contact" role="tabpanel" aria-labelledby="bottom-contact-tab"&gt;
+                          |    &lt;div class="card-body px-0 pb-0"&gt; 
+                          |      &lt;div class="form"&gt; 
+                          |        &lt;div class="mb-3"&gt;
+                          |          &lt;label class="form-label" for="exampleFormControltwo"&gt;Email address&lt;/label&gt;
+                          |          &lt;input class="form-control" id="exampleFormControltwo" type="email" placeholder="youremail@gmail.com"&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="mb-0"&gt;
+                          |          &lt;label class="form-label" for="exampleFormControlTextarea1"&gt;Example textarea&lt;/label&gt;
+                          |          &lt;textarea class="form-control" id="exampleFormControlTextarea1" rows="3"&gt;&lt;/textarea&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-xxl-6 
+                .card 
+                  .card-header
+                    h4 Background Pill Tab 
+                    p.mt-1.f-m-light
+                      | Use of the
+                      code  active
+                      |  class on the
+                      code  nav-link
+                      |  and backdrop tab with the 
+                      code  new-pills
+                      |  class.
+                  .card-body 
+                    .bg-navbar
+                      ul#pills-bg-tab.nav.nav-pills.nav-primary(role='tablist')
+                        li.nav-item
+                            a#pills-sofa-tab.nav-link(data-bs-toggle='pill' href='#pills-sofa' role='tab' aria-controls='pills-sofa' aria-selected='true')
+                                | Sofa
+                        li.nav-item
+                            a#pills-chairs-tab.nav-link(data-bs-toggle='pill' href='#pills-chairs' role='tab' aria-controls='pills-chairs' aria-selected='false') Chairs
+                        li.nav-item
+                            a#pills-tables-tab.nav-link.active(data-bs-toggle='pill' href='#pills-tables' role='tab' aria-controls='pills-tables' aria-selected='false') Tables
+                      #pills-bg-tabContent.tab-content
+                        #pills-sofa.tab-pane.fade(role='tabpanel' aria-labelledby='pills-sofa-tab')
+                          .row.g-3.pt-3
+                            .col-4
+                              img.img-fluid(src="../assets/images/switch/s1.jpg", alt="sofa") 
+                            .col-4
+                              img.img-fluid(src="../assets/images/switch/s2.jpg", alt="sofa") 
+                            .col-4
+                              img.img-fluid(src="../assets/images/switch/s3.jpg", alt="sofa") 
+                        #pills-chairs.tab-pane.fade(role='tabpanel' aria-labelledby='pills-chairs-tab')
+                          .row.g-3.pt-3
+                            .col-4
+                              img.img-fluid(src="../assets/images/switch/c1.jpg", alt="chairs") 
+                            .col-4
+                              img.img-fluid(src="../assets/images/switch/c2.jpg", alt="chairs") 
+                            .col-4
+                              img.img-fluid(src="../assets/images/switch/c3.jpg", alt="chairs") 
+                        #pills-tables.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-tables-tab')
+                          .row.g-3.pt-3
+                            .col-4
+                              img.img-fluid(src="../assets/images/switch/t1.jpg", alt="table") 
+                            .col-4
+                              img.img-fluid(src="../assets/images/switch/t2.jpg", alt="table") 
+                            .col-4
+                              img.img-fluid(src="../assets/images/switch/t3.jpg", alt="table") 
+
+              .col-xxl-6 
+                .card 
+                  .card-header
+                    h4 Arrow Tabs
+                    p.mt-1.f-m-light
+                      | Use of the
+                      code  active 
+                      |  class on the
+                      code  nav-link
+                      |  and arrow tab with the 
+                      code  new-item
+                      |  class. 
+                  .card-body 
+                    .bg-navbar.arrow-tabs
+                      ul#pills-bg-tab2.nav.nav-pills.mb-3(role='tablist')
+                        li.nav-item
+                            a#pills-account-tab.nav-link(data-bs-toggle='pill' href='#pills-account' role='tab' aria-controls='pills-account' aria-selected='true')
+                                | Account Info
+                        li.nav-item
+                            a#pills-portfolio-tab.nav-link.active(data-bs-toggle='pill' href='#pills-portfolio' role='tab' aria-controls='pills-portfolio' aria-selected='false') Portfolio
+                        li.nav-item
+                            a#pills-skills-tab.nav-link(data-bs-toggle='pill' href='#pills-skills' role='tab' aria-controls='pills-skills' aria-selected='false') Skills
+                        li.nav-item
+                            a#pills-installment-tab.nav-link(data-bs-toggle='pill' href='#pills-installment' role='tab' aria-controls='pills-installment' aria-selected='false') Installment
+                      #pills-bg-tabContent2.tab-content
+                        #pills-account.tab-pane.fade(role='tabpanel' aria-labelledby='pills-account-tab')
+                          .common-box
+                            i.fa.fa-arrow-circle-o-right
+                            p Your account details serve as the digital gateway to safe, customized online experiences. Modern security measures are in place to safeguard your data, and we have given top priority to the smooth handling of your account details during the building of our website.
+                          .common-box
+                            i.fa.fa-arrow-circle-o-right
+                            p We design systems that enable customers to easily update and access their account information, from user-friendly interfaces to simple navigation. Because of our dedication to openness, you have easy access to change settings, see transaction history, and customize your preferences while being informed. With our website solutions, you can take account management to the next level. Your information is protected, and your digital trip is customized to meet your demands.
+                        #pills-portfolio.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-portfolio-tab')
+                          .row.g-3
+                            .col-4
+                              img.img-fluid(src="../assets/images/switch/t1.jpg", alt="table") 
+                            .col-4
+                              img.img-fluid(src="../assets/images/switch/t2.jpg", alt="table") 
+                            .col-4
+                              img.img-fluid(src="../assets/images/switch/t3.jpg", alt="table") 
+
+                        #pills-skills.tab-pane.fade(role='tabpanel' aria-labelledby='pills-skills-tab')
+                          .skill-tab
+                            h5 In what area are you an expert?
+                            p Summarize your expertise for us in a few crucial terms. Make careful to select these tags carefully, since they will appear on your portfolio page.
+                            ul 
+                              li HTML5
+                              li CSS3
+                              li Javascript
+                              li React
+                              li SQL
+
+                        #pills-installment.tab-pane.fade(role='tabpanel' aria-labelledby='pills-installment-tab')
+                          .common-box
+                            i.fa.fa-arrow-circle-o-right
+                            p We will handle your payment procedure, saving you the trouble of following up with clients after each assignment. We'll try our hardest to make sure you receive your money promptly and equitably.
+                          .common-box
+                            i.fa.fa-arrow-circle-o-right
+                            p Seamless website development requires a foundation that's reliable and efficient. Enter the installment process – the bedrock of building a powerful online presence. Installments in website development refer to the strategic implementation of features, functionalities, and updates in a phased manner, ensuring smooth integration and optimal performance. 
+              .col-xxl-6.box-col-12 
+                .card 
+                  .card-header
+                    h4 Bottom Tabs
+                    p.mt-1.f-m-light
+                      | Use of the
+                      code  active 
+                      |  class on the
+                      code  nav-link
+                      | . It is possible to build a arrow tab with the 
+                      code new-item
+                      |  class. 
+                  .card-body 
+                    .bg-navbar.bottom-navbar
+                      #pills-bg-tabContent3.tab-content
+                        #pills-html.tab-pane.fade(role='tabpanel' aria-labelledby='pills-css-tab')
+                          .common-flex
+                            img(src="../assets/images/tree/html.png", alt="")
+                            H5 CSS
+                          .tab-paragraph
+                            i.fa.fa-arrow-circle-o-right
+                            P "One of the three main web technologies is CSS. The terms "cascading" and "style," with cascading indicating how one style can cascade from another, are actually the key to understanding CSS, which stands for Cascading Style Sheets."
+                          .tab-paragraph
+                            i.fa.fa-arrow-circle-o-right
+                            p To specify how HTML code will appear on a website, utilize CSS.
+                        #pills-vendor.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-vendor-tab')
+                          .common-flex
+                            img(src="../assets/images/tree/vendor.png", alt="")
+                            H5 Vendors
+                          .tab-paragraph
+                            i.fa.fa-arrow-circle-o-right
+                            P To improve the development of your website, find a carefully chosen list of premier suppliers. Use our dependable network to locate the ideal partners for the accomplishment of your project.
+                          .tab-paragraph
+                            i.fa.fa-arrow-circle-o-right
+                            p Cutting-edge design tools, or specialized services, our curated list ensures you have access to the best resources for a seamless and successful website development experience.
+                        #pills-js.tab-pane.fade(role='tabpanel' aria-labelledby='pills-js-tab')
+                          .common-flex
+                            img(src="../assets/images/tree/js.png", alt="")
+                            H5 Javascript
+                          .tab-paragraph
+                            i.fa.fa-arrow-circle-o-right
+                            P Development of interactive and adaptable websites is made possible by JavaScript, the web's dynamic programming language.
+                          .tab-paragraph
+                            i.fa.fa-arrow-circle-o-right
+                            p Building strong and interactive online apps requires JavaScript, which is essential for everything from enabling asynchronous requests to designing captivating user interfaces.
+                      ul#pills-bg-tab3.nav.nav-pills.nav-primary(role='tablist')
+                        li.nav-item
+                            a#pills-css-tab.nav-link(data-bs-toggle='pill' href='#pills-html' role='tab' aria-controls='pills-html' aria-selected='true')
+                              img(src="../assets/images/tree/html.png", alt="")
+                              | CSS
+                        li.nav-item
+                            a#pills-vendor-tab.nav-link.active(data-bs-toggle='pill' href='#pills-vendor' role='tab' aria-controls='pills-vendor' aria-selected='false') 
+                              img(src="../assets/images/tree/vendor.png", alt="")
+                              | Vendors
+                        li.nav-item
+                            a#pills-js-tab.nav-link(data-bs-toggle='pill' href='#pills-js' role='tab' aria-controls='pills-js' aria-selected='false') 
+                              img(src="../assets/images/tree/js.png", alt="")
+                              | Javascript
+              .col-xxl-6.box-col-12 
+                .card 
+                  .card-header
+                    h4 Animated Horizontal Tabs
+                    p.mt-1.f-m-light
+                        | Use of the 
+                        code  active
+                        |   class on the 
+                        code  nav-link
+                        | . It is possible to build a animated tab with the 
+                        code horizontal-icons-tab 
+                        |  class.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.horizontal-icons-tab
+                    ul#bottom-tab2.nav.nav-tabs.border-tab.mb-0(role='tablist')
+                      li.nav-item
+                          a#dubai-tab.nav-link.tab-info(data-bs-toggle='tab' href='#dubai' role='tab' aria-controls='dubai' aria-selected='true')
+                              i.icofont.icofont-building-alt
+                              span Home
+                      li.nav-item
+                          a#paris-tab.nav-link.tab-info.active(data-bs-toggle='tab' href='#paris' role='tab' aria-controls='paris' aria-selected='false')
+                              i.icofont.icofont-building-alt
+                              span Profile
+                      li.nav-item
+                          a#tokyo-tab.nav-link.tab-info(data-bs-toggle='tab' href='#tokyo' role='tab' aria-controls='tokyo' aria-selected='false')
+                              i.icofont.icofont-building-alt
+                              span About Us
+                      li.nav-item
+                          a#rome-tab.nav-link.tab-info(data-bs-toggle='tab' href='#rome' role='tab' aria-controls='rome' aria-selected='false')
+                              i.icofont.icofont-building-alt
+                              span Gallery
+                      li.nav-item
+                          a#seoul-tab.nav-link.tab-info(data-bs-toggle='tab' href='#seoul' role='tab' aria-controls='seoul' aria-selected='false')
+                              i.icofont.icofont-building-alt
+                              span FAQ
+                    #bottom-tabContent2.tab-content
+                      #dubai.tab-pane.fade(role='tabpanel' aria-labelledby='dubai-tab')
+                          p.pt-3
+                            | This is some placeholder content the 
+                            b Home tab's 
+                            | associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other. This tab provide animation with gradient hover effects and amazing smooth transition for your projects. Also tab has horizontal alignment and title with amazing icons.
+                      #paris.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='paris-tab')
+                          p.pt-3
+                            | This is some placeholder content the 
+                            b Profile tab's
+                            |  associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other. This tab provide animation with gradient hover effects and amazing smooth transition for your projects. Also tab has horizontal alignment and title with amazing icons.
+                      #tokyo.tab-pane.fade(role='tabpanel' aria-labelledby='tokyo-tab')
+                          p.pt-3
+                            | This is some placeholder content the 
+                            b About tab's 
+                            | associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other. This tab provide animation with gradient hover effects and amazing smooth transition for your projects. Also tab has horizontal alignment and title with amazing icons.
+                      #rome.tab-pane.fade(role='tabpanel' aria-labelledby='rome-tab')
+                          p.pt-3
+                            | This is some placeholder content the 
+                            b Gallery tab's 
+                            | associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other. This tab provide animation with gradient hover effects and amazing smooth transition for your projects. Also tab has horizontal alignment and title with amazing icons.
+                      #seoul.tab-pane.fade(role='tabpanel' aria-labelledby='seoul-tab')
+                          p.pt-3
+                            | This is some placeholder content the 
+                            b FAQ tab's 
+                            | associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other. This tab provide animation with gradient hover effects and amazing smooth transition for your projects. Also tab has horizontal alignment and title with amazing icons.
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#animated-tab-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#animated-tab-copy
+                            |&lt;ul class="nav nav-tabs border-tab mb-0" id="bottom-tab" role="tablist"&gt;
+                            |  &lt;li class="nav-item"&gt;&lt;a class="nav-link tab-info" id="h-home-tab" data-bs-toggle="tab" href="#h-home" role="tab" aria-controls="h-home" aria-selected="true"&gt;&lt;i class="icofont icofont-building-alt"&gt;&lt;/i&gt;<span>Home</span>&lt;/a&gt;&lt;/li&gt;
+                            |  &lt;li class="nav-item"&gt;&lt;a class="nav-link tab-info active" id="h-profile-tab" data-bs-toggle="tab" href="#h-profile" role="tab" aria-controls="h-profile" aria-selected="false"&gt;&lt;i class="icofont icofont-user-male"&gt;&lt;/i&gt;<span>Profile</span>&lt;/a&gt;&lt;/li&gt;
+                            |  &lt;li class="nav-item"&gt;&lt;a class="nav-link tab-info" id="h-about-tab" data-bs-toggle="tab" href="#h-about" role="tab" aria-controls="h-about" aria-selected="false"&gt;&lt;i class="icofont icofont-business-man"&gt;&lt;/i&gt;<span>About Us</span>&lt;/a&gt;&lt;/li&gt;
+                            |  &lt;li class="nav-item"&gt;&lt;a class="nav-link tab-info" id="h-gallery-tab" data-bs-toggle="tab" href="#h-gallery" role="tab" aria-controls="h-gallery" aria-selected="false"&gt;&lt;i class="icofont icofont-picture"&gt;&lt;/i&gt;<span>Gallery</span>&lt;/a&gt;&lt;/li&gt;
+                            |  &lt;li class="nav-item"&gt;&lt;a class="nav-link tab-info" id="h-faq-tab" data-bs-toggle="tab" href="#h-faq" role="tab" aria-controls="h-faq" aria-selected="false"&gt;&lt;i class="icofont icofont-question-circle"&gt;&lt;/i&gt;<span>FAQ</span>&lt;/a&gt;&lt;/li&gt;
+                            |&lt;/ul&gt;
+                            |&lt;div class="tab-content" id="bottom-tabContent"&gt;
+                            |  &lt;div class="tab-pane fade" id="h-home" role="tabpanel" aria-labelledby="h-home-tab"&gt;
+                            |    &lt;p class="pt-3"&gt;This is some placeholder content for the&lt;b&gt;Home tab's&lt;/b&gt;associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation. Bootstrap provides a flexible and easy-to-use tab component that allows developers to create tabbed navigation effortlessly.&lt;/p&gt;
+                            |  &lt;/div&gt;
+                            |  &lt;div class="tab-pane fade show active" id="h-profile" role="tabpanel" aria-labelledby="h-profile-tab"&gt;
+                            |    &lt;p class="pt-3"&gt;This is some placeholder content the&lt;b&gt;Profile tab's&lt;/b&gt; associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation. Bootstrap provides a flexible and easy-to-use tab component that allows developers to create tabbed navigation effortlessly.&lt;/p&gt;
+                            |  &lt;/div&gt;
+                            |  &lt;div class="tab-pane fade" id="h-about" role="tabpanel" aria-labelledby="h-about-tab"&gt;
+                            |    &lt;p class="pt-3"&gt;This is some placeholder content the&lt;b&gt;About tab's&lt;/b&gt;associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation. Bootstrap provides a flexible and easy-to-use tab component that allows developers to create tabbed navigation effortlessly.&lt;/p&gt;
+                            |  &lt;/div&gt;
+                            |  &lt;div class="tab-pane fade" id="h-gallery" role="tabpanel" aria-labelledby="h-gallery-tab"&gt;
+                            |    &lt;p class="pt-3"&gt;This is some placeholder content the&lt;b&gt;Gallery tab's&lt;/b&gt;associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation. Bootstrap provides a flexible and easy-to-use tab component that allows developers to create tabbed navigation effortlessly.&lt;/p&gt;
+                            |  &lt;/div&gt;
+                            |  &lt;div class="tab-pane fade" id="h-faq" role="tabpanel" aria-labelledby="h-faq-tab"&gt;
+                            |    &lt;p class="pt-3"&gt;This is some placeholder content the&lt;b&gt;FAQ tab's&lt;/b&gt;associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation. Bootstrap provides a flexible and easy-to-use tab component that allows developers to create tabbed navigation effortlessly.&lt;/p&gt;
+                            |  &lt;/div&gt;
+                            |&lt;/div&gt;   
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files   

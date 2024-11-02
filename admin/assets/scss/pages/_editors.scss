@@ -1,0 +1,231 @@
+/**=====================
+    3.48 Editors CSS Start
+==========================**/
+
+#editor6 {
+    &.ql-bubble {
+        .ql-tooltip {
+            background-color: $body-font-color;
+            padding: 12px;
+
+            &:not(.ql-flip) {
+                .ql-tooltip-arrow {
+                    border-bottom: 6px solid $body-font-color;
+                }
+            }
+        }
+
+        .ql-tooltip-editor {
+            input[type=text] {
+                color: var(--white);
+            }
+        }
+    }
+
+    #toolbar6 {
+        .ql-formats {
+            margin: 8px 8px 8px -3px;
+
+            .ql-stroke,
+            .ql-fill {
+                stroke: $white;
+            }
+        }
+    }
+}
+
+.ql-formats {
+    .ql-picker-label {
+        &::before {
+            color: $dark-body-background;
+
+        }
+
+        svg {
+            .ql-stroke {
+                stroke: var(--body-font-color);
+            }
+
+            [dir="rtl"] & {
+                right: unset !important;
+                left: 0;
+            }
+        }
+    }
+
+    .ql-script,
+    .ql-stroke {
+        stroke: var(--body-font-color);
+    }
+
+    .ql-size {
+        .ql-picker-label {
+            &.ql-active {
+                .ql-stroke {
+                    stroke: var(--theme-default);
+                }
+            }
+        }
+    }
+}
+
+.ql-editor {
+    ol {
+        [dir="rtl"] & {
+            padding-left: unset !important;
+            padding-right: 24px;
+        }
+
+        li {
+            &:not(.ql-direction-rtl)::before {
+                [dir="rtl"] & {
+                    margin-left: unset;
+                    margin-right: unset;
+                }
+            }
+        }
+    }
+
+    ul {
+        [dir="rtl"] & {
+            padding-left: unset !important;
+            padding-right: 24px;
+        }
+
+        li {
+            &:not(.ql-direction-rtl)::before {
+                [dir="rtl"] & {
+                    margin-left: unset;
+                    margin-right: unset;
+                }
+            }
+        }
+    }
+}
+
+.quill-paragraph {
+    p {
+        color: var(--body-font-color);
+    }
+
+    ol,
+    ul {
+        li {
+            color: var(--body-font-color);
+        }
+    }
+}
+
+.ql-toolbar {
+    &.ql-snow {
+        button {
+            &.ql-active {
+                svg {
+                    .ql-stroke {
+                        stroke: var(--theme-default);
+                    }
+                    .ql-fill {
+                        fill: var(--theme-default);
+                    }
+                }
+            }
+        }
+        .ql-formats {
+
+            .ql-script,
+            .ql-header,
+            .ql-video,
+            .ql-picker-label,
+            .ql-blockquote,
+            .ql-strike {
+                &:hover {
+                    .ql-fill {
+                        fill: var(--theme-default);
+                    }
+
+                    color: var(--theme-default);
+                    stroke: var(--theme-default);
+                }
+            }
+
+            .ql-picker-options {
+                .ql-picker-item {
+
+                    &:hover,
+                    &.ql-selected {
+                        color: var(--theme-default);
+                    }
+                }
+            }
+
+            .ql-video {
+                &:hover {
+                    .ql-fill {
+                        fill: var(--theme-default);
+                    }
+                }
+            }
+
+            .ql-align {
+                &:hover {
+                    .ql-stroke {
+                        stroke: var(--theme-default);
+                    }
+                }
+            }
+
+            .ql-clean {
+                &:hover {
+                    .ql-stroke {
+                        stroke: var(--theme-default);
+                    }
+
+                    .ql-fill {
+                        fill: var(--theme-default);
+                    }
+                }
+            }
+
+            .ql-header {
+                .ql-stroke {
+                    stroke: var(--theme-default);
+                }
+            }
+
+            .ql-picker-label {
+                &:hover {
+
+                    .ql-color-label,
+                    .ql-stroke {
+                        stroke: var(--theme-default);
+                    }
+                }
+            }
+
+            .ql-blockquote {
+                &:hover {
+                    .ql-fill {
+                        fill: var(--theme-default);
+                        stroke: var(--theme-default);
+                    }
+                }
+            }
+
+            .ql-code-block {
+                &:hover {
+                    color: var(--theme-default);
+
+                    .ql-even,
+                    .ql-stroke {
+                        stroke: var(--theme-default);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/**=====================
+    3.48 Editors CSS End
+==========================**/

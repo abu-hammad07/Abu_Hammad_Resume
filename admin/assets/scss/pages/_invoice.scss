@@ -1,0 +1,78 @@
+// ------invioce-1-------//
+.invoice-1 {
+    body {
+        font-family: 'Outfit', sans-serif;
+        display: block;
+        color: #000248;
+    }
+
+    .table-wrapper {
+        margin: 0 auto;
+    }
+
+    h2 {
+        margin: 0;
+        font-weight: 500;
+        font-size: 32px;
+    }
+
+    h6 {
+        font-weight: 400;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    span {
+        line-height: 1.5;
+        font-weight: 400;
+    }
+
+    .banner-image {
+        margin: 13px 0 10px;
+    }
+
+    .order-details td span {
+        margin-bottom: -4px;
+        display: block;
+    }
+
+    .order-details th:first-child,
+    .order-details td:first-child {
+        // min-width: 490px;
+    }
+
+    .order-details th:nth-child(2),
+    .order-details td:nth-child(2) {
+        // width: 20%;
+    }
+
+    @media (max-width: 1199px) {
+        .table-wrapper {
+            // width: 930px;
+        }
+
+        .address {
+            // width: 21% !important;
+        }
+    }
+}
+
+.invoice-2 {
+    .card-body {
+        >table {
+            display: block;
+
+            >tbody {
+                display: block;
+
+                >tr {
+                    display: block;
+
+                    >td {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

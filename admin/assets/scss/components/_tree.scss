@@ -1,0 +1,134 @@
+/**=====================
+   2.34 Tree CSS Start
+==========================**/
+.treejs {
+
+	.treejs-nodes {
+		[dir="rtl"] & {
+			padding-left: unset;
+			padding-right: 20px;
+		}
+
+	}
+
+	.treejs-node {
+		&.treejs-placeholder {
+			[dir="rtl"] & {
+
+				padding-right: 20px;
+				padding-left: unset;
+			}
+		}
+	}
+
+	.treejs-node__halfchecked {
+		>.treejs-checkbox:before {
+			background-color: $primary-color !important;
+			border-color: $primary-color !important;
+		}
+
+		>.treejs-checkbox:after {
+			[dir="rtl"] & {
+				right: 3px;
+				left: unset;
+			}
+		}
+	}
+
+	.treejs-node__checked {
+		>.treejs-checkbox:before {
+			background-color: $success-color !important;
+			border-color: $dark-color !important;
+		}
+
+		>.treejs-checkbox:after {
+			[dir="rtl"] & {
+				right: 5px;
+				left: unset;
+			}
+		}
+	}
+}
+
+// Sortable css
+.sortable-handler {
+	ul {
+		li {
+			i {
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.grid-box-wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.grid-box {
+	padding: 8px;
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+	display: grid;
+	place-items: center;
+}
+
+.draggable-filter {
+	ul {
+		li {
+			img {
+				width: 37px;
+				height: 37px;
+			}
+		}
+	}
+}
+
+.stackable-list {
+	.list-group {
+		padding: 11px 16px;
+
+		.list-group-item {
+			padding: 12px 16px;
+
+			i {
+				color: $warning-color;
+			}
+		}
+	}
+}
+
+.nested-1 {
+	background-color: rgba($primary-color, 0.03);
+}
+
+.nested-2 {
+	background-color: rgba($primary-color, 0.05);
+}
+
+.nested-3 {
+	background-color: rgba($primary-color, 0.07);
+}
+
+.nested-4 {
+	background-color: rgba($primary-color, 0.09);
+}
+
+.swap-wrapper {
+	.list-group {
+		padding: 11px 16px;
+
+		img {
+			height: 16px;
+			width: auto;
+		}
+	}
+}
+
+/**=====================
+   2.34 Tree CSS Ends
+==========================**/

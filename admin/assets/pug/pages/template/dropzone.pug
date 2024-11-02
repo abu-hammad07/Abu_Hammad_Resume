@@ -1,0 +1,122 @@
+- var page_Title = 'Dropzone';
+- var theme_customizer      = true;
+- var tooltip               = true;
+- var dropzone              = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+- var filepond              = true;
+- var height_equal          = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Bonus Ui','Dropzone'],'Dropzone')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-md-6
+                .card
+                  .card-header
+                    h4 Default File Upload
+                    p.f-m-light.mt-1
+                      | We use the create method to turn a
+                      code  &lt;input type="file"&gt;
+                      |  into a FilePond drop area.
+                      code [https://pqina.nl/filepond/]
+                  .card-body
+                    input(type='file' class="no-preview")
+              .col-md-6
+                .card
+                  .card-header
+                    h4 Image Preview 
+                    p.f-m-light.mt-1
+                      | We use the create method to turn a
+                      code  &lt;input type="file"&gt;
+                      |  into a FilePond drop area.
+                      code [https://pqina.nl/filepond/]
+                  .card-body
+                    input(type='file' class="show-preview")
+              .col-xl-4.col-md-6
+                .card.height-equal
+                  .card-header 
+                    h4 Single File Upload
+                    p.f-m-light.mt-1
+                    | Use the 
+                    code .dropzone 
+                    |  class through create upload files and with that we can upload single file by doing 
+                    code singleFileUpload 
+                    | id.
+                  .card-body
+                    form#singleFileUpload.dropzone(action='/upload.php')
+                      .dropzone-wrapper
+                        .dz-message.needsclick
+                          i.icon-cloud-up
+                          h5.f-w-600 Drop files here or click to upload.
+                          span.note.needsclick
+                            | (This is just a demo dropzone. Selected files are 
+                            strong not
+                            |  actually uploaded.)
+              .col-xl-4.col-md-6
+                .card.height-equal
+                  .card-header
+                    h4 Multiple File Upload
+                    p.f-m-light.mt-1
+                      | Use the 
+                      code .dropzone 
+                      |  class through create upload files and with that we can upload multiple file by doing 
+                      code multiFileUpload 
+                      | id.
+                  .card-body
+                    form#multiFileUpload.dropzone.dropzone-secondary(action='/upload.php')
+                      .dz-message.needsclick
+                        i.icon-cloud-up
+                        h5.f-w-600 Drop files here or click to upload.
+                        span.note.needsclick
+                          | (This is just a demo dropzone. Selected files are 
+                          strong not
+                          |  actually uploaded.)
+              .col-xl-4
+                .card.height-equal
+                  .card-header
+                    h4 Animated Photo Dropzone
+                    p.f-m-light.mt-1
+                      | Use the 
+                      code .dropzone 
+                      |  class through create upload images. Additionally, 
+                      code "fileup" 
+                      | Id thrown pictures can be uploaded.
+                  .card-body.animated-dropfile
+                    form(name='upload' method='post' action='#' enctype='multipart/form-data' accept-charset='utf-8')
+                      .row
+                        .col-md-12.col-md-offset-3.text-center
+                          .btn-container
+                            // the three icons: default, ok file (img), error file (not an img)
+                            .imgupload.mb-2
+                              i.fa.fa-file-image-o
+                            .imgupload.ok
+                              i.fa.fa-check
+                            .imgupload.stop
+                              i.fa.fa-times
+                            // this field changes dinamically displaying the filename we are trying to upload
+                            p#namefile Only pics allowed! (jpg,jpeg,bmp,png)
+                            // our custom btn which which stays under the actual one
+                            button#btnup.btn.btn-primary(type='button') Search for your photo!
+                            // this is the actual file input, is set with opacity=0 beacause we wanna see our custom one
+                            input#fileup(type='file' name='fileup')
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

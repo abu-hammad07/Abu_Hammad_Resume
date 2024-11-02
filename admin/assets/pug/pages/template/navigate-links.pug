@@ -1,0 +1,372 @@
+- var page_Title = 'Navigate-links';
+- var theme_customizer      = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+- var clipboard             = true;
+- var prism                 = true;
+- var customcard            = true;
+- var height_equal          = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Ui Kits','Navigate Links'],'Navigate Links')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid 
+            .row
+              .col-xxl-3.col-sm-6
+                .card.height-equal
+                  .card-header
+                    h4 Link Utilities 
+                    p.f-m-light.mt-1
+                      | Colored links can also be modified by our 
+                      code link utilities
+                      | .
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    p
+                      a.link-primary.link-offset-2.link-underline-opacity-25.link-underline-opacity-100-hover(href='#!') Link primary
+                    p
+                      a.link-secondary.link-offset-2.link-underline-opacity-25.link-underline-opacity-100-hover(href='#!') Link secondary
+                    p
+                      a.link-success.link-offset-2.link-underline-opacity-25.link-underline-opacity-100-hover(href='#!') Link success
+                    p
+                      a.link-danger.link-offset-2.link-underline-opacity-25.link-underline-opacity-100-hover(href='#!') Link danger
+                    p
+                      a.link-warning.link-offset-2.link-underline-opacity-25.link-underline-opacity-100-hover(href='#!') Link warning
+                    p
+                      a.link-info.link-offset-2.link-underline-opacity-25.link-underline-opacity-100-hover(href='#!') Link info
+                    p
+                      a.link-light.link-offset-2.link-underline-opacity-25.link-underline-opacity-100-hover(href='#!') Link light
+                    p
+                      a.link-dark.link-offset-2.link-underline-opacity-25.link-underline-opacity-100-hover(href='#!') Link dark
+                    p
+                      a.link-body-emphasis.link-offset-2.link-underline-opacity-25.link-underline-opacity-75-hover(href='#!') Link emphasis
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#avatar-size', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#avatar-size
+                          |&lt;p&gt;&lt;a class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#!"&gt;Link primary&lt;/a&gt;&lt;/p&gt;
+                          |&lt;p&gt;&lt;a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#!"&gt;Link secondary&lt;/a&gt;&lt;/p&gt;
+                          |&lt;p&gt;&lt;a class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#!"&gt;Link success&lt;/a&gt;&lt;/p&gt;
+                          |&lt;p&gt;&lt;a class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#!"&gt;Link danger&lt;/a&gt;&lt;/p&gt;
+                          |&lt;p&gt;&lt;a class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#!"&gt;Link warning&lt;/a&gt;&lt;/p&gt;
+                          |&lt;p&gt;&lt;a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#!"&gt;Link info&lt;/a&gt;&lt;/p&gt;
+                          |&lt;p&gt;&lt;a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#!"&gt;Link light&lt;/a&gt;&lt;/p&gt;
+                          |&lt;p&gt;&lt;a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#!"&gt;Link dark&lt;/a&gt;&lt;/p&gt;
+                          |&lt;p&gt;&lt;a class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover" href="#!"&gt;Link emphasis&lt;/a&gt;&lt;/p&gt;
+
+              .col-xxl-3.col-sm-6
+                .card.height-equal
+                  .card-header
+                    h4 Link Underlines 
+                    p.f-m-light.mt-1
+                      | Use 
+                      code link-underline-* 
+                      | classes to link underlines. Change the underline's color independent of the link text color.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    p
+                      a.link-underline-primary(href='#!') Primary underline
+                    p
+                      a.link-underline-secondary(href='#!') Secondary underline
+                    p
+                      a.link-underline-success(href='#!') Success underline
+                    p
+                      a.link-underline-danger(href='#!') Danger underline
+                    p
+                      a.link-underline-warning(href='#!') Warning underline
+                    p
+                      a.link-underline-info(href='#!') Info underline
+                    p
+                      a.link-underline-light(href='#!') Light underline
+                    p
+                      a.link-underline-dark(href='#!') Dark underline
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#link-underlines', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#link-underlines
+                          |&lt;p&gt;&lt;a class="link-underline-primary" href="#!"&gt;Primary underline&lt;/a&gt;&lt;/p&gt;
+                          |&lt;p&gt;&lt;a class="link-underline-secondary" href="#!"&gt;Secondary underline&lt;/a&gt;&lt;/p&gt;
+                          |&lt;p&gt;&lt;a class="link-underline-success" href="#!"&gt;Success underline&lt;/a&gt;&lt;/p&gt;
+                          |&lt;p&gt;&lt;a class="link-underline-danger" href="#!"&gt;Danger underline&lt;/a&gt;&lt;/p&gt;
+                          |&lt;p&gt;&lt;a class="link-underline-warning" href="#!"&gt;Warning underline&lt;/a&gt;&lt;/p&gt;
+                          |&lt;p&gt;&lt;a class="link-underline-info" href="#!"&gt;Info underline&lt;/a&gt;&lt;/p&gt;
+                          |&lt;p&gt;&lt;a class="link-underline-light" href="#!"&gt;Light underline&lt;/a&gt;&lt;/p&gt;
+                          |&lt;p&gt;&lt;a class="link-underline-dark" href="#!"&gt;Dark underline&lt;/a&gt;&lt;/p&gt;
+              .col-xxl-3.col-sm-6
+                .card.height-equal
+                  .card-header
+                    h4 Border Opacity
+                    p.f-m-light.mt-1
+                      | Use 
+                      code border-opacity-* (10,25,50,75)
+                      |  class to border opacity links.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.border-opacity-wrapper
+                    .border.p-2.mb-xl-3.mb-2.border-primary 
+                      a(href="#!") This is default primary border
+                    .border.p-2.mb-xl-3.mb-2.border-opacity-75 
+                      a(href="#!") This is 75% opacity primary border
+                    .border.p-2.mb-xl-3.mb-2.border-opacity-50
+                      a(href="#!") This is 50% opacity primary border
+                    .border.p-2.mb-xl-3.mb-2.border-opacity-25
+                      a(href="#!") This is 25% opacity primary border
+                    .border.p-2.border-opacity-10
+                      a(href="#!") This is 10% opacity primary border
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#border-opacity', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#border-opacity
+                          |&lt;div class="card-body border-opacity-wrapper"&gt;
+                          |  &lt;div class="border p-2 mb-xl-3 mb-2 border-primary"&gt;&lt;a href="#!"&gt;This is default primary border&lt;/a&gt;&lt;/div&gt;
+                          |  &lt;div class="border p-2 mb-xl-3 mb-2 border-opacity-75"&gt;&lt;a href="#!"&gt;This is 75% opacity primary border&lt;/a&gt;&lt;/div&gt;
+                          |  &lt;div class="border p-2 mb-xl-3 mb-2 border-opacity-50"&gt;&lt;a href="#!"&gt;This is 50% opacity primary border&lt;/a&gt;&lt;/div&gt;
+                          |  &lt;div class="border p-2 mb-xl-3 mb-2 border-opacity-25"&gt;&lt;a href="#!"&gt;This is 25% opacity primary border&lt;/a&gt;&lt;/div&gt;
+                          |  &lt;div class="border p-2 border-opacity-10"&gt;&lt;a href="#!"&gt;This is 10% opacity primary border&lt;/a&gt;&lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-xxl-3.col-sm-6
+                .card.height-equal
+                  .card-header
+                    h4 Background Color Opacity
+                    p.f-m-light.mt-1
+                      | Use 
+                      code bg-opacity-* (10,25,50,75)
+                      |  class to background opacity links.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.bg-opacity-wrapper
+                    .bg-primary.p-2.mb-3.text-white
+                      a(href="#!") This is default success background
+                    .p-2.mb-3.text-white.bg-opacity-75
+                      a(href="#!") This is 75% opacity success background
+                    .p-2.mb-3.text-dark.bg-opacity-50
+                      a(href="#!") This is 50% opacity success background
+                    .p-2.mb-3.text-dark.bg-opacity-25
+                      a(href="#!") This is 25% opacity success background
+                    .p-2.mb-3.text-dark.bg-opacity-10
+                      a(href="#!") This is 10% opacity success background
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#bg-opacity', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#bg-opacity
+                          |&lt;div class="card-body bg-opacity-wrapper"&gt;
+                          |  &lt;div class="bg-primary p-2 mb-3 text-white"&gt;&lt;a href="#!"&gt;This is default success background&lt;/a&gt;&lt;/div&gt;
+                          |  &lt;div class="p-2 mb-3 text-white bg-opacity-75"&gt;&lt;a href="#!"&gt;This is 75% opacity success background&lt;/a&gt;&lt;/div&gt;
+                          |  &lt;div class="p-2 mb-3 text-dark bg-opacity-50"&gt;&lt;a href="#!"&gt;This is 50% opacity success background&lt;/a&gt;&lt;/div&gt;
+                          |  &lt;div class="p-2 mb-3 text-dark bg-opacity-25"&gt;&lt;a href="#!"&gt;This is 25% opacity success background&lt;/a&gt;&lt;/div&gt;
+                          |  &lt;div class="p-2 mb-3 text-dark bg-opacity-10"&gt;&lt;a href="#!"&gt;This is 10% opacity success background&lt;/a&gt;&lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-sm-12
+                .card
+                  .card-header
+                    h4 Common Links
+                    p.f-m-light.mt-1
+                      | Link utilities are used to stylize your anchors to adjust their link opacity 
+                      code  (link-opacity-*), 
+                      | hovered link Opacity 
+                      code (link-opacity-*-hover), 
+                      | underline opacity 
+                      code (link-underline-opacity-*), 
+                      | underline offset 
+                      code (link-offset-*), 
+                      | and more.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .row.g-3
+                      .col-sm-6.col-xxl-3
+                        .card-wrapper.border.rounded-3.h-100
+                          h6.sub-title.fw-bold Link Opacity
+                          .link-opacity-wrapper 
+                            p
+                              a.link-opacity-10(href='#!') Link opacity 10
+                            p
+                              a.link-opacity-25(href='#!') Link opacity 25
+                            p
+                              a.link-opacity-50(href='#!') Link opacity 50
+                            p
+                              a.link-opacity-75(href='#!') Link opacity 75
+                            p
+                              a.link-opacity-100(href='#!') Link opacity 100
+                      .col-sm-6.col-xxl-3
+                        .card-wrapper.border.rounded-3.h-100
+                          h6.sub-title.fw-bold  Hovered Link Opacity
+                          .link-opacity-wrapper 
+                            p
+                              a.link-opacity-10-hover(href='#!') Link hover opacity 10
+                            p
+                              a.link-opacity-25-hover(href='#!') Link hover opacity 25
+                            p
+                              a.link-opacity-50-hover(href='#!') Link hover opacity 50
+                            p
+                              a.link-opacity-75-hover(href='#!') Link hover opacity 75
+                            p
+                              a.link-opacity-100-hover(href='#!') Link hover opacity 100
+                      .col-sm-6.col-xxl-3
+                        .card-wrapper.border.rounded-3.h-100
+                          h6.sub-title.fw-bold Underline Opacity
+                          .underline-opacity-wrapper
+                            p
+                              a.link-offset-2.link-underline.link-underline-opacity-0(href='#!') Underline opacity 0
+                            p
+                              a.link-offset-2.link-underline.link-underline-opacity-10(href='#!') Underline opacity 10
+                            p
+                              a.link-offset-2.link-underline.link-underline-opacity-25(href='#!') Underline opacity 25
+                            p
+                              a.link-offset-2.link-underline.link-underline-opacity-50(href='#!') Underline opacity 50
+                            p
+                              a.link-offset-2.link-underline.link-underline-opacity-75(href='#!') Underline opacity 75
+                            p
+                              a.link-offset-2.link-underline.link-underline-opacity-100(href='#!') Underline opacity 100
+                      .col-sm-6.col-xxl-3
+                        .card-wrapper.border.rounded-3.h-100
+                          h6.sub-title.fw-bold Underline Offset
+                          .underline-opacity-wrapper
+                            p
+                              a(href='#!') Default link
+                            p
+                              a.link-offset-1(href='#!') Offset 1 link
+                            p
+                              a.link-offset-2(href='#!') Offset 2 link
+                            p
+                              a.link-offset-3(href='#!') Offset 3 link
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#common-links', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#common-links
+                          |&lt;div class="row g-3"&gt;
+                          |  &lt;div class="col-sm-6 col-xxl-3"&gt;
+                          |    &lt;div class="card-wrapper border rounded-3 h-100"&gt;
+                          |      &lt;h6 class="sub-title fw-bold"&gt;Link Opacity&lt;/h6&gt;
+                          |      &lt;div class="link-opacity-wrapper"&gt; 
+                          |        &lt;p&gt;&lt;a class="link-opacity-10" href="#!"&gt;Link opacity 10&lt;/a&gt;&lt;/p&gt;
+                          |        &lt;p&gt;&lt;a class="link-opacity-25" href="#!"&gt;Link opacity 25&lt;/a&gt;&lt;/p&gt;
+                          |        &lt;p&gt;&lt;a class="link-opacity-50" href="#!"&gt;Link opacity 50&lt;/a&gt;&lt;/p&gt;
+                          |        &lt;p&gt;&lt;a class="link-opacity-75" href="#!"&gt;Link opacity 75&lt;/a&gt;&lt;/p&gt;
+                          |        &lt;p&gt;&lt;a class="link-opacity-100" href="#!"&gt;Link opacity 100&lt;/a&gt;&lt;/p&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="col-sm-6 col-xxl-3"&gt;
+                          |    &lt;div class="card-wrapper border rounded-3 h-100"&gt;
+                          |      &lt;h6 class="sub-title fw-bold"&gt; Hovered Link Opacity&lt;/h6&gt;
+                          |      &lt;div class="link-opacity-wrapper"&gt; 
+                          |        &lt;p&gt;&lt;a class="link-opacity-10-hover" href="#!"&gt;Link hover opacity 10&lt;/a&gt;&lt;/p&gt;
+                          |        &lt;p&gt;&lt;a class="link-opacity-25-hover" href="#!"&gt;Link hover opacity 25&lt;/a&gt;&lt;/p&gt;
+                          |        &lt;p&gt;&lt;a class="link-opacity-50-hover" href="#!"&gt;Link hover opacity 50&lt;/a&gt;&lt;/p&gt;
+                          |        &lt;p&gt;&lt;a class="link-opacity-75-hover" href="#!"&gt;Link hover opacity 75&lt;/a&gt;&lt;/p&gt;
+                          |        &lt;p&gt;&lt;a class="link-opacity-100-hover" href="#!"&gt;Link hover opacity 100&lt;/a&gt;&lt;/p&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="col-sm-6 col-xxl-3"&gt;
+                          |    &lt;div class="card-wrapper border rounded-3 h-100"&gt;
+                          |      &lt;h6 class="sub-title fw-bold"&gt;Underline Opacity&lt;/h6&gt;
+                          |      &lt;div class="underline-opacity-wrapper"&gt;
+                          |        &lt;p&gt;&lt;a class="link-offset-2 link-underline link-underline-opacity-0" href="#!"&gt;Underline opacity 0&lt;/a&gt;&lt;/p&gt;
+                          |        &lt;p&gt;&lt;a class="link-offset-2 link-underline link-underline-opacity-10" href="#!"&gt;Underline opacity 10&lt;/a&gt;&lt;/p&gt;
+                          |        &lt;p&gt;&lt;a class="link-offset-2 link-underline link-underline-opacity-25" href="#!"&gt;Underline opacity 25&lt;/a&gt;&lt;/p&gt;
+                          |        &lt;p&gt;&lt;a class="link-offset-2 link-underline link-underline-opacity-50" href="#!"&gt;Underline opacity 50&lt;/a&gt;&lt;/p&gt;
+                          |        &lt;p&gt;&lt;a class="link-offset-2 link-underline link-underline-opacity-75" href="#!"&gt;Underline opacity 75&lt;/a&gt;&lt;/p&gt;
+                          |        &lt;p&gt;&lt;a class="link-offset-2 link-underline link-underline-opacity-100" href="#!"&gt;Underline opacity 100&lt;/a&gt;&lt;/p&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="col-sm-6 col-xxl-3"&gt;
+                          |    &lt;div class="card-wrapper border rounded-3 h-100"&gt;
+                          |      &lt;h6 class="sub-title fw-bold"&gt;Underline Offset&lt;/h6&gt;
+                          |      &lt;div class="underline-opacity-wrapper"&gt;
+                          |        &lt;p&gt;&lt;a href="#!"&gt;Default link&lt;/a&gt;&lt;/p&gt;
+                          |        &lt;p&gt;&lt;a class="link-offset-1" href="#!"&gt;Offset 1 link&lt;/a&gt;&lt;/p&gt;
+                          |        &lt;p&gt;&lt;a class="link-offset-2" href="#!"&gt;Offset 2 link&lt;/a&gt;&lt;/p&gt;
+                          |        &lt;p&gt;&lt;a class="link-offset-3" href="#!"&gt;Offset 3 link&lt;/a&gt;&lt;/p&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

@@ -1,0 +1,695 @@
+- var page_Title = 'Offcanvas';
+- var theme_customizer      = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+- var prism                 = true;
+- var clipboard             = true;
+- var customcard            = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Ui Kits','Offcanvas'],'Offcanvas')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .user-profile
+              .row
+                .col-12
+                  .card
+                    .card-header
+                      h4.mb-0 Offcanvas Directions
+                      p.mb-0.mt-1
+                        | Use
+                        code  Offcanvas-* 
+                        | [top/end/bottom/start] class allows you to modify the offcanvas direction.
+                      .card-header-right
+                        ul.list-unstyled.card-option
+                          li
+                            i.icon-more-alt
+                          li
+                            i.view-html.fa.fa-code
+                          li
+                            i.icofont.icofont-maximize.full-card
+                          li
+                            i.icofont.icofont-minus.minimize-card
+                          li
+                            i.icofont.icofont-refresh.reload-card
+                          li
+                            i.icofont.icofont-error.close-card
+                    .card-body.common-flex.common-offcanvas
+                        button.btn.btn-primary(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasTop' aria-controls='offcanvasTop') Top Offcanvas
+                        #offcanvasTop.offcanvas.offcanvas-top(tabindex='-1' aria-labelledby='offcanvasTopLabel')
+                            .offcanvas-header
+                                h4#offcanvasTopLabel.offcanvas-title Offcanvas Top
+                                button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+                            .offcanvas-body.custom-scrollbar
+                                form.row.g-3
+                                    .col-md-4
+                                        label.form-label(for='validationDefault01') First name
+                                        input#validationDefault01.form-control(type='text' value='Mark' required='')
+                                    .col-md-4
+                                        label.form-label(for='validationDefault02') Last name
+                                        input#validationDefault02.form-control(type='text' value='Otto' required='')
+                                    .col-md-4
+                                        label.form-label(for='validationDefaultUsername') Username
+                                        .input-group
+                                            span#inputGroupPrepend2.input-group-text @
+                                            input#validationDefaultUsername.form-control(type='text' aria-describedby='inputGroupPrepend2' required='')
+                                    .col-md-6
+                                        label.form-label(for='validationDefault03') City
+                                        input#validationDefault03.form-control(type='text' required='')
+                                    .col-md-3
+                                        label.form-label(for='validationDefault04') Country
+                                        select#validationDefault04.form-select(required='')
+                                            option(selected='' disabled='' value='') Choose...
+                                            option US 
+                                            option UK 
+                                            option Africa
+                                    .col-md-3
+                                        label.form-label(for='validationDefault05') Zip
+                                        input#validationDefault05.form-control(type='text' required='')
+                                    .col-12
+                                        .form-check.checkbox-checked
+                                            input#invalidCheck1.form-check-input(type='checkbox' value='' required='')
+                                            label.form-check-label(for='invalidCheck1')
+                                                | Agree to terms and conditions
+                                    .col-12
+                                        button.btn.btn-primary(type='submit') Submit
+
+                        button.btn.btn-secondary(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasRight' aria-controls='offcanvasRight') Right Offcanvas
+                        #offcanvasRight.offcanvas.offcanvas-end(tabindex='-1' aria-labelledby='offcanvasRightLabel')
+                            .offcanvas-header
+                                h4#offcanvasRightLabel.offcanvas-title Offcanvas End
+                                button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+                            .offcanvas-body.custom-scrollbar
+                                form.row.g-3
+                                    .col-12 
+                                        label.form-label(for='exampleFormControlInput6') Email
+                                        input#exampleFormControlInput6.form-control(type='email' placeholder='name@example.com')  
+                                    .col-12
+                                        label.form-label(for='exampleFormControlInput2') Select Project
+                                        select.form-select(aria-label='Default select example')
+                                            option(selected='') Select your projects
+                                            option(value='1') Project1
+                                            option(value='2') Project2
+                                            option(value='3') Project3
+                                    .col-12
+                                        label.form-label(for='exampleFormControlInput3') Project Counts
+                                        select.form-select(aria-label='Default select example')
+                                            option(selected='') How many projects do you make?
+                                            option(value='1') One
+                                            option(value='2') Two
+                                            option(value='3') Three
+                                    .col-12 
+                                        label.form-label(for='exampleFormControlTextarea1') External Notes
+                                        textarea#exampleFormControlTextarea1.form-control(rows='4')
+                                    .col-12
+                                        .form-check.checkbox-checked
+                                            input#invalidCheck2.form-check-input(type='checkbox' value='' required='')
+                                            label.form-check-label(for='invalidCheck2')
+                                                | Agree to terms and conditions
+                                    .col-12
+                                        button.btn.btn-light.me-2(type='submit' data-bs-dismiss='offcanvas' aria-label='Close') Cancel
+                                        button.btn.btn-primary(type='submit') Submit
+                        button.btn.btn-warning(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasBottom' aria-controls='offcanvasBottom') Bottom Offcanvas
+                        #offcanvasBottom.offcanvas.offcanvas-bottom(tabindex='-1' aria-labelledby='offcanvasBottomLabel')
+                            .offcanvas-header
+                                h4#offcanvasBottomLabel.offcanvas-title Offcanvas Bottom
+                                button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+                            .offcanvas-body.custom-scrollbar
+                                form.row.g-3
+                                    .col-md-4
+                                        label.form-label(for='validationDefault06') First name
+                                        input#validationDefault06.form-control(type='text' value='Mark' required='')
+                                    .col-md-4
+                                        label.form-label(for='validationDefault07') Last name
+                                        input#validationDefault07.form-control(type='text' value='Otto' required='')
+                                    .col-md-4
+                                        label.form-label(for='validationDefaultUsername2') Username
+                                        .input-group
+                                            span#inputGroupPrepend3.input-group-text @
+                                            input#validationDefaultUsername2.form-control(type='text' aria-describedby='inputGroupPrepend3' required='')
+                                    .col-md-6
+                                        label.form-label(for='validationDefault08') City
+                                        input#validationDefault08.form-control(type='text' required='')
+                                    .col-md-3
+                                        label.form-label(for='validationDefault09') Country
+                                        select#validationDefault09.form-select(required='')
+                                            option(selected='' disabled='' value='') Choose...
+                                            option US 
+                                            option UK 
+                                            option Africa
+                                    .col-md-3
+                                        label.form-label(for='validationDefault10') Zip
+                                        input#validationDefault10.form-control(type='text' required='')
+                                    .col-12
+                                        .form-check.checkbox-checked
+                                            input#invalidCheck3.form-check-input(type='checkbox' value='' required='')
+                                            label.form-check-label(for='invalidCheck3')
+                                                | Agree to terms and conditions
+                                    .col-12
+                                        button.btn.btn-primary(type='submit') Submit
+                        button.btn.btn-success(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasLeft' aria-controls='offcanvasLeft') Left Offcanvas
+                        #offcanvasLeft.offcanvas.offcanvas-start(tabindex='-1' aria-labelledby='offcanvasLeftLabel')
+                            .offcanvas-header
+                                h4#offcanvasLeftLabel.offcanvas-title Offcanvas Start
+                                button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+                            .offcanvas-body.custom-scrollbar
+                                form.row.g-3
+                                    .col-12 
+                                        label.form-label(for='exampleFormControlInput2') Email
+                                        input#exampleFormControlInput2.form-control(type='email' placeholder='name@example.com')  
+                                    .col-12
+                                        label.form-label(for='exampleFormControlInput2') Select Project
+                                        select.form-select(aria-label='Default select example')
+                                            option(selected='') Select your projects
+                                            option(value='1') Project1
+                                            option(value='2') Project2
+                                            option(value='3') Project3
+                                    .col-12
+                                        label.form-label(for='exampleFormControlInput3') Project Counts
+                                        select.form-select(aria-label='Default select example')
+                                            option(selected='') How many projects do you make?
+                                            option(value='1') One
+                                            option(value='2') Two
+                                            option(value='3') Three
+                                    .col-12 
+                                        label.form-label(for='exampleFormControlTextarea2') External Notes
+                                        textarea#exampleFormControlTextarea2.form-control(rows='4')
+                                    .col-12
+                                        .form-check.checkbox-checked
+                                            input#invalidCheck4.form-check-input(type='checkbox' value='' required='')
+                                            label.form-check-label(for='invalidCheck4')
+                                                | Agree to terms and conditions
+                                    .col-12
+                                        button.btn.btn-light.me-2(type='submit' data-bs-dismiss='offcanvas' aria-label='Close') Cancel
+                                        button.btn.btn-primary(type='submit') Submit
+
+                        .code-box-copy
+                          button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#offcanvas-direction', title='Copy')
+                            i.icofont.icofont-copy-alt
+                          pre.theme-scrollbar
+                            code.language-html#offcanvas-direction
+                                |&lt;button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"&gt;Top Offcanvas&lt;/button&gt;
+                                |&lt;div class="offcanvas offcanvas-top" id="offcanvasTop" tabindex="-1" aria-labelledby="offcanvasTopLabel"&gt;
+                                |  &lt;div class="offcanvas-header pb-0"&gt;
+                                |    &lt;h5 class="offcanvas-title" id="offcanvasTopLabel"&gt;Offcanvas Top&lt;/h5&gt;
+                                |    &lt;button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+                                |  &lt;/div&gt;
+                                |  &lt;div class="offcanvas-body"&gt;
+                                |    &lt;form class="row g-3"&gt;
+                                |      &lt;div class="col-md-4"&gt;
+                                |        &lt;label class="form-label" for="validationDefault03"&gt;First name&lt;/label&gt;
+                                |        &lt;input class="form-control" id="validationDefault03" type="text" value="Mark" required=""&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-md-4"&gt;
+                                |        &lt;label class="form-label" for="validationDefault02"&gt;Last name&lt;/label&gt;
+                                |        &lt;input class="form-control" id="validationDefault02" type="text" value="Otto" required=""&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-md-4"&gt;
+                                |        &lt;label class="form-label" for="validationDefaultUsername1"&gt;Username&lt;/label&gt;
+                                |        &lt;div class="input-group"&gt;&lt;span class="input-group-text" id="inputGroupPrepend2"&gt;@&lt;/span&gt;
+                                |          &lt;input class="form-control" id="validationDefaultUsername1" type="text" aria-describedby="inputGroupPrepend2" required=""&gt;
+                                |        &lt;/div&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-md-6"&gt;
+                                |        &lt;label class="form-label" for="validationDefaultCity"&gt;City&lt;/label&gt;
+                                |        &lt;input class="form-control" id="validationDefaultCity" type="text" required=""&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-md-3"&gt;
+                                |        &lt;label class="form-label" for="validationCountry"&gt;Country&lt;/label&gt;
+                                |        &lt;select class="form-select" id="validationCountry" required=""&gt;
+                                |          &lt;option selected="" disabled="" value=""&gt;Choose...&lt;/option&gt;
+                                |          &lt;option&gt;US &lt;/option&gt;
+                                |          &lt;option&gt;UK &lt;/option&gt;
+                                |          &lt;option&gt;Africa&lt;/option&gt;
+                                |        &lt;/select&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-md-3"&gt;
+                                |        &lt;label class="form-label" for="validationZip"&gt;Zip&lt;/label&gt;
+                                |        &lt;input class="form-control" id="validationZip" type="text" required=""&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;div class="form-check checkbox-checked"&gt;
+                                |          &lt;input class="form-check-input" id="termsCondition4" type="checkbox" value="" required=""&gt;
+                                |          &lt;label class="form-check-label" for="termsCondition4"&gt;Agree to terms and conditions&lt;/label&gt;
+                                |        &lt;/div&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;button class="btn btn-primary" type="submit"&gt;Submit&lt;/button&gt;
+                                |      &lt;/div&gt;
+                                |    &lt;/form&gt;
+                                |  &lt;/div&gt;
+                                |&lt;/div&gt;
+                                |&lt;button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"&gt;Right Offcanvas&lt;/button&gt;
+                                |&lt;div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1" aria-labelledby="offcanvasRightLabel"&gt;
+                                |  &lt;div class="offcanvas-header pb-0"&gt;
+                                |    &lt;h5 class="offcanvas-title" id="offcanvasRightLabel"&gt;Offcanvas End&lt;/h5&gt;
+                                |    &lt;button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+                                |  &lt;/div&gt;
+                                |  &lt;div class="offcanvas-body"&gt;
+                                |    &lt;form class="row g-3"&gt;
+                                |      &lt;div class="col-12"&gt; 
+                                |        &lt;label class="form-label" for="exampleFormControlInput1"&gt;Email&lt;/label&gt;
+                                |        &lt;input class="form-control" id="exampleFormControlInput1" type="email" placeholder="name@example.com"&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;label class="form-label" for="exampleFormControlInput2"&gt;Select Project&lt;/label&gt;
+                                |        &lt;select class="form-select" aria-label="Default select example"&gt;
+                                |          &lt;option selected=""&gt;Select your projects&lt;/option&gt;
+                                |          &lt;option value="1"&gt;Project1&lt;/option&gt;
+                                |          &lt;option value="2"&gt;Project2&lt;/option&gt;
+                                |          &lt;option value="3"&gt;Project3&lt;/option&gt;
+                                |        &lt;/select&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;label class="form-label" for="exampleFormControlInput3"&gt;Project Counts&lt;/label&gt;
+                                |        &lt;select class="form-select" aria-label="Default select example"&gt;
+                                |          &lt;option selected=""&gt;How many projects do you make?&lt;/option&gt;
+                                |          &lt;option value="1"&gt;One&lt;/option&gt;
+                                |          &lt;option value="2"&gt;Two&lt;/option&gt;
+                                |          &lt;option value="3"&gt;Three&lt;/option&gt;
+                                |        &lt;/select&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt; 
+                                |        &lt;label class="form-label" for="exampleFormControlTextarea1"&gt;External Notes&lt;/label&gt;
+                                |        &lt;textarea class="form-control" id="exampleFormControlTextarea1" rows="4"&gt;&lt;/textarea&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;div class="form-check checkbox-checked"&gt;
+                                |          &lt;input class="form-check-input" id="termsCondition5" type="checkbox" value="" required=""&gt;
+                                |          &lt;label class="form-check-label" for="termsCondition5"&gt;Agree to terms and conditions&lt;/label&gt;
+                                |        &lt;/div&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;button class="btn btn-light me-2" type="submit" data-bs-dismiss="offcanvas" aria-label="Close"&gt;Cancel&lt;/button&gt;
+                                |        &lt;button class="btn btn-primary" type="submit"&gt;Submit&lt;/button&gt;
+                                |      &lt;/div&gt;
+                                |    &lt;/form&gt;
+                                |  &lt;/div&gt;
+                                |&lt;/div&gt;
+                                |&lt;button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"&gt;Bottom Offcanvas&lt;/button&gt;
+                                |&lt;div class="offcanvas offcanvas-bottom" id="offcanvasBottom" tabindex="-1" aria-labelledby="offcanvasBottomLabel"&gt;
+                                |  &lt;div class="offcanvas-header pb-0"&gt;
+                                |    &lt;h5 class="offcanvas-title" id="offcanvasBottomLabel"&gt;Offcanvas Bottom&lt;/h5&gt;
+                                |    &lt;button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+                                |  &lt;/div&gt;
+                                |  &lt;div class="offcanvas-body"&gt;
+                                |    &lt;form class="row g-3"&gt;
+                                |      &lt;div class="col-md-4"&gt;
+                                |        &lt;label class="form-label" for="validationFirstName"&gt;First name&lt;/label&gt;
+                                |        &lt;input class="form-control" id="validationFirstName" type="text" value="Mark" required=""&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-md-4"&gt;
+                                |        &lt;label class="form-label" for="validationDefault0"&gt;Last name&lt;/label&gt;
+                                |        &lt;input class="form-control" id="validationDefault0" type="text" value="Otto" required=""&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-md-4"&gt;
+                                |        &lt;label class="form-label" for="validationDefaultUsername"&gt;Username&lt;/label&gt;
+                                |        &lt;div class="input-group"&gt;&lt;span class="input-group-text" id="inputGroupPrepend3"&gt;@&lt;/span&gt;
+                                |          &lt;input class="form-control" id="validationDefaultUsername" type="text" aria-describedby="inputGroupPrepend3" required=""&gt;
+                                |        &lt;/div&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-md-6"&gt;
+                                |        &lt;label class="form-label" for="validationCity1"&gt;City&lt;/label&gt;
+                                |        &lt;input class="form-control" id="validationCity1" type="text" required=""&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-md-3"&gt;
+                                |        &lt;label class="form-label" for="validationDefault04"&gt;Country&lt;/label&gt;
+                                |        &lt;select class="form-select" id="validationDefault04" required=""&gt;
+                                |          &lt;option selected="" disabled="" value=""&gt;Choose...&lt;/option&gt;
+                                |          &lt;option&gt;US &lt;/option&gt;
+                                |          &lt;option&gt;UK &lt;/option&gt;
+                                |          &lt;option&gt;Africa&lt;/option&gt;
+                                |        &lt;/select&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-md-3"&gt;
+                                |        &lt;label class="form-label" for="validationDefault05"&gt;Zip&lt;/label&gt;
+                                |        &lt;input class="form-control" id="validationDefault05" type="text" required=""&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;div class="form-check checkbox-checked"&gt;
+                                |          &lt;input class="form-check-input" id="termsCondition6" type="checkbox" value="" required=""&gt;
+                                |          &lt;label class="form-check-label" for="termsCondition6"&gt;Agree to terms and conditions&lt;/label&gt;
+                                |        &lt;/div&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;button class="btn btn-primary" type="submit"&gt;Submit&lt;/button&gt;
+                                |      &lt;/div&gt;
+                                |    &lt;/form&gt;
+                                |  &lt;/div&gt;
+                                |&lt;/div&gt;
+                                |&lt;button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft"&gt;Left Offcanvas&lt;/button&gt;
+                                |&lt;div class="offcanvas offcanvas-start" id="offcanvasLeft" tabindex="-1" aria-labelledby="offcanvasLeftLabel"&gt;
+                                |  &lt;div class="offcanvas-header pb-0"&gt;
+                                |    &lt;h5 class="offcanvas-title" id="offcanvasLeftLabel"&gt;Offcanvas Start&lt;/h5&gt;
+                                |    &lt;button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+                                |  &lt;/div&gt;
+                                |  &lt;div class="offcanvas-body"&gt;
+                                |    &lt;form class="row g-3"&gt;
+                                |      &lt;div class="col-12"&gt; 
+                                |        &lt;label class="form-label" for="exampleFormControlEmail"&gt;Email&lt;/label&gt;
+                                |        &lt;input class="form-control" id="exampleFormControlEmail" type="email" placeholder="name@example.com"&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;label class="form-label" for="exampleFormControlInput2"&gt;Select Project&lt;/label&gt;
+                                |        &lt;select class="form-select" aria-label="Default select example"&gt;
+                                |          &lt;option selected=""&gt;Select your projects&lt;/option&gt;
+                                |          &lt;option value="1"&gt;Project1&lt;/option&gt;
+                                |          &lt;option value="2"&gt;Project2&lt;/option&gt;
+                                |          &lt;option value="3"&gt;Project3&lt;/option&gt;
+                                |        &lt;/select&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;label class="form-label" for="exampleFormControlInput3"&gt;Project Counts&lt;/label&gt;
+                                |        &lt;select class="form-select" aria-label="Default select example"&gt;
+                                |          &lt;option selected=""&gt;How many projects do you make?&lt;/option&gt;
+                                |          &lt;option value="1"&gt;One&lt;/option&gt;
+                                |          &lt;option value="2"&gt;Two&lt;/option&gt;
+                                |          &lt;option value="3"&gt;Three&lt;/option&gt;
+                                |        &lt;/select&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt; 
+                                |        &lt;label class="form-label" for="exampleFormControlTextarea2"&gt;External Notes&lt;/label&gt;
+                                |        &lt;textarea class="form-control" id="exampleFormControlTextarea2" rows="4"&gt;&lt;/textarea&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;div class="form-check checkbox-checked"&gt;
+                                |          &lt;input class="form-check-input" id="termsCondition" type="checkbox" value="" required=""&gt;
+                                |          &lt;label class="form-check-label" for="termsCondition"&gt;Agree to terms and conditions&lt;/label&gt;
+                                |        &lt;/div&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;button class="btn btn-light me-2" type="submit" data-bs-dismiss="offcanvas" aria-label="Close"&gt;Cancel&lt;/button&gt;
+                                |        &lt;button class="btn btn-primary" type="submit"&gt;Submit&lt;/button&gt;
+                                |      &lt;/div&gt;
+                                |    &lt;/form&gt;
+                                |  &lt;/div&gt;
+                                |&lt;/div&gt;
+                .col-12
+                  .card
+                    .card-header
+                      h4.mb-0 Offcanvas Variations
+                      p.mb-0.mt-1
+                        | Use
+                        code  data-bs-scroll 
+                        | attribute to enable 
+                        code &lt;body&gt; 
+                        | scrolling class and clicking outside of the offcanvas will not cause it to close if the backdrop is static.
+                      .card-header-right
+                        ul.list-unstyled.card-option
+                          li
+                            i.icon-more-alt
+                          li
+                            i.view-html.fa.fa-code
+                          li
+                            i.icofont.icofont-maximize.full-card
+                          li
+                            i.icofont.icofont-minus.minimize-card
+                          li
+                            i.icofont.icofont-refresh.reload-card
+                          li
+                            i.icofont.icofont-error.close-card
+                    .card-body.common-flex.common-offcanvas      
+                        button.btn.btn-info(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasScrolling' aria-controls='offcanvasScrolling') Enable Body Scrolling
+                        #offcanvasScrolling.offcanvas.offcanvas-start(data-bs-scroll='true' data-bs-backdrop='false' tabindex='-1' aria-labelledby='offcanvasScrollingLabel')
+                            .offcanvas-header
+                                h4#offcanvasScrollingLabel.offcanvas-title Offcanvas body scrolling
+                                button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+                            .offcanvas-body.custom-scrollbar
+                                h5 Wed designer
+                                p For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.
+                                form.row.g-3
+                                    .col-12 
+                                        label.form-label(for='exampleFormControlInput3') Email
+                                        input#exampleFormControlInput3.form-control(type='email' placeholder='name@example.com')  
+                                    .col-12
+                                        label.form-label(for='exampleFormControlInput2') Select Project
+                                        select.form-select(aria-label='Default select example')
+                                            option(selected='') Select your projects
+                                            option(value='1') Project1
+                                            option(value='2') Project2
+                                            option(value='3') Project3
+                                    .col-12
+                                        label.form-label(for='exampleFormControlInput3') Project Counts
+                                        select.form-select(aria-label='Default select example')
+                                            option(selected='') How many projects do you make?
+                                            option(value='1') One
+                                            option(value='2') Two
+                                            option(value='3') Three
+                                    .col-12 
+                                        label.form-label(for='exampleFormControlTextarea3') External Notes
+                                        textarea#exampleFormControlTextarea3.form-control(rows='4')
+                                    .col-12
+                                        .form-check.checkbox-checked
+                                            input#invalidCheck5.form-check-input(type='checkbox' value='' required='')
+                                            label.form-check-label(for='invalidCheck5')
+                                                | Agree to terms and conditions
+                                    .col-12
+                                        button.btn.btn-light.me-2(type='submit' data-bs-dismiss='offcanvas' aria-label='Close') Cancel
+                                        button.btn.btn-primary(type='submit') Submit
+                        button.btn.btn-warning(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasWithBothOptions' aria-controls='offcanvasWithBothOptions') Enable Both Scrolling &amp; Backdrop
+                        #offcanvasWithBothOptions.offcanvas.offcanvas-start(data-bs-scroll='true' tabindex='-1' aria-labelledby='offcanvasWithBothOptionsLabel')
+                            .offcanvas-header
+                                h4#offcanvasWithBothOptionsLabel.offcanvas-title Backdrop with scrolling
+                                button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+                            .offcanvas-body.custom-scrollbar
+                                h5 Wed designer
+                                p For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.
+                                form.row.g-3
+                                    .col-12 
+                                        label.form-label(for='exampleFormControlInput4') Email
+                                        input#exampleFormControlInput4.form-control(type='email' placeholder='name@example.com')  
+                                    .col-12
+                                        label.form-label(for='exampleFormControlInput2') Select Project
+                                        select.form-select(aria-label='Default select example')
+                                            option(selected='') Select your projects
+                                            option(value='1') Project1
+                                            option(value='2') Project2
+                                            option(value='3') Project3
+                                    .col-12
+                                        label.form-label(for='exampleFormControlInput3') Project Counts
+                                        select.form-select(aria-label='Default select example')
+                                            option(selected='') How many projects do you make?
+                                            option(value='1') One
+                                            option(value='2') Two
+                                            option(value='3') Three
+                                    .col-12 
+                                        label.form-label(for='exampleFormControlTextarea4') External Notes
+                                        textarea#exampleFormControlTextarea4.form-control(rows='4')
+                                    .col-12
+                                        .form-check.checkbox-checked
+                                            input#invalidCheck6.form-check-input(type='checkbox' value='' required='')
+                                            label.form-check-label(for='invalidCheck6')
+                                                | Agree to terms and conditions
+                                    .col-12
+                                        button.btn.btn-light.me-2(type='submit' data-bs-dismiss='offcanvas' aria-label='Close') Cancel
+                                        button.btn.btn-primary(type='submit') Submit
+                        button.btn.btn-info(type='button' data-bs-toggle='offcanvas' data-bs-target='#staticBackdrop' aria-controls='staticBackdrop')
+                            | Toggle Static Offcanvas
+                        #staticBackdrop.offcanvas.offcanvas-start(data-bs-backdrop='static' tabindex='-1' aria-labelledby='staticBackdropLabel')
+                            .offcanvas-header
+                                h4#staticBackdropLabel.offcanvas-title Static Offcanvas
+                                button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+                            .offcanvas-body.custom-scrollbar
+                                h5 Wed designer
+                                p For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.
+                                form.row.g-3
+                                    .col-12 
+                                        label.form-label(for='exampleFormControlInput5') Email
+                                        input#exampleFormControlInput5.form-control(type='email' placeholder='name@example.com')  
+                                    .col-12
+                                        label.form-label(for='exampleFormControlInput2') Select Project
+                                        select.form-select(aria-label='Default select example')
+                                            option(selected='') Select your projects
+                                            option(value='1') Project1
+                                            option(value='2') Project2
+                                            option(value='3') Project3
+                                    .col-12
+                                        label.form-label(for='exampleFormControlInput3') Project Counts
+                                        select.form-select(aria-label='Default select example')
+                                            option(selected='') How many projects do you make?
+                                            option(value='1') One
+                                            option(value='2') Two
+                                            option(value='3') Three
+                                    .col-12 
+                                        label.form-label(for='exampleFormControlTextarea5') External Notes
+                                        textarea#exampleFormControlTextarea5.form-control(rows='4')
+                                    .col-12
+                                        .form-check.checkbox-checked
+                                            input#invalidCheck7.form-check-input(type='checkbox' value='' required='')
+                                            label.form-check-label(for='invalidCheck7')
+                                                | Agree to terms and conditions
+                                    .col-12
+                                        button.btn.btn-light.me-2(type='submit' data-bs-dismiss='offcanvas' aria-label='Close') Cancel
+                                        button.btn.btn-primary(type='submit') Submit
+
+                        .code-box-copy
+                          button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#offcanvas-variation', title='Copy')
+                            i.icofont.icofont-copy-alt
+                          pre.theme-scrollbar
+                            code.language-html#offcanvas-variation
+                                |&lt;button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"&gt;Enable Body Scrolling&lt;/button&gt;
+                                |&lt;div class="offcanvas offcanvas-start" id="offcanvasScrolling" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" aria-labelledby="offcanvasScrollingLabel"&gt;
+                                |  &lt;div class="offcanvas-header pb-0"&gt;
+                                |    &lt;h5 class="offcanvas-title" id="offcanvasScrollingLabel"&gt;Offcanvas Body Scrolling&lt;/h5&gt;
+                                |    &lt;button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+                                |  &lt;/div&gt;
+                                |  &lt;div class="offcanvas-body"&gt;
+                                |    &lt;h6&gt;Wed Designer&lt;/h6&gt;
+                                |    &lt;p&gt;For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.&lt;/p&gt;
+                                |    &lt;form class="row g-3"&gt;
+                                |      &lt;div class="col-12"&gt; 
+                                |        &lt;label class="form-label" for="exampleFormControlInput2"&gt;Email&lt;/label&gt;
+                                |        &lt;input class="form-control" id="exampleFormControlInput2" type="email" placeholder="name@example.com"&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;label class="form-label" for="exampleFormControlInput2"&gt;Select Project&lt;/label&gt;
+                                |        &lt;select class="form-select" aria-label="Default select example"&gt;
+                                |          &lt;option selected=""&gt;Select your projects&lt;/option&gt;
+                                |          &lt;option value="1"&gt;Project1&lt;/option&gt;
+                                |          &lt;option value="2"&gt;Project2&lt;/option&gt;
+                                |          &lt;option value="3"&gt;Project3&lt;/option&gt;
+                                |        &lt;/select&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;label class="form-label" for="exampleFormControlInput3"&gt;Project Counts&lt;/label&gt;
+                                |        &lt;select class="form-select" aria-label="Default select example"&gt;
+                                |          &lt;option selected=""&gt;How many projects do you make?&lt;/option&gt;
+                                |          &lt;option value="1"&gt;One&lt;/option&gt;
+                                |          &lt;option value="2"&gt;Two&lt;/option&gt;
+                                |          &lt;option value="3"&gt;Three&lt;/option&gt;
+                                |        &lt;/select&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt; 
+                                |        &lt;label class="form-label" for="exampleFormControlTextarea3"&gt;External Notes&lt;/label&gt;
+                                |        &lt;textarea class="form-control" id="exampleFormControlTextarea3" rows="4"&gt;&lt;/textarea&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;div class="form-check checkbox-checked"&gt;
+                                |          &lt;input class="form-check-input" id="termsCondition1" type="checkbox" value="" required=""&gt;
+                                |          &lt;label class="form-check-label" for="termsCondition1"&gt;Agree to terms and conditions&lt;/label&gt;
+                                |        &lt;/div&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;button class="btn btn-light me-2" type="submit" data-bs-dismiss="offcanvas" aria-label="Close"&gt;Cancel&lt;/button&gt;
+                                |        &lt;button class="btn btn-primary" type="submit"&gt;Submit&lt;/button&gt;
+                                |      &lt;/div&gt;
+                                |    &lt;/form&gt;
+                                |  &lt;/div&gt;
+                                |&lt;/div&gt;
+                                |&lt;button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"&gt;Enable Both Scrolling &amp; Backdrop&lt;/button&gt;
+                                |&lt;div class="offcanvas offcanvas-start" id="offcanvasWithBothOptions" data-bs-scroll="true" tabindex="-1" aria-labelledby="offcanvasWithBothOptionsLabel"&gt;
+                                |  &lt;div class="offcanvas-header pb-0"&gt;
+                                |    &lt;h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"&gt;Backdrop with Scrolling&lt;/h5&gt;
+                                |    &lt;button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+                                |  &lt;/div&gt;
+                                |  &lt;div class="offcanvas-body"&gt;
+                                |    &lt;h6&gt;Wed Designer&lt;/h6&gt;
+                                |    &lt;p&gt;For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.&lt;/p&gt;
+                                |    &lt;form class="row g-3"&gt;
+                                |      &lt;div class="col-12"&gt; 
+                                |        &lt;label class="form-label" for="exampleFormControlInput3"&gt;Email&lt;/label&gt;
+                                |        &lt;input class="form-control" id="exampleFormControlInput3" type="email" placeholder="name@example.com"&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;label class="form-label" for="exampleFormControlInput2"&gt;Select Project&lt;/label&gt;
+                                |        &lt;select class="form-select" aria-label="Default select example"&gt;
+                                |          &lt;option selected=""&gt;Select your projects&lt;/option&gt;
+                                |          &lt;option value="1"&gt;Project1&lt;/option&gt;
+                                |          &lt;option value="2"&gt;Project2&lt;/option&gt;
+                                |          &lt;option value="3"&gt;Project3&lt;/option&gt;
+                                |        &lt;/select&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;label class="form-label" for="exampleFormControlInput3"&gt;Project Counts&lt;/label&gt;
+                                |        &lt;select class="form-select" aria-label="Default select example"&gt;
+                                |          &lt;option selected=""&gt;How many projects do you make?&lt;/option&gt;
+                                |          &lt;option value="1"&gt;One&lt;/option&gt;
+                                |          &lt;option value="2"&gt;Two&lt;/option&gt;
+                                |          &lt;option value="3"&gt;Three&lt;/option&gt;
+                                |        &lt;/select&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt; 
+                                |        &lt;label class="form-label" for="externalNotes"&gt;External Notes&lt;/label&gt;
+                                |        &lt;textarea class="form-control" id="externalNotes" rows="4"&gt;&lt;/textarea&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;div class="form-check checkbox-checked"&gt;
+                                |          &lt;input class="form-check-input" id="termsCondition2" type="checkbox" value="" required=""&gt;
+                                |          &lt;label class="form-check-label" for="termsCondition2"&gt;Agree to terms and conditions&lt;/label&gt;
+                                |        &lt;/div&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;button class="btn btn-light me-2" type="submit" data-bs-dismiss="offcanvas" aria-label="Close"&gt;Cancel&lt;/button&gt;
+                                |        &lt;button class="btn btn-primary" type="submit"&gt;Submit&lt;/button&gt;
+                                |      &lt;/div&gt;
+                                |    &lt;/form&gt;
+                                |  &lt;/div&gt;
+                                |&lt;/div&gt;
+                                |&lt;button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"&gt;Toggle Static Offcanvas&lt;/button&gt;
+                                |&lt;div class="offcanvas offcanvas-start" id="staticBackdrop" data-bs-backdrop="static" tabindex="-1" aria-labelledby="staticBackdropLabel"&gt;
+                                |  &lt;div class="offcanvas-header pb-0"&gt;
+                                |    &lt;h5 class="offcanvas-title" id="staticBackdropLabel"&gt;Static Offcanvas&lt;/h5&gt;
+                                |    &lt;button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+                                |  &lt;/div&gt;
+                                |  &lt;div class="offcanvas-body"&gt;
+                                |    &lt;h6&gt;Wed Designer&lt;/h6&gt;
+                                |    &lt;p&gt;For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.&lt;/p&gt;
+                                |    &lt;form class="row g-3"&gt;
+                                |      &lt;div class="col-12"&gt; 
+                                |        &lt;label class="form-label" for="exampleFormControlInput4"&gt;Email&lt;/label&gt;
+                                |        &lt;input class="form-control" id="exampleFormControlInput4" type="email" placeholder="name@example.com"&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;label class="form-label" for="exampleFormControlInput2"&gt;Select Project&lt;/label&gt;
+                                |        &lt;select class="form-select" aria-label="Default select example"&gt;
+                                |          &lt;option selected=""&gt;Select your projects&lt;/option&gt;
+                                |          &lt;option value="1"&gt;Project1&lt;/option&gt;
+                                |          &lt;option value="2"&gt;Project2&lt;/option&gt;
+                                |          &lt;option value="3"&gt;Project3&lt;/option&gt;
+                                |        &lt;/select&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;label class="form-label" for="exampleFormControlInput3"&gt;Project Counts&lt;/label&gt;
+                                |        &lt;select class="form-select" aria-label="Default select example"&gt;
+                                |          &lt;option selected=""&gt;How many projects do you make?&lt;/option&gt;
+                                |          &lt;option value="1"&gt;One&lt;/option&gt;
+                                |          &lt;option value="2"&gt;Two&lt;/option&gt;
+                                |          &lt;option value="3"&gt;Three&lt;/option&gt;
+                                |        &lt;/select&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt; 
+                                |        &lt;label class="form-label" for="exampleFormControlTextarea4"&gt;External Notes&lt;/label&gt;
+                                |        &lt;textarea class="form-control" id="exampleFormControlTextarea4" rows="4"&gt;&lt;/textarea&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;div class="form-check checkbox-checked"&gt;
+                                |          &lt;input class="form-check-input" id="termsCondition3" type="checkbox" value="" required=""&gt;
+                                |          &lt;label class="form-check-label" for="termsCondition3"&gt;Agree to terms and conditions&lt;/label&gt;
+                                |        &lt;/div&gt;
+                                |      &lt;/div&gt;
+                                |      &lt;div class="col-12"&gt;
+                                |        &lt;button class="btn btn-light me-2" type="submit" data-bs-dismiss="offcanvas" aria-label="Close"&gt;Cancel&lt;/button&gt;
+                                |        &lt;button class="btn btn-primary" type="submit"&gt;Submit&lt;/button&gt;
+                                |      &lt;/div&gt;
+                                |    &lt;/form&gt;
+                                |  &lt;/div&gt;
+                                |&lt;/div&gt;
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

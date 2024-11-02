@@ -1,0 +1,2058 @@
+- var page_Title = 'Modal';
+- var theme_customizer      = true;
+- var popover_custom        = true;
+- var tooltip               = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var clipboard             = true;
+- var prism                 = true;
+- var customcard            = true;
+- var scrollbar             = true;
+- var validation_modal      = true;
+- var height_equal          = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Ui Kits','Modal'],'Modal')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-lg-6
+                .card
+                  .card-header
+                    h4 Basic modal
+                    p.mt-1.f-m-light
+                      | Different types of basic modals using like 
+                      code simple / scrolling / tooltips / grid / varying modal
+                      | .
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.badge-spacing
+                    // Simple demo
+                    button.btn.btn-secondary(type='button', data-bs-toggle='modal', data-original-title='test', data-bs-target='#exampleModal') Simple
+                    #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModal', aria-hidden='true')
+                      .modal-dialog(role='document')
+                        .modal-content
+                          .modal-body
+                            .modal-toggle-wrapper 
+                              h4
+                                | Up to 
+                                strong.txt-danger 85% OFF
+                                | , Hurry Up Online Shopping
+                              .modal-img 
+                                img(src="../assets/images/gif/online-shopping.gif", alt="online-shopping")
+                              p.text-sm-center Our difficulty in finding regular clothes that was of great quality, comfortable, and didn't impact the environment given way to Creatures of Habit.
+                              button.btn.bg-primary.d-flex.align-items-center.gap-2.text-light.ms-auto(type='button', data-bs-dismiss='modal') Explore More
+                                i(data-feather='arrow-right')
+                    // Scrolling long content
+                    button.btn.btn-success(type='button', data-bs-toggle='modal', data-bs-target='#exampleModalLong')
+                      | Scrolling Content
+                    #exampleModalLong.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLongTitle', aria-hidden='true')
+                      .modal-dialog(role='document')
+                        .modal-content
+                          .modal-header
+                            h4#exampleModalLongTitle.modal-title Scrolling modal
+                            button.btn-close.py-0(type='button', data-bs-dismiss='modal', aria-label='Close')
+                          .modal-body
+                            h5.f-w-600 Wed designer
+                            .d-flex.mt-3
+                              .flex-shrink-0
+                                i.svg-modal(data-feather='arrow-right-circle')
+                              .flex-grow-1.ms-2
+                                p
+                                  | For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.
+                            .d-flex.mt-2
+                              .flex-shrink-0
+                                i.svg-modal(data-feather='arrow-right-circle')
+                              .flex-grow-1.ms-2
+                                p
+                                  | As a web designer, you either prefer to work freelance for several different businesses at once or you may choose to work for just one. In either case, you'll need good time management skills to keep several projects moving forward.
+                            .d-flex.mt-2
+                              .flex-shrink-0
+                                i.svg-modal(data-feather='arrow-right-circle')
+                              .flex-grow-1.ms-2
+                                p
+                                  | Although a designer doesn't write the code that makes a site work, it doesn't hurt to have a basic understanding of HTML or CSS to make minor adjustments to a site. You'll find it simpler to edit templates, improve typefaces, or change item placements if you have a basic understanding of how things work.
+                            .d-flex.my-2
+                              .flex-shrink-0
+                                i.svg-modal(data-feather='arrow-right-circle')
+                              .flex-grow-1.ms-2
+                                p.pb-4
+                                  | Most businesses employ a certain font or typography so that clients can quickly distinguish them from their rivals. Since designers now have access to a wider variety of fonts, firms may more easily and precisely communicate their brands through typography.
+                            h5.f-w-600 UX designer 
+                            .d-flex.mt-3
+                              .flex-shrink-0
+                                i.svg-modal(data-feather='arrow-right-circle')
+                              .flex-grow-1.ms-2
+                                p
+                                  | User research, persona creation, building wireframes and interactive prototypes, and testing ideas are among the common tasks of a UX designer. These duties can differ greatly between organizations.
+                            .d-flex.mt-3
+                              .flex-shrink-0
+                                i.svg-modal(data-feather='arrow-right-circle')
+                              .flex-grow-1.ms-2
+                                p
+                                  | Create solutions that will be helpful for the issues and situations that exist right now, not for those that will. With the right materials, assist people in organizing their time, completing things more quickly, and optimizing it.
+                            .d-flex.mt-3
+                              .flex-shrink-0
+                                i.svg-modal(data-feather='arrow-right-circle')
+                              .flex-grow-1.ms-2
+                                p
+                                  | Based on the data received from users, improve them. Adapt existing solutions to the requirements, hopes, difficulties, and expectations of users.
+                            .d-flex.mt-3
+                              .flex-shrink-0
+                                i.svg-modal(data-feather='arrow-right-circle')
+                              .flex-grow-1.ms-2
+                                p
+                                  | Keep in mind that you are creating solutions to particular challenges for a particular population living in a particular habitat. Always remember to correctly contextualise your thoughts and determine whether they are actually appropriate for the situation. It's sometimes necessary to concede that a digital solution is not the most appropriate choice in a certain circumstance.
+                          .modal-footer
+                            button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+                            button.btn.btn-primary(type='button') Save changes
+                    // Tooltips and popovers modal
+                    button.btn.btn-info(type='button', data-bs-toggle='modal', data-bs-target='#tooltipmodal')
+                      | Tooltips and Popovers
+                    #tooltipmodal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='tooltipmodal', aria-hidden='true')
+                      .modal-dialog.modal-dialog-centered(role='document')
+                        .modal-content
+                          .modal-header
+                            h5.modal-title Tooltip and popover modal
+                            button.btn-close.py-0(type='button', data-bs-dismiss='modal', aria-label='Close')
+                          .modal-body
+                            h5 Popover in a modal
+                            p.mt-2
+                              | This 
+                              button.btn.btn-secondary(data-bs-toggle='popover' title='Popover title' data-bs-content='Popover body content is set in this attribute.') button
+                              |  triggers a popover on click.
+                            hr
+                            h5 Tooltips in a modal
+                            p.mt-2
+                              a.tooltip-test.txt-primary(href='#', title='Tooltip', data-bs-toggle="tooltip") This link
+                              |  and 
+                              a.tooltip-test.txt-primary(href='#', title='Tooltip', data-bs-toggle="tooltip") that link
+                              |  have tooltips on hover.
+                          .modal-footer
+                            button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+                            button.btn.btn-primary(type='button') Save changes
+                    //varying modal content
+                    button.btn.btn-primary(type='button', data-bs-toggle='modal', data-bs-target='#exampleModalgetbootstrap', data-whatever='@getbootstrap') Open Modal for Mofi
+                    #exampleModalgetbootstrap.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalgetbootstrap', aria-hidden='true')
+                      .modal-dialog(role='document')
+                        .modal-content.overflow-hidden
+                          .modal-toggle-wrapper.social-profile.text-start.dark-sign-up
+                            h4.modal-header.justify-content-center.border-0.text-dark Mofi SIGN-UP
+                            .modal-body
+                              form.row.g-3.needs-validation(novalidate='')
+                                .col-md-6
+                                  label.form-label(for='validationCustom01') First name
+                                  input#validationCustom01.form-control(type='text' placeholder='Enter your name' required='')
+                                  .valid-feedback
+                                    | Looks good!
+                                .col-md-6
+                                  label.form-label(for='validationCustom02') Last name
+                                  input#validationCustom02.form-control(type='text' placeholder='Enter your surname' required='')
+                                  .valid-feedback
+                                    | Looks good!
+                                .col-md-12
+                                  .mb-3
+                                    label.form-label(for='exampleFormControlInput1') Email address
+                                    input#exampleFormControlInput1.form-control(type='email' placeholder='Mofitheme@gmail.com')
+                                .col-md-12 
+                                  .form-check.mb-3
+                                    input#flexCheckDefault.form-check-input.checkbox-primary(type='checkbox' value='')
+                                    label.form-check-label.d-block.mb-0(for='flexCheckDefault')
+                                      | You accept our Terms and Privacy Policy by clicking Submit below.
+                                  button.btn.btn-primary(type='submit') Sign Up
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#basic-modal-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#basic-modal-copy
+                          |&lt;button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-original-title="test" data-bs-target="#exampleModal"&gt;Simple&lt;/button&gt;
+                          |&lt;div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true"&gt;
+                          |  &lt;div class="modal-dialog" role="document"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-body"&gt;
+                          |        &lt;div class="modal-toggle-wrapper"&gt; 
+                          |          &lt;h4&gt;Up to&lt;strong class="txt-danger"&gt;85% OFF&lt;/strong&gt;,Hurry Up Online Shopping&lt;/h4&gt;
+                          |          &lt;div class="modal-img"&gt;&lt;img src="../assets/images/gif/online-shopping.gif" alt="online-shopping"&gt;&lt;/div&gt;
+                          |          &lt;p class="text-sm-center"&gt;Our difficulty in finding regular clothes that was of great quality, comfortable, and didn't impact the environment given way to creatures of habit.&lt;/p&gt;
+                          |          &lt;button class="btn bg-primary d-flex align-items-center gap-2 text-light ms-auto" type="button" data-bs-dismiss="modal"&gt;Explore More&lt;i data-feather="arrow-right"&gt;&lt;/i&gt;&lt;/button&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+                          |&lt;!--Scrolling long content--&gt;
+                          |&lt;button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalLong"&gt;Scrolling Content&lt;/button&gt;
+                          |&lt;div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true"&gt;
+                          |  &lt;div class="modal-dialog" role="document"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-header"&gt;
+                          |        &lt;h5 class="modal-title" id="exampleModalLongTitle"&gt;Scrolling Modal&lt;/h5&gt;
+                          |        &lt;button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-body"&gt;
+                          |        &lt;h6&gt;Wed Designer&lt;/h6&gt;
+                          |        &lt;div class="d-flex mt-3"&gt;
+                          |          &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |          &lt;div class="flex-grow-1 ms-2"&gt;
+                          |            &lt;p&gt;For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="d-flex mt-2"&gt;
+                          |          &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |          &lt;div class="flex-grow-1 ms-2"&gt;
+                          |            &lt;p&gt;As a web designer, you either prefer to work freelance for several different businesses at once or you may choose to work for just one. In either case, you'll need good time management skills to keep several projects moving forward.&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="d-flex mt-2"&gt;
+                          |          &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |          &lt;div class="flex-grow-1 ms-2"&gt;
+                          |            &lt;p&gt;Although a designer doesn't write the code that makes a site work, it doesn't hurt to have a basic understanding of HTML or CSS to make minor adjustments to a site. You'll find it simpler to edit templates, improve typefaces, or change item placements if you have a basic understanding of how things work.&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="d-flex my-2"&gt;
+                          |          &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |          &lt;div class="flex-grow-1 ms-2"&gt;
+                          |            &lt;p class="pb-4"&gt;Most businesses employ a certain font or typography so that clients can quickly distinguish them from their rivals. Since designers now have access to a wider variety of fonts, firms may more easily and precisely communicate their brands through typography.&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;h6&gt;UX Designer&lt;/h6&gt;
+                          |        &lt;div class="d-flex mt-3"&gt;
+                          |          &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |          &lt;div class="flex-grow-1 ms-2"&gt;
+                          |            &lt;p&gt;User research, persona creation, building wireframes and interactive prototypes, and testing ideas are among the common tasks of a UX designer. These duties can differ greatly between organizations.&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="d-flex mt-3"&gt;
+                          |          &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |          &lt;div class="flex-grow-1 ms-2"&gt;
+                          |            &lt;p&gt;Create solutions that will be helpful for the issues and situations that exist right now, not for those that will. With the right materials, assist people in organizing their time, completing things more quickly, and optimizing it.&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="d-flex mt-3"&gt;
+                          |          &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |          &lt;div class="flex-grow-1 ms-2"&gt;
+                          |            &lt;p&gt;Based on the data received from users, improve them. Adapt existing solutions to the requirements, hopes, difficulties, and expectations of users.&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="d-flex mt-3"&gt;
+                          |          &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |          &lt;div class="flex-grow-1 ms-2"&gt;
+                          |            &lt;p&gt;Keep in mind that you are creating solutions to particular challenges for a particular population living in a particular habitat. Always remember to correctly contextualise your thoughts and determine whether they are actually appropriate for the situation. It's sometimes necessary to concede that a digital solution is not the most appropriate choice in a certain circumstance.&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-footer"&gt;
+                          |        &lt;button class="btn btn-secondary" type="button" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+                          |        &lt;button class="btn btn-primary" type="button"&gt;Save&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+                          |&lt;!--Tooltips and popovers modal--&gt;
+                          |&lt;button class="btn btn-info" type="button" data-bs-toggle="modal" data-bs-target="#tooltipmodal"&gt;Tooltips and Popovers&lt;/button&gt;
+                          |&lt;div class="modal fade" id="tooltipmodal" tabindex="-1" role="dialog" aria-labelledby="tooltipmodal" aria-hidden="true"&gt;
+                          |  &lt;div class="modal-dialog modal-dialog-centered" role="document"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-header"&gt;
+                          |        &lt;h5 class="modal-title"&gt;Tooltip and Popover Modal&lt;/h5&gt;
+                          |        &lt;button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-body"&gt;
+                          |        &lt;h5&gt;Popover in a modal&lt;/h5&gt;
+                          |        &lt;p class="mt-2"&gt;This 
+                          |          &lt;button class="btn btn-info" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute."&gt;button&lt;/button&gt; triggers a popover on click.
+                          |        &lt;/p&gt;
+                          |        &lt;hr&gt;
+                          |        &lt;h5&gt;Tooltips in a modal&lt;/h5&gt;
+                          |        &lt;p class="mt-2"&gt;&lt;a class="tooltip-test txt-primary" href="#" title="Tooltip" data-bs-toggle="tooltip"&gt;This link&lt;/a&gt; and &lt;a class="tooltip-test txt-primary" href="#" title="Tooltip" data-bs-toggle="tooltip"&gt;that link&lt;/a&gt; have tooltips on hover.&lt;/p&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-footer"&gt;
+                          |        &lt;button class="btn btn-secondary" type="button" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+                          |        &lt;button class="btn btn-primary" type="button"&gt;Save&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+                          |&lt;!--varying modal content--&gt;
+                          |&lt;button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalgetbootstrap" data-whatever="@getbootstrap"&gt;Open Modal for Cuba&lt;/button&gt;
+                          |&lt;div class="modal fade" id="exampleModalgetbootstrap" tabindex="-1" role="dialog" aria-labelledby="exampleModalgetbootstrap" aria-hidden="true"&gt;
+                          |  &lt;div class="modal-dialog" role="document"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-toggle-wrapper social-profile text-start dark-sign-up"&gt;
+                          |        &lt;h3 class="modal-header justify-content-center border-0"&gt;CUBA SIGN-UP&lt;/h3&gt;
+                          |        &lt;div class="modal-body"&gt;
+                          |          &lt;form class="row g-3 needs-validation" novalidate=""&gt;
+                          |            &lt;div class="col-md-6"&gt;
+                          |              &lt;label class="form-label" for="validationCustom01"&gt;First name&lt;/label&gt;
+                          |              &lt;input class="form-control" id="validationCustom01" type="text" placeholder="Enter your name" required=""&gt;
+                          |              &lt;div class="valid-feedback"&gt;Looks good!&lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |            &lt;div class="col-md-6"&gt;
+                          |              &lt;label class="form-label" for="validationCustom02"&gt;Last name&lt;/label&gt;
+                          |              &lt;input class="form-control" id="validationCustom02" type="text" placeholder="Enter your surname" required=""&gt;
+                          |              &lt;div class="valid-feedback"&gt;Looks good!&lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |            &lt;div class="col-md-12"&gt;
+                          |              &lt;div class="mb-3"&gt;
+                          |                &lt;label class="form-label" for="exampleFormControlInput1"&gt;Email address&lt;/label&gt;
+                          |                &lt;input class="form-control" id="exampleFormControlInput1" type="email" placeholder="cubatheme@gmail.com"&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |            &lt;div class="col-md-12"&gt; 
+                          |              &lt;div class="form-check mb-3"&gt;
+                          |                &lt;input class="form-check-input checkbox-primary" id="flexCheckDefault" type="checkbox" value=""&gt;
+                          |                &lt;label class="form-check-label d-block mb-0" for="flexCheckDefault"&gt;You accept our Terms and Privacy Policy by clicking Submit below.&lt;/label&gt;
+                          |              &lt;/div&gt;
+                          |              &lt;button class="btn btn-primary" type="submit"&gt;Sign Up&lt;/button&gt;
+                          |            &lt;/div&gt;
+                          |          &lt;/form&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-lg-6
+                .card
+                  .card-header
+                    h4 Sizes modal
+                    p.mt-1.f-m-light
+                      | Modals have three optional sizes, available via modifier classes to be placed on a 
+                      code modal-dialog.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.badge-spacing
+                    //full screen modal
+                    .btn.btn-secondary(data-bs-toggle='modal', data-bs-target='.bd-example-modal-fullscreen') Full Screen Modal
+                    .modal.fade.bd-example-modal-fullscreen(tabindex='-1', role='dialog', aria-labelledby='myFullLargeModalLabel', aria-hidden='true')
+                      .modal-dialog.modal-fullscreen
+                        .modal-content
+                          .modal-header
+                            h4#myFullLargeModalLabel.modal-title Extra large modal
+                            button.btn-close.py-0(type='button', data-bs-dismiss='modal', aria-label='Close')
+                          .modal-body.dark-modal
+                            .large-modal-header
+                              i(data-feather='chevrons-right')
+                              h5.f-w-600 Web design 
+                            p.modal-padding-space We build specialised websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.
+                            .large-modal-header
+                              i(data-feather='chevrons-right')
+                              h5.f-w-600 Content marketing 
+                            p.modal-padding-space Through better opportunities and knowledgeable marketing strategies, we aid business funnel. We won't only hit the target; instead, we'll aim higher and surpass the objectives.
+                            .large-modal-header
+                              i(data-feather='chevrons-right')
+                              h5.f-w-600 PPC 
+                            p.modal-padding-space Customized advertising to increase visitors and improve conversion. To increase retention, identify the correct audience and remarket to them.
+                            .large-modal-header
+                              i(data-feather='chevrons-right')
+                              h5.f-w-600 UX designer 
+                            p.modal-padding-space The capacity to comprehend and experience other people's feelings is known as empathy. A positive consumer experience is prioritised by UX. The finest UX designers spend time studying individuals and their tendencies because of this. Designers may produce goods that genuinely engage and excite customers by having a thorough understanding of the end consumers.
+                    //Extra large modal
+                    .btn.btn-info(data-bs-toggle='modal', data-bs-target='.bd-example-modal-xl') Extra Large Modal
+                    .modal.fade.bd-example-modal-xl(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
+                      .modal-dialog.modal-xl
+                        .modal-content
+                          .modal-header
+                            h4#myLargeModalLabel.modal-title Extra large modal
+                            button.btn-close.py-0(type='button', data-bs-dismiss='modal', aria-label='Close')
+                          .modal-body.dark-modal
+                            .large-modal-header
+                              i(data-feather='chevrons-right')
+                              h5.f-w-600 Web design 
+                            p.modal-padding-space We build specialised websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.
+                            .large-modal-header
+                              i(data-feather='chevrons-right')
+                              h5.f-w-600 Content marketing 
+                            p.modal-padding-space Through better opportunities and knowledgeable marketing strategies, we aid business funnel. We won't only hit the target; instead, we'll aim higher and surpass the objectives.
+                            .large-modal-header
+                              i(data-feather='chevrons-right')
+                              h5.f-w-600 PPC 
+                            p.modal-padding-space Customized advertising to increase visitors and improve conversion. To increase retention, identify the correct audience and remarket to them.
+                            .large-modal-header
+                              i(data-feather='chevrons-right')
+                              h5.f-w-600 UX designer 
+                            p.modal-padding-space The capacity to comprehend and experience other people's feelings is known as empathy. A positive consumer experience is prioritised by UX. The finest UX designers spend time studying individuals and their tendencies because of this. Designers may produce goods that genuinely engage and excite customers by having a thorough understanding of the end consumers.
+                    // Large modal
+                    button.btn.btn-success(type='button', data-bs-toggle='modal', data-bs-target='.bd-example-modal-lg') Large Modal
+                    .modal.fade.bd-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myExtraLargeModal', aria-hidden='true')
+                      .modal-dialog.modal-lg
+                        .modal-content
+                          .modal-header
+                            h4#myExtraLargeModal.modal-title Large modal
+                            button.btn-close.py-0(type='button', data-bs-dismiss='modal', aria-label='Close')
+                          .modal-body.dark-modal
+                            .large-modal-header
+                              i(data-feather='chevrons-right')
+                              h5.f-w-600 Start with your goals 
+                            p.modal-padding-space.mb-0 No matter how talented you are as a content writer or creator, you will always fail if you don't have a clear set of goals.
+                            p.modal-padding-space.mb-0 First of all, without goals, there is no way to determine your success. Additionally, you lack direction.
+                            p.modal-padding-space.mb-0 Together with your team, respond to the following questions to make sure they are:
+                            .large-modal-body
+                              i(data-feather='corner-up-right')
+                              p.ps-1 What must you achieve, and by when?
+                            .large-modal-body
+                              i(data-feather='corner-up-right')
+                              p.ps-1 How will you evaluate your level of success?
+                            .large-modal-body
+                              i(data-feather='corner-up-right')
+                              p.ps-1 Can you accomplish it with the available resources?
+                            .large-modal-body
+                              i(data-feather='corner-up-right')
+                              p.ps-1 Does it advance your core business aims?                          
+                    // Small modal
+                    button.btn.btn-primary(type='button', data-bs-toggle='modal', data-bs-target='.bd-example-modal-sm') Small Modal
+                    .modal.fade.bd-example-modal-sm(tabindex='-1', role='dialog', aria-labelledby='mySmallModalLabel', aria-hidden='true')
+                      .modal-dialog.modal-sm
+                        .modal-content
+                          .modal-header
+                            h4#mySmallModalLabel.modal-title Small modal
+                            button.btn-close.py-0(type='button', data-bs-dismiss='modal', aria-label='Close')
+                          .modal-body.dark-modal
+                            .large-modal-header
+                              i(data-feather='chevrons-right')
+                              h5.f-w-600 Web design 
+                            p.modal-padding-space We build specialised websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.
+                            .large-modal-header
+                              i(data-feather='chevrons-right')
+                              h5.f-w-600 Content marketing 
+                            p.modal-padding-space Through better opportunities and knowledgeable marketing strategies, we aid business funnel. We won't only hit the target; instead, we'll aim higher and surpass the objectives.
+                            .large-modal-header
+                              i(data-feather='chevrons-right')
+                              h5.f-w-600 PPC 
+                            p.modal-padding-space Customized advertising to increase visitors and improve conversion. To increase retention, identify the correct audience and remarket to them.
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#size-modal-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#size-modal-copy
+                          |&lt;div class="btn btn-secondary" data-bs-toggle="modal" data-bs-target=".bd-example-modal-fullscreen"&gt;Full Screen Modal&lt;/div&gt;
+                          |&lt;div class="modal fade bd-example-modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myFullLargeModalLabel" aria-hidden="true"&gt;
+                          |  &lt;div class="modal-dialog modal-fullscreen"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-header"&gt;
+                          |        &lt;h4 class="modal-title" id="myFullLargeModalLabel"&gt;Full Screen Modal&lt;/h4&gt;
+                          |        &lt;button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-body dark-modal"&gt;
+                          |        &lt;div class="large-modal-header"&gt;&lt;i data-feather="chevrons-right"&gt;&lt;/i&gt;
+                          |          &lt;h6&gt;Web Design&lt;/h6&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;p class="modal-padding-space"&gt;We build specialized websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.&lt;/p&gt;
+                          |        &lt;div class="large-modal-header"&gt;&lt;i data-feather="chevrons-right"&gt;&lt;/i&gt;
+                          |          &lt;h6&gt;Content Marketing&lt;/h6&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;p class="modal-padding-space"&gt;Through better opportunities and knowledgeable marketing strategies, we aid business funnel. We won't only hit the target; instead, we'll aim higher and surpass the objectives.&lt;/p&gt;
+                          |        &lt;div class="large-modal-header"&gt;&lt;i data-feather="chevrons-right"&gt;&lt;/i&gt;
+                          |          &lt;h6&gt;PPC&lt;/h6&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;p class="modal-padding-space"&gt;Customized advertising to increase visitors and improve conversion. To increase retention, identify the correct audience and remarket to them.&lt;/p&gt;
+                          |        &lt;div class="large-modal-header"&gt;&lt;i data-feather="chevrons-right"&gt;&lt;/i&gt;
+                          |          &lt;h6&gt;UX Designer&lt;/h6&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;p class="modal-padding-space"&gt;The capacity to comprehend and experience other people's feelings is known as empathy. A positive consumer experience is prioritised by UX. The finest UX designers spend time studying individuals and their tendencies because of this. Designers may produce goods that genuinely engage and excite customers by having a thorough understanding of the end consumers.&lt;/p&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+                          |&lt;!--Extra large modal--&gt;
+                          |&lt;div class="btn btn-info" data-bs-toggle="modal" data-bs-target=".bd-example-modal-xl"&gt;Extra Large Modal&lt;/div&gt;
+                          |&lt;div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"&gt;
+                          |  &lt;div class="modal-dialog modal-xl"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-header"&gt;
+                          |        &lt;h4 class="modal-title" id="myLargeModalLabel"&gt;Extra Large Modal&lt;/h4&gt;
+                          |        &lt;button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-body dark-modal"&gt;
+                          |        &lt;div class="large-modal-header"&gt;&lt;i data-feather="chevrons-right"&gt;&lt;/i&gt;
+                          |          &lt;h6&gt;Web Design&lt;/h6&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;p class="modal-padding-space"&gt;We build specialized websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.&lt;/p&gt;
+                          |        &lt;div class="large-modal-header"&gt;&lt;i data-feather="chevrons-right"&gt;&lt;/i&gt;
+                          |          &lt;h6&gt;Content Marketing&lt;/h6&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;p class="modal-padding-space"&gt;Through better opportunities and knowledgeable marketing strategies, we aid business funnel. We won't only hit the target; instead, we'll aim higher and surpass the objectives.&lt;/p&gt;
+                          |        &lt;div class="large-modal-header"&gt;&lt;i data-feather="chevrons-right"&gt;&lt;/i&gt;
+                          |          &lt;h6&gt;PPC&lt;/h6&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;p class="modal-padding-space"&gt;Customized advertising to increase visitors and improve conversion. To increase retention, identify the correct audience and remarket to them.&lt;/p&gt;
+                          |        &lt;div class="large-modal-header"&gt;&lt;i data-feather="chevrons-right"&gt;&lt;/i&gt;
+                          |          &lt;h6&gt;UX Designer&lt;/h6&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;p class="modal-padding-space"&gt;The capacity to comprehend and experience other people's feelings is known as empathy. A positive consumer experience is prioritized by UX. The finest UX designers spend time studying individuals and their tendencies because of this. Designers may produce goods that genuinely engage and excite customers by having a thorough understanding of the end consumers.&lt;/p&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+                          |&lt;!--Large modal--&gt;
+                          |&lt;button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg"&gt;Large Modal&lt;/button&gt;
+                          |&lt;div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModal" aria-hidden="true"&gt;
+                          |  &lt;div class="modal-dialog modal-lg"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-header"&gt;
+                          |        &lt;h4 class="modal-title" id="myExtraLargeModal"&gt;Large Modal&lt;/h4&gt;
+                          |        &lt;button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-body dark-modal"&gt;
+                          |        &lt;div class="large-modal-header"&gt;&lt;i data-feather="chevrons-right"&gt;&lt;/i&gt;
+                          |          &lt;h6&gt;Start with your goals&lt;/h6&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;p class="modal-padding-space mb-0"&gt;No matter how talented you are as a content writer or creator, you will always fail if you don't have a clear set of goals.&lt;/p&gt;
+                          |        &lt;p class="modal-padding-space mb-0"&gt;First of all, without goals, there is no way to determine your success. Additionally, you lack direction.&lt;/p&gt;
+                          |        &lt;p class="modal-padding-space mb-0"&gt;Together with your team, respond to the following questions to make sure they are:&lt;/p&gt;
+                          |        &lt;div class="large-modal-body"&gt;&lt;i data-feather="corner-up-right"&gt;&lt;/i&gt;
+                          |          &lt;p class="ps-1"&gt;What must you achieve, and by when?&lt;/p&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="large-modal-body"&gt;&lt;i data-feather="corner-up-right"&gt;&lt;/i&gt;
+                          |          &lt;p class="ps-1"&gt;How will you evaluate your level of success?&lt;/p&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="large-modal-body"&gt;&lt;i data-feather="corner-up-right"&gt;&lt;/i&gt;
+                          |          &lt;p class="ps-1"&gt;Can you accomplish it with the available resources?&lt;/p&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="large-modal-body"&gt;&lt;i data-feather="corner-up-right"&gt;&lt;/i&gt;
+                          |          &lt;p class="ps-1"&gt;Does it advance your core business aims?&lt;/p&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+                          |&lt;!--Small modal--&gt;
+                          |&lt;button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm"&gt;Small Modal&lt;/button&gt;
+                          |&lt;div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true"&gt;
+                          |  &lt;div class="modal-dialog modal-sm"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-header"&gt;
+                          |        &lt;h4 class="modal-title" id="mySmallModalLabel"&gt;Small Modal&lt;/h4&gt;
+                          |        &lt;button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-body dark-modal"&gt;
+                          |        &lt;div class="large-modal-header"&gt;&lt;i data-feather="chevrons-right"&gt;&lt;/i&gt;
+                          |          &lt;h6&gt;Web Design&lt;/h6&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;p class="modal-padding-space"&gt;We build specialized websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.&lt;/p&gt;
+                          |        &lt;div class="large-modal-header"&gt;&lt;i data-feather="chevrons-right"&gt;&lt;/i&gt;
+                          |          &lt;h6&gt;Content marketing&lt;/h6&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;p class="modal-padding-space"&gt;Through better opportunities and knowledgeable marketing strategies, we aid business funnel. We won't only hit the target; instead, we'll aim higher and surpass the objectives.&lt;/p&gt;
+                          |        &lt;div class="large-modal-header"&gt;&lt;i data-feather="chevrons-right"&gt;&lt;/i&gt;
+                          |          &lt;h6&gt;PPC&lt;/h6&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;p class="modal-padding-space"&gt;Customized advertising to increase visitors and improve conversion. To increase retention, identify the correct audience and remarket to them.&lt;/p&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-xl-12 
+                .card 
+                  .card-header 
+                    h4 Fullscreen modals
+                    p.f-m-light.mt-1
+                      | Another override is the option to pop up a modal that covers the user viewport, available via modifier classes that are placed on a
+                      code  modal-dialog
+                      | . 
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.badge-spacing
+                    button.btn.btn-outline-secondary-2x(type='button' data-bs-toggle='modal' data-bs-target='#exampleModalfullscreen')
+                      | Fullscreen modal
+                    // Full Screen Modal
+                    #exampleModalfullscreen.modal.fade(tabindex='-1' aria-labelledby='fullScreenModalLabel' aria-hidden='true')
+                      .modal-dialog.modal-fullscreen
+                        .modal-content
+                          .modal-header
+                            h1#fullScreenModalLabel.modal-title.fs-5 Full screen modal
+                            button.btn-close.py-0(type='button' data-bs-dismiss='modal' aria-label='Close')
+                          .modal-body.dark-modal
+                            .large-modal-header
+                              i(data-feather='chevrons-right')
+                              h5.f-w-600 Web design 
+                            p.modal-padding-space We build specialised websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.
+                            div.modal-details
+                              div.web-content
+                                h5.f-w-600 Web designer
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | As a web designer, you either prefer to work freelance for several different businesses at once or you may choose to work for just one. In either case, you'll need good time management skills to keep several projects moving forward.
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | Although a designer doesn't write the code that makes a site work, it doesn't hurt to have a basic understanding of HTML or CSS to make minor adjustments to a site. You'll find it simpler to edit templates, improve typefaces, or change item placements if you have a basic understanding of how things work.
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p 
+                                      | Most businesses employ a certain font or typography so that clients can quickly distinguish them from their rivals. Since designers now have access to a wider variety of fonts, firms may more easily and precisely communicate their brands through typography.
+                              div.web-content
+                                h5.f-w-600 UX designer 
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | User research, persona creation, building wireframes and interactive prototypes, and testing ideas are among the common tasks of a UX designer. These duties can differ greatly between organizations.
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | Create solutions that will be helpful for the issues and situations that exist right now, not for those that will. With the right materials, assist people in organizing their time, completing things more quickly, and optimizing it.
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | Based on the data received from users, improve them. Adapt existing solutions to the requirements, hopes, difficulties, and expectations of users.
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | Keep in mind that you are creating solutions to particular challenges for a particular population living in a particular habitat. Always remember to correctly contextualise your thoughts and determine whether they are actually appropriate for the situation. It's sometimes necessary to concede that a digital solution is not the most appropriate choice in a certain circumstance.
+                          .modal-footer
+                            button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+                            button.btn.btn-primary(type='button') Save 
+                    button.btn.btn-outline-info-2x(type='button' data-bs-toggle='modal' data-bs-target='#exampleModalfullscreensm')
+                      | Fullscreen below sm
+                    // Full screen below sm
+                    #exampleModalfullscreensm.modal.fade(tabindex='-1' aria-labelledby='smModalLabel' aria-hidden='true')
+                      .modal-dialog.modal-fullscreen-sm-down
+                        .modal-content
+                          .modal-header
+                            h1#smModalLabel.modal-title.fs-5 Full screen below sm
+                            button.btn-close.py-0(type='button' data-bs-dismiss='modal' aria-label='Close')
+                          .modal-body.dark-modal
+                            .large-modal-header
+                              i(data-feather='chevrons-right')
+                              h5.f-w-600 Web design 
+                            p.modal-padding-space We build specialised websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.
+                            div.modal-details
+                              div.web-content
+                                h5.f-w-600 Wed designer
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | Most businesses employ a certain font or typography so that clients can quickly distinguish them from their rivals. Since designers now have access to a wider variety of fonts, firms may more easily and precisely communicate their brands through typography.
+                              div.web-content
+                                h5.f-w-600 UX designer 
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | User research, persona creation, building wireframes and interactive prototypes, and testing ideas are among the common tasks of a UX designer. These duties can differ greatly between organizations.
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | Keep in mind that you are creating solutions to particular challenges for a particular population living in a particular habitat. Always remember to correctly contextualise your thoughts and determine whether they are actually appropriate for the situation. It's sometimes necessary to concede that a digital solution is not the most appropriate choice in a certain circumstance.
+                          .modal-footer
+                            button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+                            button.btn.btn-primary(type='button') Save changes              
+                    button.btn.btn-outline-success-2x(type='button' data-bs-toggle='modal' data-bs-target='#exampleModalfullscreen-md')
+                      | Fullscreen below md
+                    // Full screen below md
+                    #exampleModalfullscreen-md.modal.fade(tabindex='-1' aria-labelledby='mdModalLabel' aria-hidden='true')
+                      .modal-dialog.modal-fullscreen-md-down
+                        .modal-content
+                          .modal-header
+                            h1#mdModalLabel.modal-title.fs-5 Full screen below md
+                            button.btn-close.py-0(type='button' data-bs-dismiss='modal' aria-label='Close')
+                          .modal-body.dark-modal
+                            .large-modal-header
+                              i(data-feather='chevrons-right')
+                              h5.f-w-600 Web design 
+                            p.modal-padding-space We build specialised websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.
+                            div.modal-details
+                              div.web-content
+                                h5.f-w-600 Wed designer
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | Most businesses employ a certain font or typography so that clients can quickly distinguish them from their rivals. Since designers now have access to a wider variety of fonts, firms may more easily and precisely communicate their brands through typography.
+                              div.web-content
+                                h5.f-w-600 UX designer 
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | User research, persona creation, building wireframes and interactive prototypes, and testing ideas are among the common tasks of a UX designer. These duties can differ greatly between organizations.
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | Keep in mind that you are creating solutions to particular challenges for a particular population living in a particular habitat. Always remember to correctly contextualise your thoughts and determine whether they are actually appropriate for the situation. It's sometimes necessary to concede that a digital solution is not the most appropriate choice in a certain circumstance.
+                          .modal-footer
+                            button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+                            button.btn.btn-primary(type='button') Save changes              
+                    button.btn.btn-outline-warning-2x(type='button' data-bs-toggle='modal' data-bs-target='#exampleModalfullscreen-lg')
+                      |Fullscreen below lg
+                    // Full screen below lg
+                    #exampleModalfullscreen-lg.modal.fade(tabindex='-1' aria-labelledby='lgModalLabel' aria-hidden='true')
+                      .modal-dialog.modal-fullscreen-lg-down
+                        .modal-content
+                          .modal-header
+                            h1#lgModalLabel.modal-title.fs-5 Full screen below lg
+                            button.btn-close.py-0(type='button' data-bs-dismiss='modal' aria-label='Close')
+                          .modal-body.dark-modal
+                            .large-modal-header
+                              i(data-feather='chevrons-right')
+                              h5.f-w-600 Web design 
+                            p.modal-padding-space We build specialised websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.
+                            div.modal-details
+                              div.web-content
+                                h5.f-w-600 Wed designer
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | Most businesses employ a certain font or typography so that clients can quickly distinguish them from their rivals. Since designers now have access to a wider variety of fonts, firms may more easily and precisely communicate their brands through typography.
+                              div.web-content
+                                h5.f-w-600 UX Designer 
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | User research, persona creation, building wireframes and interactive prototypes, and testing ideas are among the common tasks of a UX designer. These duties can differ greatly between organizations.
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | Keep in mind that you are creating solutions to particular challenges for a particular population living in a particular habitat. Always remember to correctly contextualise your thoughts and determine whether they are actually appropriate for the situation. It's sometimes necessary to concede that a digital solution is not the most appropriate choice in a certain circumstance.
+                          .modal-footer
+                            button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+                            button.btn.btn-primary(type='button') Save changes 
+                    button.btn.btn-outline-primary-2x(type='button' data-bs-toggle='modal' data-bs-target='#exampleModalfullscreen-xl')
+                      | Fullscreen below xl
+                    // Full screen below xl
+                    #exampleModalfullscreen-xl.modal.fade(tabindex='-1' aria-labelledby='xlModalLabel' aria-hidden='true')
+                      .modal-dialog.modal-fullscreen-xl-down
+                        .modal-content
+                          .modal-header
+                            h1#xlModalLabel.modal-title.fs-5 Full screen below xl
+                            button.btn-close.py-0(type='button' data-bs-dismiss='modal' aria-label='Close')
+                          .modal-body.dark-modal
+                            .large-modal-header
+                              i(data-feather='chevrons-right')
+                              h5.f-w-600 Web design 
+                            p.modal-padding-space We build specialised websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.
+                            div.modal-details
+                              div.web-content
+                                h5.f-w-600 Wed designer
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | Most businesses employ a certain font or typography so that clients can quickly distinguish them from their rivals. Since designers now have access to a wider variety of fonts, firms may more easily and precisely communicate their brands through typography.
+                              div.web-content
+                                h5.f-w-600 UX designer 
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | User research, persona creation, building wireframes and interactive prototypes, and testing ideas are among the common tasks of a UX designer. These duties can differ greatly between organizations.
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | Keep in mind that you are creating solutions to particular challenges for a particular population living in a particular habitat. Always remember to correctly contextualise your thoughts and determine whether they are actually appropriate for the situation. It's sometimes necessary to concede that a digital solution is not the most appropriate choice in a certain circumstance.
+                          .modal-footer
+                            button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+                            button.btn.btn-primary(type='button') Save changes        
+                    button.btn.btn-outline-danger-2x(type='button' data-bs-toggle='modal' data-bs-target='#exampleModalfullscreen-xxl')
+                      | Fullscreen below xxl
+                    // Full screen below xxl
+                    #exampleModalfullscreen-xxl.modal.fade(tabindex='-1' aria-labelledby='xxlModalLabel' aria-hidden='true')
+                      .modal-dialog.modal-fullscreen-xxl-down
+                        .modal-content
+                          .modal-header
+                            h1#xxlModalLabel.modal-title.fs-5 Full screen below xxl
+                            button.btn-close.py-0(type='button' data-bs-dismiss='modal' aria-label='Close')
+                          .modal-body.dark-modal
+                            .large-modal-header
+                              i(data-feather='chevrons-right')
+                              h5.f-w-600 Web design 
+                            p.modal-padding-space We build specialised websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.
+                            div.modal-details
+                              div.web-content
+                                h5.f-w-600 Wed designer
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | Most businesses employ a certain font or typography so that clients can quickly distinguish them from their rivals. Since designers now have access to a wider variety of fonts, firms may more easily and precisely communicate their brands through typography.
+                              div.web-content
+                                h5.f-w-600 UX designer 
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | User research, persona creation, building wireframes and interactive prototypes, and testing ideas are among the common tasks of a UX designer. These duties can differ greatly between organizations.
+                                .d-flex
+                                  .flex-shrink-0
+                                    i.svg-modal(data-feather='arrow-right-circle')
+                                  .flex-grow-1.ms-2
+                                    p
+                                      | Keep in mind that you are creating solutions to particular challenges for a particular population living in a particular habitat. Always remember to correctly contextualise your thoughts and determine whether they are actually appropriate for the situation. It's sometimes necessary to concede that a digital solution is not the most appropriate choice in a certain circumstance.
+                          .modal-footer
+                            button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+                            button.btn.btn-primary(type='button') Save changes                                
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#common-modal', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#common-modal
+                          |&lt;button class="btn btn-outline-secondary-2x" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalfullscreen"&gt;Fullscreen Modal&lt;/button&gt;
+                          |&lt;!--Full Screen Modal--&gt;
+                          |&lt;div class="modal fade" id="exampleModalfullscreen" tabindex="-1" aria-labelledby="fullScreenModalLabel" aria-hidden="true"&gt;
+                          |  &lt;div class="modal-dialog modal-fullscreen"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-header"&gt;
+                          |        &lt;h1 class="modal-title fs-5" id="fullScreenModalLabel"&gt;Full Screen Modal&lt;/h1&gt;
+                          |        &lt;button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-body dark-modal"&gt;
+                          |        &lt;div class="large-modal-header"&gt;&lt;i data-feather="chevrons-right"&gt;&lt;/i&gt;
+                          |          &lt;h6&gt;Web Design&lt;/h6&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;p class="modal-padding-space"&gt;We build specialized websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.&lt;/p&gt;
+                          |        &lt;div class="modal-details"&gt;
+                          |          &lt;div class="web-content"&gt;
+                          |            &lt;h6&gt;Web Designer&lt;/h6&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;As a web designer, you either prefer to work freelance for several different businesses at once or you may choose to work for just one. In either case, you'll need good time management skills to keep several projects moving forward.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;Although a designer doesn't write the code that makes a site work, it doesn't hurt to have a basic understanding of HTML or CSS to make minor adjustments to a site. You'll find it simpler to edit templates, improve typefaces, or change item placements if you have a basic understanding of how things work.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;Most businesses employ a certain font or typography so that clients can quickly distinguish them from their rivals. Since designers now have access to a wider variety of fonts, firms may more easily and precisely communicate their brands through typography.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |          &lt;div class="web-content"&gt;
+                          |            &lt;h6&gt;UX Designer&lt;/h6&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;User research, persona creation, building wireframes and interactive prototypes, and testing ideas are among the common tasks of a UX designer. These duties can differ greatly between organizations.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;Create solutions that will be helpful for the issues and situations that exist right now, not for those that will. With the right materials, assist people in organizing their time, completing things more quickly, and optimizing it.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;Based on the data received from users, improve them. Adapt existing solutions to the requirements, hopes, difficulties, and expectations of users.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;Keep in mind that you are creating solutions to particular challenges for a particular population living in a particular habitat. Always remember to correctly contextualise your thoughts and determine whether they are actually appropriate for the situation. It's sometimes necessary to concede that a digital solution is not the most appropriate choice in a certain circumstance.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-footer"&gt;
+                          |        &lt;button class="btn btn-secondary" type="button" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+                          |        &lt;button class="btn btn-primary" type="button"&gt;Save &lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+                          |&lt;button class="btn btn-outline-info-2x" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalfullscreensm"&gt;Fullscreen Below sm&lt;/button&gt;
+                          |&lt;!--Full screen below sm--&gt;
+                          |&lt;div class="modal fade" id="exampleModalfullscreensm" tabindex="-1" aria-labelledby="smModalLabel" aria-hidden="true"&gt;
+                          |  &lt;div class="modal-dialog modal-fullscreen-sm-down"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-header"&gt;
+                          |        &lt;h1 class="modal-title fs-5" id="smModalLabel"&gt;Full Screen Below sm&lt;/h1&gt;
+                          |        &lt;button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-body dark-modal"&gt;
+                          |        &lt;div class="large-modal-header"&gt;&lt;i data-feather="chevrons-right"&gt;&lt;/i&gt;
+                          |          &lt;h6&gt;Web Design&lt;/h6&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;p class="modal-padding-space"&gt;We build specialized websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.&lt;/p&gt;
+                          |        &lt;div class="modal-details"&gt;
+                          |          &lt;div class="web-content"&gt;
+                          |            &lt;h6&gt;Wed Designer&lt;/h6&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;Most businesses employ a certain font or typography so that clients can quickly distinguish them from their rivals. Since designers now have access to a wider variety of fonts, firms may more easily and precisely communicate their brands through typography.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |          &lt;div class="web-content"&gt;
+                          |            &lt;h6&gt;UX Designer&lt;/h6&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;User research, persona creation, building wireframes and interactive prototypes, and testing ideas are among the common tasks of a UX designer. These duties can differ greatly between organizations.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;Keep in mind that you are creating solutions to particular challenges for a particular population living in a particular habitat. Always remember to correctly contextualise your thoughts and determine whether they are actually appropriate for the situation. It's sometimes necessary to concede that a digital solution is not the most appropriate choice in a certain circumstance.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-footer"&gt;
+                          |        &lt;button class="btn btn-secondary" type="button" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+                          |        &lt;button class="btn btn-primary" type="button"&gt;Save&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+                          |&lt;button class="btn btn-outline-success-2x" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalfullscreen-md"&gt;Fullscreen Below md&lt;/button&gt;
+                          |&lt;!--Full screen below md--&gt;
+                          |&lt;div class="modal fade" id="exampleModalfullscreen-md" tabindex="-1" aria-labelledby="mdModalLabel" aria-hidden="true"&gt;
+                          |  &lt;div class="modal-dialog modal-fullscreen-md-down"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-header"&gt;
+                          |        &lt;h1 class="modal-title fs-5" id="mdModalLabel"&gt;Full Screen Below md&lt;/h1&gt;
+                          |        &lt;button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-body dark-modal"&gt;
+                          |        &lt;div class="large-modal-header"&gt;&lt;i data-feather="chevrons-right"&gt;&lt;/i&gt;
+                          |          &lt;h6&gt;Web Design&lt;/h6&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;p class="modal-padding-space"&gt;We build specialized websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.&lt;/p&gt;
+                          |        &lt;div class="modal-details"&gt;
+                          |          &lt;div class="web-content"&gt;
+                          |            &lt;h6&gt;Wed Designer&lt;/h6&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;Most businesses employ a certain font or typography so that clients can quickly distinguish them from their rivals. Since designers now have access to a wider variety of fonts, firms may more easily and precisely communicate their brands through typography.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |          &lt;div class="web-content"&gt;
+                          |            &lt;h6&gt;UX Designer&lt;/h6&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;User research, persona creation, building wireframes and interactive prototypes, and testing ideas are among the common tasks of a UX designer. These duties can differ greatly between organizations.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;Keep in mind that you are creating solutions to particular challenges for a particular population living in a particular habitat. Always remember to correctly contextualise your thoughts and determine whether they are actually appropriate for the situation. It's sometimes necessary to concede that a digital solution is not the most appropriate choice in a certain circumstance.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-footer"&gt;
+                          |        &lt;button class="btn btn-secondary" type="button" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+                          |        &lt;button class="btn btn-primary" type="button"&gt;Save&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+                          |&lt;button class="btn btn-outline-warning-2x" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalfullscreen-lg"&gt;Fullscreen Below lg&lt;/button&gt;
+                          |&lt;!--Full screen below lg--&gt;
+                          |&lt;div class="modal fade" id="exampleModalfullscreen-lg" tabindex="-1" aria-labelledby="lgModalLabel" aria-hidden="true"&gt;
+                          |  &lt;div class="modal-dialog modal-fullscreen-lg-down"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-header"&gt;
+                          |        &lt;h1 class="modal-title fs-5" id="lgModalLabel"&gt;Full Screen Below lg&lt;/h1&gt;
+                          |        &lt;button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-body dark-modal"&gt;
+                          |        &lt;div class="large-modal-header"&gt;&lt;i data-feather="chevrons-right"&gt;&lt;/i&gt;
+                          |          &lt;h6&gt;Web Design&lt;/h6&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;p class="modal-padding-space"&gt;We build specialized websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.&lt;/p&gt;
+                          |        &lt;div class="modal-details"&gt;
+                          |          &lt;div class="web-content"&gt;
+                          |            &lt;h6&gt;Wed Designer&lt;/h6&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;Most businesses employ a certain font or typography so that clients can quickly distinguish them from their rivals. Since designers now have access to a wider variety of fonts, firms may more easily and precisely communicate their brands through typography.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |          &lt;div class="web-content"&gt;
+                          |            &lt;h6&gt;UX Designer&lt;/h6&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;User research, persona creation, building wireframes and interactive prototypes, and testing ideas are among the common tasks of a UX designer. These duties can differ greatly between organizations.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;Keep in mind that you are creating solutions to particular challenges for a particular population living in a particular habitat. Always remember to correctly contextualise your thoughts and determine whether they are actually appropriate for the situation. It's sometimes necessary to concede that a digital solution is not the most appropriate choice in a certain circumstance.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-footer"&gt;
+                          |        &lt;button class="btn btn-secondary" type="button" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+                          |        &lt;button class="btn btn-primary" type="button"&gt;Save&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+                          |&lt;button class="btn btn-outline-primary-2x" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalfullscreen-xl"&gt;Fullscreen Below xl&lt;/button&gt;
+                          |&lt;!--Full screen below xl--&gt;
+                          |&lt;div class="modal fade" id="exampleModalfullscreen-xl" tabindex="-1" aria-labelledby="xlModalLabel" aria-hidden="true"&gt;
+                          |  &lt;div class="modal-dialog modal-fullscreen-xl-down"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-header"&gt;
+                          |        &lt;h1 class="modal-title fs-5" id="xlModalLabel"&gt;Full Screen Below xl&lt;/h1&gt;
+                          |        &lt;button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-body dark-modal"&gt;
+                          |        &lt;div class="large-modal-header"&gt;&lt;i data-feather="chevrons-right"&gt;&lt;/i&gt;
+                          |          &lt;h6&gt;Web Design&lt;/h6&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;p class="modal-padding-space"&gt;We build specialized websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.&lt;/p&gt;
+                          |        &lt;div class="modal-details"&gt;
+                          |          &lt;div class="web-content"&gt;
+                          |            &lt;h6&gt;Wed Designer&lt;/h6&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;Most businesses employ a certain font or typography so that clients can quickly distinguish them from their rivals. Since designers now have access to a wider variety of fonts, firms may more easily and precisely communicate their brands through typography.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |          &lt;div class="web-content"&gt;
+                          |            &lt;h6&gt;UX Designer&lt;/h6&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;User research, persona creation, building wireframes and interactive prototypes, and testing ideas are among the common tasks of a UX designer. These duties can differ greatly between organizations.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;Keep in mind that you are creating solutions to particular challenges for a particular population living in a particular habitat. Always remember to correctly contextualise your thoughts and determine whether they are actually appropriate for the situation. It's sometimes necessary to concede that a digital solution is not the most appropriate choice in a certain circumstance.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-footer"&gt;
+                          |        &lt;button class="btn btn-secondary" type="button" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+                          |        &lt;button class="btn btn-primary" type="button"&gt;Save &lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+                          |&lt;button class="btn btn-outline-danger-2x" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalfullscreen-xxl"&gt;Fullscreen Below xxl&lt;/button&gt;
+                          |&lt;!--Full screen below xxl--&gt;
+                          |&lt;div class="modal fade" id="exampleModalfullscreen-xxl" tabindex="-1" aria-labelledby="xxlModalLabel" aria-hidden="true"&gt;
+                          |  &lt;div class="modal-dialog modal-fullscreen-xxl-down"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-header"&gt;
+                          |        &lt;h1 class="modal-title fs-5" id="xxlModalLabel"&gt;Full Screen Below xxl&lt;/h1&gt;
+                          |        &lt;button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-body dark-modal"&gt;
+                          |        &lt;div class="large-modal-header"&gt;&lt;i data-feather="chevrons-right"&gt;&lt;/i&gt;
+                          |          &lt;h6&gt;Web Design&lt;/h6&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;p class="modal-padding-space"&gt;We build specialized websites for companies, list them on digital directories, and set up a sales funnel to boost ROI.&lt;/p&gt;
+                          |        &lt;div class="modal-details"&gt;
+                          |          &lt;div class="web-content"&gt;
+                          |            &lt;h6&gt;Wed Designer&lt;/h6&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;Most businesses employ a certain font or typography so that clients can quickly distinguish them from their rivals. Since designers now have access to a wider variety of fonts, firms may more easily and precisely communicate their brands through typography.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |          &lt;div class="web-content"&gt;
+                          |            &lt;h6&gt;UX Designer&lt;/h6&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;User research, persona creation, building wireframes and interactive prototypes, and testing ideas are among the common tasks of a UX designer. These duties can differ greatly between organizations.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |            &lt;div class="d-flex"&gt;
+                          |              &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |              &lt;div class="flex-grow-1 ms-2"&gt;
+                          |                &lt;p&gt;Keep in mind that you are creating solutions to particular challenges for a particular population living in a particular habitat. Always remember to correctly contextualise your thoughts and determine whether they are actually appropriate for the situation. It's sometimes necessary to concede that a digital solution is not the most appropriate choice in a certain circumstance.&lt;/p&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-footer"&gt;
+                          |        &lt;button class="btn btn-secondary" type="button" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+                          |        &lt;button class="btn btn-primary" type="button"&gt;Save&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-xl-4.col-md-6
+                .card
+                  .card-header 
+                    h4 Centered modal 
+                    p.f-m-light.mt-1 
+                      | Use the 
+                      code .modal-dialog-centered 
+                      | through centered modal. and set 
+                      code data-bs-target 
+                      |.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    //Centered modal
+                    button.btn.btn-success(type='button', data-bs-toggle='modal', data-bs-target='#exampleModalCenter1')
+                      | Vertically Centered
+                    #exampleModalCenter1.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenter1', aria-hidden='true')
+                      .modal-dialog.modal-dialog-centered(role='document')
+                        .modal-content
+                          .modal-body 
+                            .modal-toggle-wrapper   
+                              ul.modal-img
+                                li 
+                                  img(src="../assets/images/gif/danger.gif", alt="error")
+                              h4.text-center.pb-2 Ohh! Something went wrong!
+                              p.text-center
+                                | Attackers on malicious activity may trick you into doing something dangrous like installing software or revealing your personal informations.
+                              button.btn.btn-secondary.d-flex.m-auto(type='button', data-bs-dismiss='modal') Close
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#centered-modal', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#centered-modal
+                          |&lt;button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalCenter1"&gt;Vertically Centered&lt;/button&gt;
+                          |&lt;div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter1" aria-hidden="true"&gt;
+                          |  &lt;div class="modal-dialog modal-dialog-centered" role="document"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-body"&gt; 
+                          |        &lt;div class="modal-toggle-wrapper"&gt;  
+                          |          &lt;ul class="modal-img"&gt;
+                          |            &lt;li&gt; &lt;img src="../assets/images/gif/danger.gif" alt="error"&gt;&lt;/li&gt;
+                          |          &lt;/ul&gt;
+                          |          &lt;h4 class="text-center pb-2"&gt;Ohh! Something went wrong!&lt;/h4&gt;
+                          |          &lt;p class="text-center c-light"&gt;Attackers on malicious activity may trick you into doing something Dangerous like installing software or revealing your personal Information.&lt;/p&gt;
+                          |          &lt;button class="btn btn-secondary d-flex m-auto" type="button" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-xl-4.col-md-6
+                .card
+                  .card-header 
+                    h4 Toggle between modal
+                    p.f-m-light.mt-1 
+                      | Toggle between multiple modals with some clever placement of the 
+                      code data-bs-target 
+                      | and 
+                      code data-bs-toggle
+                      |  attributes.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    #exampleModalToggle.modal.fade(aria-hidden='true' aria-labelledby='exampleModalToggle' tabindex='-1')
+                      .modal-dialog.modal-dialog-centered
+                        .modal-content
+                          .modal-body
+                            .modal-toggle-wrapper
+                              ul.modal-img 
+                                li
+                                  img(src="../assets/images/gif/whatapp.gif", alt="whatsapp")
+                                li 
+                                  img(src="../assets/images/gif/instagram.gif", alt="instagram")
+                                li 
+                                  img(src="../assets/images/gif/facebook.gif", alt="facebook")
+                              h6 Remove your complete account from your phone or tablet to sign out of the Gmail app.
+                              button.btn.btn-dark.rounded-pill.w-100.mt-4(data-bs-target='#exampleModalToggle2' data-bs-toggle='modal') Connect new account
+                              button.btn.rounded-pill.w-100.pb-0.dark-toggle-btn(type='button', data-bs-dismiss='modal') Cancel
+                    #exampleModalToggle2.modal.fade(aria-hidden='true' aria-labelledby='exampleModalToggle2' tabindex='-1')
+                      .modal-dialog.modal-dialog-centered
+                        .modal-content
+                          .modal-body
+                            .modal-toggle-wrapper
+                              ul.modal-img 
+                                li 
+                                  img(src="../assets/images/gif/logout.gif", alt="logout")
+                              h4.pt-3.text-center Already leaving??
+                              p.text-center Are you sure want to logout this dashboard?
+                              span.d-block.text-center.mb-4  Not a member?
+                                a.ms-1(href="dashboard-02.html") Register
+                              button.btn.btn-dark.d-flex.m-auto(type='button', data-bs-dismiss='modal') Yes, Log out
+                    a.btn.btn-dark(data-bs-toggle='modal' href='#exampleModalToggle' role='button' data-bs-dismiss='modal') Open First Modal
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#togal-between-modal', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#togal-between-modal
+                          |&lt;div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggle" tabindex="-1"&gt;
+                          |  &lt;div class="modal-dialog modal-dialog-centered"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-body"&gt;
+                          |        &lt;div class="modal-toggle-wrapper"&gt;
+                          |          &lt;ul class="modal-img"&gt; 
+                          |            &lt;li&gt;&lt;img src="../assets/images/gif/whatapp.gif" alt="whatsapp"&gt;&lt;/li&gt;
+                          |            &lt;li&gt; &lt;img src="../assets/images/gif/instagram.gif" alt="instagram"&gt;&lt;/li&gt;
+                          |            &lt;li&gt; &lt;img src="../assets/images/gif/facebook.gif" alt="facebook"&gt;&lt;/li&gt;
+                          |          &lt;/ul&gt;
+                          |          &lt;h6&gt;Remove your complete account from your phone or tablet to sign out of the Gmail app.&lt;/h6&gt;
+                          |          &lt;button class="btn btn-dark rounded-pill w-100 mt-4" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"&gt;Connect new account&lt;/button&gt;
+                          |          &lt;button class="btn rounded-pill w-100 pb-0 dark-toggle-btn" type="button" data-bs-dismiss="modal"&gt;Cancel&lt;/button&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+                          |&lt;div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggle2" tabindex="-1"&gt;
+                          |  &lt;div class="modal-dialog modal-dialog-centered"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-body"&gt;
+                          |        &lt;div class="modal-toggle-wrapper"&gt;
+                          |          &lt;ul class="modal-img"&gt; 
+                          |            &lt;li&gt; &lt;img src="../assets/images/gif/logout.gif" alt="logout"&gt;&lt;/li&gt;
+                          |          &lt;/ul&gt;
+                          |          &lt;h4 class="pt-3 text-center"&gt;Already leaving??&lt;/h4&gt;
+                          |          &lt;p class="text-center"&gt;Are you sure want to logout this dashboard?&lt;/p&gt;&lt;span class="d-block text-center mb-4"&gt; Not a member?&lt;a class="ms-1" href="dashboard-02.html"&gt;Register&lt;/a&gt;&lt;/span&gt;
+                          |          &lt;button class="btn btn-dark d-flex m-auto" type="button" data-bs-dismiss="modal"&gt;Yes, Log out&lt;/button&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;&lt;a class="btn btn-dark" data-bs-toggle="modal" href="#exampleModalToggle" role="button" data-bs-dismiss="modal"&gt;Open First Modal&lt;/a&gt;
+              .col-xl-4
+                .card
+                  .card-header 
+                    h4 Static Backdrop Modal
+                    p.f-m-light.mt-1    
+                      | When backdrop is set to static, the modal will not close when clicking outside of it. Click the button below to try it.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#staticBackdrop')
+                      | Static Backdrop Modal
+                    // Modal
+                    #staticBackdrop.modal.fade(data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='staticBackdrop' aria-hidden='true')
+                      .modal-dialog
+                        .modal-content
+                          .modal-body 
+                            .modal-toggle-wrapper   
+                              ul.modal-img
+                                li 
+                                  img(src="../assets/images/gif/time.gif", alt="alarm")
+                              h4.text-center.pb-2 Failed to establish a connection.
+                              p.text-center
+                                | Getting back in touch in 
+                                b.txt-warning 14 seconds...
+                              button.btn.btn-warning.d-flex.m-auto(type='button', data-bs-dismiss='modal') Close                                                     
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#static-backdrop-modal', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#static-backdrop-modal
+                          |&lt;button class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"&gt;Static Backdrop Modal&lt;/button&gt;
+                          |&lt;!--Modal--&gt;
+                          |&lt;div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop" aria-hidden="true"&gt;
+                          |  &lt;div class="modal-dialog"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-body"&gt; 
+                          |        &lt;div class="modal-toggle-wrapper"&gt;  
+                          |          &lt;ul class="modal-img"&gt;
+                          |            &lt;li&gt; &lt;img src="../assets/images/gif/time.gif" alt="alarm"&gt;&lt;/li&gt;
+                          |          &lt;/ul&gt;
+                          |          &lt;h4 class="text-center pb-2"&gt;Failed to establish a connection.&lt;/h4&gt;
+                          |          &lt;p class="text-center"&gt;Getting back in touch in &lt;b class="txt-warning"&gt;14 seconds...&lt;/b&gt;&lt;/p&gt;
+                          |          &lt;button class="btn btn-warning d-flex m-auto" type="button" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              //- Grid Modal
+              .col-md-6
+                .card.height-equal
+                  .card-header 
+                    h4 Grid Modal
+                    p.f-m-light.mt-1    
+                      | Utilize the Bootstrap grid system within a modal by nesting 
+                      code  container-fluid 
+                      |  within the 
+                      code  modal-body
+                      |  . Then, use the normal grid system classes as you would anywhere else.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    button.btn.btn-warning(type='button' data-bs-toggle='modal' data-bs-target='#grid-modal')
+                      | Grid Modal 
+                    // Modal
+                    #grid-modal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='grid-modal' aria-hidden='true')
+                      .modal-dialog.modal-dialog-centered(role='document')
+                        .modal-content
+                          .modal-header
+                            h4.modal-title Grid Modal
+                            button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                          .modal-body
+                            .container-fluid
+                              .row.common-align
+                                .col-md-4 
+                                  span.grid-space.bg-light-secondary.txt-secondary .col-md-4
+                                .col-md-4.ms-auto
+                                  span.grid-space.bg-light-secondary.txt-secondary .col-md-4 .ms-auto
+                              .row.justify-content-center
+                                .col-md-3.ms-auto
+                                  span.grid-space.bg-light-secondary.txt-secondary .col-md-3 .ms-auto
+                                .col-md-2.ms-auto
+                                  span.grid-space.bg-light-secondary.txt-secondary .col-md-2 .ms-auto
+                              .row
+                                .col-md-6.ms-auto
+                                  span.grid-space.bg-light-secondary.txt-secondary .col-md-6 .ms-auto
+                              .row.common-align
+                                .col-sm-9
+                                  span.grid-space.bg-light-secondary.txt-secondary Level 1: .col-sm-9
+                                  .row
+                                    .col-8.col-sm-6
+                                      span.grid-space.bg-light-secondary.txt-secondary.mb-0  Level 2: .col-8 .col-sm-6
+                                    .col-4.col-sm-6
+                                      span.grid-space.bg-light-secondary.txt-secondary.mb-0 Level 2: .col-4 .col-sm-6
+                          .modal-footer 
+                              button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+                              button.btn.btn-primary(type='button') Save
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#grid-modal', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#grid-modal
+                          |&lt;button class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#grid-modal"&gt;Grid Modal &lt;/button&gt;
+                          |&lt;!--Modal--&gt;
+                          |&lt;div class="modal fade" id="grid-modal" tabindex="-1" role="dialog" aria-labelledby="grid-modal" aria-hidden="true"&gt;
+                          |  &lt;div class="modal-dialog modal-dialog-centered" role="document"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-header"&gt;
+                          |        &lt;h5 class="modal-title"&gt;Grid Modal&lt;/h5&gt;
+                          |        &lt;button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-body"&gt;
+                          |        &lt;div class="container-fluid"&gt;
+                          |          &lt;div class="row common-align"&gt;
+                          |            &lt;div class="col-md-4"&gt;&lt;span class="grid-space bg-light-secondary txt-secondary"&gt;.col-md-4&lt;/span&gt;&lt;/div&gt;
+                          |            &lt;div class="col-md-4 ms-auto"&gt;&lt;span class="grid-space bg-light-secondary txt-secondary"&gt;.col-md-4 .ms-auto&lt;/span&gt;&lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |          &lt;div class="row justify-content-center"&gt;
+                          |            &lt;div class="col-md-3 ms-auto"&gt;&lt;span class="grid-space bg-light-secondary txt-secondary"&gt;.col-md-3 .ms-auto&lt;/span&gt;&lt;/div&gt;
+                          |            &lt;div class="col-md-2 ms-auto"&gt;&lt;span class="grid-space bg-light-secondary txt-secondary"&gt;.col-md-2 .ms-auto&lt;/span&gt;&lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |          &lt;div class="row"&gt;
+                          |            &lt;div class="col-md-6 ms-auto"&gt;&lt;span class="grid-space bg-light-secondary txt-secondary"&gt;.col-md-6 .ms-auto&lt;/span&gt;&lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |          &lt;div class="row common-align"&gt;
+                          |            &lt;div class="col-sm-9"&gt;&lt;span class="grid-space bg-light-secondary txt-secondary"&gt;Level 1: .col-sm-9&lt;/span&gt;
+                          |              &lt;div class="row"&gt;
+                          |                &lt;div class="col-8 col-sm-6"&gt;&lt;span class="grid-space bg-light-secondary txt-secondary mb-0"&gt; Level 2: .col-8 .col-sm-6&lt;/span&gt;&lt;/div&gt;
+                          |                &lt;div class="col-4 col-sm-6"&gt;&lt;span class="grid-space bg-light-secondary txt-secondary mb-0"&gt;Level 2: .col-4 .col-sm-6&lt;/span&gt;&lt;/div&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-footer"&gt; 
+                          |        &lt;button class="btn btn-secondary" type="button" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+                          |        &lt;button class="btn btn-primary" type="button"&gt;Save&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              //- Scrolling Long Content Modal
+              .col-md-6
+                .card.height-equal
+                  .card-header 
+                    h4 Scrolling Long Content Modal
+                    p.f-m-light.mt-1    
+                      | You can also create a scrollable modal that allows scrolling the modal body by adding 
+                      code  modal-dialog-scrollable 
+                      | to 
+                      code modal-dialog
+                      | .
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    button.btn.btn-secondary(type='button' data-bs-toggle='modal' data-bs-target='#scrolling-modal')
+                      | Scrolling Modal
+                    // Modal
+                    #scrolling-modal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='grid-modal' aria-hidden='true')
+                      .modal-dialog.modal-dialog-scrollable(role='document')
+                        .modal-content
+                          .modal-header
+                            h4.modal-title Scrolling Long Modal
+                            button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                          .modal-body.custom-scrollbar
+                            h5.f-w-600 Wed Designer
+                            .d-flex.mt-3
+                              .flex-shrink-0
+                                i.svg-modal(data-feather='arrow-right-circle')
+                              .flex-grow-1.ms-2
+                                p
+                                  | For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.
+                            .d-flex.mt-2
+                              .flex-shrink-0
+                                i.svg-modal(data-feather='arrow-right-circle')
+                              .flex-grow-1.ms-2
+                                p
+                                  | As a web designer, you either prefer to work freelance for several different businesses at once or you may choose to work for just one. In either case, you'll need good time management skills to keep several projects moving forward.
+                            .d-flex.mt-2
+                              .flex-shrink-0
+                                i.svg-modal(data-feather='arrow-right-circle')
+                              .flex-grow-1.ms-2
+                                p
+                                  | Although a designer doesn't write the code that makes a site work, it doesn't hurt to have a basic understanding of HTML or CSS to make minor adjustments to a site. You'll find it simpler to edit templates, improve typefaces, or change item placements if you have a basic understanding of how things work.
+                            .d-flex.my-2
+                              .flex-shrink-0
+                                i.svg-modal(data-feather='arrow-right-circle')
+                              .flex-grow-1.ms-2
+                                p.pb-4
+                                  | Most businesses employ a certain font or typography so that clients can quickly distinguish them from their rivals. Since designers now have access to a wider variety of fonts, firms may more easily and precisely communicate their brands through typography.
+                            h6 UX Designer 
+                            .d-flex.mt-3
+                              .flex-shrink-0
+                                i.svg-modal(data-feather='arrow-right-circle')
+                              .flex-grow-1.ms-2
+                                p
+                                  | User research, persona creation, building wireframes and interactive prototypes, and testing ideas are among the common tasks of a UX designer. These duties can differ greatly between organizations.
+                            .d-flex.mt-3
+                              .flex-shrink-0
+                                i.svg-modal(data-feather='arrow-right-circle')
+                              .flex-grow-1.ms-2
+                                p
+                                  | Create solutions that will be helpful for the issues and situations that exist right now, not for those that will. With the right materials, assist people in organizing their time, completing things more quickly, and optimizing it.
+                            .d-flex.mt-3
+                              .flex-shrink-0
+                                i.svg-modal(data-feather='arrow-right-circle')
+                              .flex-grow-1.ms-2
+                                p
+                                  | Based on the data received from users, improve them. Adapt existing solutions to the requirements, hopes, difficulties, and expectations of users.
+                            .d-flex.mt-3
+                              .flex-shrink-0
+                                i.svg-modal(data-feather='arrow-right-circle')
+                              .flex-grow-1.ms-2
+                                p
+                                  | Keep in mind that you are creating solutions to particular challenges for a particular population living in a particular habitat. Always remember to correctly contextualise your thoughts and determine whether they are actually appropriate for the situation. It's sometimes necessary to concede that a digital solution is not the most appropriate choice in a certain circumstance.
+                          .modal-footer
+                            button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+                            button.btn.btn-primary(type='button') Save
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#scrolling-long-modal', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#scrolling-long-modal
+                          |&lt;button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#scrolling-modal"&gt;Scrolling Modal&lt;/button&gt;
+                          |&lt;!--Modal--&gt;
+                          |&lt;div class="modal fade" id="scrolling-modal" tabindex="-1" role="dialog" aria-labelledby="grid-modal" aria-hidden="true"&gt;
+                          |  &lt;div class="modal-dialog modal-dialog-scrollable" role="document"&gt;
+                          |    &lt;div class="modal-content"&gt;
+                          |      &lt;div class="modal-header"&gt;
+                          |        &lt;h5 class="modal-title"&gt;Scrolling Long Modal&lt;/h5&gt;
+                          |        &lt;button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-body"&gt;
+                          |        &lt;h6&gt;Wed Designer&lt;/h6&gt;
+                          |        &lt;div class="d-flex mt-3"&gt;
+                          |          &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |          &lt;div class="flex-grow-1 ms-2"&gt;
+                          |            &lt;p&gt;For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="d-flex mt-2"&gt;
+                          |          &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |          &lt;div class="flex-grow-1 ms-2"&gt;
+                          |            &lt;p&gt;As a web designer, you either prefer to work freelance for several different businesses at once or you may choose to work for just one. In either case, you'll need good time management skills to keep several projects moving forward.&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="d-flex mt-2"&gt;
+                          |          &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |          &lt;div class="flex-grow-1 ms-2"&gt;
+                          |            &lt;p&gt;Although a designer doesn't write the code that makes a site work, it doesn't hurt to have a basic understanding of HTML or CSS to make minor adjustments to a site. You'll find it simpler to edit templates, improve typefaces, or change item placements if you have a basic understanding of how things work.&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="d-flex my-2"&gt;
+                          |          &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |          &lt;div class="flex-grow-1 ms-2"&gt;
+                          |            &lt;p class="pb-4"&gt;Most businesses employ a certain font or typography so that clients can quickly distinguish them from their rivals. Since designers now have access to a wider variety of fonts, firms may more easily and precisely communicate their brands through typography.&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;h6&gt;UX Designer&lt;/h6&gt;
+                          |        &lt;div class="d-flex mt-3"&gt;
+                          |          &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |          &lt;div class="flex-grow-1 ms-2"&gt;
+                          |            &lt;p&gt;User research, persona creation, building wireframes and interactive prototypes, and testing ideas are among the common tasks of a UX designer. These duties can differ greatly between organizations.&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="d-flex mt-3"&gt;
+                          |          &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |          &lt;div class="flex-grow-1 ms-2"&gt;
+                          |            &lt;p&gt;Create solutions that will be helpful for the issues and situations that exist right now, not for those that will. With the right materials, assist people in organizing their time, completing things more quickly, and optimizing it.&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="d-flex mt-3"&gt;
+                          |          &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |          &lt;div class="flex-grow-1 ms-2"&gt;
+                          |            &lt;p&gt;Based on the data received from users, improve them. Adapt existing solutions to the requirements, hopes, difficulties, and expectations of users.&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="d-flex mt-3"&gt;
+                          |          &lt;div class="flex-shrink-0"&gt;&lt;i class="svg-modal" data-feather="arrow-right-circle"&gt;&lt;/i&gt;&lt;/div&gt;
+                          |          &lt;div class="flex-grow-1 ms-2"&gt;
+                          |            &lt;p&gt;Keep in mind that you are creating solutions to particular challenges for a particular population living in a particular habitat. Always remember to correctly contextualise your thoughts and determine whether they are actually appropriate for the situation. It's sometimes necessary to concede that a digital solution is not the most appropriate choice in a certain circumstance.&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="modal-footer"&gt;
+                          |        &lt;button class="btn btn-secondary" type="button" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+                          |        &lt;button class="btn btn-primary" type="button"&gt;Save&lt;/button&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-12
+                .card 
+                  .card-header 
+                    h4 Mofi custom modals 
+                    p.f-m-light.mt-1 
+                      | Custom Modal make by Mofi.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .row.g-3
+                      .col-xl-4.col-md-6.custom-alert.text-center
+                        .card-wrapper.border.rounded-3.h-100
+                            .Mofi-demo-img
+                              ul.dot-group.pb-3.pt-0
+                                li
+                                li
+                                li
+                              .title-wrapper.pb-3.modal-heading
+                                h4.theme-name.mb-0
+                                  span Modal 1 -
+                                  | Profile Modal
+                                p.text-gray Example of Mofi dashboard profile card.
+                              .overflow-hidden
+                                button.btn.btn-primary.mx-auto.mt-3(type='button', data-bs-toggle='modal', data-bs-target='#exampleModallaptop1')
+                                  | Click Here
+                              #exampleModallaptop1.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModallaptop1', aria-hidden='true')
+                                .modal-dialog.modal-dialog-centered(role='document')
+                                  .modal-content.overflow-hidden
+                                    .col-xl-12
+                                      .card.social-profile.mb-0.b-r-0
+                                        .card-body
+                                          .social-img-wrap 
+                                            .social-img
+                                              img(src="../assets/images/other-images/profile.png", alt="profile")
+                                            .edit-icon
+                                              svg
+                                                use(href='../assets/svg/icon-sprite.svg#profile-check')
+                                          .social-details
+                                            h5.mb-1
+                                              a(href="social-app.html") Brooklyn Simmons
+                                            span.f-light @brookly.simmons
+                                            ul.social-follow
+                                              li
+                                                h5.mb-0 1,908
+                                                span.f-light Posts
+                                              li
+                                                h5.mb-0 34.0k
+                                                span.f-light Followers
+                                              li
+                                                h5.mb-0 897
+                                                span.f-light Following
+                      .col-xl-4.col-md-6.custom-alert.text-center
+                        .card-wrapper.border.rounded-3.h-100
+                            .Mofi-demo-img
+                              ul.dot-group.pb-3.pt-0
+                                li
+                                li
+                                li
+                              .title-wrapper.pb-3.modal-heading
+                                h4.theme-name.mb-0
+                                  span Modal 2 - 
+                                  | Result Modal
+                                p.text-gray Example of Mofi login form.
+                              .overflow-hidden
+                                button.btn.btn-primary.mx-auto.mt-3(type='button', data-bs-toggle='modal', data-bs-target='#exampleModallogin')
+                                  | Click Here
+                              #exampleModallogin.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModallogin', aria-hidden='true')
+                                .modal-dialog.modal-dialog-centered(role='document')
+                                  .modal-content.dark-sign-up.overflow-hidden
+                                    .modal-body.social-profile.text-start
+                                      .modal-toggle-wrapper
+                                        h4.text-dark Mofi Login
+                                        p 
+                                          | Fill in your information below to continue.
+                                        form.row.g-3
+                                          .col-md-12
+                                            label.form-label(for='inputEmailEnter') Email
+                                            input#inputEmailEnter.form-control(type='email' placeholder='Enter Your Email')
+                                          .col-md-12
+                                            label.form-label(for='inputPasswordEnter') Password
+                                            input#inputPasswordEnter.form-control(type='password' placeholder='Enter Your Password')
+                                          .col-12
+                                            .form-check
+                                              input#checkout.form-check-input.checkbox-primary(type='checkbox')
+                                              label.form-check-label(for='checkout')
+                                                | Check me out
+                                          .col-12
+                                            button.btn.btn-primary(type='submit' data-bs-dismiss='modal') Sign in 
+                      .col-xl-4.col-md-12.custom-alert.text-center
+                        .card-wrapper.border.rounded-3.h-100
+                            .Mofi-demo-img
+                              ul.dot-group.pb-3.pt-0
+                                li
+                                li
+                                li
+                              .title-wrapper.pb-3.modal-heading
+                                h4.theme-name.mb-0
+                                  span Modal 3 - 
+                                  | Balance Modal
+                                p.text-gray Example of Mofi dashboard balance card.
+                              .overflow-hidden.balance-modal
+                                button.btn.btn-primary.mx-auto.mt-3(type='button', data-bs-toggle='modal', data-bs-target='#exampleModalbalancebox')
+                                  | Click Here
+                              #exampleModalbalancebox.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalbalancebox', aria-hidden='true')
+                                .modal-dialog.modal-dialog-centered(role='document')
+                                  .modal-content.overflow-hidden
+                                    .col-xl-12
+                                      .card.balance-box.mb-0.b-r-0
+                                        .card-body
+                                          .balance-profile
+                                            .balance-img
+                                              img(src="../assets/images/dashboard-4/user.png", alt="user vector")
+                                              a(href="user-profile.html").edit-icon
+                                                svg
+                                                  use(href='../assets/svg/icon-sprite.svg#pencil')
+                                            span.f-light.d-block Your Balance 
+                                            h5.mt-1 $768,987.90
+                                            ul 
+                                              li
+                                                .balance-item.danger 
+                                                  .balance-icon-wrap  
+                                                    .balance-icon
+                                                      i(data-feather="arrow-down-right")
+                                                  div 
+                                                    span.f-12.f-light Investment  
+                                                    h5 78.8K
+                                                    span.badge.badge-light-danger.rounded-pill -11.67%
+                                              li
+                                                .balance-item.success
+                                                  .balance-icon-wrap  
+                                                    .balance-icon
+                                                      i(data-feather="arrow-up-right")
+                                                  div 
+                                                    span.f-12.f-light Cash Back
+                                                    h5 19.7K
+                                                    span.badge.badge-light-success.rounded-pill +10.67%
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#cuba-custom-modal', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#cuba-custom-modal
+                          |&lt;div class="row g-3"&gt;
+                          |  &lt;div class="col-xl-4 col-md-6 custom-alert text-center"&gt;
+                          |    &lt;div class="card-wrapper border rounded-3 h-100"&gt;
+                          |      &lt;div class="cuba-demo-img"&gt;
+                          |        &lt;ul class="dot-group pb-3 pt-0"&gt;
+                          |          &lt;li&gt;&lt;/li&gt;
+                          |          &lt;li&gt;&lt;/li&gt;
+                          |          &lt;li&gt;&lt;/li&gt;
+                          |        &lt;/ul&gt;
+                          |        &lt;div class="title-wrapper pb-3 modal-heading"&gt;
+                          |          &lt;h5 class="theme-name mb-0"&gt;&lt;span&gt;Modal 1 -&lt;/span&gt;Profile Modal&lt;/h5&gt;
+                          |          &lt;p class="f-m-light"&gt;Example of cuba dashboard profile card.&lt;/p&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="overflow-hidden"&gt;
+                          |          &lt;button class="btn btn-primary mx-auto mt-3" type="button" data-bs-toggle="modal" data-bs-target="#exampleModallaptop1"&gt;Click Here&lt;/button&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="modal fade" id="exampleModallaptop1" tabindex="-1" role="dialog" aria-labelledby="exampleModallaptop1" aria-hidden="true"&gt;
+                          |          &lt;div class="modal-dialog modal-dialog-centered" role="document"&gt;
+                          |            &lt;div class="modal-content"&gt;
+                          |              &lt;div class="col-xl-12"&gt;
+                          |                &lt;div class="card social-profile mb-0"&gt;
+                          |                  &lt;div class="card-body"&gt;
+                          |                    &lt;div class="social-img-wrap"&gt; 
+                          |                      &lt;div class="social-img"&gt;&lt;img src="../assets/images/dashboard-5/profile.png" alt="profile"&gt;&lt;/div&gt;
+                          |                      &lt;div class="edit-icon"&gt;
+                          |                        &lt;svg&gt;
+                          |                          &lt;use href="../assets/svg/icon-sprite.svg#profile-check"&gt;&lt;/use&gt;
+                          |                        &lt;/svg&gt;
+                          |                      &lt;/div&gt;
+                          |                    &lt;/div&gt;
+                          |                    &lt;div class="social-details"&gt;
+                          |                      &lt;h5 class="mb-1"&gt;&lt;a href="social-app.html"&gt;Brooklyn Simmons&lt;/a&gt;&lt;/h5&gt;&lt;span class="f-light"&gt;@brookly.simmons&lt;/span&gt;
+                          |                      &lt;ul class="social-follow"&gt;
+                          |                        &lt;li&gt;
+                          |                          &lt;h5 class="mb-0"&gt;1,908&lt;/h5&gt;&lt;span class="f-light"&gt;Posts&lt;/span&gt;
+                          |                        &lt;/li&gt;
+                          |                        &lt;li&gt;
+                          |                          &lt;h5 class="mb-0"&gt;34.0k&lt;/h5&gt;&lt;span class="f-light"&gt;Followers&lt;/span&gt;
+                          |                        &lt;/li&gt;
+                          |                        &lt;li&gt;
+                          |                          &lt;h5 class="mb-0"&gt;897&lt;/h5&gt;&lt;span class="f-light"&gt;Following&lt;/span&gt;
+                          |                        &lt;/li&gt;
+                          |                      &lt;/ul&gt;
+                          |                    &lt;/div&gt;
+                          |                  &lt;/div&gt;
+                          |                &lt;/div&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="col-xl-4 col-md-6 custom-alert text-center"&gt;
+                          |    &lt;div class="card-wrapper border rounded-3 h-100"&gt;
+                          |      &lt;div class="cuba-demo-img"&gt;
+                          |        &lt;ul class="dot-group pb-3 pt-0"&gt;
+                          |          &lt;li&gt;&lt;/li&gt;
+                          |          &lt;li&gt;&lt;/li&gt;
+                          |          &lt;li&gt;&lt;/li&gt;
+                          |        &lt;/ul&gt;
+                          |        &lt;div class="title-wrapper pb-3 modal-heading"&gt;
+                          |          &lt;h5 class="theme-name mb-0"&gt;&lt;span&gt;Modal 2 - &lt;/span&gt;Result Modal&lt;/h5&gt;
+                          |          &lt;p class="f-m-light"&gt;Example of cuba login form.&lt;/p&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="overflow-hidden"&gt;
+                          |          &lt;button class="btn btn-primary mx-auto mt-3" type="button" data-bs-toggle="modal" data-bs-target="#exampleModallogin"&gt;Click Here&lt;/button&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="modal fade" id="exampleModallogin" tabindex="-1" role="dialog" aria-labelledby="exampleModallogin" aria-hidden="true"&gt;
+                          |          &lt;div class="modal-dialog modal-dialog-centered" role="document"&gt;
+                          |            &lt;div class="modal-content dark-sign-up"&gt;
+                          |              &lt;div class="modal-body social-profile text-start"&gt;
+                          |                &lt;div class="modal-toggle-wrapper"&gt;
+                          |                  &lt;h3&gt;Cuba Login&lt;/h3&gt;
+                          |                  &lt;p class="f-light"&gt;Fill in your information below to continue.&lt;/p&gt;
+                          |                  &lt;form class="row g-3"&gt;
+                          |                    &lt;div class="col-md-12"&gt;
+                          |                      &lt;label class="form-label" for="inputEmailEnter"&gt;Email&lt;/label&gt;
+                          |                      &lt;input class="form-control" id="inputEmailEnter" type="email" placeholder="Enter Your Email"&gt;
+                          |                    &lt;/div&gt;
+                          |                    &lt;div class="col-md-12"&gt;
+                          |                      &lt;label class="form-label" for="inputPasswordEnter"&gt;Password&lt;/label&gt;
+                          |                      &lt;input class="form-control" id="inputPasswordEnter" type="password" placeholder="Enter Your Password"&gt;
+                          |                    &lt;/div&gt;
+                          |                    &lt;div class="col-12"&gt;
+                          |                      &lt;div class="form-check"&gt;
+                          |                        &lt;input class="form-check-input checkbox-primary" id="checkout" type="checkbox"&gt;
+                          |                        &lt;label class="form-check-label" for="checkout"&gt;Check me out&lt;/label&gt;
+                          |                      &lt;/div&gt;
+                          |                    &lt;/div&gt;
+                          |                    &lt;div class="col-12"&gt;
+                          |                      &lt;button class="btn btn-primary" type="submit" data-bs-dismiss="modal"&gt;Sign in &lt;/button&gt;
+                          |                    &lt;/div&gt;
+                          |                  &lt;/form&gt;
+                          |                &lt;/div&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="col-xl-4 col-md-12 custom-alert text-center"&gt;
+                          |    &lt;div class="card-wrapper border rounded-3 h-100"&gt;
+                          |      &lt;div class="cuba-demo-img"&gt;
+                          |        &lt;ul class="dot-group pb-3 pt-0"&gt;
+                          |          &lt;li&gt;&lt;/li&gt;
+                          |          &lt;li&gt;&lt;/li&gt;
+                          |          &lt;li&gt;&lt;/li&gt;
+                          |        &lt;/ul&gt;
+                          |        &lt;div class="title-wrapper pb-3 modal-heading"&gt;
+                          |          &lt;h5 class="theme-name mb-0"&gt;&lt;span&gt;Modal 3 -&lt;/span&gt;Balance Modal&lt;/h5&gt;
+                          |          &lt;p class="f-m-light"&gt;Example of cuba dashboard balance card.&lt;/p&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="overflow-hidden balance-modal"&gt;
+                          |          &lt;button class="btn btn-primary mx-auto mt-3" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalbalancebox"&gt;Click Here&lt;/button&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="modal fade" id="exampleModalbalancebox" tabindex="-1" role="dialog" aria-labelledby="exampleModalbalancebox" aria-hidden="true"&gt;
+                          |          &lt;div class="modal-dialog modal-dialog-centered" role="document"&gt;
+                          |            &lt;div class="modal-content"&gt;
+                          |              &lt;div class="col-xl-12"&gt;
+                          |                &lt;div class="card balance-box mb-0"&gt;
+                          |                  &lt;div class="card-body"&gt;
+                          |                    &lt;div class="balance-profile"&gt;
+                          |                      &lt;div class="balance-img"&gt;&lt;img src="../assets/images/dashboard-4/user.png" alt="user vector"&gt;&lt;a class="edit-icon" href="user-profile.html"&gt;
+                          |                          &lt;svg&gt;
+                          |                            &lt;use href="../assets/svg/icon-sprite.svg#pencil"&gt;&lt;/use&gt;
+                          |                          &lt;/svg&gt;&lt;/a&gt;&lt;/div&gt;&lt;span class="f-light d-block"&gt;Your Balance &lt;/span&gt;
+                          |                      &lt;h5 class="mt-1"&gt;$768,987.90&lt;/h5&gt;
+                          |                      &lt;ul&gt; 
+                          |                        &lt;li&gt;
+                          |                          &lt;div class="balance-item danger"&gt; 
+                          |                            &lt;div class="balance-icon-wrap"&gt; 
+                          |                              &lt;div class="balance-icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-right"&gt;&lt;line x1="7" y1="7" x2="17" y2="17"&gt;&lt;/line&gt;&lt;polyline points="17 7 17 17 7 17"&gt;&lt;/polyline&gt;&lt;/svg&gt;&lt;/div&gt;
+                          |                            &lt;/div&gt;
+                          |                            &lt;div&gt;&lt;span class="f-12 f-light"&gt;Investment  &lt;/span&gt;
+                          |                              &lt;h5&gt;78.8K&lt;/h5&gt;&lt;span class="badge badge-light-danger rounded-pill"&gt;-11.67%&lt;/span&gt;
+                          |                            &lt;/div&gt;
+                          |                          &lt;/div&gt;
+                          |                        &lt;/li&gt;
+                          |                        &lt;li&gt;
+                          |                          &lt;div class="balance-item success"&gt;
+                          |                            &lt;div class="balance-icon-wrap"&gt; 
+                          |                              &lt;div class="balance-icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right"&gt;&lt;line x1="7" y1="17" x2="17" y2="7"&gt;&lt;/line&gt;&lt;polyline points="7 7 17 7 17 17"&gt;&lt;/polyline&gt;&lt;/svg&gt;&lt;/div&gt;
+                          |                            &lt;/div&gt;
+                          |                            &lt;div&gt;&lt;span class="f-12 f-light"&gt;Cash Back&lt;/span&gt;
+                          |                              &lt;h5&gt;19.7K&lt;/h5&gt;&lt;span class="badge badge-light-success rounded-pill"&gt;+10.67%&lt;/span&gt;
+                          |                            &lt;/div&gt;
+                          |                          &lt;/div&gt;
+                          |                        &lt;/li&gt;
+                          |                      &lt;/ul&gt;
+                          |                    &lt;/div&gt;
+                          |                  &lt;/div&gt;
+                          |                &lt;/div&gt;
+                          |              &lt;/div&gt;
+                          |            &lt;/div&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

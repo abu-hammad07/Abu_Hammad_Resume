@@ -1,0 +1,205 @@
+/**=====================
+    3.38 Sweet-alert CSS Start
+==========================**/
+
+.sweet-alert-wrapper {
+    .card-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 14px;
+        border: 1px dashed var(--recent-dashed-border);
+        border-radius: 10px;
+
+        h6 {
+            color: $theme-body-sub-title-color;
+        }
+
+        .btn {
+            &:hover {
+                background-color: var(--theme-default);
+                color: var(--white);
+            }
+        }
+    }
+}
+
+.swal2-container {
+    .swal2-input {
+        box-shadow: none;
+        &:focus {
+            border-color: $primary-color;
+        }
+    }
+    
+    .swal2-html-container {
+        font-size: 17px;
+    }
+
+    .swal2-title {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .swal2-question {
+        border-color: $info-color;
+        color: $info-color;
+    }
+
+    .swal2-actions {
+        gap: 12px;
+
+        .swal2-confirm {
+            background-color: var(--theme-default) !important;
+            color: $white !important;
+            box-shadow: none;
+
+            &:hover {
+                background-image: none;
+            }
+        }
+        .swal2-cancel {
+            background-color: $light-semi-gray;
+            color: $theme-body-font-color;
+            box-shadow: none;
+            &:hover {
+                background-image: none;
+            }
+        }
+
+        .swal2-confirm {
+            &.btn {
+                &.btn-success {
+                    background-color: $success-color !important;
+                    color: var(--white);
+                }
+            }
+        }
+
+        .swal2-deny {
+            background-color: $danger-color !important;
+        }   
+    }
+
+    .swal2-close {
+        color: $light-paragraph;
+    }
+
+
+    .swal2-error {
+        border-color: $danger-color;
+        color: $danger-color;
+
+        .swal2-x-mark {
+            span {
+                background-color: $danger-color;
+            }
+        }
+    }
+
+    .swal2-warning {
+        border-color: $warning-color;
+        color: $warning-color;
+
+        .swal2-icon-content {
+            color: $warning-color;
+        }
+    }
+
+    div:where(.swal2-icon).swal2-success .swal2-success-ring {
+        border: 2px solid rgba($success-color, 0.3);
+    }
+
+    div:where(.swal2-icon).swal2-success [class^=swal2-success-line] {
+        background-color: $success-color;
+    }
+
+    div:where(.swal2-icon) {
+        &.swal2-info {
+            border-color: $info-color !important;
+            color: $info-color !important;
+        }
+    }
+
+    .swal2-loader {
+        border-color: $light-paragraph rgba(0, 0, 0, 0) $light-paragraph rgba(0, 0, 0, 0);
+    }
+
+
+    button {
+        font-size: 14px !important;
+        padding: 6px 28px;
+        font-weight: 400;
+        color: var(--theme-default);
+        margin: 0;
+    }
+
+
+    button {
+        &.swal2-close {
+            font-size: 40px !important;
+
+            &:focus,
+            &:hover {
+                box-shadow: unset;
+            }
+        }
+    }
+
+    .swal2-wrapper {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        .swal2-select {
+            padding: 0 !important;
+
+            label {
+                font-size: 16px !important;
+            }
+
+            .swal2-input {
+                color: $theme-body-sub-title-color;
+
+                option {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .swal2-input {
+            margin: 0;
+            box-shadow: none;
+            &:focus {
+                border: 1px dashed $primary-color;
+            }
+        }
+        
+        .form-check-input {
+            box-shadow: none;
+        }
+
+        .swal2-genders {
+            display: flex;
+            gap: 24px;
+            margin: 18px 0;
+        }
+
+        .swal2-radio-group,
+        .swal2-checkbox {
+            display: flex;
+            gap: 7px;
+        }
+    }
+}
+
+
+div:where(.swal2-container) button:where(.swal2-close) {
+    &:hover {
+        color: var(--theme-default) !important;
+    }
+}
+
+/**=====================
+    3.38 Sweet-alert CSS ends
+==========================**/

@@ -1,0 +1,798 @@
+- var page_Title = 'Typography';
+- var theme_customizer      = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+- var clipboard             = true;
+- var prism                 = true;
+- var customcard            = true;
+- var height_equal          = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Ui Kits','Typography'],'Typography')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid 
+            .row
+              .col-xxl-6
+                .card.height-equal
+                  .card-header
+                    h4.mb-0 Headings
+                    p.f-m-light.mt-1
+                      | All HTML headings, 
+                      code &lt;h1&gt;
+                      |  through 
+                      code &lt;h6&gt;
+                      | , are available.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .table-responsive.theme-scrollbar
+                      table.table.mb-0.typography-table
+                        thead
+                          tr
+                            th.pt-0 Code
+                            th.pt-0 Font-Size
+                            th.pt-0 Heading
+                        tbody
+                          tr
+                            td
+                              code &lt;h1&gt;&lt;/h1&gt;
+                            td
+                              h1.mb-0 1.875rem
+                            td
+                              h1
+                                span  Heading 1 (MEGA)
+                          tr
+                            td
+                              code &lt;h2&gt;&lt;/h2&gt;
+                            td
+                              h2.mb-0 1.625rem
+                            td
+                              h2
+                                span  Heading 2 (XL)
+                          tr
+                            td
+                              code &lt;h3&gt;&lt;/h3&gt;
+                            td
+                              h3.mb-0 1.375rem
+                            td
+                              h3
+                                span  Heading 3 (LARGE)
+                          tr
+                            td
+                              code &lt;h4&gt;&lt;/h4&gt;
+                            td
+                              h4.mb-0 1.25rem
+                            td
+                              h4
+                                span  Heading 4 (MEDIUM)
+                          tr
+                            td
+                              code &lt;h5&gt;&lt;/h5&gt;
+                            td
+                              h5.mb-0 1rem
+                            td
+                              h5
+                                span  Heading 5 (SMALL)
+                          tr
+                            td.pb-0
+                              code &lt;h6&gt;&lt;/h6&gt;
+                            td.pb-0
+                              h6.mb-0 0.875rem
+                            td.pb-0
+                              h6
+                                span  Heading 6 
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#common-heading', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#common-heading
+                          |&lt;div class="table-responsive theme-scrollbar"&gt;
+                          |  &lt;table class="table mb-0 typography-table"&gt;
+                          |    &lt;thead&gt;
+                          |      &lt;tr&gt;
+                          |        &lt;th class="pt-0"&gt;Code&lt;/th&gt;
+                          |        &lt;th class="pt-0"&gt;Font-Size&lt;/th&gt;
+                          |        &lt;th class="pt-0"&gt;Heading&lt;/th&gt;
+                          |      &lt;/tr&gt;
+                          |    &lt;/thead&gt;
+                          |    &lt;tbody&gt;
+                          |      &lt;tr&gt;
+                          |        &lt;td&gt;
+                          |          &lt;code&gt;&lt;h1&gt;&lt;/h1&gt;&lt;/code&gt;
+                          |        &lt;/td&gt;
+                          |        &lt;td&gt;
+                          |          &lt;h1 class="mb-0"&gt;1.875rem&lt;/h1&gt;
+                          |        &lt;/td&gt;
+                          |        &lt;td&gt;
+                          |          &lt;h1&gt;
+                          |            &lt;span&gt;Heading 1 (MEGA)&lt;/span&gt;
+                          |          &lt;/h1&gt;
+                          |        &lt;/td&gt;
+                          |      &lt;/tr&gt;
+                          |      &lt;tr&gt;
+                          |        &lt;td&gt;
+                          |          &lt;code&gt;&lt;h2&gt;&lt;/h2&gt;&lt;/code&gt;
+                          |        &lt;/td&gt;
+                          |        &lt;td&gt;
+                          |          &lt;h2 class="mb-0"&gt;1.625rem&lt;/h2&gt;
+                          |        &lt;/td&gt;
+                          |        &lt;td&gt;
+                          |          &lt;h2&gt;
+                          |            &lt;span&gt;Heading 2 (XL)&lt;/span&gt;
+                          |          &lt;/h2&gt;
+                          |        &lt;/td&gt;
+                          |      &lt;/tr&gt;
+                          |      &lt;tr&gt;
+                          |        &lt;td&gt;
+                          |          &lt;code&gt;&lt;h3&gt;&lt;/h3&gt;&lt;/code&gt;
+                          |        &lt;/td&gt;
+                          |        &lt;td&gt;
+                          |          &lt;h3 class="mb-0"&gt;1.375rem&lt;/h3&gt;
+                          |        &lt;/td&gt;
+                          |        &lt;td&gt;
+                          |          &lt;h3&gt;
+                          |            &lt;span&gt;Heading 3 (LARGE)&lt;/span&gt;
+                          |          &lt;/h3&gt;
+                          |        &lt;/td&gt;
+                          |      &lt;/tr&gt;
+                          |      &lt;tr&gt;
+                          |        &lt;td&gt;
+                          |          &lt;code&gt;&lt;h4&gt;&lt;/h4&gt;&lt;/code&gt;
+                          |        &lt;/td&gt;
+                          |        &lt;td&gt;
+                          |          &lt;h4 class="mb-0"&gt;1.25rem&lt;/h4&gt;
+                          |        &lt;/td&gt;
+                          |        &lt;td&gt;
+                          |          &lt;h4&gt;
+                          |            &lt;span&gt;Heading 4 (MEDIUM)&lt;/span&gt;
+                          |          &lt;/h4&gt;
+                          |        &lt;/td&gt;
+                          |      &lt;/tr&gt;
+                          |      &lt;tr&gt;
+                          |        &lt;td&gt;
+                          |          &lt;code&gt;&lt;h5&gt;&lt;/h5&gt;&lt;/code&gt;
+                          |        &lt;/td&gt;
+                          |        &lt;td&gt;
+                          |          &lt;h5 class="mb-0"&gt;1rem&lt;/h5&gt;
+                          |        &lt;/td&gt;
+                          |        &lt;td&gt;
+                          |          &lt;h5&gt;
+                          |            &lt;span&gt;Heading 5 (SMALL)&lt;/span&gt;
+                          |          &lt;/h5&gt;
+                          |        &lt;/td&gt;
+                          |      &lt;/tr&gt;
+                          |      &lt;tr&gt;
+                          |        &lt;td class="pb-0"&gt;
+                          |          &lt;code&gt;&lt;h6&gt;&lt;/h6&gt;&lt;/code&gt;
+                          |        &lt;/td&gt;
+                          |        &lt;td class="pb-0"&gt;
+                          |          &lt;h6 class="mb-0"&gt;0.875rem&lt;/h6&gt;
+                          |        &lt;/td&gt;
+                          |        &lt;td class="pb-0"&gt;
+                          |          &lt;h6&gt;
+                          |            &lt;span&gt;Heading 6&lt;/span&gt;
+                          |          &lt;/h6&gt;
+                          |        &lt;/td&gt;
+                          |      &lt;/tr&gt;
+                          |    &lt;/tbody&gt;
+                          |  &lt;/table&gt;
+                          |&lt;/div&gt;
+              .col-xxl-6
+                .card.height-equal
+                  .card-header
+                    h4.mb-0 Colored Headings
+                    p.f-m-light.mt-1
+                      | All HTML headings, 
+                      code &lt;h1&gt;
+                      |  through 
+                      code &lt;h6&gt;
+                      | , are available.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .table-responsive.theme-scrollbar
+                      table.table.mb-0.typography-table
+                        thead
+                          tr
+                            th.pt-0 Code
+                            th.pt-0 Heading
+                        tbody
+                          tr
+                            td
+                              code &lt;h1&gt;&lt;/h1&gt;
+                            td
+                              h1
+                                span.txt-primary  Heading 1
+                                |  Sub Heading
+                          tr
+                            td
+                              code &lt;h2&gt;&lt;/h2&gt;
+                            td
+                              h2
+                                span.txt-secondary  Heading 1
+                                |  Sub Heading
+                          tr
+                            td
+                              code &lt;h3&gt;&lt;/h3&gt;
+                            td
+                              h3
+                                span.txt-success  Heading 1
+                                |  Sub Heading
+                          tr
+                            td
+                              code &lt;h4&gt;&lt;/h4&gt;
+                            td
+                              h4
+                                span.txt-info  Heading 1
+                                |  Sub Heading
+                          tr
+                            td
+                              code &lt;h5&gt;&lt;/h5&gt;
+                            td
+                              h5
+                                span.txt-warning  Heading 1
+                                |  Sub Heading
+                          tr
+                            td.pb-0
+                              code &lt;h6&gt;&lt;/h6&gt;
+                            td.pb-0
+                              h6
+                                span.txt-danger  Heading 1
+                                |  Sub Heading
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#color-heading', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#color-heading
+                          |&lt;div class="table-responsive"&gt;
+                          |  &lt;table class="table mb-0 typography-table"&gt;
+                          |    &lt;thead&gt;
+                          |      &lt;tr&gt;
+                          |        &lt;th class="pt-0"&gt;Code&lt;/th&gt;
+                          |        &lt;th class="pt-0"&gt;Heading&lt;/th&gt;
+                          |      &lt;/tr&gt;
+                          |    &lt;/thead&gt;
+                          |    &lt;tbody&gt;
+                          |      &lt;tr&gt;
+                          |        &lt;td&gt;&lt;code&gt;&lt;h1&gt;&lt;/h1&gt;&lt;/code&gt;&lt;/td&gt;
+                          |        &lt;td&gt;
+                          |          &lt;h1&gt;&lt;span class="txt-primary"&gt;Heading 1&lt;/span&gt;Sub Heading&lt;/h1&gt;
+                          |        &lt;/td&gt;
+                          |      &lt;/tr&gt;
+                          |      &lt;tr&gt;
+                          |        &lt;td&gt;&lt;code&gt;&lt;h2&gt;&lt;/h2&gt;&lt;/code&gt;&lt;/td&gt;
+                          |        &lt;td&gt;
+                          |          &lt;h2&gt;&lt;span class="txt-secondary"&gt;Heading 1&lt;/span&gt;Sub Heading&lt;/h2&gt;
+                          |        &lt;/td&gt;
+                          |      &lt;/tr&gt;
+                          |      &lt;tr&gt;
+                          |        &lt;td&gt;&lt;code&gt;&lt;h3&gt;&lt;/h3&gt;&lt;/code&gt;&lt;/td&gt;
+                          |        &lt;td&gt;
+                          |          &lt;h3&gt;&lt;span class="txt-success"&gt;Heading 1&lt;/span&gt;Sub Heading&lt;/h3&gt;
+                          |        &lt;/td&gt;
+                          |      &lt;/tr&gt;
+                          |      &lt;tr&gt;
+                          |        &lt;td&gt;&lt;code&gt;&lt;h4&gt;&lt;/h4&gt;&lt;/code&gt;&lt;/td&gt;
+                          |        &lt;td&gt;
+                          |          &lt;h4&gt;&lt;span class="txt-info"&gt;Heading 1&lt;/span&gt;Sub Heading&lt;/h4&gt;
+                          |        &lt;/td&gt;
+                          |      &lt;/tr&gt;
+                          |      &lt;tr&gt;
+                          |        &lt;td&gt;&lt;code&gt;&lt;h5&gt;&lt;/h5&gt;&lt;/code&gt;&lt;/td&gt;
+                          |        &lt;td&gt;
+                          |          &lt;h5&gt;&lt;span class="txt-warning"&gt;Heading 1&lt;/span&gt;Sub Heading&lt;/h5&gt;
+                          |        &lt;/td&gt;
+                          |      &lt;/tr&gt;
+                          |      &lt;tr&gt;
+                          |        &lt;td class="pb-0"&gt;&lt;code&gt;&lt;h6&gt;&lt;/h6&gt;&lt;/code&gt;&lt;/td&gt;
+                          |        &lt;td class="pb-0"&gt;
+                          |          &lt;h6&gt;&lt;span class="txt-danger"&gt;Heading 1&lt;/span&gt;Sub Heading&lt;/h6&gt;
+                          |        &lt;/td&gt;
+                          |      &lt;/tr&gt;
+                          |    &lt;/tbody&gt;
+                          |  &lt;/table&gt;
+                          |&lt;/div&gt;
+              .col-12
+                  .card
+                    .card-header
+                      h4.mb-0 Font Weight
+                      p.f-m-light.mt-1
+                        | Using 
+                        code f-w-*
+                        |  class, you can change the font weight.
+                      .card-header-right
+                        ul.list-unstyled.card-option
+                          li
+                            i.icon-more-alt
+                          li
+                            i.view-html.fa.fa-code
+                          li
+                            i.icofont.icofont-maximize.full-card
+                          li
+                            i.icofont.icofont-minus.minimize-card
+                          li
+                            i.icofont.icofont-refresh.reload-card
+                          li
+                            i.icofont.icofont-error.close-card
+                    .card-body.d-flex.flex-column.gap-3
+                      h1.f-w-900
+                        | You can set bolder font weight Heading 1 using
+                        code  f-w-900
+                      h2.f-w-700
+                        | You can set bold font weight Heading 2 using
+                        code  f-w-700
+                      h3.f-w-600
+                        | You can set medium font weight Heading 3 using
+                        code  f-w-600
+                      h4.f-w-500
+                        | You can set normal font weight Heading 4 using
+                        code  f-w-500
+                      h5.f-w-400
+                        | You can set light font weight Heading 5 using
+                        code  f-w-400
+                      h6.f-w-300
+                        | You can set light font weight Heading 6 using
+                        code  f-w-300
+                      .code-box-copy
+                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#common-weight', title='Copy')
+                          i.icofont.icofont-copy-alt
+                        pre.theme-scrollbar
+                          code.language-html#common-weight
+                            |&lt;h1 class="f-w-900"&gt;You can set bolder font weight Heading 1 using&lt;code&gt;f-w-900&lt;/code&gt;&lt;/h1&gt;
+                            |&lt;h2 class="f-w-700"&gt;You can set bold font weight Heading 2 using&lt;code&gt;f-w-700&lt;/code&gt;&lt;/h2&gt;
+                            |&lt;h3 class="f-w-600"&gt;You can set medium font weight Heading 3 using&lt;code&gt;f-w-600&lt;/code&gt;&lt;/h3&gt;
+                            |&lt;h4 class="f-w-500"&gt;You can set normal font weight Heading 4 using&lt;code&gt;f-w-500&lt;/code&gt;&lt;/h4&gt;
+                            |&lt;h5 class="f-w-400"&gt;You can set light font weight Heading 5 using&lt;code&gt;f-w-400&lt;/code&gt;&lt;/h5&gt;
+                            |&lt;h6 class="f-w-300"&gt;You can set light font weight Heading 6 using&lt;code&gt;f-w-300&lt;/code&gt;&lt;/h6&gt;
+              .col-sm-12.listing
+                .card
+                  .card-header
+                    h4.mb-0 Listing Typography
+                    p.f-m-light.mt-1
+                      | All typography list:- 
+                      code &lt;ul&gt;
+                      | ,
+                      code &lt;ol&gt;
+                      |  &amp; 
+                      code &lt;dl&gt;
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.typography-list
+                    .row.g-3
+                      .col-md-6.col-xxl-3
+                        .card-wrapper.border.rounded-3.h-100
+                          h6.sub-title Un-order List
+                          ul
+                            li This is a list.
+                            li It appears completely unstyled.
+                            li Structurally, it&apos;s still a list.
+                            li However, this style only applies to immediate child elements.
+                            li
+                              | Nested lists:
+                              ul
+                                li are unaffected by this style
+                                li will still show a bullet
+                                li and have appropriate left margin
+                            li This may still come in handy in some situations.
+                      .col-md-6.col-xxl-3
+                        .card-wrapper.border.rounded-3.h-100
+                          h6.sub-title Order List
+                          ol
+                            li This is a list.
+                            li It appears completely unstyled.
+                            li Structurally, it&apos;s still a list.
+                            li However, this style only applies to immediate child elements.
+                            li
+                              | Nested lists:
+                              ol
+                                li are unaffected by this style
+                                li will still show a bullet
+                                li and have appropriate left margin
+                            li This may still come in handy in some situations.
+                      .col-md-12.col-xxl-6
+                        .card-wrapper.border.rounded-3.h-100
+                          h6.sub-title Description List
+                          dl.row
+                            dt.col-sm-3.text-truncate Description lists
+                            dd.col-sm-9 A description list is perfect for defining terms.
+                            dt.col-sm-3 Term
+                            dd.col-sm-9
+                              p Definition for the term.
+                              p And some more placeholder definition text.
+                            dt.col-sm-3 Another term
+                            dd.col-sm-9 This definition is short, so no extra paragraphs or anything.
+                            dt.col-sm-3.text-truncate Truncated term is truncated
+                            dd.col-sm-9 This can be useful when space is tight. Adds an ellipsis at the end.
+                            dt.col-sm-3 Nesting
+                            dd.col-sm-9
+                              dl.row
+                                dt.col-sm-4 Nested definition list
+                                dd.col-sm-8
+                                  | I heard you like definition lists. Let me put a definition list inside your definition list.
+
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#list-typography', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#list-typography
+                          |&lt;div class="card-body typography-list"&gt;
+                          |  &lt;div class="row g-3"&gt;
+                          |    &lt;div class="col-md-6 col-xxl-3"&gt;
+                          |      &lt;div class="card-wrapper border rounded-3 h-100"&gt;
+                          |        &lt;h6 class="sub-title"&gt;Un-order List&lt;/h6&gt;
+                          |        &lt;ul&gt;
+                          |          &lt;li&gt;This is a list.&lt;/li&gt;
+                          |          &lt;li&gt;It appears completely unstyled.&lt;/li&gt;
+                          |          &lt;li&gt;Structurally, it&apos;s still a list.&lt;/li&gt;
+                          |          &lt;li&gt;However, this style only applies to immediate child elements.&lt;/li&gt;
+                          |          &lt;li&gt;Nested lists:
+                          |            &lt;ul&gt;
+                          |              &lt;li&gt;Are unaffected by this style&lt;/li&gt;
+                          |              &lt;li&gt;Will still show a bullet&lt;/li&gt;
+                          |              &lt;li&gt;And have appropriate left margin&lt;/li&gt;
+                          |            &lt;/ul&gt;
+                          |          &lt;/li&gt;
+                          |          &lt;li&gt;This may still come in handy in some situations.&lt;/li&gt;
+                          |        &lt;/ul&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="col-md-6 col-xxl-3"&gt;
+                          |      &lt;div class="card-wrapper border rounded-3 h-100"&gt;
+                          |        &lt;h6 class="sub-title"&gt;Order List&lt;/h6&gt;
+                          |        &lt;ol&gt;
+                          |          &lt;li&gt;This is a list.&lt;/li&gt;
+                          |          &lt;li&gt;It appears completely unstyled.&lt;/li&gt;
+                          |          &lt;li&gt;Structurally, it&apos;s still a list.&lt;/li&gt;
+                          |          &lt;li&gt;However, this style only applies to immediate child elements.&lt;/li&gt;
+                          |          &lt;li&gt;Nested lists:
+                          |            &lt;ol&gt;
+                          |              &lt;li&gt;Are unaffected by this style&lt;/li&gt;
+                          |              &lt;li&gt;Will still show a bullet&lt;/li&gt;
+                          |              &lt;li&gt;And have appropriate left margin&lt;/li&gt;
+                          |            &lt;/ol&gt;
+                          |          &lt;/li&gt;
+                          |          &lt;li&gt;This may still come in handy in some situations.&lt;/li&gt;
+                          |        &lt;/ol&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="col-md-12 col-xxl-6"&gt;
+                          |      &lt;div class="card-wrapper border rounded-3 h-100"&gt;
+                          |        &lt;h6 class="sub-title"&gt;Description List&lt;/h6&gt;
+                          |        &lt;dl class="row"&gt;
+                          |          &lt;dt class="col-sm-3 text-truncate"&gt;Description lists&lt;/dt&gt;
+                          |          &lt;dd class="col-sm-9"&gt;A description list is perfect for defining terms.&lt;/dd&gt;
+                          |          &lt;dt class="col-sm-3"&gt;Term&lt;/dt&gt;
+                          |          &lt;dd class="col-sm-9"&gt;
+                          |            &lt;p&gt;Definition for the term.&lt;/p&gt;
+                          |            &lt;p&gt;And some more placeholder definition text.&lt;/p&gt;
+                          |          &lt;/dd&gt;
+                          |          &lt;dt class="col-sm-3"&gt;Another term&lt;/dt&gt;
+                          |          &lt;dd class="col-sm-9"&gt;This definition is short, so no extra paragraphs or anything.&lt;/dd&gt;
+                          |          &lt;dt class="col-sm-3 text-truncate"&gt;Truncated term is truncated&lt;/dt&gt;
+                          |          &lt;dd class="col-sm-9"&gt;This can be useful when space is tight. Adds an ellipsis at the end.&lt;/dd&gt;
+                          |          &lt;dt class="col-sm-3"&gt;Nesting&lt;/dt&gt;
+                          |          &lt;dd class="col-sm-9"&gt;
+                          |            &lt;dl class="row"&gt;
+                          |              &lt;dt class="col-sm-4"&gt;Nested definition list&lt;/dt&gt;
+                          |              &lt;dd class="col-sm-8"&gt;I heard you like definition lists. Let me put a definition list inside your definition list.&lt;/dd&gt;
+                          |            &lt;/dl&gt;
+                          |          &lt;/dd&gt;
+                          |        &lt;/dl&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-12
+                  .card
+                    .card-header
+                      h4.mb-0 Display Headings
+                      p.f-m-light.mt-1
+                        | When you need a heading to stand out, consider using a
+                        mark display heading
+                        | &mdash;a
+                        | larger, slightly more opinionated heading style.
+                      .card-header-right
+                        ul.list-unstyled.card-option
+                          li
+                            i.icon-more-alt
+                          li
+                            i.view-html.fa.fa-code
+                          li
+                            i.icofont.icofont-maximize.full-card
+                          li
+                            i.icofont.icofont-minus.minimize-card
+                          li
+                            i.icofont.icofont-refresh.reload-card
+                          li
+                            i.icofont.icofont-error.close-card
+                    .card-body.d-flex.flex-column.gap-3
+                      h1.display-1 Display 1
+                      h1.display-2 Display 2
+                      h1.display-3 Display 3
+                      h1.display-4 Display 4
+                      h1.display-5 Display 5
+                      h1.display-6 Display 6
+                      .code-box-copy
+                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#display-heading', title='Copy')
+                          i.icofont.icofont-copy-alt
+                        pre.theme-scrollbar
+                          code.language-html#display-heading
+                            |&lt;h1 class="display-1"&gt;Display 1&lt;/h1&gt;
+                            |&lt;h2 class="display-2"&gt;Display 2&lt;/h2&gt;
+                            |&lt;h3 class="display-3"&gt;Display 3&lt;/h3&gt;
+                            |&lt;h4 class="display-4"&gt;Display 4&lt;/h4&gt;
+                            |&lt;h5 class="display-5"&gt;Display 5&lt;/h5&gt;
+                            |&lt;h6 class="display-6"&gt;Display 6&lt;/h6&gt;
+              .col-sm-12.col-xl-6
+                .card.height-equal
+                  .card-header
+                    h4 Inline Text Elements
+                    p.f-m-light.mt-1 Styling for common inline HTML5 elements.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                      .d-flex.flex-column.gap-2
+                        p.mb-0
+                          | You can use the mark tag to 
+                          mark highlight
+                          |  text.
+                        p.mb-0
+                          del This line of text is meant to be treated as deleted text.
+                        p.mb-0
+                          s This line of text is meant to be treated as no longer accurate.
+                        p.mb-0
+                          ins
+                            | This line of text is meant to be treated as an addition to the
+                            | document.
+                        p.mb-0
+                          u This line of text will render as underlined
+                        p.mb-0
+                          small This line of text is meant to be treated as fine print.
+                        p.mb-0
+                          strong This line rendered as bold text.
+                        p.mb-0
+                          em This line rendered as italicized text.
+                      .code-box-copy
+                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#text-elements', title='Copy')
+                          i.icofont.icofont-copy-alt
+                        pre.theme-scrollbar
+                          code.language-html#text-elements
+                            |&lt;div class="d-flex flex-column gap-2"&gt;
+                            |  &lt;p class="mb-0"&gt;You can use the mark tag to 
+                            |    &lt;mark&gt;highlight&lt;/mark&gt; text.
+                            |  &lt;/p&gt;
+                            |  &lt;p class="mb-0"&gt;
+                            |    &lt;del&gt;This line of text is meant to be treated as deleted text.&lt;/del&gt;
+                            |  &lt;/p&gt;
+                            |  &lt;p class="mb-0"&gt;
+                            |    &lt;s&gt;This line of text is meant to be treated as no longer accurate.&lt;/s&gt;
+                            |  &lt;/p&gt;
+                            |  &lt;p class="mb-0"&gt;
+                            |    &lt;ins&gt;This line of text is meant to be treated as an addition to the document.&lt;/ins&gt;
+                            |  &lt;/p&gt;
+                            |  &lt;p class="mb-0"&gt;
+                            |    &lt;u&gt;This line of text will render as underlined&lt;/u&gt;
+                            |  &lt;/p&gt;
+                            |  &lt;p class="mb-0"&gt;
+                            |    &lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;
+                            |  &lt;/p&gt;
+                            |  &lt;p class="mb-0"&gt;
+                            |    &lt;strong&gt;This line rendered as bold text.&lt;/strong&gt;
+                            |  &lt;/p&gt;
+                            |  &lt;p class="mb-0"&gt;
+                            |    &lt;em&gt;This line rendered as italicized text.&lt;/em&gt;
+                            |  &lt;/p&gt;
+                            |&lt;/div&gt;
+              .col-sm-12.col-xl-6.text-colors
+                .card.height-equal
+                  .card-header
+                    h4.mb-0 Text Colors
+                    p.f-m-light.mt-1
+                      | You give text color by using 
+                      code txt-*
+                      |  classes.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                      .d-flex.flex-column.gap-2
+                        p.txt-primary.mb-0
+                          | The 
+                          code "txt-primary" 
+                          | class can be used to create an text like this one.
+                        p.txt-secondary.mb-0
+                          | The 
+                          code "txt-secondary" 
+                          | class can be used to create an text like this one.
+                        p.txt-success.mb-0
+                          | The 
+                          code "txt-success" 
+                          | class can be used to create an text like this one.
+                          |  class
+                        p.txt-info.mb-0
+                          | The 
+                          code "txt-info" 
+                          | class can be used to create an text like this one.
+                          |  class
+                        p.txt-warning.mb-0
+                          | The 
+                          code "txt-warning" 
+                          | class can be used to create an text like this one.
+                        p.txt-danger.mb-0
+                          | The 
+                          code "txt-danger" 
+                          | class can be used to create an text like this one.
+                        p.txt-dark.mb-0
+                          | The 
+                          code "txt-dark" 
+                          | class can be used to create an text like this one.
+                        .code-box-copy
+                          button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#text-colors', title='Copy')
+                            i.icofont.icofont-copy-alt
+                          pre.theme-scrollbar
+                            code.language-html#text-colors
+                              |&lt;div class="d-flex flex-column gap-2"&gt;
+                              |    &lt;p class="txt-primary mb-0"&gt;The
+                              |    &lt;code&gt;"txt-primary"&lt;/code&gt;class can be used to create an text like this one.
+                              |  &lt;/p&gt;
+                              |  &lt;p class="txt-secondary mb-0"&gt;The
+                              |    &lt;code&gt;"txt-secondary"&lt;/code&gt;class can be used to create an text like this one.
+                              |  &lt;/p&gt;
+                              |  &lt;p class="txt-success mb-0"&gt;The
+                              |    &lt;code&gt;"txt-success"&lt;/code&gt;class can be used to create an text like this one. class
+                              |  &lt;/p&gt;
+                              |  &lt;p class="txt-info mb-0"&gt;The
+                              |    &lt;code&gt;"txt-info"&lt;/code&gt;class can be used to create an text like this one. class
+                              |  &lt;/p&gt;
+                              |  &lt;p class="txt-warning mb-0"&gt;The
+                              |    &lt;code&gt;"txt-warning"&lt;/code&gt;class can be used to create an text like this one.
+                              |  &lt;/p&gt;
+                              |  &lt;p class="txt-danger mb-0"&gt;The
+                              |    &lt;code&gt;"txt-danger"&lt;/code&gt;class can be used to create an text like this one.
+                              |  &lt;/p&gt;
+                              |  &lt;p class="txt-dark mb-0"&gt;The
+                              |    &lt;code&gt;"txt-dark"&lt;/code&gt;class can be used to create an text like this one.
+                              |  &lt;/p&gt;
+                              |&lt;/div&gt;
+              .col-sm-12
+                .card.overflow-hidden
+                  .card-header
+                    h4.mb-0 Blockquote
+                    p.f-m-light.mt-1
+                      | The 
+                      code &lt;blockquote&gt;
+                      |  tag specifies a section that is quoted from another source.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                      .figure.d-block.dark-blockquote
+                        blockquote.blockquote.light-card.mb-2.bg-light-primary
+                          p.mb-0.txt-primary
+                            | The only impossible journey is the one you never begin.
+                          span.blockquote-footer.pt-3
+                            | Tony Robbins
+                      .figure.text-center.d-block.dark-blockquote
+                        blockquote.blockquote.light-card.mb-2.bg-light-secondary
+                          p.mb-0.txt-secondary
+                            | In this life we cannot do great things. We can only do small things with great love.
+                          span.blockquote-footer.pt-3
+                            | Mother Teresa
+                      .figure.text-end.d-block.dark-blockquote
+                        blockquote.blockquote.mb-0.light-card.mb-2.bg-light-warning
+                          p.mb-0.txt-warning
+                            | Live in the sunshine, swim the sea, drink the wild air.
+                          span.blockquote-footer.pt-3
+                            | Ralph Waldo Emerson
+                      .code-box-copy
+                          button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#blockquote-heading', title='Copy')
+                            i.icofont.icofont-copy-alt
+                          pre.theme-scrollbar
+                            code.language-html#blockquote-heading
+                              |&lt;div class="figure d-block dark-blockquote"&gt;
+                              |  &lt;blockquote class="blockquote light-card mb-2"&gt;
+                              |    &lt;p class="mb-0"&gt;The only impossible journey is the one you never begin.&lt;/p&gt;
+                              |    &lt;span class="blockquote-footer pt-3"&gt;Tony Robbins&lt;/span&gt;
+                              |  &lt;/blockquote&gt;
+                              |&lt;/div&gt;
+                              |&lt;div class="figure text-center d-block dark-blockquote"&gt;
+                              |  &lt;blockquote class="blockquote light-card mb-2"&gt;
+                              |    &lt;p class="mb-0"&gt;In this life we cannot do great things. We can only do small things with great love.&lt;/p&gt;
+                              |    &lt;span class="blockquote-footer pt-3"&gt;Mother Teresa&lt;/span&gt;
+                              |  &lt;/blockquote&gt;
+                              |&lt;/div&gt;
+                              |&lt;div class="figure text-end d-block dark-blockquote"&gt;
+                              |  &lt;blockquote class="blockquote mb-0 light-card mb-2"&gt;
+                              |    &lt;p class="mb-0"&gt;Live in the sunshine, swim the sea, drink the wild air.&lt;/p&gt;
+                              |    &lt;span class="blockquote-footer pt-3"&gt;Ralph Waldo Emerson&lt;/span&gt;
+                              |  &lt;/blockquote&gt;
+                              |&lt;/div&gt;
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

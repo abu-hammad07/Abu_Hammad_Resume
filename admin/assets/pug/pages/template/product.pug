@@ -1,0 +1,1169 @@
+- var page_Title = 'Product';
+- var theme_customizer      = true;
+- var range_slider          = true;
+- var page_range_slider     = true;
+- var touchspin             = true;
+- var select2               = true;
+- var page_select2          = true;
+- var product_tab           = true;
+- var owlcarousel           = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['ECommerce','Product'],'Product')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body 
+          // Container-fluid starts
+          .container-fluid.product-wrapper
+            .product-grid
+              .feature-products
+                .row
+                  .col-md-6.products-total
+                    .square-product-setting.d-inline-block
+                      a.icon-grid.grid-layout-view(href='#', data-original-title='', title='')
+                        i(data-feather='grid')
+                    .square-product-setting.d-inline-block
+                      a.icon-grid.m-0.list-layout-view(href='#', data-original-title='', title='')
+                        i(data-feather='list')
+                    span.d-none-productlist.filter-toggle     
+                      | Filters
+                      span.ms-2
+                        i(data-feather='chevron-down').toggle-data
+                    .grid-options.d-inline-block
+                      ul
+                        li
+                          a.product-2-layout-view(href='#', data-original-title='', title='')
+                            span.line-grid.line-grid-1.bg-primary
+                            span.line-grid.line-grid-2.bg-primary
+                        li
+                          a.product-3-layout-view(href='#', data-original-title='', title='')
+                            span.line-grid.line-grid-3.bg-primary
+                            span.line-grid.line-grid-4.bg-primary
+                            span.line-grid.line-grid-5.bg-primary
+                        li
+                          a.product-4-layout-view(href='#', data-original-title='', title='')
+                            span.line-grid.line-grid-6.bg-primary
+                            span.line-grid.line-grid-7.bg-primary
+                            span.line-grid.line-grid-8.bg-primary
+                            span.line-grid.line-grid-9.bg-primary
+                        li
+                          a.product-6-layout-view(href='#', data-original-title='', title='')
+                            span.line-grid.line-grid-10.bg-primary
+                            span.line-grid.line-grid-11.bg-primary
+                            span.line-grid.line-grid-12.bg-primary
+                            span.line-grid.line-grid-13.bg-primary
+                            span.line-grid.line-grid-14.bg-primary
+                            span.line-grid.line-grid-15.bg-primary
+                  .col-md-6.text-sm-end
+                    span.f-w-600.m-r-5 Showing Products 1 - 24 Of 200 Results
+                    .select2-drpdwn-product.select-options.d-inline-block
+                      select.form-control.btn-square(name='select')
+                        option(value='opt1') Featured
+                        option(value='opt2') Lowest Prices
+                        option(value='opt3') Highest Prices
+                .row
+                  .col-sm-3
+                    .product-sidebar
+                      .filter-section
+                        .card
+                          .card-header
+                            h5.mb-0.f-w-700
+                              | Filters
+                              span.pull-right
+                                i.fa.fa-chevron-down.toggle-data
+                          .left-filter
+                            .card-body.filter-cards-view.animate-chk
+                              .product-filter
+                                h6.f-w-600 Category
+                                .checkbox-animated.mt-0
+                                  label.d-block(for='edo-ani5')
+                                    input#edo-ani5.checkbox_animated(type='checkbox', data-original-title='', title='')
+                                    | Man Shirt
+                                  label.d-block(for='edo-ani6')
+                                    input#edo-ani6.checkbox_animated(type='checkbox', data-original-title='', title='')
+                                    | Man Jeans
+                                  label.d-block(for='edo-ani7')
+                                    input#edo-ani7.checkbox_animated(type='checkbox', data-original-title='', title='')
+                                    | Woman Topcheckbox
+                                  label.d-block(for='edo-ani8')
+                                    input#edo-ani8.checkbox_animated(type='checkbox', data-original-title='', title='')
+                                    | Woman Jeans
+                                  label.d-block(for='edo-ani9')
+                                    input#edo-ani9.checkbox_animated(type='checkbox', data-original-title='', title='')
+                                    | Man T-shirt
+                              .product-filter
+                                h6.f-w-600 Brand
+                                .checkbox-animated.mt-0
+                                  label.d-block(for='chk-ani')
+                                    input#chk-ani.checkbox_animated(type='checkbox', data-original-title='', title='')
+                                    |  Levi's
+                                  label.d-block(for='chk-ani1')
+                                    input#chk-ani1.checkbox_animated(type='checkbox', data-original-title='', title='')
+                                    | Diesel
+                                  label.d-block(for='chk-ani2')
+                                    input#chk-ani2.checkbox_animated(type='checkbox', data-original-title='', title='')
+                                    | Lee
+                                  label.d-block(for='chk-ani3')
+                                    input#chk-ani3.checkbox_animated(type='checkbox', data-original-title='', title='')
+                                    | Hudson
+                                  label.d-block(for='chk-ani4')
+                                    input#chk-ani4.checkbox_animated(type='checkbox', data-original-title='', title='')
+                                    | Denizen
+                                  label.d-block(for='chk-ani5')
+                                    input#chk-ani5.checkbox_animated(type='checkbox', data-original-title='', title='')
+                                    | Spykar
+                              .product-filter.slider-product
+                                h6.f-w-600 Colors
+                                .color-selector
+                                  ul
+                                    li.white
+                                    li.gray
+                                    li.black
+                                    li.orange
+                                    li.green
+                                    li.pink
+                                    li.yellow
+                                    li.blue
+                                    li.red
+                              .product-filter.pb-0
+                                h6.f-w-600 Price
+                                input#u-range-03(type='text')
+                                h6.f-w-600 New Products
+                              .product-filter.pb-0.new-products
+                                #testimonial.owl-carousel.owl-theme
+                                  .item
+                                    .product-box.row
+                                      .product-img.col-md-5
+                                        img.img-fluid.img-100(src='../assets/images/ecommerce/01.jpg', alt='', data-original-title='', title='')
+                                      .product-details.col-md-7.text-start
+                                        span
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning
+                                        p.mb-0 Woman Top
+                                        .product-price $100.00
+                                    .product-box.row
+                                      .product-img.col-md-5
+                                        img.img-fluid.img-100(src='../assets/images/ecommerce/02.jpg', alt='', data-original-title='', title='')
+                                      .product-details.col-md-7.text-start
+                                        span
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning
+                                        p.mb-0 Beauty Fashion
+                                        .product-price $150.00
+                                    .product-box.row
+                                      .product-img.col-md-5
+                                        img.img-fluid.img-100(src='../assets/images/ecommerce/03.jpg', alt='', data-original-title='', title='')
+                                      .product-details.col-md-7.text-start
+                                        span
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning
+                                        p.mb-0 Voxati
+                                        .product-price $200.00
+                                  .item
+                                    .product-box.row
+                                      .product-img.col-md-5
+                                        img.img-fluid.img-100(src='../assets/images/ecommerce/01.jpg', alt='', data-original-title='', title='')
+                                      .product-details.col-md-7.text-start
+                                        span
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning
+                                        p.mb-0 Red Top
+                                        .product-price $100.00
+                                    .product-box.row
+                                      .product-img.col-md-5
+                                        img.img-fluid.img-100(src='../assets/images/ecommerce/02.jpg', alt='', data-original-title='', title='')
+                                      .product-details.col-md-7.text-start
+                                        span
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning
+                                        p.mb-0 Black Crop Top
+                                        .product-price $100.00
+                                    .product-box.row
+                                      .product-img.col-md-5
+                                        img.img-fluid.img-100(src='../assets/images/ecommerce/03.jpg', alt='', data-original-title='', title='')
+                                      .product-details.col-md-7.text-start
+                                        span
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning.me-1
+                                          i.fa.fa-star.font-warning
+                                        p.mb-0 Denim Jeans
+                                        .product-price $100.00  
+                              .product-filter.text-center
+                                img.img-fluid.banner-product(src='../assets/images/ecommerce/banner.jpg', alt='', data-original-title='', title='')
+                  .col-md-9.col-sm-12
+                    form
+                      .form-group.m-0
+                        input.form-control(type='search', placeholder='Search..', data-original-title='', title='')
+                        i.fa.fa-search
+              .product-wrapper-grid
+                .row
+                  .col-xl-3.col-sm-6.xl-4
+                    .card
+                      .product-box
+                        .product-img
+                          img.img-fluid(src='../assets/images/ecommerce/01.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                a(href="cart.html")
+                                  i.icon-shopping-cart
+                              li
+                                a(data-bs-toggle='modal', data-bs-target='#exampleModalCenter')
+                                  i.icon-eye
+                        #exampleModalCenter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenter', aria-hidden='true')
+                          .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+                            .modal-content
+                              .modal-header
+                                .product-box.row
+                                  .product-img.col-lg-6
+                                    img.img-fluid(src='../assets/images/ecommerce/01.jpg', alt='')
+                                  .product-details.col-lg-6.text-start
+                                    h4 Women's Top
+                                    .product-price
+                                      | $50.00 
+                                      del $35.00    
+                                    .product-view
+                                      h6.f-w-600 Product Details
+                                      p.mb-0 Rock paper scissors women tank top high neck cotton top stylish women top.
+                                    .product-size
+                                      ul
+                                        li 
+                                          button.btn.btn-outline-light(type='button') M
+                                        li 
+                                          button.btn.btn-outline-light(type='button') L
+                                        li 
+                                          button.btn.btn-outline-light(type='button') Xl
+                                    .product-qnty
+                                      h6.f-w-600 Quantity
+                                      fieldset
+                                        .input-group
+                                          input.touchspin.text-center(type='text', value='5')
+                                      .addcart-btn
+                                        a.btn.btn-primary(href="cart.html") Add to Cart
+                                        a.btn.btn-primary.ms-2(href="product-page.html") View Details
+                                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                        .product-details
+                          .rating
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star-o
+                            i.fa.fa-star-o
+                          a(href='product-page.html')
+                            h4 Women's Top
+                          p Regular Flare Fit Women's Red Top
+                          .product-price
+                            | $50.00 
+                            del $80.00    
+                  .col-xl-3.col-sm-6.xl-4
+                    .card
+                      .product-box
+                        .product-img
+                          .ribbon.ribbon-danger Sale
+                          img.img-fluid(src='../assets/images/ecommerce/02.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                a(href="cart.html")
+                                  i.icon-shopping-cart
+                              li
+                                a(data-bs-toggle='modal', data-bs-target='#exampleModalCenter1')
+                                  i.icon-eye
+                        #exampleModalCenter1.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenter1', aria-hidden='true')
+                          .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+                            .modal-content
+                              .modal-header
+                                .product-box.row
+                                  .product-img.col-lg-6
+                                    img.img-fluid(src='../assets/images/ecommerce/02.jpg', alt='')
+                                  .product-details.col-lg-6.text-start
+                                    h4 Women's Crop Top
+                                    .product-price
+                                      | $45.00 
+                                      del $50.00    
+                                    .product-view
+                                      h6.f-w-600 Product Details
+                                      p.mb-0 Rock paper scissors women crop top high neck cotton black top stylish women top.
+                                    .product-size
+                                      ul
+                                        li 
+                                          button.btn.btn-outline-light(type='button') M
+                                        li 
+                                          button.btn.btn-outline-light(type='button') L
+                                        li 
+                                          button.btn.btn-outline-light(type='button') Xl
+                                    .product-qnty
+                                      h6.f-w-600 Quantity
+                                      fieldset
+                                        .input-group
+                                          input.touchspin.text-center(type='text', value='5')
+                                      .addcart-btn
+                                        a.btn.btn-primary(href="cart.html") Add to Cart
+                                        a.btn.btn-primary.ms-2(href="product-page.html") View Details
+                                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                        .product-details
+                          .rating
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star-half-o
+                            i.fa.fa-star-o
+                          a(href='product-page.html')
+                            h4 Women's Crop Top
+                          p Cotton Blend Women's Black Top
+                          .product-price
+                            | $45.00 
+                            del $50.00    
+                  .col-xl-3.col-sm-6.xl-4
+                    .card
+                      .product-box
+                        .product-img
+                          img.img-fluid(src='../assets/images/ecommerce/03.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                a(href="cart.html")
+                                  i.icon-shopping-cart
+                              li
+                                a(data-bs-toggle='modal', data-bs-target='#exampleModalCenter2')
+                                  i.icon-eye
+                        #exampleModalCenter2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenter2', aria-hidden='true')
+                          .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+                            .modal-content
+                              .modal-header
+                                .product-box.row
+                                  .product-img.col-lg-6
+                                    img.img-fluid(src='../assets/images/ecommerce/03.jpg', alt='')
+                                  .product-details.col-lg-6.text-start
+                                    h4 Women's Jeans
+                                    .product-price
+                                      | $426.00
+                                      del $480.00    
+                                    .product-view
+                                      h6.f-w-600 Product Details
+                                      p.mb-0 Women's classic stretchy all time trendy pleated gray jeans with printed winter full sleeve t-shirt.
+                                    .product-size
+                                      ul
+                                        li 
+                                          button.btn.btn-outline-light(type='button') M
+                                        li 
+                                          button.btn.btn-outline-light(type='button') L
+                                        li 
+                                          button.btn.btn-outline-light(type='button') Xl
+                                    .product-qnty
+                                      h6.f-w-600 Quantity
+                                      fieldset
+                                        .input-group
+                                          input.touchspin.text-center(type='text', value='5')
+                                      .addcart-btn
+                                        a.btn.btn-primary(href="cart.html") Add to Cart
+                                        a.btn.btn-primary.ms-2(href="product-page.html") View Details
+                                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                        .product-details
+                          .rating
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star-o
+                            i.fa.fa-star-o
+                            i.fa.fa-star-o
+                          a(href='product-page.html')
+                            h4 Women's Jeans
+                          p Cotton Blend Women's Jeans
+                          .product-price
+                            |  $426.00
+                            del $480.00    
+                  .col-xl-3.col-sm-6.xl-4
+                    .card
+                      .product-box
+                        .product-img
+                          .ribbon.ribbon-success.ribbon-right 50%
+                          img.img-fluid(src='../assets/images/ecommerce/04.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                a(href="cart.html")
+                                  i.icon-shopping-cart
+                              li
+                                a(data-bs-toggle='modal', data-bs-target='#exampleModalCenter3')
+                                  i.icon-eye
+                        #exampleModalCenter3.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenter3', aria-hidden='true')
+                          .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+                            .modal-content
+                              .modal-header
+                                .product-box.row
+                                  .product-img.col-lg-6
+                                    img.img-fluid(src='../assets/images/ecommerce/04.jpg', alt='')
+                                  .product-details.col-lg-6.text-start
+                                    h4 Men's Shirt
+                                    .product-price
+                                      | $26.00
+                                      del $35.00    
+                                    .product-view
+                                      h6.f-w-600 Product Details
+                                      p.mb-0 Regular men's cotton blend black and blue checks with full sleeve shirt.
+                                    .product-size
+                                      ul
+                                        li 
+                                          button.btn.btn-outline-light(type='button') M
+                                        li 
+                                          button.btn.btn-outline-light(type='button') L
+                                        li 
+                                          button.btn.btn-outline-light(type='button') Xl
+                                    .product-qnty
+                                      h6.f-w-600 Quantity
+                                      fieldset
+                                        .input-group
+                                          input.touchspin.text-center(type='text', value='5')
+                                      .addcart-btn
+                                        a.btn.btn-primary(href="cart.html") Add to Cart
+                                        a.btn.btn-primary.ms-2(href="product-page.html") View Details
+                                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                        .product-details
+                          .rating
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                          a(href='product-page.html')
+                            h4 Men's Shirt
+                          p Cotton Regular Fit Men's Shirt
+                          .product-price
+                            | $26.00
+                            del $35.00    
+                  .col-xl-3.col-sm-6.xl-4
+                    .card
+                      .product-box
+                        .product-img
+                          img.img-fluid(src='../assets/images/ecommerce/05.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                a(href="cart.html")
+                                  i.icon-shopping-cart
+                              li
+                                a(data-bs-toggle='modal', data-bs-target='#exampleModalCenter4')
+                                  i.icon-eye
+                        #exampleModalCenter4.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenter4', aria-hidden='true')
+                          .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+                            .modal-content
+                              .modal-header
+                                .product-box.row
+                                  .product-img.col-lg-6
+                                    img.img-fluid(src='../assets/images/ecommerce/05.jpg', alt='')
+                                  .product-details.col-lg-6.text-start
+                                    h4 Yellow Long Dress
+                                    .product-price
+                                      | $20.00
+                                      del $25.00    
+                                    .product-view
+                                      h6.f-w-600 Product Details
+                                      p.mb-0 Rock paper scissors women's stylish yellow long dress with printed skirt.
+                                    .product-size
+                                      ul
+                                        li 
+                                          button.btn.btn-outline-light(type='button') M
+                                        li 
+                                          button.btn.btn-outline-light(type='button') L
+                                        li 
+                                          button.btn.btn-outline-light(type='button') Xl
+                                    .product-qnty
+                                      h6.f-w-600 Quantity
+                                      fieldset
+                                        .input-group
+                                          input.touchspin.text-center(type='text', value='5')
+                                      .addcart-btn
+                                        a.btn.btn-primary(href="cart.html") Add to Cart
+                                        a.btn.btn-primary.ms-2(href="product-page.html") View Details
+                                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                        .product-details
+                          .rating
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star-o
+                          a(href='product-page.html')
+                            h4 Yellow Long Dress
+                          p Dress With Printed Skirt
+                          .product-price                                           
+                            | $20.00 
+                            del $25.00  
+                  .col-xl-3.col-sm-6.xl-4
+                    .card
+                      .product-box
+                        .ribbon.ribbon-secondary.ribbon-vertical-left
+                          i.icon-gift
+                        .product-img
+                          img.img-fluid(src='../assets/images/ecommerce/06.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                a(href="cart.html")
+                                  i.icon-shopping-cart
+                              li
+                                a(data-bs-toggle='modal', data-bs-target='#exampleModalCenter5')
+                                  i.icon-eye
+                        #exampleModalCenter5.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenter5', aria-hidden='true')
+                          .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+                            .modal-content
+                              .modal-header
+                                .product-box.row
+                                  .product-img.col-lg-6
+                                    img.img-fluid(src='../assets/images/ecommerce/06.jpg', alt='')
+                                  .product-details.col-lg-6.text-start
+                                    h4 Men's Jacket
+                                    .product-price
+                                      | $25.00
+                                      del $30.00    
+                                    .product-view
+                                      h6.f-w-600 Product Details
+                                      p.mb-0 Regular men's denim jacket with full sleeve and white cotton t-shirt.
+                                    .product-size
+                                      ul
+                                        li 
+                                          button.btn.btn-outline-light(type='button') M
+                                        li 
+                                          button.btn.btn-outline-light(type='button') L
+                                        li 
+                                          button.btn.btn-outline-light(type='button') Xl
+                                    .product-qnty
+                                      h6.f-w-600 Quantity
+                                      fieldset
+                                        .input-group
+                                          input.touchspin.text-center(type='text', value='5')
+                                      .addcart-btn
+                                        a.btn.btn-primary(href="cart.html") Add to Cart
+                                        a.btn.btn-primary.ms-2(href="product-page.html") View Details
+                                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                        .product-details
+                          .rating
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star-o
+                            i.fa.fa-star-o
+                          a(href='product-page.html')
+                            h4 Men's Jacket
+                          p Solid Denim Jacket
+                          .product-price
+                            | $25.00
+                            del $30.00
+                  .col-xl-3.col-sm-6.xl-4
+                    .card
+                      .product-box
+                        .product-img
+                          img.img-fluid(src='../assets/images/ecommerce/07.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                a(href="cart.html")
+                                  i.icon-shopping-cart
+                              li
+                                a(data-bs-toggle='modal', data-bs-target='#exampleModalCenter6')
+                                  i.icon-eye
+                        #exampleModalCenter6.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenter6', aria-hidden='true')
+                          .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+                            .modal-content
+                              .modal-header
+                                .product-box.row
+                                  .product-img.col-lg-6
+                                    img.img-fluid(src='../assets/images/ecommerce/07.jpg', alt='')
+                                  .product-details.col-lg-6.text-start
+                                    h4 Black Jeans
+                                    .product-price
+                                      | $30.00
+                                      del $35.00    
+                                    .product-view
+                                      h6.f-w-600 Product Details
+                                      p.mb-0 Men's classic stretchy all time trendy pleated black jeans with cotton t-shirt.
+                                    .product-size
+                                      ul
+                                        li 
+                                          button.btn.btn-outline-light(type='button') M
+                                        li 
+                                          button.btn.btn-outline-light(type='button') L
+                                        li 
+                                          button.btn.btn-outline-light(type='button') Xl
+                                    .product-qnty
+                                      h6.f-w-600 Quantity
+                                      fieldset
+                                        .input-group
+                                          input.touchspin.text-center(type='text', value='5')
+                                      .addcart-btn
+                                        a.btn.btn-primary(href="cart.html") Add to Cart
+                                        a.btn.btn-primary.ms-2(href="product-page.html") View Details
+                                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                        .product-details
+                          .rating
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star-half-o
+                            i.fa.fa-star-o
+                          a(href='product-page.html')
+                            h4 Black Jeans
+                          p Cotton Blend Men's Jeans
+                          .product-price
+                            | $30.00 
+                            del $35.00
+                  .col-xl-3.col-sm-6.xl-4
+                    .card
+                      .product-box
+                        .product-img
+                          img.img-fluid(src='../assets/images/ecommerce/08.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                a(href="cart.html")
+                                  i.icon-shopping-cart
+                              li
+                                a(data-bs-toggle='modal', data-bs-target='#exampleModalCenter7')
+                                  i.icon-eye
+                        #exampleModalCenter7.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenter7', aria-hidden='true')
+                          .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+                            .modal-content
+                              .modal-header
+                                .product-box.row
+                                  .product-img.col-lg-6
+                                    img.img-fluid(src='../assets/images/ecommerce/08.jpg', alt='')
+                                  .product-details.col-lg-6.text-start
+                                    h4 Printed One Piece
+                                    .product-price
+                                      | $35.00
+                                      del $40.00    
+                                    .product-view
+                                      h6.f-w-600 Product Details
+                                      p.mb-0 One piece dress comes in a wide range of styles, fabrics and silhouettes.
+                                    .product-size
+                                      ul
+                                        li 
+                                          button.btn.btn-outline-light(type='button') M
+                                        li 
+                                          button.btn.btn-outline-light(type='button') L
+                                        li 
+                                          button.btn.btn-outline-light(type='button') Xl
+                                    .product-qnty
+                                      h6.f-w-600 Quantity
+                                      fieldset
+                                        .input-group
+                                          input.touchspin.text-center(type='text', value='5')
+                                      .addcart-btn
+                                        a.btn.btn-primary(href="cart.html") Add to Cart
+                                        a.btn.btn-primary.ms-2(href="product-page.html") View Details
+                                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                        .product-details
+                          .rating
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star-o
+                            i.fa.fa-star-o
+                          a(href='product-page.html')
+                            h4 Printed One Piece
+                          p Western One Piece Dress
+                          .product-price
+                            | $35.00 
+                            del $40.00    
+                  .col-xl-3.col-sm-6.xl-4
+                    .card
+                      .product-box
+                        .product-img
+                          img.img-fluid(src='../assets/images/ecommerce/09.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                a(href="cart.html")
+                                  i.icon-shopping-cart
+                              li
+                                a(data-bs-toggle='modal', data-bs-target='#exampleModalCenter8')
+                                  i.icon-eye
+                        #exampleModalCenter8.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenter8', aria-hidden='true')
+                          .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+                            .modal-content
+                              .modal-header
+                                .product-box.row
+                                  .product-img.col-lg-6
+                                    img.img-fluid(src='../assets/images/ecommerce/09.jpg', alt='')
+                                  .product-details.col-lg-6.text-start
+                                    h4 Woman's Tank Top
+                                    .product-price
+                                      | $45.00
+                                      del $50.00    
+                                    .product-view
+                                      h6.f-w-600 Product Details
+                                      p.mb-0 Women's white half sleeve tank top with denim shorty pants.
+                                    .product-size
+                                      ul
+                                        li 
+                                          button.btn.btn-outline-light(type='button') M
+                                        li 
+                                          button.btn.btn-outline-light(type='button') L
+                                        li 
+                                          button.btn.btn-outline-light(type='button') Xl
+                                    .product-qnty
+                                      h6.f-w-600 Quantity
+                                      fieldset
+                                        .input-group
+                                          input.touchspin.text-center(type='text', value='5')
+                                      .addcart-btn
+                                        a.btn.btn-primary(href="cart.html") Add to Cart
+                                        a.btn.btn-primary.ms-2(href="product-page.html") View Details
+                                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                        .product-details
+                          .rating
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star-o
+                          a(href='product-page.html')
+                            h4 Woman's Tank Top
+                          p Woman's White Fancy Top
+                          .product-price
+                            | $45.00 
+                            del $50.00    
+                  .col-xl-3.col-sm-6.xl-4 
+                    .card
+                      .product-box
+                        .product-img
+                          img.img-fluid(src='../assets/images/ecommerce/10.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                a(href="cart.html")
+                                  i.icon-shopping-cart
+                              li
+                                a(data-bs-toggle='modal', data-bs-target='#exampleModalCenter9')
+                                  i.icon-eye
+                        #exampleModalCenter9.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenter9', aria-hidden='true')
+                          .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+                            .modal-content
+                              .modal-header
+                                .product-box.row
+                                  .product-img.col-lg-6
+                                    img.img-fluid(src='../assets/images/ecommerce/10.jpg', alt='')
+                                  .product-details.col-lg-6.text-start
+                                    h4 Women's Long Coat
+                                    .product-price
+                                      | $50.00
+                                      del $55.00    
+                                    .product-view
+                                      h6.f-w-600 Product Details
+                                      p.mb-0 Rock paper scissors women's stylish long coat with black t-shirt.
+                                    .product-size
+                                      ul
+                                        li 
+                                          button.btn.btn-outline-light(type='button') M
+                                        li 
+                                          button.btn.btn-outline-light(type='button') L
+                                        li 
+                                          button.btn.btn-outline-light(type='button') Xl
+                                    .product-qnty
+                                      h6.f-w-600 Quantity
+                                      fieldset
+                                        .input-group
+                                          input.touchspin.text-center(type='text', value='5')
+                                      .addcart-btn
+                                        a.btn.btn-primary(href="cart.html") Add to Cart
+                                        a.btn.btn-primary.ms-2(href="product-page.html") View Details
+                                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                        .product-details
+                          .rating
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                          a(href='product-page.html')
+                            h4 Women's Long Coat
+                          p Women's Full Sleeve Long Coat
+                          .product-price
+                            | $50.00 
+                            del $55.00    
+                  .col-xl-3.col-sm-6.xl-4
+                    .card
+                      .product-box
+                        .product-img
+                          img.img-fluid(src='../assets/images/ecommerce/11.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                a(href="cart.html")
+                                  i.icon-shopping-cart
+                              li
+                                a(data-bs-toggle='modal', data-bs-target='#exampleModalCenter10')
+                                  i.icon-eye
+                        #exampleModalCenter10.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenter10', aria-hidden='true')
+                          .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+                            .modal-content
+                              .modal-header
+                                .product-box.row
+                                  .product-img.col-lg-6
+                                    img.img-fluid(src='../assets/images/ecommerce/11.jpg', alt='')
+                                  .product-details.col-lg-6.text-start
+                                    h4 Man's Suit
+                                    .product-price
+                                      | $60.00
+                                      del $65.00    
+                                    .product-view
+                                      h6.f-w-600 Product Details
+                                      p.mb-0 Professional man's gray suit with regular cotton white shirt.
+                                    .product-size
+                                      ul
+                                        li 
+                                          button.btn.btn-outline-light(type='button') M
+                                        li 
+                                          button.btn.btn-outline-light(type='button') L
+                                        li 
+                                          button.btn.btn-outline-light(type='button') Xl
+                                    .product-qnty
+                                      h6.f-w-600 Quantity
+                                      fieldset
+                                        .input-group
+                                          input.touchspin.text-center(type='text', value='5')
+                                      .addcart-btn
+                                        a.btn.btn-primary(href="cart.html") Add to Cart
+                                        a.btn.btn-primary.ms-2(href="product-page.html") View Details
+                                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                        .product-details
+                          .rating
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                          a(href='product-page.html')
+                            h4 Man's Suit
+                          p Professional Man's Gray Suit
+                          .product-price
+                            | $60.00 
+                            del $65.00    
+                  .col-xl-3.col-sm-6.xl-4
+                    .card
+                      .product-box
+                        .product-img
+                          img.img-fluid(src='../assets/images/ecommerce/12.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                a(href="cart.html")
+                                  i.icon-shopping-cart
+                              li
+                                a(data-bs-toggle='modal', data-bs-target='#exampleModalCenter11')
+                                  i.icon-eye
+                        #exampleModalCenter11.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenter11', aria-hidden='true')
+                          .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+                            .modal-content
+                              .modal-header
+                                .product-box.row
+                                  .product-img.col-lg-6
+                                    img.img-fluid(src='../assets/images/ecommerce/12.jpg', alt='')
+                                  .product-details.col-lg-6.text-start
+                                    h4 Slim Fit Plastic Coat
+                                    .product-price
+                                      | $30.00
+                                      del $35.00    
+                                    .product-view
+                                      h6.f-w-600 Product Details
+                                      p.mb-0 Professional woman's suit with regular cotton black t-shirt.
+                                    .product-size
+                                      ul
+                                        li 
+                                          button.btn.btn-outline-light(type='button') M
+                                        li 
+                                          button.btn.btn-outline-light(type='button') L
+                                        li 
+                                          button.btn.btn-outline-light(type='button') Xl
+                                    .product-qnty
+                                      h6.f-w-600 Quantity
+                                      fieldset
+                                        .input-group
+                                          input.touchspin.text-center(type='text', value='5')
+                                      .addcart-btn
+                                        a.btn.btn-primary(href="cart.html") Add to Cart
+                                        a.btn.btn-primary.ms-2(href="product-page.html") View Details
+                                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                        .product-details
+                          .rating
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star-o
+                            i.fa.fa-star-o
+                          a(href='product-page.html')
+                            h4 Slim Fit Plastic Coat
+                          p Slim Fit Plastic Thunder Coat
+                          .product-price
+                            | $30.00 
+                            del $35.00    
+                  .col-xl-3.col-sm-6.xl-4
+                    .card
+                      .product-box
+                        .product-img
+                          .ribbon.ribbon-bookmark.ribbon-vertical-right.ribbon-info
+                            i.icofont.icofont-love
+                          img.img-fluid(src='../assets/images/ecommerce/13.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                a(href="cart.html")
+                                  i.icon-shopping-cart
+                              li
+                                a(data-bs-toggle='modal', data-bs-target='#exampleModalCenter12')
+                                  i.icon-eye
+                        #exampleModalCenter12.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenter12', aria-hidden='true')
+                          .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+                            .modal-content
+                              .modal-header
+                                .product-box.row
+                                  .product-img.col-lg-6
+                                    img.img-fluid(src='../assets/images/ecommerce/13.jpg', alt='')
+                                  .product-details.col-lg-6.text-start
+                                    h4 Men's Cotton Shirt
+                                    .product-price
+                                      | $50.00
+                                      del $60.00    
+                                    .product-view
+                                      h6.f-w-600 Product Details
+                                      p.mb-0 Regular men's cotton full sleeve checks shirt with denim jeans.
+                                    .product-size
+                                      ul
+                                        li 
+                                          button.btn.btn-outline-light(type='button') M
+                                        li 
+                                          button.btn.btn-outline-light(type='button') L
+                                        li 
+                                          button.btn.btn-outline-light(type='button') Xl
+                                    .product-qnty
+                                      h6.f-w-600 Quantity
+                                      fieldset
+                                        .input-group
+                                          input.touchspin.text-center(type='text', value='5')
+                                      .addcart-btn
+                                        a.btn.btn-primary(href="cart.html") Add to Cart
+                                        a.btn.btn-primary.ms-2(href="product-page.html") View Details
+                                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                        .product-details
+                          .rating
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star-half-o
+                          a(href='product-page.html')
+                            h4 Men's Cotton Shirt
+                          p Regular Men's Cotton Shirt
+                          .product-price
+                            | $30.00 
+                            del $360.00    
+                  .col-xl-3.col-sm-6.xl-4
+                    .card
+                      .product-box
+                        .product-img
+                          img.img-fluid(src='../assets/images/ecommerce/14.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                a(href="cart.html")
+                                  i.icon-shopping-cart
+                              li
+                                a(data-bs-toggle='modal', data-bs-target='#exampleModalCenter13')
+                                  i.icon-eye
+                        #exampleModalCenter13.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenter13', aria-hidden='true')
+                          .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+                            .modal-content
+                              .modal-header
+                                .product-box.row
+                                  .product-img.col-lg-6
+                                    img.img-fluid(src='../assets/images/ecommerce/14.jpg', alt='')
+                                  .product-details.col-lg-6.text-start
+                                    h4 Woman Jumpsuit
+                                    .product-price
+                                      | $60.00
+                                      del $70.00    
+                                    .product-view
+                                      h6.f-w-600 Product Details
+                                      p.mb-0 This jumpsuits come in a variety of styles, ranging from casual and relaxed to elegant and formal.
+                                    .product-size
+                                      ul
+                                        li 
+                                          button.btn.btn-outline-light(type='button') M
+                                        li 
+                                          button.btn.btn-outline-light(type='button') L
+                                        li 
+                                          button.btn.btn-outline-light(type='button') Xl
+                                    .product-qnty
+                                      h6.f-w-600 Quantity
+                                      fieldset
+                                        .input-group
+                                          input.touchspin.text-center(type='text', value='5')
+                                      .addcart-btn
+                                        a.btn.btn-primary(href="cart.html") Add to Cart
+                                        a.btn.btn-primary.ms-2(href="product-page.html") View Details
+                                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                        .product-details
+                          .rating
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star-half-o
+                          a(href='product-page.html')
+                            h4 Woman Jumpsuit
+                          p The Best Jumpsuit For Woman
+                          .product-price
+                            | $60.00 
+                            del $70.00    
+                  .col-xl-3.col-sm-6.xl-4
+                    .card
+                      .product-box
+                        .product-img
+                          .ribbon.ribbon-clip.ribbon-warning Hot
+                          img.img-fluid(src='../assets/images/ecommerce/15.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                a(href="cart.html")
+                                  i.icon-shopping-cart
+                              li
+                                a(data-bs-toggle='modal', data-bs-target='#exampleModalCenter14')
+                                  i.icon-eye
+                        #exampleModalCenter14.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenter14', aria-hidden='true')
+                          .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+                            .modal-content
+                              .modal-header
+                                .product-box.row
+                                  .product-img.col-lg-6
+                                    img.img-fluid(src='../assets/images/ecommerce/15.jpg', alt='')
+                                  .product-details.col-lg-6.text-start
+                                    h4 Woman Party Wear
+                                    .product-price
+                                      | $57.00
+                                      del $60.00    
+                                    .product-view
+                                      h6.f-w-600 Product Details
+                                      p.mb-0 Stylish party wear for women with featuring luxurious fabrics, intricate embellishments and flattering silhouettes.
+                                    .product-size
+                                      ul
+                                        li 
+                                          button.btn.btn-outline-light(type='button') M
+                                        li 
+                                          button.btn.btn-outline-light(type='button') L
+                                        li 
+                                          button.btn.btn-outline-light(type='button') Xl
+                                    .product-qnty
+                                      h6.f-w-600 Quantity
+                                      fieldset
+                                        .input-group
+                                          input.touchspin.text-center(type='text', value='5')
+                                      .addcart-btn
+                                        a.btn.btn-primary(href="cart.html") Add to Cart
+                                        a.btn.btn-primary.ms-2(href="product-page.html") View Details
+                                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                        .product-details
+                          .rating
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                          a(href='product-page.html')
+                            h4 Woman Party Wear
+                          p Stylish Party Wear For Women
+                          .product-price
+                            | $30.00 
+                            del $350.00    
+                  .col-xl-3.col-sm-6.xl-4
+                    .card
+                      .product-box
+                        .product-img
+                          img.img-fluid(src='../assets/images/ecommerce/16.jpg', alt='')
+                          .product-hover
+                            ul
+                              li
+                                a(href="cart.html")
+                                  i.icon-shopping-cart
+                              li
+                                a(data-bs-toggle='modal', data-bs-target='#exampleModalCenter15')
+                                  i.icon-eye
+                        #exampleModalCenter15.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenter15', aria-hidden='true')
+                          .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+                            .modal-content
+                              .modal-header
+                                .product-box.row
+                                  .product-img.col-lg-6
+                                    img.img-fluid(src='../assets/images/ecommerce/16.jpg', alt='')
+                                  .product-details.col-lg-6.text-start
+                                    h4 Beauty Fashion
+                                    .product-price
+                                      | $26.00
+                                      del $350.00    
+                                    .product-view
+                                      h6.f-w-600 Product Details
+                                      p.mb-0 Beauty fashion dress comes in a wide range of styles, fabrics and silhouettes.
+                                    .product-size
+                                      ul
+                                        li 
+                                          button.btn.btn-outline-light(type='button') M
+                                        li 
+                                          button.btn.btn-outline-light(type='button') L
+                                        li 
+                                          button.btn.btn-outline-light(type='button') Xl
+                                    .product-qnty
+                                      h6.f-w-600 Quantity
+                                      fieldset
+                                        .input-group
+                                          input.touchspin.text-center(type='text', value='5')
+                                      .addcart-btn
+                                        a.btn.btn-primary(href="cart.html") Add to Cart
+                                        a.btn.btn-primary.ms-2(href="product-page.html") View Details
+                                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                        .product-details
+                          .rating
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                          a(href='product-page.html')
+                            h4 Beauty Fashion
+                          p Stylish Dress For Women
+                          .product-price
+                            | $30.00 
+                            del $360.00       
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

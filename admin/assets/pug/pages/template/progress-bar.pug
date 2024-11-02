@@ -1,0 +1,647 @@
+- var page_Title = 'Progress-bar';
+- var theme_customizer      = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var progress              = true;
+- var scrollbar             = true;
+- var clipboard             = true;
+- var prism                 = true;
+- var customcard            = true;
+- var height_equal          = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Ui Kits','Progress'],'Progress')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-sm-12
+                .card
+                  .card-header
+                    h4 Initial Progress Bars
+                    p.f-m-light.mt-1
+                      | Progress components are built with two HTML elements, some CSS to set the width, and a few attributes.
+                      | We use the 
+                      code  progress 
+                      | as a wrapper to indicate the max value of the progress bar. The 
+                      code  progress-bar 
+                      | requires an inline style, utility class, or custom CSS to set their width.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.progress-showcase
+                    .row
+                      .col
+                        .progress
+                          .progress-bar(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100') 
+                        .progress
+                          .progress-bar.bg-primary(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 25%
+                        .progress
+                          .progress-bar.bg-secondary(role='progressbar', style='width: 50%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100') 50%
+                        .progress
+                          .progress-bar.bg-success(role='progressbar', style='width: 75%', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100') 75%
+                        .progress
+                          .progress-bar.bg-info(role='progressbar', style='width: 100%', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100') 100%
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#progress-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#progress-copy
+                          |&lt;div class="row"&gt;
+                          |  &lt;div class="col"&gt;
+                          |    &lt;div class="progress"&gt;
+                          |      &lt;div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"&gt; &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress"&gt;
+                          |      &lt;div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;25%&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress"&gt;
+                          |      &lt;div class="progress-bar bg-secondary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;50%&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress"&gt;
+                          |      &lt;div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"&gt;75%&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress"&gt;
+                          |      &lt;div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"&gt;100%&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-xl-6
+                .card
+                  .card-header
+                    h4 Striped Progress Bars
+                    p.f-m-light.mt-1
+                      | Add 
+                      code  progress-bar-striped
+                      |  to any 
+                      code  progress-bar 
+                      |  to apply a stripe via CSS gradient over the progress bar's background color Using CSS Effects.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.progress-showcase
+                    .row
+                      .col
+                        .progress
+                          .progress-bar.bg-primary.progress-bar-striped(role='progressbar', style='width: 10%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+                        .progress
+                          .progress-bar.progress-bar-striped.bg-warning(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                        .progress
+                          .progress-bar.progress-bar-striped.bg-danger(role='progressbar', style='width: 50%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+                        .progress
+                          .progress-bar.progress-bar-striped.bg-success(role='progressbar', style='width: 75%', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100')
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#striped-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#striped-copy
+                          |&lt;div class="row"&gt;
+                          |  &lt;div class="col"&gt;
+                          |    &lt;div class="progress"&gt;
+                          |      &lt;div class="progress-bar bg-primary progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress"&gt;
+                          |      &lt;div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress"&gt;
+                          |      &lt;div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress"&gt;
+                          |      &lt;div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-xl-6                          
+                .card
+                  .card-header
+                    h4 Animated Progress Bars
+                    p.f-m-light.mt-1
+                      | The striped gradient can also be animated. Add 
+                      code  progress-bar-animated
+                      |  to
+                      code  progress-bar
+                      |  to animate the stripes right to left via CSS3 animations.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.progress-showcase
+                    .row
+                      .col
+                        .progress
+                          .progress-bar-animated.bg-primary.progress-bar-striped(role='progressbar', style='width: 10%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+                        .progress
+                          .progress-bar-animated.progress-bar-striped.bg-warning(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                        .progress
+                          .progress-bar-animated.progress-bar-striped.bg-danger(role='progressbar', style='width: 50%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+                        .progress
+                          .progress-bar-animated.progress-bar-striped.bg-success(role='progressbar', style='width: 75%', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100')
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#animated-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#animated-copy
+                          |&lt;div class="row"&gt;
+                          |  &lt;div class="col"&gt;
+                          |    &lt;div class="progress"&gt;
+                          |      &lt;div class="progress-bar-animated bg-primary progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress"&gt;
+                          |      &lt;div class="progress-bar-animated progress-bar-striped bg-warning" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress"&gt;
+                          |      &lt;div class="progress-bar-animated progress-bar-striped bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress"&gt;
+                          |      &lt;div class="progress-bar-animated progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-xl-6
+                .card
+                  .card-header
+                    h4 Multiple Bars
+                    p.f-m-light.mt-1
+                      | Include multiple progress bars in a progress component if you need.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.progress-showcase
+                    .row
+                      .col
+                        .progress
+                          .progress-bar.bg-primary(role='progressbar', style='width: 30%', aria-valuenow='30', aria-valuemin='0', aria-valuemax='100')
+                          .progress-bar.bg-secondary(role='progressbar', style='width: 20%', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100')
+                          .progress-bar.bg-success(role='progressbar', style='width: 15%', aria-valuenow='15', aria-valuemin='0', aria-valuemax='100')
+                        .progress
+                          .progress-bar.bg-primary(role='progressbar', style='width: 10%', aria-valuenow='15', aria-valuemin='0', aria-valuemax='100')
+                          .progress-bar.bg-secondary(role='progressbar', style='width: 10%', aria-valuenow='30', aria-valuemin='0', aria-valuemax='100')
+                          .progress-bar.bg-success(role='progressbar', style='width: 10%', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100')
+                          .progress-bar.bg-info(role='progressbar', style='width: 10%', aria-valuenow='15', aria-valuemin='0', aria-valuemax='100')
+                          .progress-bar.bg-warning(role='progressbar', style='width: 10%', aria-valuenow='15', aria-valuemin='0', aria-valuemax='100')
+                          .progress-bar.bg-danger(role='progressbar', style='width: 10%', aria-valuenow='15', aria-valuemin='0', aria-valuemax='100')
+                          .progress-bar.bg-primary(role='progressbar', style='width: 10%', aria-valuenow='15', aria-valuemin='0', aria-valuemax='100')
+                          .progress-bar.bg-light(role='progressbar', style='width: 10%', aria-valuenow='15', aria-valuemin='0', aria-valuemax='100')
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#multiple-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#multiple-copy
+                          |&lt;div class="row"&gt;
+                          |  &lt;div class="col"&gt;
+                          |    &lt;div class="progress"&gt;
+                          |      &lt;div class="progress-bar bg-primary" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |      &lt;div class="progress-bar bg-secondary" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |      &lt;div class="progress-bar bg-success" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress"&gt;
+                          |      &lt;div class="progress-bar bg-primary" role="progressbar" style="width: 10%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |      &lt;div class="progress-bar bg-secondary" role="progressbar" style="width: 10%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |      &lt;div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |      &lt;div class="progress-bar bg-info" role="progressbar" style="width: 10%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |      &lt;div class="progress-bar bg-warning" role="progressbar" style="width: 10%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |      &lt;div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |      &lt;div class="progress-bar bg-primary" role="progressbar" style="width: 10%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |      &lt;div class="progress-bar bg-light" role="progressbar" style="width: 10%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-xl-6
+                .card
+                  .card-header
+                    h4 Progress with Number Steps
+                    p.f-m-light.mt-1 
+                      | Use the 
+                      code  position-absolute 
+                      | to set progress numbers steps.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    .position-relative.m-3.progress-number
+                      .progress.progress-wrapper
+                        .progress-bar(role='progressbar' aria-label='Progress' style='width: 50%;' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100')
+                      button.position-absolute.top-0.start-0.translate-middle.btn-sm.btn-primary.rounded-circle(type='button') 1
+                      button.position-absolute.top-0.start-50.translate-middle.btn-sm.btn-primary.rounded-circle(type='button') 2
+                      button.progress-btn.position-absolute.top-0.start-100.translate-middle.btn-sm.rounded-circle(type='button') 3
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#progress-strap-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#progress-strap-copy
+                          |&lt;div class="position-relative m-3 progress-number"&gt;
+                          |  &lt;div class="progress progress-wrapper"&gt;
+                          |    &lt;div class="progress-bar" role="progressbar" aria-label="Progress" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;button class="position-absolute top-0 start-0 translate-middle btn-sm btn-primary rounded-circle" type="button"&gt;1&lt;/button&gt;
+                          |  &lt;button class="position-absolute top-0 start-50 translate-middle btn-sm btn-primary rounded-circle" type="button"&gt;2&lt;/button&gt;
+                          |  &lt;button class="progress-btn position-absolute top-0 start-100 translate-middle btn-sm rounded-circle" type="button"&gt;3&lt;/button&gt;
+                          |&lt;/div&gt;
+              .col-sm-12            
+                .card
+                  .card-header
+                    h4 Custom Progress Bars
+                    p.f-m-light.mt-1
+                      | Use the 
+                      code  progress-bar-animated 
+                      | and 
+                      code  progress-bar-striped 
+                      | to animate the stripes right to left.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.progress-showcase
+                    .row
+                      .col
+                        h6.mb-2 0% Getting Started 
+                        .progress.mb-4
+                          .progress-bar-animated.progress-bar-striped.text-center(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100') 
+                        h6.mb-2 30% Getting Uploading...
+                        .progress.mb-4
+                          .progress-bar-animated.progress-bar-striped.bg-primary.text-center(role='progressbar', style='width: 30%', aria-valuenow='30', aria-valuemin='0', aria-valuemax='100') 30%
+                        h6.mb-2 60% Getting Pause...
+                        .progress.mb-4
+                          .progress-bar-animated.progress-bar-striped.bg-secondary.text-center(role='progressbar', style='width: 60%', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100') 60%
+                        h6.mb-2 70% Getting Uploading...
+                        .progress.mb-4
+                          .progress-bar-animated.progress-bar-striped.bg-success.text-center(role='progressbar', style='width: 70%', aria-valuenow='70', aria-valuemin='0', aria-valuemax='100') 70%
+                        h6.mb-2 100% Completed
+                        .progress
+                          .progress-bar-animated.progress-bar-striped.bg-dark.text-center(role='progressbar', style='width: 100%', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100') 100%
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#custom-progress-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#custom-progress-copy
+                          |&lt;div class="row"&gt;
+                          |  &lt;div class="col"&gt;
+                          |    &lt;h6 class="mb-2"&gt;0% Getting Started &lt;/h6&gt;
+                          |    &lt;div class="progress mb-4"&gt;
+                          |      &lt;div class="progress-bar-animated progress-bar-striped text-center" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;h6 class="mb-2"&gt;30% Getting Uploading...&lt;/h6&gt;
+                          |    &lt;div class="progress mb-4"&gt;
+                          |      &lt;div class="progress-bar-animated progress-bar-striped bg-primary text-center" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"&gt;30%&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;h6 class="mb-2"&gt;60% Getting Pause...&lt;/h6&gt;
+                          |    &lt;div class="progress mb-4"&gt;
+                          |      &lt;div class="progress-bar-animated progress-bar-striped bg-secondary text-center" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"&gt;60%&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;h6 class="mb-2"&gt;70% Getting Uploading...&lt;/h6&gt;
+                          |    &lt;div class="progress mb-4"&gt;
+                          |      &lt;div class="progress-bar-animated progress-bar-striped bg-success text-center" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"&gt;70%&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;h6 class="mb-2"&gt;100% Completed&lt;/h6&gt;
+                          |    &lt;div class="progress"&gt;
+                          |      &lt;div class="progress-bar-animated progress-bar-striped bg-dark text-center" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"&gt;100%&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-xl-6
+                .card.height-equal
+                  .card-header
+                    h4 Small Progress Bars
+                    p.f-m-light.mt-1
+                      | Use 
+                      code  sm-progress-bar
+                      |   class to change progress size to small.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.progress-showcase.progress-b-space
+                    .row
+                      .col
+                        .progress.sm-progress-bar.overflow-visible.mt-4
+                          .progress-bar-animated.small-progressbar.bg-primary.rounded-pill.progress-bar-striped(role='progressbar', style='width: 30%', aria-valuenow='30', aria-valuemin='0', aria-valuemax='100')
+                            span.txt-primary.progress-label 30 MB Data
+                            span.animate-circle
+                        .progress.sm-progress-bar.overflow-visible
+                          .progress-bar-animated.small-progressbar.bg-primary.rounded-pill.progress-bar-striped(role='progressbar', style='width: 50%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+                            span.txt-primary.progress-label 50 MB Data
+                            span.animate-circle
+                        .progress.sm-progress-bar.overflow-visible
+                          .progress-bar-animated.small-progressbar.bg-primary.rounded-pill.progress-bar-striped(role='progressbar', style='width: 75%', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100')
+                            span.txt-primary.progress-label 75 MB Data
+                            span.animate-circle
+                        .progress.sm-progress-bar.overflow-visible
+                          .progress-bar-animated.small-progressbar.bg-primary.rounded-pill.progress-bar-striped(role='progressbar', style='width: 90%', aria-valuenow='90', aria-valuemin='0', aria-valuemax='100')
+                            span.txt-primary.progress-label 90 MB Data
+                            span.animate-circle
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#small-progress-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#small-progress-copy
+                          |&lt;div class="row"&gt;
+                          |  &lt;div class="col"&gt;
+                          |    &lt;div class="progress sm-progress-bar overflow-visible mt-4"&gt;
+                          |      &lt;div class="progress-bar-animated small-progressbar bg-primary rounded-pill progress-bar-striped" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"&gt;<span class="txt-primary progress-label"&gt;30 MB Data</span><span class="animate-circle"&gt;</span>&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress sm-progress-bar overflow-visible"&gt;
+                          |      &lt;div class="progress-bar-animated small-progressbar bg-primary rounded-pill progress-bar-striped" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;<span class="txt-primary progress-label"&gt;50 MB Data</span><span class="animate-circle"&gt;</span>&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress sm-progress-bar overflow-visible"&gt;
+                          |      &lt;div class="progress-bar-animated small-progressbar bg-primary rounded-pill progress-bar-striped" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"&gt;<span class="txt-primary progress-label"&gt;75 MB Data</span><span class="animate-circle"&gt;</span>&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress sm-progress-bar overflow-visible"&gt;
+                          |      &lt;div class="progress-bar-animated small-progressbar bg-primary rounded-pill progress-bar-striped" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"&gt;<span class="txt-primary progress-label"&gt;90 MB Data</span><span class="animate-circle"&gt;</span>&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-xl-6
+                .card.height-equal
+                  .card-header
+                    h4 Large Progress Bars
+                    p.f-m-light.mt-1
+                      | Use 
+                      code  lg-progress-bar
+                      |   class to change progress size to large.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.progress-showcase
+                    .row
+                      .col
+                        .progress.lg-progress-bar
+                          .progress-bar.bg-primary(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 25%
+                        .progress.lg-progress-bar
+                          .progress-bar.bg-secondary(role='progressbar', style='width: 50%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100') 50%
+                        .progress.lg-progress-bar
+                          .progress-bar.bg-success(role='progressbar', style='width: 75%', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100') 75%
+                        .progress.lg-progress-bar
+                          .progress-bar.bg-info(role='progressbar', style='width: 100%', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100') 100%
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#large-progress-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#large-progress-copy
+                          |&lt;div class="row"&gt;
+                          |  &lt;div class="col"&gt;
+                          |    &lt;div class="progress lg-progress-bar"&gt;
+                          |      &lt;div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;25%&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress lg-progress-bar"&gt;
+                          |      &lt;div class="progress-bar bg-secondary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;50%&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress lg-progress-bar"&gt;
+                          |      &lt;div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"&gt;75%&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress lg-progress-bar"&gt;
+                          |      &lt;div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"&gt;100%&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-xxl-6.box-col-12
+                .card
+                  .card-header
+                    h4 Custom Height Progress Bars
+                    p.f-m-light.mt-1
+                      | Set a height value on the 
+                      code  progress-bar
+                      | , so if you change that value the outer
+                      code  progress
+                      |  will automatically resize accordingly.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.progress-showcase
+                    .row
+                      .col
+                        .progress(style='height: 1px;')
+                          .progress-bar.bg-primary(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                        .progress(style='height: 5px;')
+                          .progress-bar.bg-warning(role='progressbar', style='width: 50%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+                        .progress(style='height: 11px;')
+                          .progress-bar.bg-danger(role='progressbar', style='width: 75%', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100')
+                        .progress(style='height: 19px;')
+                          .progress-bar.bg-info(role='progressbar', style='width: 100%', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100')
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#height-progress-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#height-progress-copy
+                          |&lt;div class="row"&gt;
+                          |  &lt;div class="col"&gt;
+                          |    &lt;div class="progress" style="height: 1px;"&gt;
+                          |      &lt;div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress" style="height: 5px;"&gt;
+                          |      &lt;div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress" style="height: 11px;"&gt;
+                          |      &lt;div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;div class="progress" style="height: 19px;"&gt;
+                          |      &lt;div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-xxl-6.box-col-12
+                .card
+                  .card-header
+                    h4 Step Progressbar
+                    p.f-m-light.mt-1
+                      | Use 
+                      code  step-progress-wrapper
+                      |   class to make step progressbar.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body.progress-showcase.step-progress-wrapper
+                    .step-progress-box
+                      ul.theme-scrollbar
+                        li
+                          i.bookmark-search(data-feather='user')
+                          .p-step.first.active
+                            p 1
+                            i.bookmark-search(data-feather='check')
+                          h6 Profile
+                        li
+                          i.bookmark-search(data-feather='database')
+                          .p-step.second.active
+                            p 2
+                            i.bookmark-search(data-feather='check')
+                          h6 Finance
+                        li
+                          i.bookmark-search(data-feather='home')
+                          .p-step.third
+                            p 3
+                            i.bookmark-search(data-feather='check')
+                          h6 Property
+                        li
+                          i.bookmark-search(data-feather='star')
+                          .p-step.fourth
+                            p 4
+                            i.bookmark-search(data-feather='check')
+                          h6 Review
+                        li
+                          i.bookmark-search(data-feather='check-circle')
+                          .p-step.fifth
+                            p 5
+                            i.bookmark-search(data-feather='check')
+                          h6 Authorization
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#step-progress-copy', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#step-progress-copy
+                          |&lt;div class="step-progress-box"&gt;
+                          |  &lt;ul class="theme-scrollbar"&gt;
+                          |    &lt;li&gt;&lt;i class="bookmark-search" data-feather="user"&gt;&lt;/i&gt;
+                          |      &lt;div class="p-step first active"&gt;
+                          |        &lt;p&gt;1&lt;/p&gt;&lt;i class="bookmark-search" data-feather="check"&gt;&lt;/i&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;h6&gt;Profile&lt;/h6&gt;
+                          |    &lt;/li&gt;
+                          |    &lt;li&gt;&lt;i class="bookmark-search" data-feather="database"&gt;&lt;/i&gt;
+                          |      &lt;div class="p-step second active"&gt;
+                          |        &lt;p&gt;2&lt;/p&gt;&lt;i class="bookmark-search" data-feather="check"&gt;&lt;/i&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;h6&gt;Finance&lt;/h6&gt;
+                          |    &lt;/li&gt;
+                          |    &lt;li&gt;&lt;i class="bookmark-search" data-feather="home"&gt;&lt;/i&gt;
+                          |      &lt;div class="p-step third"&gt;
+                          |        &lt;p&gt;3&lt;/p&gt;&lt;i class="bookmark-search" data-feather="check"&gt;&lt;/i&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;h6&gt;Property&lt;/h6&gt;
+                          |    &lt;/li&gt;
+                          |    &lt;li&gt;&lt;i class="bookmark-search" data-feather="star"&gt;&lt;/i&gt;
+                          |      &lt;div class="p-step fourth"&gt;
+                          |        &lt;p&gt;4&lt;/p&gt;&lt;i class="bookmark-search" data-feather="check"&gt;&lt;/i&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;h6&gt;Review&lt;/h6&gt;
+                          |    &lt;/li&gt;
+                          |    &lt;li&gt;&lt;i class="bookmark-search" data-feather="check-circle"&gt;&lt;/i&gt;
+                          |      &lt;div class="p-step fifth"&gt;
+                          |        &lt;p&gt;5&lt;/p&gt;&lt;i class="bookmark-search" data-feather="check"&gt;&lt;/i&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;h6&gt;Authorization&lt;/h6&gt;
+                          |    &lt;/li&gt;
+                          |  &lt;/ul&gt;
+                          |&lt;/div&gt;
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

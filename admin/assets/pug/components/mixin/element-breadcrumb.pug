@@ -1,0 +1,15 @@
+mixin breadcrumb(items,pagetitle)
+    .header-logo-wrapper.col-auto
+      .logo-wrapper
+        a(href='index.html')
+          img.img-fluid.for-light(src='../assets/images/logo/logo.png', alt='')
+          img.img-fluid.for-dark(src='../assets/images/logo/logo_light.png', alt='')
+    .col-4.col-xl-4.page-title
+        h4.f-w-700= pagetitle
+        nav
+          ol.breadcrumb.justify-content-sm-start.align-items-center.mb-0
+            li.breadcrumb-item
+              a(href='index.html') 
+                i(data-feather='home')  
+            each pagename, index in items
+              li.breadcrumb-item.f-w-400(class=`${(index === items.length - 1 ?'active':'')}`)= pagename

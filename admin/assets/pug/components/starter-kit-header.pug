@@ -1,0 +1,254 @@
+// Page Header Start
+.header-wrapper.col.m-0
+  .row
+    form(action='#', method='get').form-inline.search-full.col
+      .form-group.w-100
+        .Typeahead.Typeahead--twitterUsers
+          .u-posRelative
+            input.demo-input.Typeahead-input.form-control-plaintext.w-100(type='text' placeholder='Search Mofi ..' name='q' title='' autofocus)
+            .spinner-border.Typeahead-spinner(role='status')
+              span.sr-only Loading...
+            i(data-feather='x').close-search
+          .Typeahead-menu
+    .header-logo-wrapper.col-auto.p-0
+      .logo-wrapper
+        a(href='index.html')
+          img.img-fluid(src='../assets/images/logo/logo.png', alt='')
+      .toggle-sidebar
+        svg.stroke-icon.sidebar-toggle.status_toggle.middle
+          use(href='../assets/svg/icon-sprite.svg#toggle-icon')
+
+    .nav-right.col-xxl-8.col-xl-6.col-md-7.col-8.pull-right.right-header.p-0.ms-auto
+      ul.nav-menus
+        li                          
+          span.header-search
+            svg
+              use(href='../assets/svg/icon-sprite.svg#search')
+        li
+          .form-group.w-100
+            .Typeahead.Typeahead--twitterUsers
+              .u-posRelative.d-flex.align-items-center
+                svg.search-bg.svg-color 
+                  use(href='../assets/svg/icon-sprite.svg#search')
+                input.demo-input.py-0.Typeahead-input.form-control-plaintext.w-100(type='text' placeholder='Search Mofi ..' name='q' title='')
+        li.fullscreen-body                        
+          span
+            svg#maximize-screen
+              use(href='../assets/svg/icon-sprite.svg#full-screen')
+        li.onhover-dropdown
+          .notification-box
+            svg
+              use(href='../assets/svg/icon-sprite.svg#notification')
+            span.badge.rounded-pill.badge-primary 4 
+          .onhover-show-div.notification-dropdown
+            h5.f-18.f-w-600.mb-0.dropdown-title Notifications                               
+            ul.notification-box
+              li.toast.default-show-toast.align-items-center.border-0.fade.show(aria-live='assertive' aria-atomic='true' data-bs-autohide='false')
+                .d-flex.justify-content-between
+                  .toast-body.d-flex.p-0
+                    .flex-shrink-0.bg-light-primary
+                      img.w-auto(src="../assets/images/dashboard/icon/wallet.png", alt="Wallet")
+                    .flex-grow-1 
+                      a(href="../template/private-chat.html")
+                        h6.m-0 Daily offer added
+                      p.m-0 User-only offer added
+                  button.btn-close.btn-close-white.shadow-none(type='button' data-bs-dismiss='toast' aria-label='Close')
+              li.toast.default-show-toast.align-items-center.border-0.fade.show(aria-live='assertive' aria-atomic='true' data-bs-autohide='false') 
+                .d-flex.justify-content-between
+                  .toast-body.d-flex.p-0
+                    .flex-shrink-0.bg-light-info
+                      img.w-auto(src="../assets/images/dashboard/icon/shield-dne.png", alt="Shield-dne")
+                    .flex-grow-1 
+                      a(href="../template/private-chat.html")
+                        h6.m-0 Product Review
+                      p.m-0 Changed to a workflow
+                  button.btn-close.btn-close-white.shadow-none(type='button' data-bs-dismiss='toast' aria-label='Close')
+              li.toast.default-show-toast.align-items-center.border-0.fade.show(aria-live='assertive' aria-atomic='true' data-bs-autohide='false')   
+                .d-flex.justify-content-between
+                  .toast-body.d-flex.p-0
+                    .flex-shrink-0.bg-light-warning
+                      img.w-auto(src="../assets/images/dashboard/icon/graph.png", alt="Graph")
+                    .flex-grow-1 
+                      a(href="../template/private-chat.html")
+                        h6.m-0 Return Products
+                      p.m-0 52 items were returned
+                  button.btn-close.btn-close-white.shadow-none(type='button' data-bs-dismiss='toast' aria-label='Close')
+              li.toast.default-show-toast.align-items-center.border-0.fade.show(aria-live='assertive' aria-atomic='true' data-bs-autohide='false') 
+                .d-flex.justify-content-between  
+                  .toast-body.d-flex.p-0
+                    .flex-shrink-0.bg-light-tertiary
+                      img.w-auto(src="../assets/images/dashboard/icon/ticket-star.png", alt="Ticket-star")
+                    .flex-grow-1 
+                      a(href="../template/private-chat.html")
+                        h6.m-0 Recently Paid
+                      p.m-0 Card payment of $343   
+                  button.btn-close.btn-close-white.shadow-none(type='button' data-bs-dismiss='toast' aria-label='Close')
+        li.onhover-dropdown
+          svg
+            use(href='../assets/svg/icon-sprite.svg#header-bookmark')
+          .onhover-show-div.bookmark-flip
+            .flip-card
+              .flip-card-inner
+                .front
+                  h5.f-18.f-w-600.mb-0.dropdown-title Bookmark
+                  ul.bookmark-dropdown
+                    li
+                      .row
+                        .col-4.text-center
+                          .bookmark-content
+                            .bookmark-icon.bg-light-primary
+                              i.stroke-primary(data-feather='file-text')
+                            span.font-primary Forms
+                        .col-4.text-center
+                          .bookmark-content
+                            .bookmark-icon.bg-light-secondary
+                              i.stroke-secondary(data-feather='user')
+                            span.font-secondary Profile
+                        .col-4.text-center
+                          .bookmark-content
+                            .bookmark-icon.bg-light-warning
+                              i.stroke-warning(data-feather='server')
+                            span.font-warning Tables
+                    li.text-center
+                      a.flip-btn#flip-btn.f-w-700.btn.btn-primary.w-100(href="javascript:void(0)") Add Bookmark
+                .back
+                  ul
+                    li
+                      .bookmark-dropdown.flip-back-content
+                        input(type='text' placeholder='search...')
+                    li
+                      a.f-w-700.d-block.flip-back#flip-back.btn.btn-primary.w-100(href="javascript:void(0)")
+                        | Back
+        li
+          .mode
+            svg
+              use(href='../assets/svg/icon-sprite.svg#moon')
+        li.onhover-dropdown
+          .notification-box
+            svg
+              use(href='../assets/svg/icon-sprite.svg#header-message')
+            span.badge.rounded-pill.badge-info 3 
+          .onhover-show-div.notification-dropdown
+            h5.f-18.f-w-600.mb-0.dropdown-title Messages             
+            ul.messages
+              li.d-flex.b-light1-primary.gap-2  
+                .flex-shrink-0
+                  img(src="../assets/images/dashboard-2/user/1.png", alt="Graph")
+                .flex-grow-1 
+                  a(href="../template/private-chat.html")
+                    h6.font-primary.f-w-600 Hackett Yessenia
+                  p Hello Miss...&#128522;
+                span 2 hours
+              li.d-flex.b-light1-secondary.gap-2 
+                .flex-shrink-0
+                  img(src="../assets/images/dashboard-2/user/2.png", alt="Graph")
+                .flex-grow-1 
+                  a(href="../template/private-chat.html")
+                    h6.font-secondary.f-w-600 schneider Adan
+                  p Wishing You a Happy Birthday Dear..  🥳&#127882;
+                span 3 hours
+              li.d-flex.b-light1-success.gap-2  
+                .flex-shrink-0
+                  img(src="../assets/images/dashboard-2/user/3.png", alt="Graph")
+                .flex-grow-1 
+                  a(href="../template/private-chat.html")
+                    h6.font-success.f-w-600 Mahdi Gholizadeh
+                  p Hello Dear!! This Theme Is Very beautiful
+                span 5 hours
+              li.bg-transparent
+                a.f-w-700.btn.btn-primary.w-100(href="../template/letter-box.html") View all
+        li.cart-nav.onhover-dropdown
+          .cart-box
+            svg
+              use(href='../assets/svg/icon-sprite.svg#stroke-ecommerce')
+          .cart-dropdown.onhover-show-div
+            h5.f-18.f-w-600.mb-0.dropdown-title Cart
+            ul
+              li
+                .d-flex
+                  img.img-fluid.b-r-5.me-3.img-60(src='../assets/images/other-images/cart-img.jpg', alt='')
+                  .flex-grow-1
+                    span.f-w-600 Furniture Chair for Home
+                    .qty-box
+                      .input-group
+                        span.input-group-prepend
+                          button.btn.quantity-left-minus(type='button' data-type='minus' data-field='')
+                            | -
+                        input.form-control.input-number(type='text' name='quantity' value='1')
+                        span.input-group-prepend
+                          button.btn.quantity-right-plus(type='button' data-type='plus' data-field='')
+                            | +
+
+                    h6.font-primary $500
+                  .close-circle
+                    a.bg-danger(href='#')
+                      i(data-feather='x')
+              li
+                .d-flex
+                  img.img-fluid.b-r-5.me-3.img-60(src='../assets/images/other-images/table-img.jpg', alt='')
+                  .flex-grow-1
+                    span.f-w-600 Furniture Table for Office
+                    .qty-box
+                      .input-group
+                        span.input-group-prepend
+                          button.btn.quantity-left-minus(type='button' data-type='minus' data-field='')
+                            | -
+                        input.form-control.input-number(type='text' name='quantity' value='1')
+                        span.input-group-prepend
+                          button.btn.quantity-right-plus(type='button' data-type='plus' data-field='')
+                            | +
+
+                    h6.font-primary $500.00
+                  .close-circle
+                    a.bg-danger(href='#')
+                      i(data-feather='x')
+              li.total
+                h6.mb-0
+                  | Order Total : 
+                  span.f-w-600.f-right $1000.00
+              li.text-center
+                a.d-block.view-cart.f-w-700.btn.btn-primary.w-100(href='../template/cart.html')
+                  | View Cart
+                a.btn.btn-primary.view-checkout.w-100.f-w-700(href='../template/checkout.html')
+                  | Checkout
+        li.profile-nav.onhover-dropdown.px-0.py-0
+          .d-flex.profile-media.align-items-center
+            img.img-30(src='../assets/images/dashboard/profile.png', alt='')
+            .flex-grow-1
+              span Alen Miller
+              p.mb-0.font-outfit UI Designer
+                i.fa.fa-angle-down
+          ul.profile-dropdown.onhover-show-div
+            li
+              a(href="../template/private-chat.html")
+                i(data-feather='user')
+                span Account 
+            li
+              a(href="../template/letter-box.html")
+                i(data-feather='mail')
+                span Inbox
+            li
+              a(href="../template/task.html")
+                i(data-feather='file-text')
+                span Taskboard
+            li
+              a(href="../template/edit-profile.html")
+                i(data-feather='settings')
+                span Settings
+            li
+              a(href="../template/login.html")
+                i(data-feather='log-in') 
+                span Log out
+
+    //- .d-lg-none.mobile-toggle.pull-right
+    //-     i(data-feather='more-horizontal')
+    script.result-template(type='text/x-handlebars-template').
+      <div class="ProfileCard u-cf">                        
+      <div class="ProfileCard-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay m-0"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg></div>
+      <div class="ProfileCard-details">
+      <div class="ProfileCard-realName">{{name}}</div>
+      </div>
+      </div>
+    script.empty-template(type='text/x-handlebars-template').
+      <div class="EmptyMessage">Your search turned up 0 results. This most likely means the backend is down, yikes!</div>
+// Page Header Ends                              

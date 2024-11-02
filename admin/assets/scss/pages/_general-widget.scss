@@ -1,0 +1,1064 @@
+/**=====================
+    3.11 General widget CSS Start
+==========================**/
+
+.total-sells,
+.total-sells-4,
+.total-sells-3,
+.total-sells-2 {
+    .d-flex {
+
+        .flex-shrink-0 {
+            width: 52px;
+            height: 52px;
+            border-radius: 50px;
+            display: flex;
+            margin: 4px;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            @media (max-width: 1399px) and (min-width: 1200px) {
+                width: 45px;
+                height: 45px;
+            }
+
+            img {
+                @media (max-width: 1399px) and (min-width: 1200px) {
+                    width: 28px;
+                }
+            }
+        }
+
+        .flex-grow-1 {
+            h2 {
+                font-weight: 600;
+
+                @media (max-width: 1399px) and (min-width: 1200px) {
+                    font-size: 22px;
+                }
+            }
+
+            .total-icon {
+                @media (max-width: 1644px) and (min-width: 576px) {
+                    display: none !important;
+                }
+            }
+
+            .up-arrow {
+                height: 18px;
+                width: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 2px;
+
+                i {
+                    font-size: 10px;
+                    font-weight: 700;
+                }
+            }
+
+            p {
+                color: $light-text-color;
+                font-weight: 500;
+
+                @media (max-width: 1520px) and (min-width: 576px) {
+                    display: block;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+.daily-revenue-card {
+    h4 {
+        font-size: 18px;
+        color: $light-text-color;
+    }
+}
+
+.total-sells {
+    .d-flex {
+
+        .flex-shrink-0 {
+            background-color: var(--theme-default);
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 115%;
+                height: 115%;
+                opacity: 0;
+                border-radius: 50%;
+                border: 2px dashed var(--theme-default);
+                padding: 10px;
+                transition: 0.8s;
+                animation: spin 10s infinite linear;
+            }
+        }
+    }
+
+    &:hover {
+        .d-flex {
+
+            .flex-shrink-0 {
+                img {
+                    animation: tada 1.5s ease infinite;
+                }
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.total-sells-2 {
+    .d-flex {
+
+        .flex-shrink-0 {
+            background-color: var(--theme-secondary);
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 115%;
+                height: 115%;
+                opacity: 0;
+                border-radius: 50%;
+                border: 2px dashed var(--theme-secondary);
+                padding: 10px;
+                transition: 0.8s;
+                animation: spin 10s infinite linear;
+            }
+        }
+    }
+
+    &:hover {
+        .d-flex {
+
+            .flex-shrink-0 {
+                img {
+                    animation: tada 1.5s ease infinite;
+                }
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.total-sells-3 {
+    .d-flex {
+
+        .flex-shrink-0 {
+            background-color: $warning-color;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 115%;
+                height: 115%;
+                opacity: 0;
+                border-radius: 50%;
+                border: 2px dashed $warning-color;
+                padding: 10px;
+                transition: 0.8s;
+                animation: spin 10s infinite linear;
+            }
+        }
+    }
+
+    &:hover {
+        .d-flex {
+
+            .flex-shrink-0 {
+                img {
+                    animation: tada 1.5s ease infinite;
+                }
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.total-sells-4 {
+    .d-flex {
+
+        .flex-shrink-0 {
+            background-color: $tertiary-color;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 115%;
+                height: 115%;
+                opacity: 0;
+                border-radius: 50%;
+                border: 2px dashed $tertiary-color;
+                padding: 10px;
+                transition: 0.8s;
+                animation: spin 10s infinite linear;
+            }
+        }
+    }
+
+    &:hover {
+        .d-flex {
+
+            .flex-shrink-0 {
+                img {
+                    animation: tada 1.5s ease infinite;
+                }
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.visitor-card {
+    .card-header {
+        svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--theme-default);
+        }
+    }
+}
+
+.visitors-container {
+    margin: 0 -12px -27px -17px;
+
+    svg {
+        .apexcharts-series {
+            path {
+                clip-path: inset(1% 0% 0% 0% round 3rem);
+            }
+        }
+
+        .apexcharts-legend.apexcharts-align-left {
+            .apexcharts-legend-series {
+                display: flex;
+            }
+        }
+    }
+}
+
+
+.opening-box {
+    .d-flex {
+        @media (max-width: 1410px) {
+            display: none !important;
+        }
+
+        [class="box-layout"] & {
+            display: none !important;
+        }
+    }
+
+    .up-arrow {
+        height: 16px;
+        width: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba($success-color , 0.2);
+        border-radius: 2px;
+
+        i {
+            color: $success-color;
+            font-size: 10px;
+            font-weight: 700;
+        }
+    }
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+
+    a {
+        i {
+            font-size: 11px;
+            margin-bottom: -2px;
+        }
+
+        &.btn {
+            padding: 8px 12px;
+
+            @media (max-width:575px) {
+                padding: 5px;
+            }
+
+            &.badge-light-primary {
+                &:hover {
+                    background-color: var(--theme-default);
+                }
+            }
+        }
+    }
+}
+
+
+.currency-chart-wrap {
+    height: 90px;
+}
+
+.order-chart,
+.profit-chart {
+    height: 100px;
+}
+
+.course-box {
+    overflow: hidden;
+
+    &:hover {
+        transform: translateY(-5px);
+        transition: 0.5s;
+
+        .course-icon {
+            svg {
+                animation: tada 1.5s ease infinite;
+            }
+        }
+    }
+}
+
+.designer-card {
+    .d-flex {
+        margin-bottom: 16px;
+
+        @media (max-width: 1844px) and (min-width: 1200px) {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 804px) and (min-width: 576px) {
+            margin-bottom: 8px;
+        }
+
+        .flex-shrink-0 {
+            img {
+                border-radius: 50px;
+            }
+        }
+
+        .flex-grow-1 {
+            a {
+                h5 {
+                    color: $theme-body-font-color;
+                    font-weight: 500;
+                }
+            }
+
+            p {
+                color: $light-text-color;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .design-button {
+        margin-bottom: 28px;
+
+        @media (max-width: 1844px) and (min-width: 1200px) {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 804px) and (min-width: 576px) {
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            @media (max-width: 1666px) {
+                padding: 6px 12px;
+            }
+        }
+    }
+
+    .ratting-button {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 26px;
+
+
+        @media (max-width: 1844px) and (min-width: 1200px) {
+            margin-bottom: 8px;
+            gap: 6px;
+        }
+
+        @media (max-width: 804px) and (min-width: 576px) {
+            margin-bottom: 8px;
+            gap: 6px;
+        }
+
+        .d-flex {
+            .flex-shrink-0 {
+                width: 32px;
+                height: 23px;
+                border-radius: 25px;
+                background-color: $main-body-color;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .flex-grow-1 {
+                span {
+                    color: $light-text-color;
+                }
+            }
+        }
+    }
+
+    .progress {
+        height: 10px;
+
+        .progress-bar {
+            background-color: transparent !important;
+        }
+    }
+}
+
+
+.redial-social-widget {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin: 0 auto;
+    background-image: linear-gradient(90deg, $light-color 50%, transparent 50%, transparent), linear-gradient(90deg, $light-gray 50%, $light-color 50%, $light-color);
+
+    i {
+        background-color: $white;
+        height: 80px;
+        width: 80px;
+        border-radius: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &.radial-bar-70 {
+        background-image: linear-gradient(342deg, var(--theme-default) 50%, transparent 50%, transparent), linear-gradient(270deg, var(--theme-default) 50%, $light-color 50%, $light-color);
+    }
+}
+
+.social {
+    &-img {
+        padding: 5px;
+        background: var(--white);
+        border-radius: 100%;
+    }
+
+    &-widget {
+        .card-body {
+            padding: 15px;
+        }
+
+        .social-icons {
+            min-width: 55px;
+            height: 55px;
+            background: var(--white);
+            box-shadow: 0px 42.1092px 27.8569px rgba(41, 72, 152, 0.0303704), 0px 8.90772px 7.12618px rgba(41, 72, 152, 0.0196296), 0px 2.02448px 3.44162px rgba(41, 72, 152, 0.012037);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            [dir="rtl"] & {
+                [class="dark-only"] & {
+                    background: $dark-card-background;
+                }
+            }
+
+            img {
+                margin-left: 0px;
+            }
+
+            @media (max-width: 1399px) {
+                min-width: 40px;
+                height: 40px;
+
+                img {
+                    height: 20px;
+                }
+            }
+        }
+
+        .social-content {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+
+            h5 {
+                font-size: 22px;
+                font-weight: 700;
+            }
+
+            span {
+                font-weight: 600;
+            }
+
+            .social-chart {
+                margin: -34px -42px -13px;
+                width: 150px;
+
+                .apexcharts-canvas {
+                    .apexcharts-datalabels-group {
+                        .apexcharts-datalabel-label {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.student,
+.student-2,
+.student-3,
+.student-4 {
+    .d-flex {
+        .flex-grow-1 {
+            h2 {
+                padding-bottom: 24px;
+                color: $theme-body-font-color;
+                font-weight: 600;
+            }
+
+            >p {
+                color: $theme-body-font-color;
+                font-weight: 600;
+                font-size: 18px;
+                padding-bottom: 7px;
+
+                @media (max-width: 1410px) and (min-width: 1200px) {
+                    display: block;
+                    width: 88px;
+                }
+            }
+
+            .student-arrow {
+                @media (max-width: 1656px) and (min-width: 1200px) {
+                    display: none !important;
+                }
+
+                @media (max-width: 710px) and (min-width: 576px) {
+                    display: none !important;
+                }
+
+                @media (max-width: 347px) {
+                    display: block;
+                    width: 147px;
+                }
+
+                .up-arrow {
+                    height: 18px;
+                    width: 18px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 2px;
+
+                    i {
+                        font-size: 10px;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+        }
+
+        .flex-shrink-0 {
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.student {
+    .d-flex {
+        .flex-shrink-0 {
+            background-color: var(--theme-default);
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 115%;
+                height: 115%;
+                opacity: 0;
+                border-radius: 50%;
+                border: 2px dashed var(--theme-default);
+                padding: 10px;
+                transition: 0.8s;
+                animation: spin 10s infinite linear;
+            }
+        }
+    }
+
+    &:hover {
+        .d-flex {
+
+            .flex-shrink-0 {
+                img {
+                    animation: tada 1.5s ease infinite;
+                }
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.student-2 {
+    .d-flex {
+        .flex-shrink-0 {
+            background-color: var(--theme-secondary);
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 115%;
+                height: 115%;
+                opacity: 0;
+                border-radius: 50%;
+                border: 2px dashed var(--theme-secondary);
+                padding: 10px;
+                transition: 0.8s;
+                animation: spin 10s infinite linear;
+            }
+        }
+    }
+
+    &:hover {
+        .d-flex {
+
+            .flex-shrink-0 {
+                img {
+                    animation: tada 1.5s ease infinite;
+                }
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.student-3 {
+    .d-flex {
+        .flex-shrink-0 {
+            background-color: $warning-color;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 115%;
+                height: 115%;
+                opacity: 0;
+                border-radius: 50%;
+                border: 2px dashed $warning-color;
+                padding: 10px;
+                transition: 0.8s;
+                animation: spin 10s infinite linear;
+            }
+        }
+    }
+
+    &:hover {
+        .d-flex {
+
+            .flex-shrink-0 {
+                img {
+                    animation: tada 1.5s ease infinite;
+                }
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.student-4 {
+    .d-flex {
+        .flex-shrink-0 {
+            background-color: $tertiary-color;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 115%;
+                height: 115%;
+                opacity: 0;
+                border-radius: 50%;
+                border: 2px dashed $tertiary-color;
+                padding: 10px;
+                transition: 0.8s;
+                animation: spin 10s infinite linear;
+            }
+        }
+    }
+
+    &:hover {
+        .d-flex {
+
+            .flex-shrink-0 {
+                img {
+                    animation: tada 1.5s ease infinite;
+                }
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.appointments {
+    @media (max-width: 1400px) and (min-width: 1200px) {
+        .col-5 {
+            display: none;
+        }
+
+        .col-7 {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 484px) {
+        .col-5 {
+            display: none;
+        }
+
+        .col-7 {
+            width: 100%;
+        }
+    }
+
+    .datepicker-here {
+        .datepicker-inline {
+            .datepicker {
+                .datepicker--nav {
+                    width: 90%;
+                    position: absolute;
+                    top: -46px;
+                    border-bottom: none;
+
+                    @media (max-width: 1750px) {
+                        top: -18px;
+                    }
+
+                    [class="box-layout"] & {
+                        top: -22px;
+                    }
+                }
+
+                .datepicker--content {
+                    border-left: 1px dashed $light-gray;
+
+                    @media (max-width: 1400px) and (min-width: 1200px) {
+                        border-left: none;
+                    }
+
+                    @media (max-width: 484px) {
+                        border-left: none;
+                    }
+
+                    [dir="rtl"] & {
+                        border-left: unset;
+                        border-right: 1px dashed $light-gray;
+                    }
+                }
+            }
+        }
+    }
+
+    .default-datepicker {
+        .datepicker-inline {
+            .datepicker {
+                padding: 0 0 12px 0;
+
+                .datepicker--nav-title {
+                    width: 100%;
+                }
+
+                .datepicker--nav {
+                    .datepicker--nav-action[data-action=prev] {
+                        left: 0;
+                    }
+                }
+
+                .datepicker--content {
+                    .datepicker--days {
+                        .datepicker--days-names {
+                            margin: 0;
+                        }
+
+                        .datepicker--cells {
+                            .datepicker--cell.-current- {
+                                background-color: var(--theme-default);
+                                color: $white;
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .appointments-user {
+        @media (max-width: 1400px) and (min-width: 1200px) {
+            display: none;
+        }
+
+        li {
+            padding: 8px 0;
+
+
+            &:hover {
+                &.d-flex {
+                    .flex-grow-1 {
+                        a {
+                            h5 {
+                                color: var(--theme-default);
+                                transition: all .4s;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.d-flex {
+                gap: 10px;
+
+                .flex-shrink-0 {
+                    img {
+                        border-radius: 50%;
+                    }
+                }
+
+                .flex-grow-1 {
+                    a {
+                        h5 {
+                            font-weight: 500;
+                            color: $theme-body-font-color;
+                            transition: all .4s;
+                        }
+                    }
+
+                    p {
+                        color: $light-text-color;
+
+                        span {
+                            color: var(--theme-default);
+                        }
+
+                        @media (max-width: 1750px) and (min-width: 1200px) {
+                            display: none;
+                        }
+
+                        [class="box-layout"] & {
+                            display: none;
+                        }
+
+                        @media (max-width: 660px) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.default-datepicker {
+    .datepicker-inline {
+        .datepicker {
+            width: auto;
+            background: $white;
+            box-shadow: none;
+            padding: 0;
+
+            .datepicker--content {
+                padding: 0;
+
+                .datepicker--days {
+                    .datepicker--days-names {
+                        margin: 27px 0 0;
+                        padding: 15px 0;
+
+                        @media (max-width: 1401px) and (min-width: 1200px) {
+                            padding: 10px 0;
+                        }
+
+                        .datepicker--day-name {
+                            color: $dark-editor-document;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .datepicker--cells {
+                        .datepicker--cell-day {
+                            height: 35px;
+                            width: 14%;
+                            color: $dark-editor-document;
+
+                            @media (max-width: 1401px) and (min-width: 1200px) {
+                                height: 33px;
+                            }
+
+                            &.-other-month- {
+                                color: $dark-editor-document;
+                                opacity: 20%;
+                            }
+
+                            &.-weekend- {
+                                +.-weekend- {
+                                    color: $danger-color;
+                                }
+                            }
+                        }
+
+                        .datepicker--cell {
+                            font-weight: 500;
+                            font-size: 14px;
+                            line-height: 17px;
+                            z-index: 0;
+                            letter-spacing: 2px;
+
+                            &.-selected- {
+                                background: var(--theme-default);
+                                color: $white;
+                                position: relative;
+                                box-shadow: 0px 0px 13px 0 rgba($primary-color, 0.5);
+                            }
+
+                            &.-current- {
+                                background-color: $success-color;
+                                border: none;
+                                color: $white;
+
+                                &::after {
+                                    position: absolute;
+                                    content: '';
+                                    width: 10px;
+                                    height: 10px;
+                                    border: 2px solid var(--white);
+                                    background: $danger-color;
+                                    right: -3px;
+                                    top: -2px;
+                                    border-radius: 100%;
+                                }
+                            }
+
+                            &.-focus- {
+                                color: $white;
+                                box-shadow: none;
+                            }
+                        }
+                    }
+                }
+
+                .datepicker-cell {
+                    .datepicker--cell-month {
+                        &.-current- {
+                            &.-selected- {
+                                background-color: var(--theme-default);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .datepicker--nav {
+                border-bottom: none;
+                padding: 0;
+                text-transform: capitalize;
+                margin-top: 0;
+
+                .datepicker--nav-action {
+                    background-color: transparent;
+                    width: 22px;
+                    height: 22px;
+
+                    &[data-action="prev"] {
+                        position: absolute;
+                        right: 50px;
+                    }
+
+                    svg {
+                        width: 22px;
+                        height: 22px;
+                    }
+
+                    path {
+                        stroke: var(--chart-text-color);
+                    }
+                }
+            }
+
+            .datepicker--nav-title {
+                color: $dark-editor-document;
+                font-size: 20px;
+                font-weight: 500;
+
+                @media (max-width:767px) {
+                    font-size: 14px;
+                }
+
+                i {
+                    margin-left: 10px;
+                    font-weight: 500;
+                    font-size: 20px;
+                    color: $dark-editor-document;
+
+                    @media (max-width:767px) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/**=====================
+      3.11 General widget CSS Ends
+  ==========================**/

@@ -1,0 +1,1163 @@
+- var page_Title = 'Letter Box';
+- var theme_customizer      = true;
+- var email_pagination      = true;
+- var tooltip               = true;
+- var sidebar               = true;
+- var print                 = true;
+- var editors               = true;
+- var editors1              = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+include ../../components/mixin
+doctype html  
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Email','Letter Box'],'Letter Box')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+            // Container-fluid starts
+            .container-fluid
+                .email-wrap.email-main-wrapper
+                    .row
+                        .col-xxl-3.col-xl-4.box-col-12
+                            .md-sidebar 
+                                a.btn.btn-primary.md-sidebar-toggle(href='javascript:void(0)') email filter
+                                .md-sidebar-aside.job-left-aside.custom-scrollbar
+                                    .email-left-aside
+                                        .card.theme-scrollbar.mb-0
+                                            .card-body
+                                                .email-app-sidebar
+                                                    button.btn.btn-primary.emailbox(type='button' data-bs-toggle='modal' data-bs-target='#compose_mail')
+                                                        i.fa.fa-plus
+                                                        | Compose Email
+                                                    ul#email-pills-tab.nav.nav-pills.main-menu.email-category(role='tablist')
+                                                        li.nav-item
+                                                            a#inbox-pill-tab.nav-link.active(data-bs-toggle='pill' href='#inbox-pill' role='tab' aria-controls='inbox-pill' aria-selected='false')
+                                                                svg.stroke-icon
+                                                                    use(href="../assets/svg/icon-sprite.svg#inbox")
+                                                                div
+                                                                    | Inbox
+                                                                    span.badge 12
+                                                        li.nav-item
+                                                            a#sent-pill-tab.nav-link(data-bs-toggle='pill' href='#sent-pill' role='tab' aria-controls='sent-pill' aria-selected='false')
+                                                                svg.stroke-icon
+                                                                    use(href="../assets/svg/icon-sprite.svg#sent")
+                                                                | Sent
+                                                        li.nav-item
+                                                            a#starred-pill-tab.nav-link(data-bs-toggle='pill' href='#starred-pill' role='tab' aria-controls='starred-pill' aria-selected='false')
+                                                                svg.stroke-icon
+                                                                    use(href="../assets/svg/icon-sprite.svg#star")
+                                                                | Starred
+                                                        li.nav-item
+                                                            a#draft-pill-tab.nav-link(data-bs-toggle='pill' href='#draft-pill' role='tab' aria-controls='draft-pill' aria-selected='false')
+                                                                svg.stroke-icon
+                                                                    use(href="../assets/svg/icon-sprite.svg#draft")
+                                                                | Draft
+                                                        li.nav-item
+                                                            a#trash-pill-tab.nav-link(data-bs-toggle='pill' href='#trash-pill' role='tab' aria-controls='trash-pill' aria-selected='false')
+                                                                svg.stroke-icon
+                                                                    use(href="../assets/svg/icon-sprite.svg#trash")
+                                                                | Trash
+                                                        li.nav-item
+                                                            a#work-pill-tab.nav-link(data-bs-toggle='pill' href='#work-pill' role='tab' aria-controls='work-pill' aria-selected='false')
+                                                                svg.stroke-icon.stroke-primary
+                                                                    use(href="../assets/svg/icon-sprite.svg#pintag")
+                                                                | Work
+                                                        li.nav-item
+                                                            a#private-pill-tab.nav-link(data-bs-toggle='pill' href='#private-pill' role='tab' aria-controls='private-pill' aria-selected='false')
+                                                                svg.stroke-icon.stroke-warning
+                                                                    use(href="../assets/svg/icon-sprite.svg#pintag")
+                                                                | Private
+                                                        li.nav-item
+                                                            a#support-pill-tab.nav-link(data-bs-toggle='pill' href='#support-pill' role='tab' aria-controls='support-pill' aria-selected='false')
+                                                                svg.stroke-icon.stroke-success
+                                                                    use(href="../assets/svg/icon-sprite.svg#pintag")
+                                                                | Support
+                                                        li.nav-item
+                                                            //- a#label-pill-tab.nav-link(data-bs-toggle='pill' href='#label-pill' role='tab' aria-controls='label-pill' aria-selected='false')
+                                                            //-     i.fa.fa-plus
+                                                            //-     | Add Label
+                                                            a.nav-link(data-bs-toggle='modal' data-bs-target='#label-pill-modal' href='#')
+                                                                i.fa.fa-plus
+                                                                | Add Label
+                        .col-xxl-9.col-xl-8.box-col-12
+                            .email-right-aside
+                                .card.email-body.email-list
+                                    .mail-header-wrapper
+                                        .mail-header
+                                            .form-check.form-check-inline.m-0
+                                                input#emailCheckbox1.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                label.form-check-label(for='emailCheckbox1')
+                                                ul#email-content-tab.email-tabs.nav(role='tablist')
+                                                    li.nav-item
+                                                        a#pills-important-tab.nav-link(data-bs-toggle='pill' href='#pills-important' role='tab' aria-selected='true')
+                                                            svg.stroke-icon
+                                                                use(href="../assets/svg/icon-sprite.svg#mail")
+                                                            span Important 
+                                                    li.nav-item
+                                                        a#pills-social-tab.nav-link(data-bs-toggle='pill' href='#pills-social' role='tab' aria-selected='false')
+                                                            svg.stroke-icon
+                                                                use(href="../assets/svg/icon-sprite.svg#goal")
+                                                            span Social
+                                                    li.nav-item
+                                                        a#pills-promotion-tab.nav-link.active(data-bs-toggle='pill' href='#pills-promotion' role='tab' aria-selected='false')
+                                                            svg.stroke-icon
+                                                                use(href="../assets/svg/icon-sprite.svg#tread")
+                                                            span Promotion
+                                        .mail-body 
+                                            .mail-search.d-flex-align-items-center 
+                                                input.form-control(type="text" placeholder="Search...")
+                                                i.fa.fa-search
+                                            .light-square
+                                                i.fa.fa-refresh
+                                            .light-square 
+                                                i.fa.fa-trash
+                                            .light-square.dropdown-toggle(role='main' data-bs-toggle='dropdown' aria-expanded='false')
+                                                i.fa.fa-ellipsis-v
+                                            ul.dropdown-menu.dropdown-block.dropdown-menu-end
+                                                li 
+                                                    a.dropdown-item(href="#!")
+                                                        | All
+                                                li 
+                                                    a.dropdown-item(href="#!")
+                                                        | None
+                                                li 
+                                                    a.dropdown-item(href="#!")
+                                                        | Read
+                                                li 
+                                                    a.dropdown-item(href="#!")
+                                                        | Unread
+                                                li 
+                                                    a.dropdown-item(href="#!")
+                                                        | Starred
+                                                li 
+                                                    a.dropdown-item(href="#!")
+                                                        | Unstarred
+                                                           
+                                    #email-pills-tabContent.tab-content
+                                                
+                                        #inbox-pill.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='inbox-pill-tab')
+                                            .mail-body-wrapper  
+                                                ul#paginated-list(data-current-page="1" aria-live="polite")
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox2.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox2')
+                                                            svg.important-mail.active
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                img.img-fluid(src="../assets/images/user/6.jpg", alt="user")
+                                                            p Marvin McKinney
+                                                        .inbox-message
+                                                            .email-data
+                                                                span New comments on MSR2024 draft presentation - 
+                                                                    span New Here's a list of all the topic challenges...
+                                                                .badge.badge-light-primary new
+                                                            .email-timing
+                                                                span 2:30 PM
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                                
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox3.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox3')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                img.img-fluid(src="../assets/images/user/3.png  ", alt="user")
+                                                            p Brooklyn Simmons
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Confirm your booking id -
+                                                                    span  A collection of textile samples lay spread out on the table - Samsa was a travelling salesman..
+                                                                .badge.badge-light-primary deadline
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 7:50 AM
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox4.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox4')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                div
+                                                                    p.txt-primary EH
+                                                            p Esther Howard
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Confirm your booking id -
+                                                                    span craft beer labore wes anderson cred nesciunt sapiente ea proident...
+                                                                .badge.badge-light-success work
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 1:00 PM
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox5.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox5')
+                                                            svg.important-mail.active
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                .circle-success
+                                                                    p.txt-success CW
+                                                            p Cameron Williamson
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Very fiction Link  -
+                                                                    span Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 5 Day ago
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox6.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox6')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                img.img-fluid(src="../assets/images/user/6.jpg  ", alt="user")
+                                                            p Ronald Richards
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Confirm your booking id -
+                                                                    span Confirm your booking id - A collection of textile samples lay spread out on the table - Samsa was a travelling salesman..
+                                                                .badge.badge-light-light Update.Zip
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 7 April
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox7.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox7')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                img.img-fluid(src="../assets/images/user/10.jpg  ", alt="user")
+                                                            p Darlene Robertson
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Promotion Mail  -
+                                                                    span Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda ...
+                                                                .badge.badge-light-light Import File..
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 04 April
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox8.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox8')
+                                                            svg.important-mail.active
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                img.img-fluid(src="../assets/images/user/12.png ", alt="user")
+                                                            p Jacob Jones
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Welcome to our new office  -
+                                                                    span A collection of textile samples lay spread out on the table - Samsa was a travelling salesman..
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 01 April
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox9.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox9')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                img.img-fluid(src="../assets/images/user/3.png  ", alt="user")
+                                                            p Ralph Edwards
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Your Order #224820098 has been Confirmed-
+                                                                    span A collection of textile samples lay spread out on the table...
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 1:00 PM
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox10.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox10')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                img.img-fluid(src="../assets/images/user/6.jpg  ", alt="user")
+                                                            p Ronald Richards
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Confirm your booking id -
+                                                                    span Confirm your booking id - A collection of textile samples lay spread out on the table - Samsa was a travelling salesman..
+                                                                .badge.badge-light-light Update.Zip
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 7 April
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox11.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox11')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                .circle-success
+                                                                    p.txt-success WT
+                                                            p William Turner
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Very fiction Link  -
+                                                                    span Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 5 Day ago
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox12.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox12')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                img.img-fluid(src="../assets/images/user/12.png  ", alt="user")
+                                                            p Jacob Jones
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Welcome to our new office  -
+                                                                    span A collection of textile samples lay spread out on the table - Samsa was a travelling salesman..
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 01 April
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox13.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox13')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                img.img-fluid(src="../assets/images/user/3.png  ", alt="user")
+                                                            p Ralph Edwards
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Your Order #224820098 has been Confirmed-
+                                                                    span A collection of textile samples lay spread out on the table...
+                                                            .email-timing
+                                                                span 1:00 PM
+                                                            .email-options
+                                                               i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                            .mail-pagination
+                                                button#prev-button.pagination-button(aria-label='Previous page' title='Previous page')
+                                                    | &lt;
+                                                #pagination-numbers.pagination-index
+                                                button#next-button.pagination-button(aria-label='Next page' title='Next page')
+                                                    | &gt;
+                                        #sent-pill.tab-pane.fade(role='tabpanel' aria-labelledby='sent-pill-tab')
+                                            .mail-body-wrapper  
+                                                ul
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox14.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox14')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                img.img-fluid(src="../assets/images/user/14.png  ", alt="user")
+                                                            p Brooklyn Simmons
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Confirm your booking id -
+                                                                    span  A collection of textile samples lay spread out on the table - Samsa was a travelling salesman..
+                                                                .badge.badge-light-primary new
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 7:50 AM
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox15.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox15')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                img.img-fluid(src="../assets/images/user/6.jpg", alt="user")
+                                                            p Marvin McKinney
+                                                        .inbox-message
+                                                            .email-data
+                                                                span New comments on MSR2024 draft presentation - 
+                                                                    span New Here's a list of all the topic challenges...
+                                                                .badge.badge-light-primary new
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 2:30 PM
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox16.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox16')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                div
+                                                                    p.txt-primary EH
+                                                            p Esther Howard
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Confirm your booking id -
+                                                                    span craft beer labore wes anderson cred nesciunt sapiente ea proident...
+                                                                .badge.badge-light-primary new
+                                                                .badge.badge-light-success Task
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 1:00 PM
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox17.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox17')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                .circle-success
+                                                                    p.txt-success JW
+                                                            p Jack Williamson
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Very fiction Link  -
+                                                                    span Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 5 Day ago
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                        #starred-pill.tab-pane.fade(role='tabpanel' aria-labelledby='starred-pill-tab')
+                                            .mail-body-wrapper  
+                                                ul
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox18.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox18')
+                                                            svg.important-mail.active
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                img.img-fluid(src="../assets/images/user/6.jpg", alt="user")
+                                                            p Marvin McKinney
+                                                        .inbox-message
+                                                            .email-data
+                                                                span New comments on MSR2024 draft presentation - 
+                                                                    span New Here's a list of all the topic challenges...
+                                                                .badge.badge-light-primary new
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 2:30 PM
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox19.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox19')
+                                                            svg.important-mail.active
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                img.img-fluid(src="../assets/images/user/3.png  ", alt="user")
+                                                            p Brooklyn Simmons
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Confirm your booking id -
+                                                                    span  A collection of textile samples lay spread out on the table - Samsa was a travelling salesman..
+                                                                .badge.badge-light-primary new
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 7:50 AM
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                        #draft-pill.tab-pane.fade(role='tabpanel' aria-labelledby='draft-pill-tab')
+                                            .mail-body-wrapper  
+                                                ul
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox20.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox20')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                img.img-fluid(src="../assets/images/user/3.png  ", alt="user")
+                                                            p Ralph Edwards
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Your Order #224820098 has been Confirmed-
+                                                                    span A collection of textile samples lay spread out on the table...
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 1:00 PM
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox21.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox21')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                img.img-fluid(src="../assets/images/user/6.jpg  ", alt="user")
+                                                            p Ronald Richards
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Confirm your booking id -
+                                                                    span Confirm your booking id - A collection of textile samples lay spread out on the table - Samsa was a travelling salesman..
+                                                                .badge.badge-light-light Update.Zip
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 7 April
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox22.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox22')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                .circle-success
+                                                                    p.txt-success CW
+                                                            p Cameron Williamson
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Very fiction Link  -
+                                                                    span Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 5 Day ago
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox23.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox23')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                img.img-fluid(src="../assets/images/user/12.png  ", alt="user")
+                                                            p Jacob Jones
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Welcome to our new office  -
+                                                                    span A collection of textile samples lay spread out on the table - Samsa was a travelling salesman..
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 01 April
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox24.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox24')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                img.img-fluid(src="../assets/images/user/3.png  ", alt="user")
+                                                            p Ralph Edwards
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Your Order #224820098 has been Confirmed-
+                                                                    span A collection of textile samples lay spread out on the table...
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 1:00 PM
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                        #trash-pill.tab-pane.fade(role='tabpanel' aria-labelledby='trash-pill-tab')
+                                            .mail-body-wrapper  
+                                                ul
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox25.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox25')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                div
+                                                                    p.txt-primary EH
+                                                            p Esther Howard
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Confirm your booking id -
+                                                                    span craft beer labore wes anderson cred nesciunt sapiente ea proident...
+                                                                .badge.badge-light-secondary offer
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 1:00 PM
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox26.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox26')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                .circle-success
+                                                                    p.txt-success CH
+                                                            p Cameron Hill
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Very fiction Link  -
+                                                                    span Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 5 Day ago
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox27.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox27')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                div
+                                                                    p.txt-primary EH
+                                                            p Esther Howard
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Confirm your booking id -
+                                                                    span craft beer labore wes anderson cred nesciunt sapiente ea proident...
+                                                                .badge.badge-light-primary new
+                                                                .badge.badge-light-success Task
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 1:00 PM
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox28.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox28')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                .circle-success
+                                                                    p.txt-success CW
+                                                            p Cameron Williamson
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Very fiction Link  -
+                                                                    span Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 5 Day ago
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                        #work-pill.tab-pane.fade(role='tabpanel' aria-labelledby='work-pill-tab')
+                                            .mail-body-wrapper  
+                                                ul
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox29.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox29')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                div
+                                                                    p.txt-primary EH
+                                                            p Esther Howard
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Confirm your booking id -
+                                                                    span craft beer labore wes anderson cred nesciunt sapiente ea proident...
+                                                                .badge.badge-light-primary new
+                                                                .badge.badge-light-success Task
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 1:00 PM
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox30.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox30')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                img.img-fluid(src="../assets/images/user/3.png  ", alt="user")
+                                                            p Brooklyn Simmons
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Confirm your booking id -
+                                                                    span  A collection of textile samples lay spread out on the table - Samsa was a travelling salesman..
+                                                                .badge.badge-light-primary deadline
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 7:50 AM
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox31.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox31')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                div
+                                                                    p.txt-primary EV
+                                                            p Esther Voward
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Confirm your booking id -
+                                                                    span craft beer labore wes anderson cred nesciunt sapiente ea proident...
+                                                                .badge.badge-light-primary new
+                                                                .badge.badge-light-success work
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 1:00 PM
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                        #private-pill.tab-pane.fade(role='tabpanel' aria-labelledby='private-pill-tab')
+                                            .mail-body-wrapper  
+                                                ul
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox32.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox32')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                div
+                                                                    p.txt-primary AD
+                                                            p Asther Dolly
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Confirm your booking id -
+                                                                    span craft beer labore wes anderson cred nesciunt sapiente ea proident...
+                                                                .badge.badge-light-primary new
+                                                                .badge.badge-light-success Task
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 1:00 PM
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                        #support-pill.tab-pane.fade(role='tabpanel' aria-labelledby='support-pill-tab')
+                                            .mail-body-wrapper  
+                                                ul
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox33.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox33')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                div
+                                                                    p.txt-primary EH
+                                                            p Esther Howard
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Confirm your booking id -
+                                                                    span craft beer labore wes anderson cred nesciunt sapiente ea proident...
+                                                                .badge.badge-light-primary new
+                                                                .badge.badge-light-success Task
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 1:00 PM
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                                    li.inbox-data
+                                                        .inbox-user
+                                                            .form-check.form-check-inline.m-0
+                                                                input#emailCheckbox34.form-check-input.checkbox-primary(type='checkbox' value='option1')
+                                                                label.form-check-label(for='emailCheckbox34')
+                                                            svg.important-mail
+                                                                use(href="../assets/svg/icon-sprite.svg#fill-star")
+                                                            .rounded-border
+                                                                .circle-success
+                                                                    p.txt-success CW
+                                                            p Cameron Williamson
+                                                        .inbox-message
+                                                            .email-data
+                                                                span Very fiction Link  -
+                                                                    span Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                            .email-timing
+                                                                //- svg 
+                                                                //-     use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                                                span 5 Day ago
+                                                            .email-options
+                                                                i.fa.fa-envelope-o.envelope-1.show
+                                                                i.fa.fa-envelope-open-o.envelope-2.hide
+                                                                i.fa.fa-trash-o.trash-3
+                                                                i.fa.fa-print
+                                        
+                                .card.email-body.email-read
+                                    .mail-header-wrapper.header-wrapper1
+                                        .mail-header1
+                                            .light-square 
+                                                svg.btn-email
+                                                    use(href='../assets/svg/icon-sprite.svg#back-arrow')
+                                            span Interview Mail
+                                        .mail-body1 
+                                            .light-square(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Achieve')
+                                                svg 
+                                                    use(href='../assets/svg/icon-sprite.svg#sms')
+                                            .light-square(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Bookmark')
+                                                svg.bookmark-box
+                                                    use(href='../assets/svg/icon-sprite.svg#bookmark')
+                                            .light-square(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Spam')
+                                                svg 
+                                                    use(href='../assets/svg/icon-sprite.svg#spam')
+                                            .light-square(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Trash')
+                                                svg.stroke-danger
+                                                    use(href='../assets/svg/icon-sprite.svg#mail-trash')
+                                            .light-square(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Settings')
+                                                svg 
+                                                    use(href='../assets/svg/icon-sprite.svg#setting')
+                                    .mail-body-wrapper 
+                                        .user-mail-wrapper
+                                            .user-title
+                                                div 
+                                                    .rounded-border 
+                                                        img.img-fluid(src="../assets/images/user/12.png", alt="user")
+                                                    .dropdown-subtitle
+                                                        p Ronald Richards
+                                                        .onhover-dropdown
+                                                            button.btn.p-0.dropdown-button
+                                                                | To me 
+                                                                i(data-feather="chevron-down") 
+                                                            .inbox-security.onhover-show-div
+                                                                p From: 
+                                                                    span pixelstrap &lt;pixelstrap3@gmail.com&gt;
+                                                                p to: 
+                                                                    span donut.horry@gmail.com
+                                                                p reply-to:
+                                                                    span &lt;pixelstrap3@gmail.com&gt;
+                                                                p date: 
+                                                                    span Jun 13, 2024, 7:10 AM
+                                                                p subject: 
+                                                                    span Important Account Security Update
+                                                                p security: 
+                                                                    span standard encryption (TLS)
+                                                .inbox-options 
+                                                    span Friday 07 Apr (4 hours ago)
+                                                    .light-square 
+                                                        svg.important-mail
+                                                            use(href='../assets/svg/icon-sprite.svg#mail-star')
+                                                    .light-square(onclick="myFunction()")
+                                                        svg 
+                                                            use(href='../assets/svg/icon-sprite.svg#print')
+                                                    .light-square.btn-group
+                                                        svg.dropdown-toggle(data-bs-toggle="dropdown")
+                                                            use(href='../assets/svg/icon-sprite.svg#menubar')
+                                                        .dropdown-menu.dropdown-block
+                                                            a.dropdown-item(href='#!')
+                                                                i.fa.fa-mail-reply
+                                                                | Reply
+                                                            a.dropdown-item(href='#!') 
+                                                                i.fa.fa-mail-forward
+                                                                | Forward
+
+                                            .user-body
+                                                p Dear Customer,
+                                                p We regret to notify you that an unauthorized attempt was made to access your account. Our system discovered suspicious activity, and we acted right away to safeguard your personal data.
+                                                p Please change your login information by clicking the following link in order to safeguard your account:
+                                                p Please be aware that your account may be temporarily suspended if no action is taken within 24 hours. We urge you to take immediate action to prevent any inconvenience.
+                                                p We sincerely apologize for any inconvenience this may cause and thank you for your immediate attention to this matter.
+                                                .mail-subcontent
+                                                    p Yours faithfully,
+                                                    p Account Security Team
+                                            .user-footer 
+                                                div 
+                                                    svg 
+                                                        use(href='../assets/svg/icon-sprite.svg#attchment')
+                                                    span.f-light Attachments
+                                                .d-inline-block
+                                                    .attchment-file.common-flex
+                                                        .common-flex.align-items-center
+                                                            img(src="../assets/images/email-template/pdfs.png", alt="pdf")
+                                                            .d-block 
+                                                                p Offer_Letter.pdf
+                                                                p 200KB
+                                                        a(href="../assets/pug/pages/theme/text_file.txt" download) 
+                                                            i.fa.fa-download.f-light
+                                                .toolbar-box
+                                                    #toolbar
+                                                        button.ql-bold Bold 
+                                                        button.ql-italic Italic 
+                                                        button.ql-underline underline
+                                                        button.ql-list(value="ordered") List 
+                                                        button.ql-list(value="bullet") 
+                                                        button.ql-link
+                                                        button.ql-image
+                                                        
+                                                    #editor
+                                                        //- p Subject: Important Account Security Update - Action Required
+                                                        //- p From: Security Team
+                                                        //-     u newsletter@awesomedeals.com
+                                                        //- p Dear Appreciated Client,
+                                                        //- p We really hope that you are doing well. We're about to share some really wonderful news with you. We are delighted to present you with an exceptional, limited-time deal that you won't find anywhere else thanks to our long-standing partnerships with top companies!
+                                                        //- p The Ultimate Tech Bundle is now available! Imagine being able to get your hands on the newest gadgets and gizmos in a single enticing package. Here is a preview of what is contained:
+                                                        //- p Experience the ease of having your emails, texts, and fitness statistics right at your fingertips with the cutting-edge SmartWatch 4.
+                                                        //- p We appreciate you choosing Awesome Deals & Co. for all of your technological requirements!
+                                                        //- p best wishes
+                                                        //- p The team at Awesome Deals & Co.
+                                                        //- p P.S. Distribute this email to your relatives and friends to help 
+                                                        
+                                            .send-btn
+                                                button.btn.btn-primary Send
+                                                    i.fa.fa-paper-plane
+                            #compose_mail.modal.fade(tabindex='-1' aria-labelledby='compose_mailLabel' aria-hidden='true')
+                                .modal-dialog.modal-lg
+                                    .modal-content
+                                        .modal-header
+                                            h1#compose_mailLabel.modal-title.fs-5 Compose Message
+                                            button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                                        .modal-body.compose-modal
+                                            form
+                                                .row.mb-3
+                                                    label.col-sm-2.col-form-label(for='composeFrom') From :
+                                                    .col-sm-10
+                                                        input#composeFrom.form-control(type='email')
+                                                .row.mb-3
+                                                    label.col-sm-2.col-form-label(for='composeTo') To :
+                                                    .col-sm-10
+                                                        input#composeTo.form-control(type='email')
+                                                        .add-bcc
+                                                            .d-flex.gap-2
+                                                                a.btn(data-bs-toggle='collapse' href='#collapseCc' role='button' aria-expanded='false' aria-controls='collapseCc')
+                                                                    | Cc 
+                                                                a.btn(data-bs-toggle='collapse' href='#collapseBcc' role='button' aria-expanded='false' aria-controls='collapseBcc')
+                                                                    | Bcc
+                                                #collapseCc.collapse.row.mb-3 
+                                                    label.col-sm-2.col-form-label(for='composeTo2') Cc:
+                                                    .col-sm-10
+                                                        input#composeTo2.form-control(type='email')
+                                                #collapseBcc.collapse.row.mb-3 
+                                                    label.col-sm-2.col-form-label(for='composeTo3') Bcc:
+                                                    .col-sm-10
+                                                        input#composeTo3.form-control(type='email')
+                                                .row.mb-3
+                                                    label.col-sm-2.col-form-label(for='composeSubject') Subject :
+                                                    .col-sm-10
+                                                        input#composeSubject.form-control(type='email')
+                                                .toolbar-box
+                                                    #toolbar1
+                                                        button.ql-bold Bold 
+                                                        button.ql-italic Italic 
+                                                        button.ql-underline underline
+                                                        button.ql-list(value="ordered") List 
+                                                        button.ql-list(value="bullet") 
+                                                        button.ql-link
+                                                        button.ql-image
+                                                    #editor1
+                                        .modal-footer
+                                            button.btn.btn-light(type='button') Save as draft
+                                            button.btn.btn-primary(type='button' data-bs-dismiss='modal') Send
+                            #label-pill-modal.modal.fade(tabindex='-1' aria-hidden='true')
+                                .modal-dialog.modal-lg
+                                    .modal-content
+                                        .modal-header
+                                            h4.modal-title.fs-5 Add Label
+                                            button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                                        .modal-body
+                                            form
+                                                .row.g-sm-3.g-2.custom-input
+                                                    label.col-sm-2.col-form-label Label Name :
+                                                    .col-sm-10
+                                                        input#Email_Modal.form-control(type='email')
+                                                    label.col-sm-2.col-form-label Email :
+                                                    .col-sm-10
+                                                        input#Color_Modal.form-control(type='email')
+                                                    label.form-label.col-sm-2(for='exampleColorInput') Label Color :
+                                                    .col-sm-2.col-2
+                                                        input#exampleColorInput.form-control.form-control-color(type='color' value='#7A70BA' title='Choose your color')
+                                        .modal-footer
+                                            button.btn.btn-light(type='button' data-bs-dismiss='modal') Cancel
+                                            button.btn.btn-primary(type='button') Add
+        // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

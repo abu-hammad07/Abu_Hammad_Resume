@@ -1,0 +1,46 @@
+- var page_Title = 'Map JS';
+- var theme_customizer      = true;
+//- - var jquery_ui             = true;
+- var map_js                = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Maps','Map JS'],'Map JS')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-xl-6
+                .card
+                  .card-header
+                    h4 Map at a specified location
+                    span Display a map at a specified location and zoom level.
+                  .card-body.map-z-index
+                    #weathermap.map-js-height
+              .col-xl-6
+                .card
+                  .card-header
+                    h4 Map using View Bounds
+                    span Display a map of a given area.
+                  .card-body.map-z-index
+                    #map2.map-js-height 
+              
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

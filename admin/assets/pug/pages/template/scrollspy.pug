@@ -1,0 +1,593 @@
+- var page_Title = 'Scrollspy';
+- var theme_customizer      = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+- var clipboard             = true;
+- var scrollspy             = true;
+- var prism                 = true;
+- var customcard            = true;
+- var height_equal          = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Bonus Ui','ScrollSpy'],'ScrollSpy')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid 
+            .row.main-scrollspy
+                .col-12 
+                    .card 
+                        .card-header 
+                            h4 Navbar Scrollspy
+                            p.f-m-light.mt-1 
+                                |  Add 
+                                code data-bs-spy="scroll" 
+                                | and 
+                                code data-bs-target="#navId" 
+                                | where navId is the unique id of the associated navigation. Scroll the area below the navbar and watch the active class change. 
+                            .card-header-right
+                                ul.list-unstyled.card-option
+                                    li
+                                        i.icon-more-alt
+                                    li
+                                        i.view-html.fa.fa-code
+                                    li
+                                        i.icofont.icofont-maximize.full-card
+                                    li
+                                        i.icofont.icofont-minus.minimize-card
+                                    li
+                                        i.icofont.icofont-refresh.reload-card
+                                    li
+                                        i.icofont.icofont-error.close-card
+                        .card-body.navbar-scrollspy
+                            nav#navbar-scrollspy1.navbar.bg-body-tertiary.px-3.mb-3
+                                a.navbar-brand(href='#')
+                                    img.img-fluid.for-light(src="../assets/images/logo/logo.png", alt="logo")
+                                    img.img-fluid.for-dark(src="../assets/images/logo/logo_dark.png", alt="logo")
+                                ul.nav.nav-pills
+                                    li.nav-item
+                                        a.nav-link(href='#scrollspyHeading1') Section 1
+                                    li.nav-item
+                                        a.nav-link(href='#scrollspyHeading2') Section 2
+                                    li.nav-item.dropdown
+                                        a.nav-link.dropdown-toggle(data-bs-toggle='dropdown' href='#' role='button' aria-expanded='false') Dropdown
+                                        ul.dropdown-menu
+                                            li
+                                                a.dropdown-item(href='#scrollspyHeading3') Section 3
+                                            li
+                                                a.dropdown-item(href='#scrollspyHeading4') Section 4
+                                            li
+                                                hr.dropdown-divider
+                                            li
+                                                a.dropdown-item(href='#scrollspyHeading5') Section 5
+                            .scrollspy-example.bg-body-tertiary.p-3.rounded-2.custom-scrollbar(data-bs-spy='scroll' data-bs-target='#navbar-scrollspy1' data-bs-root-margin='0px 0px -40%' data-bs-smooth-scroll='true' tabindex='0')
+                                h5#scrollspyHeading1 Section 1
+                                p For the scrollspy page, this is some placeholder content. Take note of the highlighted navigation link at the bottom of the page as you scroll down. It appears again and again in the component example. To highlight the scrolling and highlighting, we're going to keep adding more sample copy here.
+                                h5#scrollspyHeading2 Section 2
+                                p The content that appears here is a placeholder for the scrollspy page. The relevant navigation link is highlighted as you scroll down the page. The component example contains repetitions of it. In order to highlight the scrolling and highlighting, we will continue to add more sample copy here.
+                                h5#scrollspyHeading3 Section 3
+                                p This is some stuff that is meant to be on the scrollspy page. Keep in mind that the relevant navigation link is highlighted as you scroll down the page. The component example uses it repeatedly. Here, we continue to add sample copy to highlight the scrolling and highlighting.
+                                h5#scrollspyHeading4 Section 4
+                                p This content is a stand-in for the scrollspy page. You'll notice that the relevant navigation link is highlighted as you scroll down the page. It appears again in the component example. Here, we'll continue to add sample copy to highlight the scrolling and highlighting.
+                                h5#scrollspyHeading5 Section 5
+                                p For the scrollspy page, this is some placeholder content. Take note of the highlighted navigation link at the bottom of the page as you scroll down. It appears again and again in the component example. To highlight the scrolling and highlighting, we're going to keep adding more sample copy here.
+                            .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#nav-scrollspy-copy', title='Copy')
+                                    i.icofont.icofont-copy-alt
+                                pre.theme-scrollbar
+                                    code.language-html#nav-scrollspy-copy
+                                        |&lt;div class="card-body navbar-scrollspy"&gt;
+                                        |    &lt;nav class="navbar bg-body-tertiary px-3 mb-3" id="navbar-scrollspy1"&gt;&lt;a class="navbar-brand" href="#"&gt;&lt;img class="img-fluid for-light" src="../assets/images/logo/logo.png" alt="logo"&gt;&lt;img class="img-fluid for-dark" src="../assets/images/logo/logo_dark.png" alt="logo"&gt;&lt;/a&gt;
+                                        |        &lt;ul class="nav nav-pills"&gt;
+                                        |            &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#scrollspyHeading1"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+                                        |            &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#scrollspyHeading2"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
+                                        |            &lt;li class="nav-item dropdown"&gt;&lt;a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"&gt;Dropdown&lt;/a&gt;
+                                        |                &lt;ul class="dropdown-menu"&gt;
+                                        |                    &lt;li&gt;&lt;a class="dropdown-item" href="#scrollspyHeading3"&gt;Section 3&lt;/a&gt;&lt;/li&gt;
+                                        |                    &lt;li&gt;&lt;a class="dropdown-item" href="#scrollspyHeading4"&gt;Section 4&lt;/a&gt;&lt;/li&gt;
+                                        |                    &lt;li&gt;
+                                        |                        &lt;hr class="dropdown-divider"&gt;
+                                        |                    &lt;/li&gt;
+                                        |                    &lt;li&gt;&lt;a class="dropdown-item" href="#scrollspyHeading5"&gt;Section 5&lt;/a&gt;&lt;/li&gt;
+                                        |                &lt;/ul&gt;
+                                        |            &lt;/li&gt;
+                                        |        &lt;/ul&gt;
+                                        |    &lt;/nav&gt;
+                                        |    &lt;div class="scrollspy-example bg-body-tertiary p-3 rounded-2 custom-scrollbar" data-bs-spy="scroll" data-bs-target="#navbar-scrollspy1" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0"&gt;
+                                        |        &lt;h6 id="scrollspyHeading1"&gt;Section 1&lt;/h6&gt;
+                                        |        &lt;p&gt;For the scrollspy page, this is some placeholder content. Take note of the highlighted navigation link at the bottom of the page as you scroll down. It appears again and again in the component example. To highlight the scrolling and highlighting, we're going to keep adding more sample copy here.&lt;/p&gt;
+                                        |        &lt;h6 id="scrollspyHeading2"&gt;Section 2&lt;/h6&gt;
+                                        |        &lt;p&gt;The content that appears here is a placeholder for the scrollspy page. The relevant navigation link is highlighted as you scroll down the page. The component example contains repetitions of it. In order to highlight the scrolling and highlighting, we will continue to add more sample copy here.&lt;/p&gt;
+                                        |        &lt;h6 id="scrollspyHeading3"&gt;Section 3&lt;/h6&gt;
+                                        |        &lt;p&gt;This is some stuff that is meant to be on the scrollspy page. Keep in mind that the relevant navigation link is highlighted as you scroll down the page. The component example uses it repeatedly. Here, we continue to add sample copy to highlight the scrolling and highlighting.&lt;/p&gt;
+                                        |        &lt;h6 id="scrollspyHeading4"&gt;Section 4&lt;/h6&gt;
+                                        |        &lt;p&gt;This content is a stand-in for the scrollspy page. You'll notice that the relevant navigation link is highlighted as you scroll down the page. It appears again in the component example. Here, we'll continue to add sample copy to highlight the scrolling and highlighting.&lt;/p&gt;
+                                        |        &lt;h6 id="scrollspyHeading5"&gt;Section 5&lt;/h6&gt;
+                                        |        &lt;p&gt;For the scrollspy page, this is some placeholder content. Take note of the highlighted navigation link at the bottom of the page as you scroll down. It appears again and again in the component example. To highlight the scrolling and highlighting, we're going to keep adding more sample copy here.&lt;/p&gt;
+                                        |    &lt;/div&gt;
+                                        |&lt;/div&gt;
+
+                .col-12 
+                    .card
+                        .card-header 
+                            h4 Nested Scrollspy
+                            p.f-m-light.mt-1 
+                                | Scrollspy also works with nested 
+                                code .navs
+                                |  if a nested 
+                                code .nav 
+                                | is 
+                                code .active
+                                | , it's parents will also be 
+                                code .active
+                                | . Scroll the area next to the navbar and watch the active class change.
+                            .card-header-right
+                                ul.list-unstyled.card-option
+                                    li
+                                        i.icon-more-alt
+                                    li
+                                        i.view-html.fa.fa-code
+                                    li
+                                        i.icofont.icofont-maximize.full-card
+                                    li
+                                        i.icofont.icofont-minus.minimize-card
+                                    li
+                                        i.icofont.icofont-refresh.reload-card
+                                    li
+                                        i.icofont.icofont-error.close-card
+                        .card-body.nested-scrollspy
+                            .row.g-4
+                                .col-xxl-3.col-lg-4.col-md-5
+                                    nav#navbar-scrollspy2.h-100.nested-scrollspy-menu.flex-column.align-items-stretch
+                                        nav.nav.nav-pills.flex-column
+                                            a.nav-link(href='#item-1') Experience
+                                            nav.nav.nav-pills.flex-column
+                                                a.nav-link.ms-3.my-1(href='#item-1-1') Web Development 
+                                                a.nav-link.ms-3.my-1(href='#item-1-2') Cyber Security
+                                            a.nav-link(href='#item-2') Get in Touch
+                                            a.nav-link(href='#item-3') Projects
+                                            nav.nav.nav-pills.flex-column
+                                                a.nav-link.ms-3.my-1(href='#item-3-1') Group Projects
+                                                a.nav-link.ms-3.my-1(href='#item-3-2') Individual Projects
+                                .col-xxl-9.col-lg-8.col-md-7
+                                    .scrollspy-example-2.custom-scrollbar(data-bs-spy='scroll' data-bs-target='#navbar-scrollspy2' data-bs-smooth-scroll='true' tabindex='0')
+                                        #item-1
+                                            h5 Experience
+                                            .common-align.gap-3
+                                                .flex-shrink-0
+                                                    svg
+                                                        use(href='../assets/svg/icon-sprite.svg#experience-scrollspy')
+                                                .flex-grow-1
+                                                    p This content is a stand-in for the scrollspy page. You'll notice that the relevant navigation link is highlighted as you scroll down the page. It appears again in the component example. Here, we'll continue to add sample copy to highlight the scrolling and highlighting.
+                                        #item-1-1
+                                            h6  Experience / Web Development 
+                                            p This is some stuff that is meant to be on the scrollspy page. Keep in mind that the relevant navigation link is highlighted as you scroll down the page. The component example uses it repeatedly. Here, we continue to add sample copy to highlight the scrolling and highlighting.
+                                        #item-1-2
+                                            h6  Experience / Cyber Security
+                                            p For the scrollspy page, this is some placeholder content. Take note of the highlighted navigation link at the bottom of the page as you scroll down. It appears again and again in the component example. To highlight the scrolling and highlighting, we're going to keep adding more sample copy here.
+                                        #item-2
+                                            h5 Get in Touch
+                                            .common-align.gap-3
+                                                .flex-shrink-0
+                                                    svg
+                                                        use(href='../assets/svg/icon-sprite.svg#contact-us')
+                                                .flex-grow-1
+                                                    p The content that appears here is a placeholder for the scrollspy page. The relevant navigation link is highlighted as you scroll down the page. The component example contains repetitions of it. In order to highlight the scrolling and highlighting, we will continue to add more sample copy here.
+                                        #item-3
+                                            h5 Projects
+                                            .common-align.gap-3
+                                                .flex-shrink-0
+                                                    svg
+                                                        use(href='../assets/svg/icon-sprite.svg#project-info')
+                                                .flex-grow-1
+                                                    p This content is a stand-in for the scrollspy page. You'll notice that the relevant navigation link is highlighted as you scroll down the page. It appears again in the component example. Here, we'll continue to add sample copy to highlight the scrolling and highlighting.
+                                        #item-3-1
+                                            h6 Projects / Group Projects
+                                            p This content is a stand-in for the scrollspy page. You'll notice that the relevant navigation link is highlighted as you scroll down the page. It appears again in the component example. Here, we'll continue to add sample copy to highlight the scrolling and highlighting.
+                                        #item-3-2
+                                            h6 Projects / Individual Projects
+                                            p For the scrollspy page, this is some placeholder content. Take note of the highlighted navigation link at the bottom of the page as you scroll down. It appears again and again in the component example. To highlight the scrolling and highlighting, we're going to keep adding more sample copy here.
+                            .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#nested-scrollspy-copy', title='Copy')
+                                    i.icofont.icofont-copy-alt
+                                pre.theme-scrollbar
+                                    code.language-html#nested-scrollspy-copy
+                                        |&lt;div class="card-body nested-scrollspy"&gt;
+                                        |    &lt;div class="row g-4"&gt;
+                                        |        &lt;div class="col-xl-3 col-lg-4 col-md-5 xl-40 box-col-4e"&gt;
+                                        |            &lt;nav class="h-100 nested-scrollspy-menu flex-column align-items-stretch" id="navbar-scrollspy2"&gt;
+                                        |                &lt;nav class="nav nav-pills flex-column"&gt;&lt;a class="nav-link f-16 txt-dark" href="#item-1"&gt;Experience&lt;/a&gt;
+                                        |                    &lt;nav class="nav nav-pills flex-column"&gt;&lt;a class="nav-link ms-3 my-1" href="#item-1-1"&gt;Web Development &lt;/a&gt;&lt;a class="nav-link ms-3 my-1" href="#item-1-2"&gt;Cyber Security&lt;/a&gt;&lt;/nav&gt;&lt;a class="nav-link f-16 txt-dark" href="#item-2"&gt;Get in Touch&lt;/a&gt;&lt;a class="nav-link f-16 txt-dark" href="#item-3"&gt;Projects&lt;/a&gt;
+                                        |                    &lt;nav class="nav nav-pills flex-column"&gt;&lt;a class="nav-link ms-3 my-1" href="#item-3-1"&gt;Group Projects&lt;/a&gt;&lt;a class="nav-link ms-3 my-1" href="#item-3-2"&gt;Individual Projects&lt;/a&gt;&lt;/nav&gt;
+                                        |                &lt;/nav&gt;
+                                        |            &lt;/nav&gt;
+                                        |        &lt;/div&gt;
+                                        |        &lt;div class="col-xl-9 col-lg-8 col-md-7 xl-60 box-col-8"&gt;
+                                        |            &lt;div class="scrollspy-example-2 custom-scrollbar" data-bs-spy="scroll" data-bs-target="#navbar-scrollspy2" data-bs-smooth-scroll="true" tabindex="0"&gt;
+                                        |                &lt;div id="item-1"&gt;
+                                        |                    &lt;h6 class="f-18"&gt;Experience&lt;/h6&gt;
+                                        |                    &lt;div class="common-align gap-lg-3 gap-1"&gt;
+                                        |                        &lt;div class="flex-shrink-0"&gt;
+                                        |                            &lt;svg&gt;
+                                        |                                &lt;use href="../assets/svg/icon-sprite.svg#experience-scrollspy"&gt;&lt;/use&gt;
+                                        |                            &lt;/svg&gt;
+                                        |                        &lt;/div&gt;
+                                        |                        &lt;div class="flex-grow-1"&gt;
+                                        |                            &lt;p&gt;This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.Keep in mind that the JavaScript plugin tries to pick the right element among all that may be visible. Multiple visible scrollspy targets at the same time may cause some issues.&lt;/p&gt;
+                                        |                        &lt;/div&gt;
+                                        |                    &lt;/div&gt;
+                                        |                &lt;/div&gt;
+                                        |                &lt;div id="item-1-1"&gt;
+                                        |                    &lt;h6&gt; Experience / Web Development &lt;/h6&gt;
+                                        |                    &lt;p&gt;This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.Keep in mind that the JavaScript plugin tries to pick the right element among all that may be visible. Multiple visible scrollspy targets at the same time may cause some issues. Try out several setups and see how the clear navigation signals that scrollspy offers improves user experience. On the other hand, you should be cautious when working with intricate layouts or scrollspy targets that overlap. Although the plugin makes an effort to choose the most pertinent aspect, there may occasionally be conflicts when there are several targets vying for the plugin's attention at once. You may take full advantage of scrollspy and improve the usability of your online application by anticipating problems and streamlining your page structure.&lt;/p&gt;
+                                        |                &lt;/div&gt;
+                                        |                &lt;div id="item-1-2"&gt;
+                                        |                    &lt;h6&gt; Experience / Cyber Security&lt;/h6&gt;
+                                        |                    &lt;p&gt;This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.Keep in mind that the JavaScript plugin tries to pick the right element among all that may be visible. Multiple visible scrollspy targets at the same time may cause some issues. It's important to remember that even while the JavaScript plugin uses visibility to determine which element is most relevant, having numerous scrollspy targets visible at once may cause confusion or unexpected behavior. In order to maximize usability and prevent any potential problems, it is therefore advised that you carefully organize your information when using scrollspy, making sure that sections are clearly distinguished from one another.&lt;/p&gt;
+                                        |                    &lt;p&gt;In summary, Scrollspy is an effective solution that improves user engagement and navigation, giving visitors to your website a smooth surfing experience. You may improve the usability and interactivity of your web pages and make them easier to navigate by making proper use of its capabilities.&lt;/p&gt;
+                                        |                &lt;/div&gt;
+                                        |                &lt;div id="item-2"&gt;
+                                        |                    &lt;h6 class="f-18"&gt;Get in Touch&lt;/h6&gt;
+                                        |                    &lt;div class="common-align gap-lg-3 gap-1"&gt;
+                                        |                        &lt;div class="flex-shrink-0"&gt;
+                                        |                            &lt;svg&gt;
+                                        |                                &lt;use href="../assets/svg/icon-sprite.svg#contact-us"&gt;&lt;/use&gt;
+                                        |                            &lt;/svg&gt;
+                                        |                        &lt;/div&gt;
+                                        |                        &lt;div class="flex-grow-1"&gt;
+                                        |                            &lt;p&gt;This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.Keep in mind that the JavaScript plugin tries to pick the right element among all that may be visible. Multiple visible scrollspy targets at the same time may cause some issues. When using scrollspy, it's important to remember best practices, particularly with regard to the arrangement and labelling of your page elements. The combination of well-placed scrollable targets and comprehensible HTML code guarantees optimal functionality and accessibility for all users.&lt;/p&gt;
+                                        |                            &lt;p&gt;In summary, Scrollspy is an effective solution that improves user engagement and navigation, giving visitors to your website a smooth surfing experience. You may improve the usability and interactivity of your web pages and make them easier to navigate by making proper use of its capabilities.&lt;/p&gt;
+                                        |                        &lt;/div&gt;
+                                        |                    &lt;/div&gt;
+                                        |                &lt;/div&gt;
+                                        |                &lt;div id="item-3"&gt;
+                                        |                    &lt;h6 class="f-18"&gt;Projects&lt;/h6&gt;
+                                        |                    &lt;div class="common-align gap-lg-3 gap-1"&gt;
+                                        |                        &lt;div class="flex-shrink-0"&gt;
+                                        |                            &lt;svg&gt;
+                                        |                                &lt;use href="../assets/svg/icon-sprite.svg#project-info"&gt;&lt;/use&gt;
+                                        |                            &lt;/svg&gt;
+                                        |                        &lt;/div&gt;
+                                        |                        &lt;div class="flex-grow-1"&gt;
+                                        |                            &lt;p&gt;This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.Keep in mind that the JavaScript plugin tries to pick the right element among all that may be visible. Multiple visible scrollspy targets at the same time may cause some issues.&lt;/p&gt;
+                                        |                        &lt;/div&gt;
+                                        |                    &lt;/div&gt;
+                                        |                &lt;/div&gt;
+                                        |                &lt;div id="item-3-1"&gt;
+                                        |                    &lt;h6&gt;Projects / Group Projects&lt;/h6&gt;
+                                        |                    &lt;p&gt;This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.Keep in mind that the JavaScript plugin tries to pick the right element among all that may be visible. Multiple visible scrollspy targets at the same time may cause some issues. When using scrollspy, it's important to remember best practices, particularly with regard to the arrangement and labelling of your page elements. The combination of well-placed scrollable targets and comprehensible HTML code guarantees optimal functionality and accessibility for all users.&lt;/p&gt;
+                                        |                    &lt;p&gt;In summary, Scrollspy is an effective solution that improves user engagement and navigation, giving visitors to your website a smooth surfing experience. You may improve the usability and interactivity of your web pages and make them easier to navigate by making proper use of its capabilities.&lt;/p&gt;
+                                        |                &lt;/div&gt;
+                                        |                &lt;div id="item-3-2"&gt;
+                                        |                    &lt;h6&gt;Projects / Individual Projects&lt;/h6&gt;
+                                        |                    &lt;p&gt;This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.Keep in mind that the JavaScript plugin tries to pick the right element among all that may be visible. Multiple visible scrollspy targets at the same time may cause some issues. When using scrollspy, it's important to remember best practices, particularly with regard to the arrangement and labelling of your page elements. The combination of well-placed scrollable targets and comprehensible HTML code guarantees optimal functionality and accessibility for all users.&lt;/p&gt;
+                                        |                    &lt;p class="mb-0"&gt;In summary, Scrollspy is an effective solution that improves user engagement and navigation, giving visitors to your website a smooth surfing experience. You may improve the usability and interactivity of your web pages and make them easier to navigate by making proper use of its capabilities.&lt;/p&gt;
+                                        |                &lt;/div&gt;
+                                        |            &lt;/div&gt;
+                                        |        &lt;/div&gt;
+                                        |    &lt;/div&gt;
+                                        |&lt;/div&gt;
+                .col-12 
+                    .card 
+                        .card-header 
+                            h4 List Group Scrollspy
+                            p.f-m-light.mt-1 
+                                | Scrollspy also works with 
+                                code .list-groups
+                                | . Scroll the area next to the list group and watch the active class change.
+                            .card-header-right
+                                ul.list-unstyled.card-option
+                                    li
+                                        i.icon-more-alt
+                                    li
+                                        i.view-html.fa.fa-code
+                                    li
+                                        i.icofont.icofont-maximize.full-card
+                                    li
+                                        i.icofont.icofont-minus.minimize-card
+                                    li
+                                        i.icofont.icofont-refresh.reload-card
+                                    li
+                                        i.icofont.icofont-error.close-card
+                        .card-body 
+                            .row.gy-3
+                                .col-sm-4
+                                    #list-example.list-group
+                                        a.list-group-item.list-group-item-action(href='#list-item-1') Item 1
+                                        a.list-group-item.list-group-item-action(href='#list-item-2') Item 2
+                                        a.list-group-item.list-group-item-action(href='#list-item-3') Item 3
+                                        a.list-group-item.list-group-item-action(href='#list-item-4') Item 4
+                                .col-sm-8
+                                    .scrollspy-example-3.custom-scrollbar(data-bs-spy='scroll' data-bs-target='#list-example' data-bs-smooth-scroll='true' tabindex='0')
+                                        h6#list-item-1 Item 1
+                                        p This content is a stand-in for the scrollspy page. You'll notice that the relevant navigation link is highlighted as you scroll down the page. It appears again in the component example. Here, we'll continue to add sample copy to highlight the scrolling and highlighting.
+                                        h6#list-item-2 Item 2
+                                        p For the scrollspy page, this is some placeholder content. Take note of the highlighted navigation link at the bottom of the page as you scroll down. It appears again and again in the component example. To highlight the scrolling and highlighting, we're going to keep adding more sample copy here.
+                                        h6#list-item-3 Item 3
+                                        p The content that appears here is a placeholder for the scrollspy page. The relevant navigation link is highlighted as you scroll down the page. The component example contains repetitions of it. In order to highlight the scrolling and highlighting, we will continue to add more sample copy here.
+                                        h6#list-item-4 Item 4
+                                        p The content that appears here is a placeholder for the scrollspy page. The relevant navigation link is highlighted as you scroll down the page. The component example contains repetitions of it. In order to highlight the scrolling and highlighting, we will continue to add more sample copy here.
+                            .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#list-group-scroll-copy', title='Copy')
+                                    i.icofont.icofont-copy-alt
+                                pre.theme-scrollbar
+                                    code.language-html#list-group-scroll-copy
+                                        |&lt;div class="row gap-sm-0 gap-3"&gt;
+                                        |    &lt;div class="col-sm-4"&gt;
+                                        |        &lt;div class="list-group" id="list-example"&gt;&lt;a class="list-group-item list-group-item-action" href="#list-item-1"&gt;Item 1&lt;/a&gt;&lt;a class="list-group-item list-group-item-action" href="#list-item-2"&gt;Item 2&lt;/a&gt;&lt;a class="list-group-item list-group-item-action" href="#list-item-3"&gt;Item 3&lt;/a&gt;&lt;a class="list-group-item list-group-item-action" href="#list-item-4"&gt;Item 4&lt;/a&gt;&lt;/div&gt;
+                                        |    &lt;/div&gt;
+                                        |    &lt;div class="col-sm-8"&gt;
+                                        |        &lt;div class="scrollspy-example-3 custom-scrollbar" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0"&gt;
+                                        |            &lt;h6 id="list-item-1"&gt;Item 1&lt;/h6&gt;
+                                        |            &lt;p&gt;This content is a stand-in for the scrollspy page. You'll notice that the relevant navigation link is highlighted as you scroll down the page. It appears again in the component example. Here, we'll continue to add sample copy to highlight the scrolling and highlighting.Keep in mind that the JavaScript plugin tries to pick the right element among all that may be visible. Multiple visible scrollspy targets at the same time may cause some issues.&lt;/p&gt;
+                                        |            &lt;h6 id="list-item-2"&gt;Item 2&lt;/h6&gt;
+                                        |            &lt;p&gt;For the scrollspy page, this is some placeholder content. Take note of the highlighted navigation link at the bottom of the page as you scroll down. It appears again and again in the component example. To highlight the scrolling and highlighting, we're going to keep adding more sample copy here.Keep in mind that the JavaScript plugin tries to pick the right element among all that may be visible. Multiple visible scrollspy targets at the same time may cause some issues.&lt;/p&gt;
+                                        |            &lt;h6 id="list-item-3"&gt;Item 3&lt;/h6&gt;
+                                        |            &lt;p&gt;The content that appears here is a placeholder for the scrollspy page. The relevant navigation link is highlighted as you scroll down the page. The component example contains repetitions of it. In order to highlight the scrolling and highlighting, we will continue to add more sample copy here.Keep in mind that the JavaScript plugin tries to pick the right element among all that may be visible. Multiple visible scrollspy targets at the same time may cause some issues.&lt;/p&gt;
+                                        |            &lt;h6 id="list-item-4"&gt;Item 4&lt;/h6&gt;
+                                        |            &lt;p&gt;The content that appears here is a placeholder for the scrollspy page. The relevant navigation link is highlighted as you scroll down the page. The component example contains repetitions of it. In order to highlight the scrolling and highlighting, we will continue to add more sample copy here.Keep in mind that the JavaScript plugin tries to pick the right element among all that may be visible. Multiple visible scrollspy targets at the same time may cause some issues.&lt;/p&gt;
+                                        |        &lt;/div&gt;
+                                        |    &lt;/div&gt;
+                                        |&lt;/div&gt;
+                .col-12 
+                    .card 
+                        .card-header 
+                            h4 Custom Scrollspy
+                            p.f-m-light.mt-1 
+                                | add 
+                                code data-bs-spy="scroll" 
+                                | and 
+                                code data-bs-target="#navId" 
+                                |  where navId is the unique id of the associated navigation.
+                            .card-header-right
+                                ul.list-unstyled.card-option
+                                    li
+                                        i.icon-more-alt
+                                    li
+                                        i.view-html.fa.fa-code
+                                    li
+                                        i.icofont.icofont-maximize.full-card
+                                    li
+                                        i.icofont.icofont-minus.minimize-card
+                                    li
+                                        i.icofont.icofont-refresh.reload-card
+                                    li
+                                        i.icofont.icofont-error.close-card
+                        .card-body.nested-scrollspy.custom-scrollspy-section
+                            .row.gy-3
+                                .col-xxl-2.col-md-3.col-sm-4
+                                    nav#navbar-scrollspy4.h-100.flex-column.align-items-stretch.pe-4
+                                        nav.nav.nav-pills.flex-column 
+                                            a.nav-link(href='#home1') Home 
+                                                .custom-arrow
+                                            a.nav-link(href='#about-me') About Me
+                                                .custom-arrow
+                                            a.nav-link(href='#project1') Projects 
+                                                .custom-arrow
+                                            a.nav-link(href='#experience1') Experience
+                                                .custom-arrow
+                                .col-xxl-10.col-md-9.col-sm-8
+                                    .scrollspy-example-5.custom-scrollbar(data-bs-spy='scroll' data-bs-target='#navbar-scrollspy4' data-bs-smooth-scroll='true' tabindex='0')
+                                        #home1.common-p-space
+                                            h5 Home
+                                            .common-align.gap-3.align-items-start
+                                                .flex-shrink-0
+                                                    img.img-fluid(src="../assets/images/banner/2.jpg", alt="")
+                                                .flex-grow-1
+                                                    span This content is a stand-in for the scrollspy page. You'll notice that the relevant navigation link is highlighted as you scroll down the page. It appears again in the component example. Here, we'll continue to add sample copy to highlight the scrolling and highlighting.
+                                                        | Remember that the JavaScript plugin selects the appropriate element from among those that might be displayed. There could be some problems if there are several scrollspy targets showing at once.
+                                                    
+                                        #about-me.common-p-space
+                                            h5 About Me
+                                            .about-box.common-align.gap-3
+                                                img.img-fluid(src="../assets/images/avtar/11.jpg", alt="user")
+                                                div
+                                                    p My name is Lichi Wallien is. I have four years of experience as a software engineer and finished my BE in 2022. I developed PHP and MySQL when I worked for Lavender, and I believe those skills will be useful in this position.
+                                                    a(href="#!").btn.btn-primary Read more
+                                                        span.ms-1
+                                                            svg.fill-icon
+                                                                use(href='../assets/svg/icon-sprite.svg#arrowright')
+                                            
+                                        #project1.common-p-space
+                                            h5 Projects
+                                            .row.g-3.main-project
+                                                .col-xl-12 
+                                                    .light-card.attendance-card
+                                                        .left-overview-content
+                                                            .svg-box
+                                                                svg 
+                                                                    use(href='../assets/svg/icon-sprite.svg#e-commerce-cart')
+                                                        .right-overview-content
+                                                            div 
+                                                                h6 Websites for E-Commerce
+                                                                span.text-muted.text-ellipsis Created a comprehensive e-commerce platform with the goal of improving the online purchasing experience. The project's goals were to offer a smooth navigation system, a user-friendly interface, and strong functionality to accommodate a wide variety of products.
+                                                            div.d-flex.marks-count
+                                                                h5 89/
+                                                                    sub.text-muted 100
+                                                                div.d-flex.justify-content-center.align-items-center
+                                                                    i.icon-arrow-up.txt-success.pe-2.f-w-600
+                                                                    span.txt-success.f-w-500 +80%
+                                                .col-xl-12 
+                                                    .light-card.attendance-card
+                                                        .left-overview-content
+                                                            .svg-box
+                                                                svg 
+                                                                    use(href='../assets/svg/icon-sprite.svg#robotics-project')
+                                                        .right-overview-content
+                                                            div 
+                                                                h6 Robotics Sensor
+                                                                span.text-muted.text-ellipsis Lidar sensor array was put into use for obstacle identification and real-time mapping. With the use of this data, the rover creates an extensive picture of its environment that helps it safely traverse difficult terrain.
+                                                            div.d-flex.marks-count
+                                                                h5 95/
+                                                                    sub.text-muted 100
+                                                                div.d-flex.justify-content-center.align-items-center
+                                                                    i.icon-arrow-up.txt-success.pe-2.f-w-600
+                                                                    span.txt-success.f-w-500 +97%
+                                                .col-xl-12 
+                                                    .light-card.attendance-card
+                                                        .left-overview-content
+                                                            .svg-box
+                                                                svg 
+                                                                    use(href='../assets/svg/icon-sprite.svg#watch-app')
+                                                        .right-overview-content
+                                                            div 
+                                                                h6 Watch Application
+                                                                span.text-muted.text-ellipsis Keeps an eye on key health indicators like heart rate, steps taken, calories burnt, and sleep habits. makes use of cutting-edge algorithms to deliver precise and useful health insights.
+                                                            div.d-flex.marks-count
+                                                                h5 92/
+                                                                    sub.text-muted 100
+                                                                div.d-flex.justify-content-center.align-items-center
+                                                                    i.icon-arrow-up.txt-success.pe-2.f-w-600
+                                                                    span.txt-success.f-w-500 +94%
+                                        #experience1.common-p-space
+                                            h5.f-w-600 Experience
+                                            .row
+                                                .col.experience-section
+                                                    h6.mb-2.text-gray Wordpress
+                                                    .progress
+                                                        .progress-bar.text-center(role='progressbar', style='width: 85%', aria-valuenow='85', aria-valuemin='0', aria-valuemax='100') 85%
+                                                    h6.mb-2.text-gray PHP
+                                                    .progress
+                                                        .progress-bar.text-center(role='progressbar', style='width: 60%', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100') 60%
+                                                    h6.mb-2.text-gray MYSQL
+                                                    .progress
+                                                        .progress-bar.text-center(role='progressbar', style='width: 30%', aria-valuenow='30', aria-valuemin='0', aria-valuemax='100') 30%
+                            .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#custom-scrollspy', title='Copy')
+                                    i.icofont.icofont-copy-alt
+                                pre.theme-scrollbar
+                                    code.language-html#custom-scrollspy
+                                        |&lt;div class="row gap-xl-0 gap-4"&gt;
+                                        |  &lt;div class="col-xxl-2 col-xl-3"&gt;
+                                        |    &lt;nav class="h-100 flex-column align-items-stretch pe-4" id="navbar-scrollspy4"&gt;
+                                        |      &lt;nav class="nav nav-pills flex-column"&gt; &lt;a class="nav-link" href="#home1"&gt;Home 
+                                        |          &lt;div class="custom-arrow"&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="nav-link" href="#about-me"&gt;About Me
+                                        |          &lt;div class="custom-arrow"&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="nav-link" href="#project1"&gt;Projects 
+                                        |          &lt;div class="custom-arrow"&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="nav-link" href="#experience1"&gt;Experiences
+                                        |          &lt;div class="custom-arrow"&gt;&lt;/div&gt;&lt;/a&gt;&lt;/nav&gt;
+                                        |    &lt;/nav&gt;
+                                        |  &lt;/div&gt;
+                                        |  &lt;div class="col-xxl-10 col-xl-9"&gt;
+                                        |    &lt;div class="scrollspy-example-5 custom-scrollbar" data-bs-spy="scroll" data-bs-target="#navbar-scrollspy4" data-bs-smooth-scroll="true" tabindex="0"&gt;
+                                        |      &lt;div id="home1"&gt;
+                                        |        &lt;h6&gt;Home&lt;/h6&gt;
+                                        |        &lt;div class="common-align gap-3 align-items-lg-start"&gt;
+                                        |          &lt;div class="flex-shrink-0"&gt;&lt;img class="img-fluid" src="../assets/images/banner/2.jpg" alt=""&gt;&lt;/div&gt;
+                                        |          &lt;div class="flex-grow-1"&gt;&lt;span&gt;This content is a stand-in for the scrollspy page. You'll notice that the relevant navigation link is highlighted as you scroll down the page. It appears again in the component example. Here, we'll continue to add sample copy to highlight the scrolling and highlighting.Remember that the JavaScript plugin selects the appropriate element from among those that might be displayed. There could be some problems if there are several scrollspy targets showing at once.Keep in mind that the JavaScript plugin tries to pick the right element among all that may be visible. Multiple visible scrollspy targets at the same time may cause some issues.&lt;/span&gt;&lt;/div&gt;
+                                        |        &lt;/div&gt;
+                                        |      &lt;/div&gt;
+                                        |      &lt;div class="common-p-space" id="about-me"&gt;
+                                        |        &lt;h6&gt;About Me&lt;/h6&gt;
+                                        |        &lt;div class="about-box common-align gap-3"&gt;&lt;img class="img-fluid" src="../assets/images/avtar/11.jpg" alt="user"&gt;
+                                        |          &lt;div&gt;
+                                        |            &lt;p&gt;My name is Lichi Wallien is. I have four years of experience as a software engineer and finished my BE in 2022. I developed PHP and MySQL when I worked for Lavender, and I believe those skills will be useful in this position.&lt;/p&gt;&lt;a class="btn btn-primary" href="#!"&gt;Read more&lt;span class="ms-1"&gt;
+                                        |                &lt;svg class="fill-icon"&gt;
+                                        |                  &lt;use href="../assets/svg/icon-sprite.svg#arrowright"&gt;&lt;/use&gt;
+                                        |                &lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;
+                                        |          &lt;/div&gt;
+                                        |        &lt;/div&gt;
+                                        |      &lt;/div&gt;
+                                        |      &lt;div class="common-p-space" id="project1"&gt;
+                                        |        &lt;h6&gt;Projects&lt;/h6&gt;
+                                        |        &lt;div class="row g-3 main-project"&gt;
+                                        |          &lt;div class="col-xl-12"&gt; 
+                                        |            &lt;div class="light-card attendance-card"&gt;
+                                        |              &lt;div class="left-overview-content"&gt;
+                                        |                &lt;div class="svg-box"&gt;
+                                        |                  &lt;svg&gt; 
+                                        |                    &lt;use href="../assets/svg/icon-sprite.svg#e-commerce-cart"&gt;&lt;/use&gt;
+                                        |                  &lt;/svg&gt;
+                                        |                &lt;/div&gt;
+                                        |              &lt;/div&gt;
+                                        |              &lt;div class="right-overview-content"&gt;
+                                        |                &lt;div&gt; 
+                                        |                  &lt;h6&gt;Websites for E-Commerce&lt;/h6&gt;&lt;span class="text-muted text-ellipsis"&gt;Created a comprehensive e-commerce platform with the goal of improving the online purchasing experience. The project's goals were to offer a smooth navigation system, a user-friendly interface, and strong functionality to accommodate a wide variety of products.&lt;/span&gt;
+                                        |                &lt;/div&gt;
+                                        |                &lt;div class="d-flex marks-count"&gt;
+                                        |                  &lt;h5&gt;89/&lt;sub class="text-muted"&gt;100&lt;/sub&gt;&lt;/h5&gt;
+                                        |                  &lt;div class="d-flex justify-content-center align-items-center"&gt;&lt;i class="icon-arrow-up txt-success pe-2 f-w-600"&gt;&lt;/i&gt;&lt;span class="txt-success f-w-500"&gt;+80%&lt;/span&gt;&lt;/div&gt;
+                                        |                &lt;/div&gt;
+                                        |              &lt;/div&gt;
+                                        |            &lt;/div&gt;
+                                        |          &lt;/div&gt;
+                                        |          &lt;div class="col-xl-12"&gt; 
+                                        |            &lt;div class="light-card attendance-card"&gt;
+                                        |              &lt;div class="left-overview-content"&gt;
+                                        |                &lt;div class="svg-box"&gt;
+                                        |                  &lt;svg&gt; 
+                                        |                    &lt;use href="../assets/svg/icon-sprite.svg#robotics-project"&gt;&lt;/use&gt;
+                                        |                  &lt;/svg&gt;
+                                        |                &lt;/div&gt;
+                                        |              &lt;/div&gt;
+                                        |              &lt;div class="right-overview-content"&gt;
+                                        |                &lt;div&gt; 
+                                        |                  &lt;h6&gt;Robotics Sensor&lt;/h6&gt;&lt;span class="text-muted text-ellipsis"&gt;Lidar sensor array was put into use for obstacle identification and real-time mapping. With the use of this data, the rover creates an extensive picture of its environment that helps it safely traverse difficult terrain.&lt;/span&gt;
+                                        |                &lt;/div&gt;
+                                        |                &lt;div class="d-flex marks-count"&gt;
+                                        |                  &lt;h5&gt;95/&lt;sub class="text-muted"&gt;100&lt;/sub&gt;&lt;/h5&gt;
+                                        |                  &lt;div class="d-flex justify-content-center align-items-center"&gt;&lt;i class="icon-arrow-up txt-success pe-2 f-w-600"&gt;&lt;/i&gt;&lt;span class="txt-success f-w-500"&gt;+97%&lt;/span&gt;&lt;/div&gt;
+                                        |                &lt;/div&gt;
+                                        |              &lt;/div&gt;
+                                        |            &lt;/div&gt;
+                                        |          &lt;/div&gt;
+                                        |          &lt;div class="col-xl-12"&gt; 
+                                        |            &lt;div class="light-card attendance-card"&gt;
+                                        |              &lt;div class="left-overview-content"&gt;
+                                        |                &lt;div class="svg-box"&gt;
+                                        |                  &lt;svg&gt; 
+                                        |                    &lt;use href="../assets/svg/icon-sprite.svg#watch-app"&gt;&lt;/use&gt;
+                                        |                  &lt;/svg&gt;
+                                        |                &lt;/div&gt;
+                                        |              &lt;/div&gt;
+                                        |              &lt;div class="right-overview-content"&gt;
+                                        |                &lt;div&gt; 
+                                        |                  &lt;h6&gt;Watch Application&lt;/h6&gt;&lt;span class="text-muted text-ellipsis"&gt;Keeps an eye on key health indicators like heart rate, steps taken, calories burnt, and sleep habits. makes use of cutting-edge algorithms to deliver precise and useful health insights.&lt;/span&gt;
+                                        |                &lt;/div&gt;
+                                        |                &lt;div class="d-flex marks-count"&gt;
+                                        |                  &lt;h5&gt;92/&lt;sub class="text-muted"&gt;100&lt;/sub&gt;&lt;/h5&gt;
+                                        |                  &lt;div class="d-flex justify-content-center align-items-center"&gt;&lt;i class="icon-arrow-up txt-success pe-2 f-w-600"&gt;&lt;/i&gt;&lt;span class="txt-success f-w-500"&gt;+94%&lt;/span&gt;&lt;/div&gt;
+                                        |                &lt;/div&gt;
+                                        |              &lt;/div&gt;
+                                        |            &lt;/div&gt;
+                                        |          &lt;/div&gt;
+                                        |        &lt;/div&gt;
+                                        |      &lt;/div&gt;
+                                        |      &lt;div class="common-p-space" id="experience1"&gt;
+                                        |        &lt;h6&gt;Experience&lt;/h6&gt;
+                                        |        &lt;div class="row"&gt;
+                                        |          &lt;div class="col experience-section"&gt;
+                                        |            &lt;p class="mb-2"&gt;Wordpress&lt;/p&gt;
+                                        |            &lt;div class="progress"&gt;
+                                        |              &lt;div class="progress-bar text-center" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"&gt;50%&lt;/div&gt;
+                                        |            &lt;/div&gt;
+                                        |            &lt;p class="mb-2"&gt;PHP&lt;/p&gt;
+                                        |            &lt;div class="progress"&gt;
+                                        |              &lt;div class="progress-bar text-center" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"&gt;30%&lt;/div&gt;
+                                        |            &lt;/div&gt;
+                                        |            &lt;p class="mb-2"&gt;MYSQL&lt;/p&gt;
+                                        |            &lt;div class="progress"&gt;
+                                        |              &lt;div class="progress-bar text-center" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"&gt;60%&lt;/div&gt;
+                                        |            &lt;/div&gt;
+                                        |          &lt;/div&gt;
+                                        |        &lt;/div&gt;
+                                        |      &lt;/div&gt;
+                                        |    &lt;/div&gt;
+                                        |  &lt;/div&gt;
+                                        |&lt;/div&gt;
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

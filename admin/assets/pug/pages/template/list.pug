@@ -1,0 +1,1056 @@
+- var page_Title = 'Lists';
+- var theme_customizer      = true;
+- var counter               = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var clipboard             = true;
+- var prism                 = true;
+- var customcard            = true;
+- var scrollbar             = true;
+- var height_equal          = true;
+include ../../components/mixin
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      .page-header.row
+        +breadcrumb(['Ui Kits','Lists'],'Lists')
+        include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-xl-4.col-md-6
+                .card.list-with-icon
+                  .card-header
+                    h4 Default Lists 
+                    p.f-m-light.mt-1 
+                      | Use 
+                      code  list-group 
+                      | define the list of items and used 
+                      code  list-group-item 
+                      | to indicate the current content.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    ul.list-group
+                      li.list-group-item 
+                        i.icofont.icofont-arrow-right
+                        | Logo design
+                      li.list-group-item 
+                        i.icofont.icofont-arrow-right
+                        | Web development 
+                      li.list-group-item 
+                        i.icofont.icofont-arrow-right
+                        | E-commerce
+                      li.list-group-item 
+                        i.icofont.icofont-arrow-right
+                        | SEO
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#common-heading', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#common-heading
+                          |&lt;ul class="list-group"&gt;
+                          |  &lt;li class="list-group-item"&gt;
+                          |    &lt;i class="icofont icofont-arrow-right"&gt;&lt;/i&gt;Logo design
+                          |  &lt;/li&gt;
+                          |  &lt;li class="list-group-item"&gt;
+                          |    &lt;i class="icofont icofont-arrow-right"&gt;&lt;/i&gt;Web development
+                          |  &lt;/li&gt;
+                          |  &lt;li class="list-group-item"&gt;
+                          |    &lt;i class="icofont icofont-arrow-right"&gt;&lt;/i&gt;E-commerce
+                          |  &lt;/li&gt;
+                          |  &lt;li class="list-group-item"&gt;
+                          |    &lt;i class="icofont icofont-arrow-right"&gt;&lt;/i&gt;SEO
+                          |  &lt;/li&gt;
+                          |&lt;/ul&gt;
+              .col-xl-4.col-md-6
+                .card.list-with-icon
+                  .card-header
+                    h4 Active Lists 
+                    p.f-m-light.mt-1 
+                      | Use
+                      code  active 
+                      | in a
+                      code  list-group-item
+                      |  to indicate the current active.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    ul.list-group
+                      li.list-group-item.active.bg-warning-light(aria-current='true')
+                        i.icofont.icofont-arrow-right 
+                        | UI kits
+                      li.list-group-item
+                        i.icofont.icofont-arrow-right 
+                        | Wow animations
+                      li.list-group-item 
+                        i.icofont.icofont-arrow-right 
+                        |Apex charts
+                      li.list-group-item
+                        i.icofont.icofont-arrow-right 
+                        | Starter kits
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#active-list', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#active-list
+                          |&lt;ul class="list-group"&gt;
+                          |  &lt;li class="list-group-item active bg-warning-light" aria-current="true"&gt;
+                          |    &lt;i class="icofont icofont-arrow-right"&gt;&lt;/i&gt;UI kits
+                          |  &lt;/li&gt;
+                          |  &lt;li class="list-group-item"&gt;
+                          |    &lt;i class="icofont icofont-arrow-right"&gt;&lt;/i&gt;Wow animations
+                          |  &lt;/li&gt;
+                          |  &lt;li class="list-group-item"&gt;
+                          |    &lt;i class="icofont icofont-arrow-right"&gt;&lt;/i&gt;Apex charts
+                          |  &lt;/li&gt;
+                          |  &lt;li class="list-group-item"&gt;
+                          |    &lt;i class="icofont icofont-arrow-right"&gt;&lt;/i&gt;Starter kits
+                          |  &lt;/li&gt;
+                          |&lt;/ul&gt;
+              .col-xl-4.col-md-12
+                .card.list-with-icon
+                  .card-header
+                    h4 Flush Lists
+                    p.f-m-light.mt-1 
+                      | Use 
+                      code   list-group-flush
+                      |  to remove some borders and rounded corners to render list group items.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    ul.list-group.list-group-flush
+                      li.list-group-item
+                        i.icofont.icofont-chart-histogram-alt
+                        | CHART
+                      li.list-group-item
+                        i.icofont.icofont-warning
+                        | ALERTS
+                      li.list-group-item
+                        i.icofont.icofont-cart
+                        | CART 
+                      li.list-group-item
+                        i.icofont.icofont-checked
+                        | CHECKOUT
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#flush-list', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#flush-list
+                          |&lt;ul class="list-group list-group-flush"&gt;
+                          |  &lt;li class="list-group-item"&gt;&lt;i class="icofont icofont-chart-histogram-alt"&gt;&lt;/i&gt;Charts&lt;/li&gt;
+                          |  &lt;li class="list-group-item"&gt;&lt;i class="icofont icofont-warning"&gt;&lt;/i&gt;Alerts&lt;/li&gt;
+                          |  &lt;li class="list-group-item"&gt;&lt;i class="icofont icofont-cart"&gt;&lt;/i&gt;Cart&lt;/li&gt;
+                          |  &lt;li class="list-group-item"&gt;&lt;i class="icofont icofont-checked"&gt;&lt;/i&gt;Checkout&lt;/li&gt;
+                          |&lt;/ul&gt;
+              .col-xxl-6.col-sm-12.box-col-12
+                .card.height-equal
+                  .card-header
+                    h4 Contextual Classes
+                    p.f-m-light.mt-1
+                      | Use contextual classes to style list items with a stateful background and colors.
+                      code  list-light-*
+                      |  and 
+                      code  txt-*
+                      | .
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    .list-group
+                      a.list-group-item.list-group-item-action.list-light-primary(href='#!') This is primary bg you can use 
+                        em.txt-primary.fw-bold .list-light-primary
+                        |   class.
+                      a.list-group-item.list-group-item-action.list-light-secondary(href='#!') This is secondary bg you can use 
+                        em.txt-secondary.fw-bold .list-light-secondary
+                        |   class.
+                      a.list-group-item.list-group-item-action.list-light-success(href='#!') This is success bg you can use 
+                        em.txt-success.fw-bold .list-light-success
+                        |   class.
+                      a.list-group-item.list-group-item-action.list-light-danger(href='#!') This is danger bg you can use
+                        em.txt-danger.fw-bold .list-light-danger
+                        |   class.
+                      a.list-group-item.list-group-item-action.list-light-warning(href='#!') This is warning bg you can use 
+                        em.txt-warning.fw-bold .list-light-warning
+                        |   class.
+                      a.list-group-item.list-group-item-action.list-light-info(href='#!') This is info bg you can use 
+                        em.txt-info.fw-bold .list-light-info
+                        |   class.
+                      a.list-group-item.list-group-item-action.list-light-white(href='#!') This is white bg you can use 
+                        em.txt-white.fw-bold .list-light-white
+                        |   class.
+                      a.list-group-item.list-group-item-action.list-light-dark(href='#!') This is white bg you can use 
+                        em.txt-white.fw-bold .list-light-dark
+                        |   class.
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#contextual-classes', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#contextual-classes
+                          |&lt;div class="card-body contextual-wrapper"&gt; 
+                          |  &lt;div class="list-group"&gt;
+                          |    &lt;a class="list-group-item list-group-item-action list-light-primary" href="#!"&gt;This is primary bg you can use
+                          |      &lt;em class="txt-primary fw-bold"&gt;.list-light-primary&lt;/em&gt;class.
+                          |    &lt;/a&gt;
+                          |    &lt;a class="list-group-item list-group-item-action list-light-secondary" href="#!"&gt;This is secondary bg you can use
+                          |      &lt;em class="txt-secondary fw-bold"&gt;.list-light-secondary&lt;/em&gt;class.
+                          |    &lt;/a&gt;
+                          |    &lt;a class="list-group-item list-group-item-action list-light-success" href="#!"&gt;This is success bg you can use
+                          |      &lt;em class="txt-success fw-bold"&gt;.list-light-success&lt;/em&gt;class.
+                          |    &lt;/a&gt;
+                          |    &lt;a class="list-group-item list-group-item-action list-light-danger" href="#!"&gt;This is danger bg you can use
+                          |      &lt;em class="txt-danger fw-bold"&gt;.list-light-danger&lt;/em&gt;class.
+                          |    &lt;/a&gt;
+                          |    &lt;a class="list-group-item list-group-item-action list-light-warning" href="#!"&gt;This is warning bg you can use
+                          |      &lt;em class="txt-warning fw-bold"&gt;.list-light-warning&lt;/em&gt;class.
+                          |    &lt;/a&gt;
+                          |    &lt;a class="list-group-item list-group-item-action list-light-info" href="#!"&gt;This is info bg you can use
+                          |      &lt;em class="txt-info fw-bold"&gt;.list-light-info&lt;/em&gt;class.
+                          |    &lt;/a&gt;
+                          |    &lt;a class="list-group-item list-group-item-action list-light-white" href="#!"&gt;This is white bg you can use
+                          |      &lt;em class="txt-white fw-bold"&gt;.list-light-white&lt;/em&gt;class.
+                          |    &lt;/a&gt;
+                          |    &lt;a class="list-group-item list-group-item-action list-light-dark" href="#!"&gt;This is white bg you can use
+                          |      &lt;em class="txt-white fw-bold"&gt;.list-light-dark&lt;/em&gt;class.
+                          |    &lt;/a&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-xxl-6.col-12.box-col-12
+                .card.height-equal
+                  .card-header
+                    h4 Horizontal Lists
+                    p.f-m-light.mt-1
+                      | Use 
+                      code  list-group-horizontal
+                      |  to change the layout of list group items from vertical to horizontal across all breakpoints.
+                      code  list-group-horizontal-[sm / md / lg / xl / xxl ]
+                      | .
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    .horizontal-list-wrapper.dark-list
+                      ul.fw-bold.list-group.list-group-horizontal-sm.pb-2
+                        li.list-group-item.border-left-primary Product 
+                        li.list-group-item Product details
+                        li.list-group-item Pricing
+                        li.list-group-item Payment details
+                        li.list-group-item Checkout 
+                        li.list-group-item Mega options 
+                      ul.fw-bold.list-group.list-group-horizontal-md.pb-2
+                        li.list-group-item.border-left-secondary Basic table
+                        li.list-group-item Sizing table 
+                        li.list-group-item Border table
+                        li.list-group-item Basic inputs 
+                        li.list-group-item Form validations
+                      ul.fw-bold.list-group.list-group-horizontal-lg.pb-2
+                        li.list-group-item.border-left-warning Flat style 
+                        li.list-group-item Edge style 
+                        li.list-group-item Button group
+                        li.list-group-item Rating
+                        li.list-group-item Crypto
+                      ul.fw-bold.list-group.list-group-horizontal-xl.pb-2
+                        li.list-group-item.border-left-success Blog 
+                        li.list-group-item Blog details 
+                        li.list-group-item Blog single 
+                        li.list-group-item Order history 
+                      ul.fw-bold.list-group.list-group-horizontal-xxl
+                        li.list-group-item.border-left-info Gallery grid 
+                        li.list-group-item Gallery desc
+                        li.list-group-item Masonry Desc
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#horizontal-lists', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#horizontal-lists
+                          |&lt;div class="horizontal-list-wrapper dark-list"&gt;
+                          |  &lt;ul class="fw-bold list-group list-group-horizontal-sm pb-2"&gt;
+                          |    &lt;li class="list-group-item border-left-primary"&gt;Product &lt;/li&gt;
+                          |    &lt;li class="list-group-item"&gt;Product details&lt;/li&gt;
+                          |    &lt;li class="list-group-item"&gt;Pricing&lt;/li&gt;
+                          |    &lt;li class="list-group-item"&gt;Payment details&lt;/li&gt;
+                          |    &lt;li class="list-group-item"&gt;Checkout &lt;/li&gt;
+                          |    &lt;li class="list-group-item"&gt;Mega options &lt;/li&gt;
+                          |  &lt;/ul&gt;
+                          |  &lt;ul class="fw-bold list-group list-group-horizontal-md pb-2"&gt;
+                          |    &lt;li class="list-group-item border-left-secondary"&gt;Basic table&lt;/li&gt;
+                          |    &lt;li class="list-group-item"&gt;Sizing table &lt;/li&gt;
+                          |    &lt;li class="list-group-item"&gt;Border table&lt;/li&gt;
+                          |    &lt;li class="list-group-item"&gt;Basic inputs &lt;/li&gt;
+                          |    &lt;li class="list-group-item"&gt;Form validations&lt;/li&gt;
+                          |  &lt;/ul&gt;
+                          |  &lt;ul class="fw-bold list-group list-group-horizontal-lg pb-2"&gt;
+                          |    &lt;li class="list-group-item border-left-warning"&gt;Flat style &lt;/li&gt;
+                          |    &lt;li class="list-group-item"&gt;Edge style &lt;/li&gt;
+                          |    &lt;li class="list-group-item"&gt;Button group&lt;/li&gt;
+                          |    &lt;li class="list-group-item"&gt;Rating&lt;/li&gt;
+                          |    &lt;li class="list-group-item"&gt;Crypto&lt;/li&gt;
+                          |  &lt;/ul&gt;
+                          |  &lt;ul class="fw-bold list-group list-group-horizontal-xl pb-2"&gt;
+                          |    &lt;li class="list-group-item border-left-success"&gt;Blog &lt;/li&gt;
+                          |    &lt;li class="list-group-item"&gt;Blog details &lt;/li&gt;
+                          |    &lt;li class="list-group-item"&gt;Blog single &lt;/li&gt;
+                          |    &lt;li class="list-group-item"&gt;Order history &lt;/li&gt;
+                          |  &lt;/ul&gt;
+                          |  &lt;ul class="fw-bold list-group list-group-horizontal-xxl"&gt;
+                          |    &lt;li class="list-group-item border-left-info"&gt;Gallery grid &lt;/li&gt;
+                          |    &lt;li class="list-group-item"&gt;Gallery desc&lt;/li&gt;
+                          |    &lt;li class="list-group-item"&gt;Masonry Desc&lt;/li&gt;
+                          |  &lt;/ul&gt;
+                          |&lt;/div&gt;
+
+              .col-md-12
+                .card
+                  .card-header
+                    h4 Custom Content Lists
+                    p.f-m-light.mt-1
+                      | Use 
+                      code  list-group-item
+                      |  through make custom design of all lists.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    .list-group.main-lists-content.pt-0
+                        a.list-group-item.list-group-item-action.active.bg-primary(href='#' aria-current='true')
+                          .d-flex.w-100.justify-content-between.align-items-center
+                            .list-wrapper
+                                img.list-img(src="../assets/images/user/1.jpg", alt="profile")
+                                .list-content 
+                                  h5 Molly Blake
+                                  p MollyBoake@reta.com
+                            small 5 days ago
+                          p.mb-1 Next step is to choose a tone of voice for your content type. From casual to convincing, pick one from 20+ tones in the dropdown.Why did we say “snag eyeballs” instead of “get attention?” Why do we say “brick-and-mortar words” instead of “concrete words?” Because, in your email subject lines, it’s better to use words that people can picture.
+                          small 20K Followers
+                        a.list-group-item.list-group-item-action.list-hover-primary(href='#!')
+                          .d-flex.w-100.justify-content-between.align-items-center
+                            .list-wrapper
+                                img.list-img(src="../assets/images/user/3.png", alt="profile")
+                                .list-content 
+                                  h5 Gabrielle Fahey
+                                  p Gabrielle@dap.com
+                            small.text-muted 10 days ago
+                          p.mb-1 Your aim with this blog is to advertise yourself and your services in blog design. That means it's vital to create content about just that: blog design. Anything else on your page may act as a distraction to your potential customers, and you don't want that!
+                          small.text-muted 100 Followers
+                        a.list-group-item.list-group-item-action.list-hover-primary(href='#!')
+                          .d-flex.w-100.justify-content-between.align-items-center
+                            .list-wrapper
+                                img.list-img(src="../assets/images/user/2.jpg", alt="profile")
+                                .list-content 
+                                  h5 Lucinda Moseley
+                                  p Lucinda@teleworm.us
+                            small.text-muted 3 days ago
+                          p.mb-1 People who are looking to hire a web designer may not know what to look out for. This will give you a chance to prove your trustworthiness by providing potential customers with advice and will let you sell your services by highlighting their best qualities.
+                          small.text-muted 23M Followers 
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#content-lists', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#content-lists
+                          |&lt;div class="list-group main-lists-content pt-0"&gt;
+                          |  &lt;a class="list-group-item list-group-item-action active bg-primary" href="#" aria-current="true"&gt;
+                          |    &lt;div class="d-flex w-100 justify-content-between align-items-center"&gt;
+                          |      &lt;div class="list-wrapper"&gt;
+                          |        &lt;img class="list-img me-0" src="../assets/images/user/1.jpg" alt="profile"&gt;
+                          |        &lt;div class="list-content"&gt; 
+                          |          &lt;h6&gt;Molly Blake&lt;/h6&gt;
+                          |          &lt;p&gt;MollyBoake@rhyta.com&lt;/p&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;small&gt;5 days ago&lt;/small&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;p class="mb-1"&gt;Next step is to choose a tone of voice for your content type. From casual to convincing, pick one from 20+ tones in the dropdown.Why did we say “snag eyeballs” instead of “get attention?” Why do we say “brick-and-mortar words” instead of “concrete words?” Because, in your email subject lines, it’s better to use words that people can picture.&lt;/p&gt;
+                          |    &lt;small&gt;20K Followers&lt;/small&gt;
+                          |  &lt;/a&gt;
+                          |  &lt;a class="list-group-item list-group-item-action list-hover-primary" href="#!"&gt;
+                          |    &lt;div class="d-flex w-100 justify-content-between align-items-center"&gt;
+                          |      &lt;div class="list-wrapper"&gt;
+                          |        &lt;img class="list-img me-0" src="../assets/images/user/3.png" alt="profile"&gt;
+                          |        &lt;div class="list-content"&gt; 
+                          |          &lt;h6&gt;Gabrielle Fahey&lt;/h6&gt;
+                          |          &lt;p&gt;GabrielleFahey@dayrep.com&lt;/p&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;small class="text-muted"&gt;10 days ago&lt;/small&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;p class="mb-1"&gt;Your aim with this blog is to advertise yourself and your services in blog design. That means it's vital to create content about just that: blog design. Anything else on your page may act as a distraction to your potential customers, and you don't want that!&lt;/p&gt;
+                          |    &lt;small class="text-muted"&gt;100 Followers&lt;/small&gt;
+                          |  &lt;/a&gt;
+                          |  &lt;a class="list-group-item list-group-item-action list-hover-primary" href="#!"&gt;
+                          |    &lt;div class="d-flex w-100 justify-content-between align-items-center"&gt;
+                          |      &lt;div class="list-wrapper"&gt;
+                          |        &lt;img class="list-img me-0" src="../assets/images/user/2.jpg" alt="profile"&gt;
+                          |        &lt;div class="list-content"&gt; 
+                          |          &lt;h6&gt;Lucinda Moseley&lt;/h6&gt;
+                          |          &lt;p&gt;LucindaMoseley@teleworm.us&lt;/p&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;small class="text-muted"&gt;3 days ago&lt;/small&gt;
+                          |    &lt;/div&gt;
+                          |    &lt;p class="mb-1"&gt;People who are looking to hire a web designer may not know what to look out for. This will give you a chance to prove your trustworthiness by providing potential customers with advice and will let you sell your services by highlighting their best qualities.&lt;/p&gt;
+                          |    &lt;small class="text-muted"&gt;23M Followers&lt;/small&gt;
+                          |  &lt;/a&gt;
+                          |&lt;/div&gt;
+    
+              .col-xl-4.col-md-6
+                .card
+                  .card-header
+                    h4 Lists with Checkbox
+                    p.f-m-light.mt-1
+                      | Use
+                      code  form-check-input 
+                      | to check your checkbox.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    ul.list-group
+                      li.list-group-item
+                        input#firstCheckbox.form-check-input.me-1.checkbox-primary(type='checkbox' value='' checked='')
+                        label.form-check-label.txt-primary.mb-0(for='firstCheckbox') Auto Start
+                      li.list-group-item
+                        input#secondCheckbox.form-check-input.me-1.checkbox-secondary(type='checkbox' value='')
+                        label.form-check-label.txt-secondary.mb-0(for='secondCheckbox') Auto Update
+                      li.list-group-item
+                        input#thirdCheckbox.form-check-input.me-1.checkbox-success(type='checkbox' value='')
+                        label.form-check-.txt-success.mb-0(for='thirdCheckbox') Don't check auth key
+                      li.list-group-item
+                        input#fourCheckbox.form-check-input.me-1.checkbox-warning(type='checkbox' value='')
+                        label.form-check-label.txt-warning.mb-0(for='fourCheckbox') Success all
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#lists-checkbox', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#lists-checkbox
+                          |&lt;ul class="list-group"&gt;
+                          |  &lt;li class="list-group-item"&gt;
+                          |    &lt;input class="form-check-input me-1 checkbox-primary active" id="firstCheckbox" type="checkbox" value=""&gt;
+                          |    &lt;label class="form-check-label txt-primary mb-0" for="firstCheckbox"&gt;Auto start&lt;/label&gt;
+                          |  &lt;/li&gt;
+                          |  &lt;li class="list-group-item"&gt;
+                          |    &lt;input class="form-check-input me-1 checkbox-secondary" id="secondCheckbox" type="checkbox" value=""&gt;
+                          |    &lt;label class="form-check-label txt-secondary mb-0" for="secondCheckbox"&gt;Auto update&lt;/label&gt;
+                          |  &lt;/li&gt;
+                          |  &lt;li class="list-group-item"&gt;
+                          |    &lt;input class="form-check-input me-1 checkbox-success" id="thirdCheckbox" type="checkbox" value=""&gt;
+                          |    &lt;label class="form-check-label txt-success mb-0" for="thirdCheckbox"&gt;Don't check auth key&lt;/label&gt;
+                          |  &lt;/li&gt;
+                          |  &lt;li class="list-group-item"&gt;
+                          |    &lt;input class="form-check-input me-1 checkbox-warning" id="fourCheckbox" type="checkbox" value=""&gt;
+                          |    &lt;label class="form-check-label txt-warning mb-0" for="fourCheckbox"&gt;Success all&lt;/label&gt;
+                          |  &lt;/li&gt;
+                          |&lt;/ul&gt;
+
+              .col-xl-4.col-md-6
+                .card
+                  .card-header
+                    h4 Lists with Radios
+                    p.f-m-light.mt-1 
+                      | Use
+                      code  form-check-input 
+                      | to check your radio buttons.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    ul.list-group
+                      li.list-group-item
+                        input#firstRadio.form-check-input.me-1.checkbox-danger(type='radio' name='listGroupRadio' value='' checked='')
+                        label.form-check-label.mb-0(for='firstRadio') Meditations
+                      li.list-group-item
+                        input#secondRadio.form-check-input.me-1.checkbox-primary(type='radio' name='listGroupRadio' value='')
+                        label.form-check-label.mb-0(for='secondRadio') Read a book
+                      li.list-group-item
+                        input#thirdRadio.form-check-input.me-1.checkbox-success(type='radio' name='listGroupRadio' value='')
+                        label.form-check-label.mb-0(for='thirdRadio') Learn to code 
+                      li.list-group-item
+                        input#fourRadio.form-check-input.me-1.checkbox-info(type='radio' name='listGroupRadio' value='')
+                        label.form-check-label.mb-0(for='fourRadio') Drink more water
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#list-radio', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#list-radio
+                          |&lt;ul class="list-group"&gt;
+                          |  &lt;li class="list-group-item"&gt;
+                          |    &lt;input class="form-check-input me-1 checkbox-danger" id="firstRadio" type="radio" name="listGroupRadio" value="" checked=""&gt;
+                          |    &lt;label class="form-check-label mb-0" for="firstRadio"&gt;Meditations&lt;/label&gt;
+                          |  &lt;/li&gt;
+                          |  &lt;li class="list-group-item"&gt;
+                          |    &lt;input class="form-check-input me-1 checkbox-primary" id="secondRadio" type="radio" name="listGroupRadio" value=""&gt;
+                          |    &lt;label class="form-check-label mb-0" for="secondRadio"&gt;Read a book&lt;/label&gt;
+                          |  &lt;/li&gt;
+                          |  &lt;li class="list-group-item"&gt;
+                          |    &lt;input class="form-check-input me-1 checkbox-success" id="thirdRadio" type="radio" name="listGroupRadio" value=""&gt;
+                          |    &lt;label class="form-check-label mb-0" for="thirdRadio"&gt;Learn to code &lt;/label&gt;
+                          |  &lt;/li&gt;
+                          |  &lt;li class="list-group-item"&gt;
+                          |    &lt;input class="form-check-input me-1 checkbox-info" id="fourRadio" type="radio" name="listGroupRadio" value=""&gt;
+                          |    &lt;label class="form-check-label mb-0" for="fourRadio"&gt;Drink more water&lt;/label&gt;
+                          |  &lt;/li&gt;
+                          |&lt;/ul&gt;
+              .col-xl-4.col-12
+                .card
+                  .card-header
+                    h4 Lists with Numbers
+                    p.f-m-light.mt-1
+                      | Use
+                      code  list-group-numbered
+                      |  to ordered wise print numbers.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    ol.list-group.list-group-numbered
+                      li.list-group-item.txt-primary.fw-bold Known for delivery of useful and usable solutions
+                      li.list-group-item.txt-danger.fw-bold Solve problem with us
+                      li.list-group-item.txt-success.fw-bold Certified Professionals
+                      li.list-group-item.txt-warning.fw-bold Growth-Driven 
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#list-number', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#list-number
+                          |&lt;ol class="list-group list-group-numbered"&gt;
+                          |  &lt;li class="list-group-item txt-primary fw-bold"&gt;Known for practical solutions&lt;/li&gt;
+                          |  &lt;li class="list-group-item txt-danger fw-bold"&gt;Solve your problem&lt;/li&gt;
+                          |  &lt;li class="list-group-item txt-success fw-bold"&gt;Certified Professionals&lt;/li&gt;
+                          |  &lt;li class="list-group-item txt-warning fw-bold"&gt;Growth-Driven &lt;/li&gt;
+                          |&lt;/ol&gt;
+              .col-sm-12.col-xl-12
+                .card
+                  .card-header
+                    h4 JavaScript Behavior
+                    p.f-m-light.mt-1 
+                      | Use tab javaScript plugin—include it individually or through the compiled
+                      code  bootstrap.js 
+                      | file to extend our list group to create table panes of local content.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .row
+                      .col-sm-4
+                        #list-tab.list-group(role='tablist')
+                          a#list-home-list.list-group-item.list-group-item-action.bg-primary.active(data-bs-toggle='list', href='#list-home', role='tab', aria-controls='list-home') Home
+                          a#list-profile-list.list-group-item.list-group-item-action.list-hover-primary(data-bs-toggle='list', href='#list-profile', role='tab', aria-controls='list-profile') Profile
+                          a#list-messages-list.list-group-item.list-group-item-action.list-hover-primary(data-bs-toggle='list', href='#list-messages', role='tab', aria-controls='list-messages') Contact Us
+                          a#list-settings-list.list-group-item.list-group-item-action.list-hover-primary(data-bs-toggle='list', href='#list-settings', role='tab', aria-controls='list-settings') Settings
+                      .col-sm-8
+                        #nav-tabContent.tab-content
+                          #list-home.tab-pane.fade.show.active.list-behaviors(role='tabpanel', aria-labelledby='list-home-list')
+                            .d-flex.mb-xl-4.list-behavior-1
+                              .flex-shrink-0
+                                img.tab-img.img-fluid(src="../assets/images/blog/img.png", alt="home") 
+                              .flex-grow-1
+                                p.mb-xl-0.mb-sm-4
+                                  | We provide end to end digital solutions, right from designing your website/application development: Domain, Web Hosting, Email Hosting Registration, Search Engine Optimization and other Internet Marketing, Renewal of Services timely and effectively.
+                            .d-flex.list-behavior-1.mb-xl-4
+                              .flex-shrink-0
+                                img.tab-img.img-fluid(src="../assets/images/blog/blog.jpg", alt="home")
+                              .flex-grow-1 
+                                p.mb-0
+                                  | When someone visits your homepage, your design should inspire them to stay. Therefore, your value proposition should be established on the homepage for visitors to select to stay on your website.Building trust, expressing value, and guiding visitors to the next step all depend on a page's design.
+                          #list-profile.tab-pane.fade.dark-list(role='tabpanel', aria-labelledby='list-profile-list')
+                              .flex-space.align-items-center.list-light-dark.contact-profile
+                                  img.tab-img(src="../assets/images/avtar/3.jpg", alt="profile") 
+                                  ul.d-flex.flex-column.gap-2
+                                    li 
+                                      strong Visit Us: 
+                                      | 	2600 Hollywood Blvd,Florida, United States-	33020
+                                    li
+                                      strong Mail Us:
+                                      | contact@us@gmail.com
+                                    li
+                                      strong Contact Number: 
+                                      | (954) 357-7760
+                          #list-messages.tab-pane.fade(role='tabpanel', aria-labelledby='list-messages-list')
+                            ul.d-flex.flex-column.gap-1
+                              li
+                                | Us Technology offers web & mobile development solutions for all industry verticals.Include a short form using fields that'll help your business understand who's contacting them.
+                              li 
+                                strong Visit Us: 
+                                | 	2600 Hollywood Blvd,Florida, United States-	33020
+                              li 
+                                strong Mail Us:
+                                | contact@us@gmail.com
+                              li
+                                strong Contact Number: 
+                                | (954) 357-7760
+                          #list-settings.tab-pane.fade(role='tabpanel', aria-labelledby='list-settings-list')
+                            ul.d-flex.flex-column.gap-2
+                              li
+                                strong Available pages in Theme: 
+                              li
+                                | --> Typography: 
+                                | Typography is the art of arranging letters and text in a way that makes the copy legible, clear, and visually appealing to the reader.
+                              li
+                                | --> Tooltip: 
+                                | A tooltip is a brief, informative message that appears when a user interacts with an element in a graphical user interface (GUI). 
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#javaScript-behavior', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#javaScript-behavior
+                          |&lt;div class="row"&gt;
+                          |  &lt;div class="col-sm-4"&gt;
+                          |    &lt;div class="list-group" id="list-tab" role="tablist"&gt;
+                          |      &lt;a class="list-group-item list-group-item-action bg-primary" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home"&gt;Home&lt;/a&gt;&lt;a class="list-group-item list-group-item-action list-hover-primary" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile"&gt;Profile&lt;/a&gt;&lt;a class="list-group-item list-group-item-action list-hover-primary" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages"&gt;Contact Us&lt;/a&gt;&lt;a class="list-group-item list-group-item-action list-hover-primary" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings"&gt;Settings&lt;/a&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |  &lt;div class="col-sm-8"&gt;
+                          |    &lt;div class="tab-content" id="nav-tabContent"&gt;
+                          |      &lt;div class="tab-pane fade show list-behaviors" id="list-home" role="tabpanel" aria-labelledby="list-home-list"&gt;
+                          |        &lt;div class="d-flex mb-xl-4 list-behavior-1"&gt;
+                          |          &lt;div class="flex-shrink-0"&gt;
+                          |            &lt;img class="tab-img img-fluid" src="../assets/images/blog/img.png" alt="home"&gt;
+                          |          &lt;/div&gt;
+                          |          &lt;div class="flex-grow-1"&gt;
+                          |            &lt;p class="mb-xl-0 mb-sm-4"&gt;We provide end to end digital solutions, right from designing your website/application development: Domain, Web Hosting, Email Hosting Registration, Search Engine Optimization and other Internet Marketing, Renewal of Services timely and effectively.&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |        &lt;div class="d-flex list-behavior-1 mb-xl-4"&gt;
+                          |          &lt;div class="flex-shrink-0"&gt;
+                          |            &lt;img class="tab-img img-fluid" src="../assets/images/blog/blog.jpg" alt="home"&gt;
+                          |          &lt;/div&gt;
+                          |          &lt;div class="flex-grow-1"&gt; 
+                          |            &lt;p class="mb-0"&gt;When someone visits your homepage, your design should inspire them to stay. Therefore, your value proposition should be established on the homepage for visitors to select to stay on your website.Building trust, expressing value, and guiding visitors to the next step all depend on a page's design.&lt;/p&gt;
+                          |          &lt;/div&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="tab-pane fade dark-list" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list"&gt;
+                          |        &lt;div class="flex-space align-items-center list-light-dark contact-profile"&gt;
+                          |          &lt;img class="tab-img" src="../assets/images/avtar/3.jpg" alt="profile"&gt;
+                          |          &lt;ul class="d-flex flex-column gap-2"&gt;
+                          |            &lt;li&gt;&lt;strong&gt;Visit Us:&lt;/strong&gt;2600 Hollywood Blvd,Florida, United States-33020&lt;/li&gt;
+                          |            &lt;li&gt;&lt;strong&gt;Mail Us:&lt;/strong&gt;contact@us@gmail.com&lt;/li&gt;
+                          |            &lt;li&gt;&lt;strong&gt;Contact Number:&lt;/strong&gt;(954) 357-7760&lt;/li&gt;
+                          |          &lt;/ul&gt;
+                          |        &lt;/div&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list"&gt;
+                          |        &lt;ul class="d-flex flex-column gap-1"&gt;
+                          |          &lt;li&gt;Us Technology offers web & mobile development solutions for all industry verticals.Include a short form using fields that'll help your business understand who's contacting them.&lt;/li&gt;
+                          |          &lt;li&gt;&lt;strong&gt;Visit Us:&lt;/strong&gt;2600 Hollywood Blvd,Florida, United States-33020&lt;/li&gt;
+                          |          &lt;li&gt;&lt;strong&gt;Mail Us:&lt;/strong&gt;contact@us@gmail.com&lt;/li&gt;
+                          |          &lt;li&gt;&lt;strong&gt;Contact Number:&lt;/strong&gt;(954) 357-7760&lt;/li&gt;
+                          |        &lt;/ul&gt;
+                          |      &lt;/div&gt;
+                          |      &lt;div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list"&gt;
+                          |        &lt;ul class="d-flex flex-column gap-2"&gt;
+                          |          &lt;li&gt;&lt;strong&gt;Available Pages in Theme:&lt;/strong&gt;&lt;/li&gt;
+                          |          &lt;li&gt;--&gt; Typography: Typography is the art of arranging letters and text in a way that makes the copy legible, clear, and visually appealing to the reader.
+                          |          &lt;/li&gt;
+                          |          &lt;li&gt;--&gt; Tooltip: A tooltip is a brief, informative message that appears when a user interacts with an element in a graphical user interface (GUI). 
+                          |          &lt;/li&gt;
+                          |        &lt;/ul&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/div&gt;
+                          |&lt;/div&gt;
+              .col-xxl-4.col-md-6
+                .card
+                  .card-header
+                    h4 Numbered & Badge Lists
+                    p.f-m-light.mt-1 
+                      | Use
+                      code   list-group-numbered
+                      |  modifier class to  numbered list group items.Numbers are generated via CSS for better placement inside list group items.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    ol.list-group.list-group-numbered.badge-list
+                      li.list-group-item
+                        div
+                          | Stella Nowland
+                        span.badge.badge-warning.rounded-pill.p-2 Freelance
+                      li.list-group-item
+                        div
+                          | Lola Stanford
+                        span.badge.badge-danger.text-white.rounded-pill.p-2 Issue
+                      li.list-group-item
+                        div
+                          | Caitlin Coungeau
+                        span.badge.badge-primary.text-white.rounded-pill.p-2 Social
+                      li.list-group-item
+                        div
+                          | Graciela W. McClaran
+                        span.badge.badge-danger.text-white.rounded-pill.p-2 Issue
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#number-badge', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#number-badge
+                          |&lt;ol class="list-group list-group-numbered badge-list"&gt;
+                          |  &lt;li class="list-group-item"&gt;
+                          |    &lt;div&gt;Stella Nowland&lt;/div&gt;
+                          |    &lt;span class="badge badge-warning rounded-pill p-2"&gt;Freelance&lt;/span&gt;
+                          |  &lt;/li&gt;
+                          |  &lt;li class="list-group-item"&gt;
+                          |    &lt;div&gt;Lola Stanford&lt;/div&gt;
+                          |    &lt;span class="badge badge-danger text-white rounded-pill p-2"&gt;Issue&lt;/span&gt;
+                          |  &lt;/li&gt;
+                          |  &lt;li class="list-group-item"&gt;
+                          |    &lt;div&gt;Caitlin Coungeau&lt;/div&gt;
+                          |    &lt;span class="badge badge-primary text-white rounded-pill p-2"&gt;Social&lt;/span&gt;
+                          |  &lt;/li&gt;
+                          |  &lt;li class="list-group-item"&gt;
+                          |    &lt;div&gt;Graciela W. McClaran&lt;/div&gt;
+                          |    &lt;span class="badge badge-danger text-white rounded-pill p-2"&gt;Issue&lt;/span&gt;
+                          |  &lt;/li&gt;
+                          |&lt;/ol&gt;
+              .col-xxl-4.col-md-6
+                .card
+                  .card-header
+                    h4 Disabled Lists 
+                    p.f-m-light.mt-1 
+                      | Use
+                      code   disabled 
+                      | to a 
+                      code  list-group-item
+                      |  to make it appear disabled.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    .list-group
+                      a.list-group-item.list-group-item-action.list-hover-primary.active(href='#!')
+                        img.rounded-circle(src='../assets/images/user/1.jpg', alt='user')
+                        | Teresa J. Mosteller
+                      a.list-group-item.list-group-item-action.list-hover-primary(href='#!')
+                        img.rounded-circle(src='../assets/images/user/3.png', alt='user')
+                        | Gloria D. Acheson
+                      a.list-group-item.list-group-item-action.disabled(href='#!')
+                        img.rounded-circle(src='../assets/images/user/2.jpg', alt='user')
+                        | Sharon C. Obrien
+                      a.list-group-item.list-group-item-action.disabled(href='#!')
+                        img.rounded-circle(src='../assets/images/user/5.jpg', alt='user')
+                        | Bryan A. Owens
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#disabled-lists', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#disabled-lists
+                          |&lt;div class="list-group"&gt;
+                          |  &lt;a class="list-group-item list-group-item-action list-hover-primary active" href="#!"&gt;
+                          |    &lt;img class="rounded-circle" src="../assets/images/dashboard-11/user/1.jpg" alt="user"&gt;Teresa J. Mosteller
+                          |  &lt;/a&gt;
+                          |  &lt;a class="list-group-item list-group-item-action list-hover-primary" href="#!"&gt;
+                          |    &lt;img class="rounded-circle" src="../assets/images/dashboard-11/user/2.jpg" alt="user"&gt;Gloria D. Acheson
+                          |  &lt;/a&gt;
+                          |  &lt;a class="list-group-item list-group-item-action disabled" href="#!"&gt;
+                          |    &lt;img class="rounded-circle" src="../assets/images/dashboard-11/user/3.jpg" alt="user"&gt;Sharon C. Obrien
+                          |  &lt;/a&gt;
+                          |  &lt;a class="list-group-item list-group-item-action disabled" href="#!"&gt;
+                          |    &lt;img class="rounded-circle" src="../assets/images/dashboard-11/user/7.jpg" alt="user"&gt;Bryan A. Owens
+                          |  &lt;/a&gt;
+                          |&lt;/div&gt;
+              .col-xxl-4
+                .card
+                  .card-header
+                    h4 Scrollable Lists 
+                    p.f-m-light.mt-1 
+                      | Use property 
+                      code overflow:auto 
+                      | through scrollable lists.
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          i.icon-more-alt
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    .list-group.main-lists-content.scrollbar-wrapper.custom-scrollbar.pt-0
+                        a.list-group-item.list-group-item-action.active.list-hover-primary(href='#' aria-current='true')
+                          .list-wrapper.gap-0
+                              img.list-img(src="../assets/images/user/9.jpg", alt="profile")
+                              .list-content 
+                                h5 Molly Boake
+                                p.f-light MollyBoake@rhyta.com
+                                small.f-light 5 days ago
+                        a.list-group-item.list-group-item-action.list-hover-primary(href='#!')
+                            .list-wrapper.gap-0
+                                img.list-img(src="../assets/images/user/10.jpg", alt="profile")
+                                .list-content 
+                                  h5 Gabrielle Fahey
+                                  p.f-light GabrielleFahey@dayrep.com
+                                  small.f-light 10 days ago
+                        a.list-group-item.list-group-item-action.list-hover-primary(href='#!')
+                            .list-wrapper.gap-0
+                                img.list-img(src="../assets/images/user/2.jpg", alt="profile")
+                                .list-content 
+                                  h5 Lucinda Moseley
+                                  p.f-light LucindaMoseley@teleworm.us
+                                  small.f-light 3 days ago
+                        a.list-group-item.list-group-item-action.list-hover-primary(href='#!')
+                            .list-wrapper.gap-0
+                                img.list-img(src="../assets/images/user/12.png", alt="profile")
+                                .list-content 
+                                  h5 Francis K. Henriques
+                                  p.f-light FrancisKHenriques@teleworm.us
+                                  small.f-light 2 days ago
+                        a.list-group-item.list-group-item-action.list-hover-primary(href='#!')
+                            .list-wrapper.gap-0
+                                img.list-img(src="../assets/images/user/14.png", alt="profile")
+                                .list-content 
+                                  h5 Jose A. Seay
+                                  p.f-light JoseASeay@rhyta.com
+                                  small.f-light 15 days ago
+                        a.list-group-item.list-group-item-action.list-hover-primary(href='#!')
+                            .list-wrapper.gap-0
+                                img.list-img(src="../assets/images/user/3.jpg", alt="profile")
+                                .list-content 
+                                  h5 Phil F. Cunningham
+                                  p.f-light PhilFCunningham@dayrep.com
+                                  small.f-light 6 days ago
+                        a.list-group-item.list-group-item-action.list-hover-primary(href='#!')
+                            .list-wrapper.gap-0
+                                img.list-img(src="../assets/images/user/7.jpg", alt="profile")
+                                .list-content 
+                                  h5 Richard E. Johnson
+                                  p.f-light RichardEJohnson@teleworm.us
+                                  small.f-light 20 days ago
+                        a.list-group-item.list-group-item-action.list-hover-primary(href='#!')
+                            .list-wrapper.gap-0
+                                img.list-img(src="../assets/images/user/2.png", alt="profile")
+                                .list-content 
+                                  h5 Lawrence L. Nash
+                                  p.f-light LawrenceLNash@jourrapide.com
+                                  small.f-light 8 days ago
+                    .code-box-copy
+                      button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#scrollable-lists', title='Copy')
+                        i.icofont.icofont-copy-alt
+                      pre.theme-scrollbar
+                        code.language-html#scrollable-lists
+                          |&lt;div class="list-group main-lists-content scrollbar-wrapper custom-scrollbar"&gt;
+                          |  &lt;a class="list-group-item list-group-item-action active list-hover-primary" href="#" aria-current="true"&gt;
+                          |    &lt;div class="list-wrapper gap-0"&gt;
+                          |      &lt;img class="list-img" src="../assets/images/dashboard-11/user/12.jpg" alt="profile"&gt;
+                          |      &lt;div class="list-content"&gt; 
+                          |        &lt;h6&gt;Molly Boake&lt;/h6&gt;
+                          |        &lt;p class="f-light"&gt;MollyBoake@rhyta.com&lt;/p&gt;&lt;small&gt;f-light&lt;/small&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/a&gt;
+                          |  &lt;a class="list-group-item list-group-item-action list-hover-primary" href="#!"&gt;
+                          |    &lt;div class="list-wrapper gap-0"&gt;
+                          |      &lt;img class="list-img" src="../assets/images/dashboard-11/user/11.jpg" alt="profile"&gt;
+                          |      &lt;div class="list-content"&gt; 
+                          |        &lt;h6&gt;Gabrielle Fahey&lt;/h6&gt;
+                          |        &lt;p class="f-light"&gt;GabrielleFahey@dayrep.com&lt;/p&gt;&lt;small class="f-light"&gt;10 days ago&lt;/small&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/a&gt;
+                          |  &lt;a class="list-group-item list-group-item-action list-hover-primary" href="#!"&gt;
+                          |    &lt;div class="list-wrapper gap-0"&gt;
+                          |      &lt;img class="list-img" src="../assets/images/dashboard-11/user/10.jpg" alt="profile"&gt;
+                          |      &lt;div class="list-content"&gt; 
+                          |        &lt;h6&gt;Lucinda Moseley&lt;/h6&gt;
+                          |        &lt;p class="f-light"&gt;LucindaMoseley@teleworm.us&lt;/p&gt;&lt;small class="f-light"&gt;3 days ago&lt;/small&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/a&gt;
+                          |  &lt;a class="list-group-item list-group-item-action list-hover-primary" href="#!"&gt;
+                          |    &lt;div class="list-wrapper gap-0"&gt;
+                          |      &lt;img class="list-img" src="../assets/images/dashboard-11/user/9.jpg" alt="profile"&gt;
+                          |      &lt;div class="list-content"&gt; 
+                          |        &lt;h6&gt;Francis K. Henriques&lt;/h6&gt;
+                          |        &lt;p class="f-light"&gt;FrancisKHenriques@teleworm.us&lt;/p&gt;&lt;small class="f-light"&gt;2 days ago&lt;/small&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/a&gt;
+                          |  &lt;a class="list-group-item list-group-item-action list-hover-primary" href="#!"&gt;
+                          |    &lt;div class="list-wrapper gap-0"&gt;
+                          |      &lt;img class="list-img" src="../assets/images/dashboard-11/user/8.jpg" alt="profile"&gt;
+                          |      &lt;div class="list-content"&gt; 
+                          |        &lt;h6&gt;Jose A. Seay&lt;/h6&gt;
+                          |        &lt;p class="f-light"&gt;JoseASeay@rhyta.com&lt;/p&gt;&lt;small class="f-light"&gt;15 days ago&lt;/small&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/a&gt;
+                          |  &lt;a class="list-group-item list-group-item-action list-hover-primary" href="#!"&gt;
+                          |    &lt;div class="list-wrapper gap-0"&gt;
+                          |      &lt;img class="list-img" src="../assets/images/dashboard-11/user/4.jpg" alt="profile"&gt;
+                          |      &lt;div class="list-content"&gt; 
+                          |        &lt;h6&gt;Phil F. Cunningham&lt;/h6&gt;
+                          |        &lt;p class="f-light"&gt;PhilFCunningham@dayrep.com&lt;/p&gt;&lt;small class="f-light"&gt;6 days ago&lt;/small&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/a&gt;
+                          |  &lt;a class="list-group-item list-group-item-action list-hover-primary" href="#!"&gt;
+                          |    &lt;div class="list-wrapper gap-0"&gt;
+                          |      &lt;img class="list-img" src="../assets/images/dashboard-9/user/5.png" alt="profile"&gt;
+                          |      &lt;div class="list-content"&gt; 
+                          |        &lt;h6&gt;Richard E. Johnson&lt;/h6&gt;
+                          |        &lt;p class="f-light"&gt;RichardEJohnson@teleworm.us&lt;/p&gt;&lt;small class="f-light"&gt;20 days ago&lt;/small&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/a&gt;
+                          |  &lt;a class="list-group-item list-group-item-action list-hover-primary" href="#!"&gt;
+                          |    &lt;div class="list-wrapper gap-0"&gt;
+                          |      &lt;img class="list-img" src="../assets/images/dashboard-9/user/1.png" alt="profile"&gt;
+                          |      &lt;div class="list-content"&gt; 
+                          |        &lt;h6&gt;Lawrence L. Nash&lt;/h6&gt;
+                          |        &lt;p class="f-light"&gt;LawrenceLNash@jourrapide.com&lt;/p&gt;&lt;small class="f-light"&gt;8 days ago&lt;/small&gt;
+                          |      &lt;/div&gt;
+                          |    &lt;/div&gt;
+                          |  &lt;/a&gt;
+                          |&lt;/div&gt;
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files
